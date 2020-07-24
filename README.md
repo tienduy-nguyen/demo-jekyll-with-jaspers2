@@ -7,3 +7,10 @@ This is a demo using Jekyll with the theme Japers2.
 [jekyllrb.com](https://jekyllrb.com/)
 
 [jekyll-themes.com](https://jekyll-themes.com/)
+
+## Installation
+
+```
+bundle install
+bundle exec jekyll server
+```
