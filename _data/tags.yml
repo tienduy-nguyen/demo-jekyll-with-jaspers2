@@ -1,12 +1,20 @@
 programing:
   name: programing
   description: False
-  cover: assets/images/fables.jpg
+  cover: assets/images/post-covers/programming.jpeg
 getting-started:
   name: getting-started
   description: False
-  cover: assets/images/speeches.jpg
+  cover: assets/images/post-covers/begin.jpeg
 algorithms:
   name: algorithms
   description: False
-  cover: assets/images/speeches.jpg
+  cover: assets/images/post-covers/algorithms.jpeg
+journey:
+  name: journey
+  description: My journey to become a full-stack web developer
+  cover: assets/images/post-covers/journey.jpeg
+ruby:
+  name: ruby
+  desdription: False
+  cover: False
