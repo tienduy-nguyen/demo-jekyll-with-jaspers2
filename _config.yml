@@ -10,6 +10,17 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 words_per_minute: 200
 
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
 
@@ -74,7 +85,23 @@ feed:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-  
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 # Additional settings available on the front-matter
 # Site logo in the index.html (as in demo.ghost.io)
 # Author's page cover in _layouts/author.html
@@ -95,13 +122,13 @@ sass:
 # or "master" otherwise
 safe: False
 lsi: False
-username: tienduy-nguyen
-repo: blog
-branch: master
-relative_source: ../blog/
-destination: ../gh-pages/
-production_url: https://tienduy-nguyen.github.io/blog/
-source_url: https://github.com/tienduy-nguyen/blog/
+# username: tienduy-nguyen
+# repo: blog
+# branch: master
+# relative_source: ../blog/
+# destination: ../gh-pages/
+# production_url: https://tienduy-nguyen.github.io/blog/
+# source_url: https://github.com/tienduy-nguyen/blog/
 
 exclude:
   - assets/css
