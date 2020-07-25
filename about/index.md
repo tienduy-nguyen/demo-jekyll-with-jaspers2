@@ -8,6 +8,6 @@ class: page-template
 subclass: 'post page'
 ---
 
-If you have any question, contact me at `tienduy.nguyen.dev@gmail.com`
+Feel free to contact me if you have any questions: `tienduy.nguyen.dev@gmail.com`
 
 This website uses the free images from [unsplash.com](https://unsplash.com/)

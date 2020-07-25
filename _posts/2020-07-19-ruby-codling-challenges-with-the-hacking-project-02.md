@@ -39,7 +39,6 @@ Should return
 ```
 Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
 ```
-
 ---
 
 :arrow_right: My solution:
@@ -47,22 +46,24 @@ Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 1
 - This challenge is always handle with the string
 - One thing that we need pay attention here is how to convert a character to the ascii caracter.
 
-```ruby
-def alphabet_position(text)
-  text=text.downcase.gsub(/[^a-z]/,'')
-  text.bytes.map{|x| x-96}.join(' ')
-end
-```
+
+{% highlight ruby %}
+  def alphabet_position(text)
+    text=text.downcase.gsub(/[^a-z]/,'')
+    text.bytes.map{|x| x-96}.join(' ')
+  end
+{% endhighlight %}
+
 
 ---
 
 :heavy_check_mark: Best solution on codewars
 
-```ruby
-def alphabet_position(text)
-  text.gsub(/[^a-z]/i, '').chars.map{ |c| c.downcase.ord - 96 }.join(' ')
-end
-```
+{% highlight ruby %}
+  def alphabet_position(text)
+    text.gsub(/[^a-z]/i, '').chars.map{ |c| c.downcase.ord - 96 }.join(' ')
+  end
+{% endhighlight %}
 
 This challenge is still not difficult for you, is it?
 We will see the next one.

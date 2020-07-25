@@ -757,10 +757,19 @@ The first (most recent) post in the list is styled to be bigger than the others 
   margin: 1.5em auto;
   max-width: 1040px;
 }
+img.emoji {
+  display: inline-block;
+  margin: 0;
+  width: auto;
+}
+
 @media (max-width: 1040px) {
   .post-full-content img,
   .post-full-content video {
     width: 100%;
+  }
+  img.emoji {
+    width: auto;
   }
 }
 
@@ -851,7 +860,7 @@ Usage (In Ghost editor):
 }
 
 .post-full-content hr {
-  margin: 4vw 0;
+  margin: 1rem 0;
 }
 
 .post-full-content hr:after {
