@@ -122,13 +122,13 @@ tag_archive:
 # or "master" otherwise
 safe: False
 lsi: False
-# username: tienduy-nguyen
-# repo: blog
-# branch: master
-# relative_source: ../blog/
-# destination: ../gh-pages/
-# production_url: https://tienduy-nguyen.github.io/blog/
-# source_url: https://github.com/tienduy-nguyen/blog/
+username: tienduy-nguyen
+repo: demo-jekyll-with-jaspers2
+branch: master
+relative_source: ../demo-jekyll-with-jaspers2/
+destination: ../gh-pages/
+production_url: https://tienduy-nguyen.github.io/demo-jekyll-with-jaspers2/
+source_url: https://github.com/tienduy-nguyen/demo-jekyll-with-jaspers2/
 
 exclude:
   - assets/css
