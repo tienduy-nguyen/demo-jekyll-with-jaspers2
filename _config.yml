@@ -123,12 +123,12 @@ tag_archive:
 safe: False
 lsi: False
 username: tienduy-nguyen
-repo: demo-jekyll-with-jaspers2
+repo: blog
 branch: master
-relative_source: ../demo-jekyll-with-jaspers2/
+relative_source: ../blog/
 destination: ../gh-pages/
-production_url: https://tienduy-nguyen.github.io/demo-jekyll-with-jaspers2/
-source_url: https://github.com/tienduy-nguyen/demo-jekyll-with-jaspers2/
+production_url: https://tienduy-nguyen.github.io/blog/
+source_url: https://github.com/tienduy-nguyen/blog/
 
 exclude:
   - assets/css
