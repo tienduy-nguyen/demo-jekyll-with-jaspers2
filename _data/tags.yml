@@ -9,7 +9,7 @@ me:
 web-development:
   name: web-development
   description: False
-  cover: assets/images/post-covers/freedom.jpeg
+  cover: assets/images/post-covers/web.jpeg
 algorithms:
   name: algorithms
   description: False
