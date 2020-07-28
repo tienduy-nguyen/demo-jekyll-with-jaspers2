@@ -3,6 +3,10 @@ language: ruby
 cache: bundler
 rvm:
   - 2.7.1
+before_install:
+  - gem update --system
+  - gem install bundler
+  - gem install rake
 
 install:
   # Install Jekyll and dependencies
