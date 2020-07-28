@@ -1,16 +1,4 @@
-# Demo Jekyll with them Jasper2
+# My blog using Jekyll.
 
-This is a demo using Jekyll with the theme Japers2.
+Link to [my blog](https://blog.adev42.com)
 
-[Jasper2](https://github.com/jekyller/jasper2)
-
-[jekyllrb.com](https://jekyllrb.com/)
-
-[jekyll-themes.com](https://jekyll-themes.com/)
-
-## Installation
-
-```
-bundle install
-bundle exec jekyll server
-```
