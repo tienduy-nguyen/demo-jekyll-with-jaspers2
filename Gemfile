@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.7.1'
 gem "jekyll"
-gem "rake", "~> 12.3.1"
+gem "rake"
 
 gem "github-pages"
 gem "slugify"
