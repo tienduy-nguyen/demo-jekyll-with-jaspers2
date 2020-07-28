@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+  <link href="http://localhost:4000/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-07-28T15:36:28+02:00</updated>
+  <id>http://localhost:4000/tag/web-development/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Adev42 | </title>
+  
+
+  
+    <subtitle>Learning is an endless journey</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Build your personal website without spending any money using Jekyll and Github pages</title>
+      <link href="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
+      <published>2020-07-25T12:00:00+02:00</published>
+      <updated>2020-07-25T12:00:00+02:00</updated>
+      <id>http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+
+&lt;h1 id=&quot;static-site-generator&quot;&gt;STATIC SITE GENERATOR&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;JAM stack&lt;/li&gt;
+  &lt;li&gt;Fast, security, ..&lt;/li&gt;
+  &lt;li&gt;Some famous static site generator&lt;/li&gt;
+  &lt;li&gt;Theme available, fast build, fast maintaince&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We have a lot of static site generator, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
+&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;Static Site Generator&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-i-choose-jekyll&quot;&gt;Why I choose Jekyll&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ruby developer&lt;/li&gt;
+  &lt;li&gt;Compatible with Github pages&lt;/li&gt;
+  &lt;li&gt;We will you Jekyll and the github pages to create our blog&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;infomations-of-jekyll&quot;&gt;Infomations of Jekyll&lt;/h3&gt;
+
+&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll is also the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.&lt;/p&gt;
+
+&lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth: we are a product (a brand) with unique skills to offer to prospective employees and customers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
+
+&lt;p&gt;I need a website to:&lt;/p&gt;
+
+&lt;p&gt;Showcase my projects,
+Blog about programming and my other interests, and
+Share information about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.&lt;/p&gt;
+
+&lt;p&gt;Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.&lt;/p&gt;
+
+&lt;p&gt;One day I watched a talk on YouTube by a content management system (CMS) evangelist. He discussed the benefits of using a CMS to generate a website composed of content from markdown and text files. This promotes separation of content from code and better security and speed at which content is delivered. Some CMS are either git-backed or talk to an API.&lt;/p&gt;
+
+&lt;p&gt;I researched different options for static site generators. My criteria are:&lt;/p&gt;
+
+&lt;p&gt;Speed - This includes speed of development (getting a website up and running quickly), and the performance of the website at delivering content.
+Popularity - A very important but often overlooked aspect of choosing a technology is how many people use it. When a technology is popular, you’d be able to get more community support (e.g. StackOverflow, tutorials, sample projects) and the creators of the tools have an incentive to continue to support and improve upon their product.
+Customization - This is a fringe criterion. Style and uniqueness of the website are not super important for me. I want my website to be a place to share information about me and having too unique of a website could make it more difficult for visitors of the website to find information. Still, it’d be nice if I have the option to choose from different layouts for my website and some customization like fonts.&lt;/p&gt;
+
+&lt;p&gt;Jekyll: Built with Ruby and uses Liquid templates. Very popular, created by the founder of Github, and offers free hosting on Github.&lt;/p&gt;
+
+&lt;h1 id=&quot;installation--build&quot;&gt;INSTALLATION &amp;amp; BUILD&lt;/h1&gt;
+
+&lt;p&gt;There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install Jekyll locally via the command line, create a new boilerplate website using &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;, build it locally with &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, then serve it. Make sure you installed jekyll on your machine &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install bundler jekyll&lt;/code&gt;. For the full installation, you can check out on the official guide &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;jekyllrb.com&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Take a Jekyll theme and clone it to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it. (You can also fork a starting point and make changes it)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We’ll get start with the easiest option: Take a available theme of Jekyll. This will only get us up and running in a few minutes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So, let’s choose a theme together&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website. You can check somes execellent paid Jekyll themes &lt;a href=&quot;https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;amp;iradid=275988&amp;amp;iradtype=ONLINE_TRACKING_LINK&amp;amp;irgwc=1&amp;amp;irmptype=mediapartner&amp;amp;irpid=2056025&amp;amp;utm_campaign=af_impact_radius_2056025&amp;amp;utm_medium=affiliate&amp;amp;utm_source=impact_radius&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But as the title I wrote, we will build our website without paying anything, we’ll choose only the free themes.&lt;/p&gt;
+
+&lt;p&gt;You can found almost the free Jekyll themes on the &lt;a href=&quot;https://jekyllthemes.io/free&quot;&gt;Free Jekyll Themes&lt;/a&gt; and choose the one you prefer. It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …&lt;/p&gt;
+
+&lt;h2 id=&quot;minimal-mistakes-jekyll-theme&quot;&gt;Minimal mistakes Jekyll theme&lt;/h2&gt;
+
+&lt;p&gt;Before writing this article, I really want to create a professionaly blog using the static site technology. After some searches, I found a really good one for a blog and I want to make a demo Jekyll with this awesome theme.&lt;/p&gt;
+
+&lt;p&gt;Its advantages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Free theme&lt;/li&gt;
+  &lt;li&gt;Very recommended by community: 7k starts and 12k forks on github &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Source Github mmistakes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Full features for blog.&lt;/li&gt;
+  &lt;li&gt;Compatible with GitHub Pages.&lt;/li&gt;
+  &lt;li&gt;Support for Jekyll’s built-in Sass/SCSS preprocessor.&lt;/li&gt;
+  &lt;li&gt;Nine different skins (color variations).&lt;/li&gt;
+  &lt;li&gt;Several responsive layout options (single, archive index, search, splash, and paginated home page).&lt;/li&gt;
+  &lt;li&gt;Commenting support (powered by Disqus, Facebook, Google+, Discourse, static-based via Staticman, and utterances).&lt;/li&gt;
+  &lt;li&gt;Google Analytics support.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We have already a starting point, now we need to install this theme on your machine.&lt;/p&gt;
+
+&lt;h2 id=&quot;clone-minimal-mistakes-theme-to-your-machine&quot;&gt;Clone Minimal mistakes theme to your machine&lt;/h2&gt;
+
+&lt;p&gt;As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on github.&lt;/p&gt;
+
+&lt;p&gt;You may probably no need to do the same way because there are many differents ways to do it. This way is just a simpler way for me.&lt;/p&gt;
+
+&lt;h3 id=&quot;init-repository-on-the-local-machine&quot;&gt;Init repository on the local machine&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create a repository on Github&lt;/p&gt;
+
+    &lt;p&gt;I don’t use the &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; via the command line, but I create directely it on github.&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png&quot; alt=&quot;create new repo&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitingore&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt;.
+I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmtakes&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;After we clone the reposiroty that we just created with &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; on local machine.&lt;/li&gt;
+  &lt;li&gt;Now, we will clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;mmistakes repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Enter in the directory of mmistakes, remove &lt;strong&gt;.git&lt;/strong&gt;, &lt;strong&gt;LICENSE&lt;/strong&gt;, and &lt;strong&gt;README&lt;/strong&gt; file&lt;/li&gt;
+  &lt;li&gt;Then we move all files in mmistakes directory to our local repository: &lt;strong&gt;demo-jekyll-mmistakes&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;First, let’s make sure that your development environment is ready.&lt;/p&gt;
+
+&lt;p&gt;-,Make sure you installed &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/&quot;&gt;Ruby gems&lt;/a&gt;, and &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; on your computer.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You’ll be using your own text editor and terminal app.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;When your development is ready, you can try run server to look your page how it is.&lt;/p&gt;
+
+    &lt;p&gt;Use &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install all gems dependencies, and &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt; to run server. The page will be running on the &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;The result on your browser:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;First page&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;We have nothing to show on the page now, because, we need to customize the mmistake theme and create a new post.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;customize-theme&quot;&gt;Customize theme&lt;/h3&gt;
+
+&lt;h1 id=&quot;extra--topics&quot;&gt;Extra  topics&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Using your domain name&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&quot;&gt;Managing a custom domain for your GitHub Pages site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Web Development" />
+      
+
+      
+        <summary type="html">In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
