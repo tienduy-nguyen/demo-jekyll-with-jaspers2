@@ -4,7 +4,6 @@ cache: bundler
 rvm:
   - 2.7.1
 before_install:
-  - gem update --system
   - gem install bundler
   - gem install rake
 
@@ -21,7 +20,7 @@ script: bundle exec rake site:deploy --quiet #--trace
 # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
 env:
   global:
-    secure: 'iNRXZz7BlYIXnjNed+9H5DZqixjpqcECl2hpC+nNNJ23cMBSYXPQKlLOh+eplFXoVqQ8BZu2j6/Ni+qXcJ7a6sEI9EWZH+s5SQQZpd+2d50GtxbVFl5zXqT8BpuVVRSKnYrDLKEG+Bv6tDcl0ND8yyy4KZ3EvFbcjspUpJ8m90F2hdOKggtJ/2Rl09ulDGnq5086CwbuUNg+ZIUhQgMUVAvOVM+sF+Fzgxhz5Qw00dOjb+TSZl4dDc01l4U8FolQeMAYbcTWu3mT9s38RqtSe2Fa+WNqeMs9TTeqnP6/uP4zlHJVBuwwF+2b1cEJMTcy6JPcnfKMKfIamBjnh+BMZpZ0WRlYYtpU6vOYlOz7RVrSjquvI2YO5FwS5OVM8mlmx2liJnWFRLdEjgf7xpJFK7R/VKYFNaTSykjndryQUw0iPrQ6NZWusPSaLP7FmLYQP9K6cG5p83UAbGWSdrO9nyQ5Z4nsJrIhDsaY+YdINJ4RxFLvwC8CFqRCJE9+HEtSEhltLx8PtPQx2KbWPJ8PoGBPNOSwiL0Vt1bP7bgs8YsXAfvlaOqdt6ttlGTqvYplUa1aknb/S6jyik0ihVfqpkMApK55HsK/f0L/ClHp426f60DlWa07UEHDTWSer/JZFZQ7MC7a6Vx49eThDTYw93D0XIW2zGRZBIc8Mk4mgKg='
+    secure: 'W/HbAoeeSyc+H+84SMOY5hAis1n2SmgxEBC4SnDcNfPTdnVBDsp8jbPRnsBRqqrTSKo4jQR6ycQpAOOyKFA/JavWCnR+Q3k3SdrQW8B5bpDh8PewNNffzkYXeipWERB2u2NHmXOa2EwxOVbQTlvGa6UUnaqC8YTGx7DH1BzMd/WLzObpV2oiZ0pz0hOGJjoPPCMK2jzn9l9JWO32ClbgGBFDZsuuHKkfbcmIoxuq4e3cd7xPdMjpCYHekWaiDvgqLoSMzvuGv/niyRh3UN2Vz6PeIwOyIe0+RCEuaneVsGl31asIUF48HxNcRiOWjDM/sjLcStxb7zzzcSpn0gzcAdrIQbvZO/R0sxD0D43dD7TDumnTYzCKF77QMhSfPJqSRaXlvxa/rEF9YdBAJ3F03qNKdGxIKdaKT885b36wJ3DS6eyzlDtCqK9TkEv5J+wQWvfVSmz4AFA/hX/mTZnIuHrMUIdjbYQwyxJtB6DzvbiScr5jAF5xpzSNs2NPYgP2AmuyS/004ErX7btTyd7JikKQZTiGXkZVAXHd+VzFsTBMG++fAsx32ObGzGFmBKSFpkYaEScgAgp2xVvNgLrdbMNya4SGrmGTEtgMrmqLPuEIvo/J/WznzDvs0V/khUwdPOD4X5Bb9g28oO6pXwohjgY8OWYm8WJ+QWh7F2HgYMY='
 branches:
   only:
     - master
