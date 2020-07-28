@@ -16,24 +16,13 @@
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/syntax.css" />
-  <!-- highlight.js -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
   <style>
     .hljs {
       background: none;
     }
   </style>
 
-  <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
-    <![endif]-->
 
   <!-- This tag outputs SEO meta+structured data and other important settings -->
   {% include head.html %}
@@ -98,15 +87,6 @@
   </div>
   {% endif %}
 
-  <!-- highlight.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('pre code').each(function (i, block) {
-        hljs.highlightBlock(block);
-      });
-    });
-  </script>
 
   <!-- jQuery + Fitvids, which makes all video embeds responsive -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -142,8 +122,6 @@
   {% include page-scripts.html %}
   {% endif %}
 
-  <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-  <!-- ghost_foot -->
 
 </body>
 
