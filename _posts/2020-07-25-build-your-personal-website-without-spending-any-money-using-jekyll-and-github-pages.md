@@ -3,9 +3,9 @@ layout: post
 current: post
 cover:  assets/images/post-covers/free-website.jpeg
 navigation: True
-title: Build your personal website without spending any money using Jekyll & Github pages
+title: Build your personal website without spending any money using Jekyll and Github pages
 date: 2020-07-25 10:00:00
-tags: algorithms
+tags:  [Web Development]
 class: post-template
 subclass: 'post'
 author: tienduy
@@ -21,6 +21,7 @@ In this article, we'll walk through how to setup a jekyll powered blog using the
 
 We have a lot of static site generator, check out on [staticgen.com](https://www.staticgen.com/)
 ![Static Site Generator](../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png)
+
 ## Jekyll
 
 ### Why I choose Jekyll

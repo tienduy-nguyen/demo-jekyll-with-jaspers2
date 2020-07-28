@@ -6,6 +6,10 @@ me:
   name: me
   description: False
   cover: assets/images/post-covers/freedom.jpeg
+web-development:
+  name: web-development
+  description: False
+  cover: assets/images/post-covers/freedom.jpeg
 algorithms:
   name: algorithms
   description: False
