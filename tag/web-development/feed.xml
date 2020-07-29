@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="http://localhost:4000/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T15:36:28+02:00</updated>
-  <id>http://localhost:4000/tag/web-development/feed.xml</id>
+  <link href="/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-07-29T10:55:01+02:00</updated>
+  <id>/tag/web-development/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Build your personal website without spending any money using Jekyll and Github pages</title>
-      <link href="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
+      <link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
       <published>2020-07-25T12:00:00+02:00</published>
       <updated>2020-07-25T12:00:00+02:00</updated>
-      <id>http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
-      <content type="html" xml:base="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+      <id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
 &lt;h1 id=&quot;static-site-generator&quot;&gt;STATIC SITE GENERATOR&lt;/h1&gt;
 &lt;ul&gt;
@@ -47,7 +47,7 @@
   &lt;li&gt;Theme available, fast build, fast maintaince&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We have a lot of static site generator, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
+&lt;p&gt;We have a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
 &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;Static Site Generator&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
@@ -193,7 +193,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
       
 
       
-        <summary type="html">In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
+        <summary type="html">In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
       
 
       

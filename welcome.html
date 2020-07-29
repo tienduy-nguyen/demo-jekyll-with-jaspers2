@@ -19,29 +19,18 @@
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
-  <!-- highlight.js -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
   <style>
     .hljs {
       background: none;
     }
   </style>
 
-  <!--[if IE]>
-        <style>
-            p, ol, ul{
-                width: 100%;
-            }
-            blockquote{
-                width: 100%;
-            }
-        </style>
-    <![endif]-->
 
   <!-- This tag outputs SEO meta+structured data and other important settings -->
   <meta name="description" content="Learning is an endless journey" />
-    <link rel="shortcut icon" href="http://localhost:4000/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="http://localhost:4000/welcome" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/welcome" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
@@ -49,8 +38,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Getting started" />
     <meta property="og:description" content="Hey! Welcome to my blog, it’s great to have you :) About me and my blog I’am Tien Duy, an Civil Engineering &amp; BIM engineer, working in Paris, France. I said “BIM engineer”, what it is? BIM full word, is Building Information Modeling. It is an intellingent 3D model-based process" />
-    <meta property="og:url" content="http://localhost:4000/welcome" />
-    <meta property="og:image" content="http://localhost:4000/assets/images/post-covers/begin.jpeg" />
+    <meta property="og:url" content="/welcome" />
+    <meta property="og:image" content="/assets/images/post-covers/begin.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta property="article:author" content="https://www.facebook.com/" />
     <meta property="article:published_time" content="2020-07-15T12:00:00+02:00" />
@@ -59,8 +48,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Getting started" />
     <meta name="twitter:description" content="Hey! Welcome to my blog, it’s great to have you :) About me and my blog I’am Tien Duy, an Civil Engineering &amp; BIM engineer, working in Paris, France. I said “BIM engineer”, what it is? BIM full word, is Building Information Modeling. It is an intellingent 3D model-based process" />
-    <meta name="twitter:url" content="http://localhost:4000/" />
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/post-covers/begin.jpeg" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/post-covers/begin.jpeg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Adev42" />
     <meta name="twitter:label2" content="Filed under" />
@@ -77,18 +66,18 @@
     "publisher": {
         "@type": "Organization",
         "name": "Adev42",
-        "logo": "http://localhost:4000/assets/images/blog-icon-200.png"
+        "logo": "/assets/images/blog-icon-200.png"
     },
-    "url": "http://localhost:4000/welcome",
+    "url": "/welcome",
     "image": {
         "@type": "ImageObject",
-        "url": "http://localhost:4000/assets/images/post-covers/begin.jpeg",
+        "url": "/assets/images/post-covers/begin.jpeg",
         "width": 2000,
         "height": 666
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "http://localhost:4000/welcome"
+        "@id": "/welcome"
     },
     "description": "Hey! Welcome to my blog, it’s great to have you :) About me and my blog I’am Tien Duy, an Civil Engineering &amp; BIM engineer, working in Paris, France. I said “BIM engineer”, what it is? BIM full word, is Building Information Modeling. It is an intellingent 3D model-based process"
 }
@@ -124,7 +113,7 @@ into the {body} of the default.hbs template -->
   <div class="site-nav-left">
     
     
-    <a class="site-nav-logo" href="http://localhost:4000/"><img src="/assets/images/blog-icon-200.png" alt="Adev42"></a>
+    <a class="site-nav-logo" href="/"><img src="/assets/images/blog-icon-200.png" alt="Adev42"></a>
     
     
     
@@ -135,9 +124,6 @@ into the {body} of the default.hbs template -->
   </li>
   <li class="nav-getting-started" role="menuitem">
 <a href="/tag/web-development/">Web Development</a>
-  </li>
-  <li class="nav-getting-started" role="menuitem">
-<a href="/tag/programming/">Programming</a>
   </li>
   <li class="nav-getting-started" role="menuitem">
 <a href="/tag/algorithms/">Algorithms</a>
@@ -331,7 +317,7 @@ The blog helps me share my perspectives and experiences in the technologies that
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
 <div class="floating-header">
     <div class="floating-header-logo">
-        <a href="http://localhost:4000/">
+        <a href="/">
             
                 <img src="/assets/images/favicon.png" alt="Adev42 icon">
             
@@ -373,7 +359,7 @@ The blog helps me share my perspectives and experiences in the technologies that
     <!-- The footer at the very bottom of the screen -->
     <footer class="site-footer outer">
       <div class="site-footer-content inner">
-        <section class="copyright"><a href="http://localhost:4000/">Adev42</a> ©
+        <section class="copyright"><a href="/">Adev42</a> ©
           2020</section>
         <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a></section>
         <nav class="site-footer-nav">
@@ -390,15 +376,6 @@ The blog helps me share my perspectives and experiences in the technologies that
   <!-- The big email subscribe modal content -->
   
 
-  <!-- highlight.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('pre code').each(function (i, block) {
-        hljs.highlightBlock(block);
-      });
-    });
-  </script>
 
   <!-- jQuery + Fitvids, which makes all video embeds responsive -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
@@ -500,8 +477,6 @@ $(document).ready(function () {
 
   
 
-  <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
-  <!-- ghost_foot -->
 
 </body>
 

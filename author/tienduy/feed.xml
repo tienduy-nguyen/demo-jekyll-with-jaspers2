@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="http://localhost:4000/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-07-28T15:36:28+02:00</updated>
-  <id>http://localhost:4000/author/tienduy/feed.xml</id>
+  <link href="/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-07-29T10:55:01+02:00</updated>
+  <id>/author/tienduy/feed.xml</id>
 
   
   
@@ -32,12 +32,218 @@
 
   
     <entry>
+      <title type="html">Rails 5 or Rails 6 ?</title>
+      <link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" />
+      <published>2020-07-29T10:00:00+02:00</published>
+      <updated>2020-07-29T10:00:00+02:00</updated>
+      <id>/rails-5-or-rails-6</id>
+      <content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+
+&lt;p&gt;At &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;Why we don’t install directely the version rails 6.0?&lt;/p&gt;
+
+&lt;p&gt;And he said: “On is &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I don’t understand so much, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
+
+&lt;p&gt;I hear that: Rails 5 is still just fine
+Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you’re still OK on Rails 5 (especially 5.2 or higher)&lt;/p&gt;
+
+&lt;p&gt;Now We will see 4 amazings features of rails 6.&lt;/p&gt;
+
+&lt;h2 id=&quot;parralled-testing&quot;&gt;Parralled Testing&lt;/h2&gt;
+
+&lt;p&gt;Test’s performance is finally going to be improved (a lot!). Now you can use cores to your advantage of running big tests much faster. Each testing worker runs in its own thread - it should be reflected in the CPU monitor. Thanks to Eileen Uchitelle and Aaron Patterson, parallel-testing will land in the upcoming, final version of Rails framework.&lt;/p&gt;
+
+&lt;p&gt;As you probably already know, the way of implementing tests is very important. We try to implement as many suitable tests as we can. It’s great news for us as more tests will no longer have that much of an impact on the execution time. (Stay tuned for our guide on how to write great tests in Rails!)&lt;/p&gt;
+
+&lt;p&gt;“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in &lt;code class=&quot;highlighter-rouge&quot;&gt;rails_helper.rb&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;native-webpacker-support&quot;&gt;Native Webpacker Support&lt;/h2&gt;
+
+&lt;p&gt;Webpacker was introduced a while back with the 5.1 version of Ruby on Rails. It makes using JavaScript pre-processor easier.&lt;/p&gt;
+
+&lt;p&gt;We usually use it for JavaScript code, it works really well but it can also be used for CSS, images, fonts and assets as well. From now on, Sprockets is being replaced and Webpacker is the default JavaScript bundler for Rails through the new app/javascript directory.&lt;/p&gt;
+
+&lt;p&gt;Currently, in modern applications, using traditional rails views is not so often anymore. User Interfaces are very interactive, there is a lot of dynamic elements which have to respond really fast. Now, the application setup with Rails on the backend and React/Vue on the frontend will be an easy-peasy pleasure :)&lt;/p&gt;
+
+&lt;h2 id=&quot;multi-database-support&quot;&gt;Multi Database Support&lt;/h2&gt;
+
+&lt;p&gt;Another great feature of upcoming Rails 6.0 is the support for multiple simultaneous database connections. It’s a new, simple API for making that happen without the need to reach deeply into Active Record.&lt;/p&gt;
+
+&lt;p&gt;Official RoR blog suggests using two databases to for example split the workflow between two replica databases for a performance boost or records segmentation into databases for scaling. We can definitely see multiple database support as an improvement in building microservices architecture.&lt;/p&gt;
+
+&lt;p&gt;One of the real life examples where this feature could be really useful is our in-house project - Artinfo. In this project, there are two database connections, one for old users and one for those who just signed up. Now with Rails 6, this implementation would be much easier.&lt;/p&gt;
+
+&lt;h2 id=&quot;zeitwerk&quot;&gt;Zeitwerk&lt;/h2&gt;
+
+&lt;p&gt;With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.&lt;/p&gt;
+
+&lt;p&gt;Still curious for more? You can find more new stuff over at &lt;a href=&quot;https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/&quot;&gt;rubyonrails.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;so-to-reponse-the-question-of-article&quot;&gt;So to reponse the question of article?&lt;/h3&gt;
+
+&lt;p&gt;I don’t know yet. All the new features of rails 6 is still so much compliated for me. At this moment, I will use the rails 5 for the project training and I will discover more about how to use the features of rails 6 and apply it in the new projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;But other developer said:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are starting a new Rails project today - I would definitely start with Rails 6. It’s officially supported now - and if you look at some of the CHANGELOGS above, you’ll see that many of the subsystems have been stable for many months.&lt;/p&gt;
+
+&lt;p&gt;If you have a project on Rails 5.2 or higher - then you have some time before you have to do anything. If you’re not interested in any of the major announced updates then you’ll still be getting security updates for awhile.&lt;/p&gt;
+
+&lt;p&gt;You could still try running rails app:update though, just to see how much has changed for you particular app - which will give you an idea of how much work it will be when you do decide to upgrade.&lt;/p&gt;
+
+&lt;p&gt;If you have a project on Rails 5.0 or lower - then I would definitely consider upgrading sooner rather than later. It will take more work to upgrade these older projects (especially Rails 4 and below) - but security updates are already stopped for Rails &amp;lt; 4.2 - so now (right after a major release) is a good time to update (so that you don’t have to do it again for awhile).&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;p&gt;Check out on &lt;a href=&quot;https://dev.to/chrisachard/rails-6-released-what-does-that-mean-for-you-3591&quot;&gt;dev.to&lt;/a&gt; and &lt;a href=&quot;https://naturaily.com/blog/4-features-ruby-on-rails-6&quot;&gt;naturaily.com&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ruby" />
+      
+
+      
+        <summary type="html">What version of rails you use in your projects, today?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">How to switch to another Rails version</title>
+      <link href="/how-to-switch-to-another-rails-version" rel="alternate" type="text/html" title="How to switch to another Rails version" />
+      <published>2020-07-28T12:00:00+02:00</published>
+      <updated>2020-07-28T12:00:00+02:00</updated>
+      <id>/how-to-switch-to-another-rails-version</id>
+      <content type="html" xml:base="/how-to-switch-to-another-rails-version">&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
+
+&lt;h2 id=&quot;installation-rails&quot;&gt;Installation rails&lt;/h2&gt;
+
+&lt;p&gt;Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and I will use it for this tuto.&lt;/p&gt;
+
+&lt;p&gt;If you are using another ruby package manager like &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt;, you should look at &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and its advantage. &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is more lighter and faster than the &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is very recommended by a a lot of developers.&lt;/p&gt;
+
+&lt;p&gt;There is an article on &lt;a href=&quot;https://dev.to/&quot;&gt;dev.to&lt;/a&gt; help you understand more clearly: &lt;a href=&quot;https://dev.to/krtb/why-and-how-i-replaced-rvm-with-rbenv-23ad&quot;&gt;Why and How I Replaced RVM with RBENV&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ok, now go on our article.&lt;/p&gt;
+
+&lt;p&gt;To install whatever version(s) of rails you want:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install rails -v 6.0.3.2&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To know all rails versions released, you check out on &lt;a href=&quot;https://rubygems.org/gems/rails/versions&quot;&gt;all rails versions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You can also do it with your terminal with the command line &lt;code class=&quot;highlighter-rouge&quot;&gt;gem list rails --remote --all | grep &quot;^rails &quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I you want to install rails on another version of ruby, you need to switch version of ruby and re-install version of rails.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv install 2.5.1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv global 2.5.1&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check list gems to see if you installed succesfullly:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem list --local&lt;/code&gt; # result: rails(5.2.4.2,5.2.3)&lt;/p&gt;
+
+&lt;p&gt;now you tap &lt;code class=&quot;highlighter-rouge&quot;&gt;rails version&lt;/code&gt; to see the current version of rails using, but it shows only&lt;/p&gt;
+
+&lt;p&gt;When you install multi version of rails on your machine, it will always take the lastest version of rails. So the question is how can create a new project rails with the version wanted?&lt;/p&gt;
+
+&lt;h2 id=&quot;create-a-project-ruby-on-rails-with-a-specific-version-of-rails&quot;&gt;Create a project Ruby on Rails with a specific version of rails&lt;/h2&gt;
+
+&lt;p&gt;I founded two ways to solve it:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Using ruby package manager(rbenv)&lt;/li&gt;
+  &lt;li&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;gem bundler&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;using-ruby-package-manager-rbenv&quot;&gt;Using ruby package manager (rbenv)&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rbenv &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rails _&amp;lt;version_rails&amp;gt;_ new my_project
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;for example:&lt;/p&gt;
+
+&lt;p&gt;if i want to create a project with rails 5.2.4.2&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv exec rails _5.2.4.2_ new my_project&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You can check the version of rails in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; when the new app has been created:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.7.1'&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rails'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'~&amp;gt; 5.2.4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;gt;= 5.2.4.2'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#version of rails using to create the project&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;using-bundler&quot;&gt;Using bundler&lt;/h3&gt;
+
+&lt;p&gt;The second way is using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundler&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You just do like another gem dependencies. That means you will specify version of rails in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;for example:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rails'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'6.0.3'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Very simple, isn’t it?&lt;/p&gt;
+
+&lt;p&gt;Make sure you don’t forget &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install all the dependencies from your Gemfile.&lt;/p&gt;
+
+&lt;p&gt;And then, what we need to do, just finish with:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rails new new_app&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So that is two ways I used. I hope it will be helpful for you.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ruby" />
+      
+
+      
+        <summary type="html">When you want to use multiple versions of rails on your computer, how to switch between them?</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Build your personal website without spending any money using Jekyll and Github pages</title>
-      <link href="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
+      <link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
       <published>2020-07-25T12:00:00+02:00</published>
       <updated>2020-07-25T12:00:00+02:00</updated>
-      <id>http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
-      <content type="html" xml:base="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+      <id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
 &lt;h1 id=&quot;static-site-generator&quot;&gt;STATIC SITE GENERATOR&lt;/h1&gt;
 &lt;ul&gt;
@@ -47,7 +253,7 @@
   &lt;li&gt;Theme available, fast build, fast maintaince&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We have a lot of static site generator, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
+&lt;p&gt;We have a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
 &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;Static Site Generator&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
@@ -193,7 +399,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
       
 
       
-        <summary type="html">In this article, we’ll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
+        <summary type="html">In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
       
 
       
@@ -202,11 +408,11 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 01</title>
-      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
+      <link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01</id>
-      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>/ruby-codling-challenges-with-the-hacking-project-01</id>
+      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -694,9 +900,9 @@ Should return: 160 (the only even number)
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;I hope you like this serie. The next challenges will be so much more instesting.&lt;/strong&gt;&lt;/p&gt;</content>
@@ -729,11 +935,11 @@ Should return: 160 (the only even number)
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 02</title>
-      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
+      <link href="/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02</id>
-      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>/ruby-codling-challenges-with-the-hacking-project-02</id>
+      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -888,9 +1094,9 @@ I need to learn more about using the block code of the gsub like them.&lt;/p&gt;
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;I hope it make more sense or at least it is helpful for you.&lt;/strong&gt;&lt;/p&gt;</content>
@@ -923,11 +1129,11 @@ I need to learn more about using the block code of the gsub like them.&lt;/p&gt;
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 03</title>
-      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
+      <link href="/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03</id>
-      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>/ruby-codling-challenges-with-the-hacking-project-03</id>
+      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -1215,9 +1421,9 @@ With these solutions, I can learn more about a method “.succ” and “.next�
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/blog/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content>
 
       
@@ -1248,11 +1454,11 @@ With these solutions, I can learn more about a method “.succ” and “.next�
   
     <entry>
       <title type="html">Getting started</title>
-      <link href="http://localhost:4000/welcome" rel="alternate" type="text/html" title="Getting started" />
+      <link href="/welcome" rel="alternate" type="text/html" title="Getting started" />
       <published>2020-07-15T12:00:00+02:00</published>
       <updated>2020-07-15T12:00:00+02:00</updated>
-      <id>http://localhost:4000/welcome</id>
-      <content type="html" xml:base="http://localhost:4000/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
+      <id>/welcome</id>
+      <content type="html" xml:base="/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
 
 &lt;h2 id=&quot;about-me-and-my-blog&quot;&gt;About me and my blog&lt;/h2&gt;
 

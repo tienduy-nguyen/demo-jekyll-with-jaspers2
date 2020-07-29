@@ -12,7 +12,7 @@
 
 
 
-  <title>About</title>
+  <title>Ruby - Adev42</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
@@ -30,35 +30,28 @@
   <!-- This tag outputs SEO meta+structured data and other important settings -->
   <meta name="description" content="Learning is an endless journey" />
     <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
-    <link rel="canonical" href="/about/" />
+    <link rel="canonical" href="/tag/ruby/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Adev42" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="About" />
-    <meta property="og:description" content="Feel free to contact me if you have any questions: `tienduy.nguyen.dev@gmail.com`
-
-This website uses the free images from [unsplash.com](https://unsplash.com/)" />
-    <meta property="og:url" content="/about/" />
+    <meta property="og:title" content="Ruby - Adev42" />
+    <meta property="og:description" content="Learning is an endless journey" />
+    <meta property="og:url" content="/tag/ruby/" />
     <meta property="og:image" content="/assets/images/blog-cover3.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
-    <meta property="article:author" content="https://www.facebook.com/" />
-    <meta property="article:published_time" content="" />
-    <meta property="article:modified_time" content="" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About" />
-    <meta name="twitter:description" content="Feel free to contact me if you have any questions: `tienduy.nguyen.dev@gmail.com`
-
-This website uses the free images from [unsplash.com](https://unsplash.com/)" />
+    <meta name="twitter:title" content="Ruby - Adev42" />
+    <meta name="twitter:description" content="Learning is an endless journey" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/blog-cover3.jpeg" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Adev42" />
     <meta name="twitter:site" content="@tienduy_nguyen" />
     <meta name="twitter:creator" content="@tienduy_nguyen" />
-    <meta property="og:image:width" content="1400" />
-    <meta property="og:image:height" content="933" />
+    <meta property="og:image:width" content="2000" />
+    <meta property="og:image:height" content="666" />
 
     <script type="application/ld+json">
 {
@@ -69,7 +62,7 @@ This website uses the free images from [unsplash.com](https://unsplash.com/)" />
         "name": "Adev42",
         "logo": "/assets/images/blog-icon-200.png"
     },
-    "url": "/about/",
+    "url": "/tag/ruby/",
     "image": {
         "@type": "ImageObject",
         "url": "/assets/images/blog-cover3.jpeg",
@@ -78,11 +71,9 @@ This website uses the free images from [unsplash.com](https://unsplash.com/)" />
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/about/"
+        "@id": "/tag/ruby/"
     },
-    "description": "Feel free to contact me if you have any questions: `tienduy.nguyen.dev@gmail.com`
-
-This website uses the free images from [unsplash.com](https://unsplash.com/)"
+    "description": "Learning is an endless journey"
 }
     </script>
 
@@ -95,22 +86,26 @@ This website uses the free images from [unsplash.com](https://unsplash.com/)"
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="About" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Tag Page" href="/feed.xml" />
 
 
 </head>
 
 <body
-  class="page-template">
+  class="tag-template">
 
   <div class="site-wrapper">
     <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-    <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+    <!-- default -->
+<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
 
 <!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer">
+<!-- #tag -->
+<!-- dynamically loading backgrounds for tags,  descriptions and page titles -->
+
+
+
+<header class="site-header outer " style="background-image: url(/assets/images/post-covers/red-sky.jpeg) ">
     <div class="inner">
         <nav class="site-nav">
   <div class="site-nav-left">
@@ -152,45 +147,126 @@ into the {body} of the default.hbs template -->
     
   </div>
 </nav>
+        <div class="site-header-content">
+            <h1 class="site-title">Ruby</h1>
+            <h2 class="site-description">
+                
+    			    A collection of 2 posts
+                
+            </h2>
+        </div>
     </div>
 </header>
+<!-- tag -->
 
-<!-- Everything inside the #post tags pulls data from the post -->
-<!-- #post -->
-
+<!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
     <div class="inner">
-
-        <article class="post-full  post page no-image">
-
-            <header class="post-full-header">
-                <h1 class="post-full-title">About</h1>
-            </header>
-
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
             
 
-            <section class="post-full-content">
-                <p>Feel free to contact me if you have any questions: <code class="highlighter-rouge">tienduy.nguyen.dev@gmail.com</code></p>
 
-<p>This website uses the free images from <a href="https://unsplash.com/">unsplash.com</a></p>
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/rails-5-or-rails-6">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/rails.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/rails-5-or-rails-6">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ruby</span>
+                            
+                        
+                    
 
-            </section>
+                    <h2 class="post-card-title">Rails 5 or Rails 6 ?</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>What version of rails you use in your projects, today?
 
-        </article>
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tienduy/">TienDuy</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      4 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
 
+    <article class="post-card tag-template">
+        
+            <a class="post-card-image-link" href="/how-to-switch-to-another-rails-version">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/multi-hats.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/how-to-switch-to-another-rails-version">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Ruby</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">How to switch to another Rails version</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>When you want to use multiple versions of rails on your computer, how to switch between them?
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tienduy/">TienDuy</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+
+        </div>
     </div>
 </main>
-
-<!-- /post -->
-
-<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
-<script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
 
 
     <!-- Previous/next page links - displayed on every page -->
@@ -230,7 +306,7 @@ $(function() {
   <!-- Paginator increased to "infinit" in _config.yml -->
   <!-- if paginator.posts  -->
   <!-- <script>
-        var maxPages = parseInt('');
+        var maxPages = parseInt('1');
     </script>
     <script src="/assets/js/infinitescroll.js"></script> -->
   <!-- /endif -->
@@ -253,14 +329,6 @@ $(function() {
 
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
-  
-  <script>
-$(function() {
-    var $postContent = $(".post-full-content");
-    $postContent.fitVids();
-});
-</script>
-
   
 
 
