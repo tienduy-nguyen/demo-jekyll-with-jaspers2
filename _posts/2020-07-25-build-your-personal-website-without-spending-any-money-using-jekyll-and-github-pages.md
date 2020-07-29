@@ -16,7 +16,7 @@ In this article, we'll walkthrough how to setup a jekyll powered blog using the 
 It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.
 
 It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose ...But for my case, I need a website to:
-- Showcase my projects,
+- Showcase my projects
 - Blog about my experiences, my knowleges in the programming and my other interests
 - Share informations about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.
 - Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.
@@ -418,7 +418,7 @@ Here is some example of our pages when we added already the posts:
 
 
 As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:
-- Paginations, next page
+- Paginations, next page, previous page
 - Menu of header in each post
 - Custom type header of post with image, video, overlay image
 - Group articles by categories and tags, category archives, tag archives
@@ -506,11 +506,10 @@ So that is a demo I want to show you. Now you can start to write your first arti
 
 
 # Reference
-
-- My repo demo github []
-
+- My article on medium [Build your personal website without spending any money](https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08)
+- My repo demo github [demo-jekyll-mmistakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)
 - Jekyll home page of Jekyll [https://jekyllrb.com/](https://jekyllrb.com/)
-- Documentation of minimal mistake theme [[minimal mistake theme](https://mmistakes.github.io/minimal-mistakes/)](https://mmistakes.github.io/minimal-mistakes/)
+- Documentation of minimal mistake theme [https://mmistakes.github.io/minimal-mistakes/](https://mmistakes.github.io/minimal-mistakes/)
 - Interesting blog about jekyll [https://blog.webjeda.com/](https://blog.webjeda.com/)
 - Using github pages [https://pages.github.com/](https://pages.github.com/)
 
