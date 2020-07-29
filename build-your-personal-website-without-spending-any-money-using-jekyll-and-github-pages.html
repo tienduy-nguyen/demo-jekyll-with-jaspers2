@@ -37,7 +37,7 @@
     <meta property="og:site_name" content="Adev42" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Build your personal website without spending any money using Jekyll and Github pages" />
-    <meta property="og:description" content="In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. STATIC SITE GENERATOR JAM stack Fast, security, .. Some famous static site generator Theme available, fast build, fast maintaince We have a lot of static site generators, check out on staticgen.com Jekyll Why" />
+    <meta property="og:description" content="In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we" />
     <meta property="og:url" content="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" />
     <meta property="og:image" content="/assets/images/post-covers/free-website.jpeg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -47,7 +47,7 @@
     <meta property="article:tag" content="Web Development" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Build your personal website without spending any money using Jekyll and Github pages" />
-    <meta name="twitter:description" content="In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. STATIC SITE GENERATOR JAM stack Fast, security, .. Some famous static site generator Theme available, fast build, fast maintaince We have a lot of static site generators, check out on staticgen.com Jekyll Why" />
+    <meta name="twitter:description" content="In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/post-covers/free-website.jpeg" />
     <meta name="twitter:label1" content="Written by" />
@@ -79,7 +79,7 @@
         "@type": "WebPage",
         "@id": "/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages"
     },
-    "description": "In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. STATIC SITE GENERATOR JAM stack Fast, security, .. Some famous static site generator Theme available, fast build, fast maintaince We have a lot of static site generators, check out on staticgen.com Jekyll Why"
+    "description": "In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme. It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we"
 }
     </script>
 
@@ -184,77 +184,90 @@ into the {body} of the default.hbs template -->
                 <div class="kg-card-markdown">
                     <p>In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.</p>
 
-<h1 id="static-site-generator">STATIC SITE GENERATOR</h1>
+<p>It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.</p>
+
+<p>It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …But for my case, I need a website to:</p>
 <ul>
-  <li>JAM stack</li>
-  <li>Fast, security, ..</li>
-  <li>Some famous static site generator</li>
-  <li>Theme available, fast build, fast maintaince</li>
+  <li>Showcase my projects,</li>
+  <li>Blog about my experiences, my knowleges in the programming and my other interests</li>
+  <li>Share informations about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.</li>
+  <li>Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.</li>
 </ul>
 
-<p>We have a lot of static site generators, check out on <a href="https://www.staticgen.com/">staticgen.com</a>
-<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="Static Site Generator" /></p>
+<p>In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a alot of time to complete it. That does not include the time I need to customize the website for each post.</p>
+
+<p>I search the solution on the internet, and I found the awesome technology “Static Site Generator”.</p>
+
+<h1 id="i-static-site-generator">I. STATIC SITE GENERATOR</h1>
+
+<p>You may be hear already about the static site generator. They aren’t new. They were what we used to build the web before dynamic CMSs (WordPress, Drupal, etc.) took over.</p>
+
+<p>What’s new, then? Modern tools—like static site generators—came out over the last years and expanded the capabilities of static sites.</p>
+
+<p>Static site generotor is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.</p>
+
+<p>With the growth of the <a href="https://jamstack.org/">JAMstack</a> and its community, Static Site Generators are becoming more and more popular.</p>
+
+<p>So why static generator?</p>
+<ul>
+  <li>Fast</li>
+  <li>Security</li>
+  <li>Development work flow: no need to create the backend serve. This makes it incredibly easy to run your site locally, automate builds, switch to a different host, etc.</li>
+  <li>Alot of themes available, fast build, easy for maintaince. That’s true. You even build a beautiful website after some minutes.</li>
+</ul>
+
+<p>There a lot of static site generators, check out on <a href="https://www.staticgen.com/">staticgen.com</a></p>
+
+<div align="center">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="STG" />
+</div>
+
+<p>In this article I will present one of them : Jekyll</p>
 
 <h2 id="jekyll">Jekyll</h2>
 
-<h3 id="why-i-choose-jekyll">Why I choose Jekyll</h3>
-<ul>
-  <li>Ruby developer</li>
-  <li>Compatible with Github pages</li>
-  <li>We will you Jekyll and the github pages to create our blog</li>
-</ul>
+<p>Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.</p>
 
-<h3 id="infomations-of-jekyll">Infomations of Jekyll</h3>
+<p>Jekyll is built with Ruby programming languague. I’am now learning the web developement with Ruby &amp; Ruby on Rails at <a href="https://www.thehackingproject.org/">The Hacking Project</a>. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.</p>
 
-<p>Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll is also the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.</p>
+<p>So let’s see how I create my personal blog. <strong>And don’t forget that will be totally free.</strong></p>
 
-<p>It’s not always clear why we need need a personal website. But here’s the truth: we are a product (a brand) with unique skills to offer to prospective employees and customers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.</p>
-
-<p>I need a website to:</p>
-
-<p>Showcase my projects,
-Blog about programming and my other interests, and
-Share information about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.</p>
-
-<p>Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.</p>
-
-<p>One day I watched a talk on YouTube by a content management system (CMS) evangelist. He discussed the benefits of using a CMS to generate a website composed of content from markdown and text files. This promotes separation of content from code and better security and speed at which content is delivered. Some CMS are either git-backed or talk to an API.</p>
-
-<p>I researched different options for static site generators. My criteria are:</p>
-
-<p>Speed - This includes speed of development (getting a website up and running quickly), and the performance of the website at delivering content.
-Popularity - A very important but often overlooked aspect of choosing a technology is how many people use it. When a technology is popular, you’d be able to get more community support (e.g. StackOverflow, tutorials, sample projects) and the creators of the tools have an incentive to continue to support and improve upon their product.
-Customization - This is a fringe criterion. Style and uniqueness of the website are not super important for me. I want my website to be a place to share information about me and having too unique of a website could make it more difficult for visitors of the website to find information. Still, it’d be nice if I have the option to choose from different layouts for my website and some customization like fonts.</p>
-
-<p>Jekyll: Built with Ruby and uses Liquid templates. Very popular, created by the founder of Github, and offers free hosting on Github.</p>
-
-<h1 id="installation--build">INSTALLATION &amp; BUILD</h1>
+<h1 id="ii-installation--build">II. INSTALLATION &amp; BUILD</h1>
 
 <p>There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:</p>
 <ul>
-  <li>Install Jekyll locally via the command line, create a new boilerplate website using <code class="highlighter-rouge">jekyll new</code>, build it locally with <code class="highlighter-rouge">jekyll build</code>, then serve it. Make sure you installed jekyll on your machine <code class="highlighter-rouge">gem install bundler jekyll</code>. For the full installation, you can check out on the official guide <a href="https://jekyllrb.com/"><strong>jekyllrb.com</strong></a>.</li>
-  <li>Take a Jekyll theme and clone it to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it. (You can also fork a starting point and make changes it)</li>
+  <li>
+    <p>Install Jekyll locally via the command line, create a new boilerplate website using <code class="highlighter-rouge">jekyll new</code>, build it locally with <code class="highlighter-rouge">jekyll build</code>, then serve it.</p>
+
+    <p>Make sure you installed jekyll on your machine <code class="highlighter-rouge">gem install bundler jekyll</code>. For the full installation, you can check out on the official guide <a href="https://jekyllrb.com/"><strong>jekyllrb.com</strong></a>.</p>
+  </li>
+  <li>
+    <p>Take a Jekyll theme and clone it to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it. (You can also fork a starting point and make changes it)</p>
+  </li>
 </ul>
 
 <p>We’ll get start with the easiest option: Take a available theme of Jekyll. This will only get us up and running in a few minutes.</p>
 
 <p><strong>So, let’s choose a theme together</strong></p>
 
-<p>Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website. You can check somes execellent paid Jekyll themes <a href="https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;iradid=275988&amp;iradtype=ONLINE_TRACKING_LINK&amp;irgwc=1&amp;irmptype=mediapartner&amp;irpid=2056025&amp;utm_campaign=af_impact_radius_2056025&amp;utm_medium=affiliate&amp;utm_source=impact_radius">here</a>.</p>
+<p>Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website.</p>
+
+<p>You can check somes execellent paid Jekyll themes <a href="https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;iradid=275988&amp;iradtype=ONLINE_TRACKING_LINK&amp;irgwc=1&amp;irmptype=mediapartner&amp;irpid=2056025&amp;utm_campaign=af_impact_radius_2056025&amp;utm_medium=affiliate&amp;utm_source=impact_radius">here</a>.</p>
 
 <p>But as the title I wrote, we will build our website without paying anything, we’ll choose only the free themes.</p>
 
-<p>You can found almost the free Jekyll themes on the <a href="https://jekyllthemes.io/free">Free Jekyll Themes</a> and choose the one you prefer. It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …</p>
+<p>You can found almost the free Jekyll themes on the <a href="https://jekyllthemes.io/free">Free Jekyll Themes</a> and choose the one you prefer.</p>
 
-<h2 id="minimal-mistakes-jekyll-theme">Minimal mistakes Jekyll theme</h2>
+<h2 id="21-minimal-mistakes-jekyll-theme">2.1 Minimal mistakes Jekyll theme</h2>
 
-<p>Before writing this article, I really want to create a professionaly blog using the static site technology. After some searches, I found a really good one for a blog and I want to make a demo Jekyll with this awesome theme.</p>
+<p>I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by <a href="https://github.com/mmistakes">Michael Rose</a>. Thank so much <a href="https://mademistakes.com/">Michael</a> has provide an awesome Jekyll theme for the comunity.</p>
 
 <p>Its advantages:</p>
 <ul>
   <li>Free theme</li>
   <li>Very recommended by community: 7k starts and 12k forks on github <a href="https://github.com/mmistakes/minimal-mistakes">Source Github mmistakes</a></li>
   <li>Full features for blog.</li>
+  <li>Reponsive mobile, tablet, desktop</li>
   <li>Compatible with GitHub Pages.</li>
   <li>Support for Jekyll’s built-in Sass/SCSS preprocessor.</li>
   <li>Nine different skins (color variations).</li>
@@ -263,15 +276,15 @@ Customization - This is a fringe criterion. Style and uniqueness of the website 
   <li>Google Analytics support.</li>
 </ul>
 
-<p>We have already a starting point, now we need to install this theme on your machine.</p>
+<p>We have already a starting point, the thing we need to do now is install this theme on your machine.</p>
 
-<h2 id="clone-minimal-mistakes-theme-to-your-machine">Clone Minimal mistakes theme to your machine</h2>
+<h2 id="22-clone-minimal-mistakes-theme-to-your-machine">2.2 Clone Minimal mistakes theme to your machine</h2>
 
 <p>As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on github.</p>
 
 <p>You may probably no need to do the same way because there are many differents ways to do it. This way is just a simpler way for me.</p>
 
-<h3 id="init-repository-on-the-local-machine">Init repository on the local machine</h3>
+<h2 id="23-init-repository-on-the-local-machine">2.3 Init repository on the local machine</h2>
 <ul>
   <li>
     <p>Create a repository on Github</p>
@@ -282,20 +295,32 @@ Customization - This is a fringe criterion. Style and uniqueness of the website 
 
     <p>With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of <code class="highlighter-rouge">.gitingore</code> and <code class="highlighter-rouge">LICENSE</code>.
 I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistakes">demo-jekyll-mmtakes</a></p>
+
+    <p><strong>If you want to this website is the origine github pages</strong>. It means the domain name of your website is <em>github-user-name.github.io</em>. You will need to create a repository with this name: “github-user-name.github.io”.</p>
+
+    <p>For example my github pages: <strong>tienduy-nguyen.github.io</strong>, so I need to create a repository named: “tienduy-nguyen.github.io”.</p>
+
+    <p>You can check to know how to create a github pages on the official document of github: <a href="https://guides.github.com/features/pages/">https://guides.github.com/features/pages/</a></p>
   </li>
   <li>After we clone the reposiroty that we just created with <code class="highlighter-rouge">git clone</code> on local machine.</li>
-  <li>Now, we will clone <a href="https://github.com/mmistakes/minimal-mistakes">mmistakes repository</a></li>
+  <li>
+    <p>Now, we will clone <a href="https://github.com/mmistakes/minimal-mistakes">mmistakes repository</a>.</p>
+
+    <div alin="center">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png" />
+</div>
+  </li>
   <li>Enter in the directory of mmistakes, remove <strong>.git</strong>, <strong>LICENSE</strong>, and <strong>README</strong> file</li>
   <li>Then we move all files in mmistakes directory to our local repository: <strong>demo-jekyll-mmistakes</strong></li>
   <li>Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.</li>
 </ul>
 
-<h3 id="setup">Setup</h3>
+<h2 id="24-setup-development-enviroment">2.4 Setup development enviroment</h2>
 
 <p>First, let’s make sure that your development environment is ready.</p>
 
-<p>-,Make sure you installed <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://rubygems.org/">Ruby gems</a>, and <a href="https://jekyllrb.com/">Jekyll</a> on your computer.</p>
 <ul>
+  <li>Make sure you installed <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://rubygems.org/">Ruby gems</a>, and <a href="https://jekyllrb.com/">Jekyll</a> on your computer.</li>
   <li>You’ll be using your own text editor and terminal app.</li>
   <li>
     <p>When your development is ready, you can try run server to look your page how it is.</p>
@@ -304,20 +329,374 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
 
     <p>The result on your browser:</p>
 
-    <p><img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="First page" /></p>
+    <div align="center">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page" />
+</div>
 
     <p>We have nothing to show on the page now, because, we need to customize the mmistake theme and create a new post.</p>
   </li>
 </ul>
 
-<h3 id="customize-theme">Customize theme</h3>
+<h2 id="25-customize-mmistake-theme">2.5 Customize mmistake theme</h2>
+
+<h3 id="251-configurations">2.5.1 Configurations</h3>
+
+<p>Tree folder of our project before customize</p>
+<div align="center">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png" alt="tree folder" />
+</div>
+
+<p>To customize your website, you need modify the <code class="highlighter-rouge">_config.yml</code> to create the initial settings for your website.</p>
+
+<p>In the <code class="highlighter-rouge">config.yml</code>, Michael has been detailed very clearly the signification of each tag.</p>
+
+<p>For example, I modified the <code class="highlighter-rouge">config.yml</code> file for my blog:</p>
+
+<ul>
+  <li>The basic information of website
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># theme: 'minimal-mistakes-jekyll'</span>
+<span class="na">remote_theme           </span><span class="pi">:</span> <span class="s2">"</span><span class="s">mmistakes/minimal-mistakes"</span>
+<span class="na">minimal_mistakes_skin</span><span class="pi">:</span> <span class="s1">'</span><span class="s">mint'</span> <span class="c1"># "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"</span>
+
+<span class="c1"># Site Settings</span>
+<span class="na">locale</span><span class="pi">:</span> <span class="s1">'</span><span class="s">en-US'</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Adev42</span><span class="nv"> </span><span class="s">blog'</span>
+<span class="na">title_separator</span><span class="pi">:</span> <span class="s1">'</span><span class="s">|'</span>
+<span class="na">subtitle</span><span class="pi">:</span> <span class="c1"># site tagline that appears below site title in masthead</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Tien</span><span class="nv"> </span><span class="s">Duy'</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Software</span><span class="nv"> </span><span class="s">-</span><span class="nv"> </span><span class="s">Fullstack</span><span class="nv"> </span><span class="s">Web</span><span class="nv"> </span><span class="s">developper'</span>
+<span class="na">url</span><span class="pi">:</span> <span class="nl">&amp;url</span> <span class="s1">'</span><span class="s">https://tienduy-nguyen.github.io'</span> <span class="c1"># the base hostname &amp; protocol for your site e.g. "https://mmistakes.github.io"</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="c1"># the subpath of your site, e.g. "/blog"</span>
+<span class="na">repository</span><span class="pi">:</span> <span class="s1">'</span><span class="s">tienduy-nguyen/demo-jekyll-mmistakes'</span> <span class="c1"># GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"</span>
+<span class="na">teaser</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/assets/images/page-cover.png'</span> <span class="c1"># path of fallback teaser image, e.g. "/assets/images/500x300.png"</span>
+<span class="na">logo</span><span class="pi">:</span> <span class="c1"># path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"</span>
+<span class="na">masthead_title</span><span class="pi">:</span> <span class="c1"># overrides the website title displayed in the masthead, use " " for no title</span>
+<span class="na">breadcrumbs</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># true, false (default)</span>
+<span class="na">words_per_minute</span><span class="pi">:</span> <span class="m">200</span>
+</code></pre></div>    </div>
+
+    <p><code class="highlighter-rouge">minimal_mistake_skin: 'mint</code> is the background color for your website. There 9 options to choose: “air”, “aqua”, “contrast”, “dark”, “dirt”, “neon”, “mint”, “plum”, “sunrise”. Check detail  how it looks at <a href="https://github.com/mmistakes/minimal-mistakes">skin mmistake</a>.</p>
+  </li>
+  <li>Search provider: I use “lurn” by default. If you want to use “algolia” you can change it.
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">search</span><span class="pi">:</span> <span class="c1"># true, false (default)</span>
+<span class="na">search_full_content</span><span class="pi">:</span> <span class="c1"># true, false (default)</span>
+<span class="na">search_provider</span><span class="pi">:</span> <span class="s">lunr</span> <span class="c1"># lunr (default), algolia, google</span>
+<span class="na">algolia</span><span class="pi">:</span>
+  <span class="na">application_id</span><span class="pi">:</span> <span class="c1"># YOUR_APPLICATION_ID</span>
+  <span class="na">index_name</span><span class="pi">:</span> <span class="c1"># YOUR_INDEX_NAME</span>
+  <span class="na">search_only_api_key</span><span class="pi">:</span> <span class="c1"># YOUR_SEARCH_ONLY_API_KEY</span>
+  <span class="na">powered_by</span><span class="pi">:</span> <span class="c1"># true (default), false</span>
+<span class="na">google</span><span class="pi">:</span>
+  <span class="na">search_engine_id</span><span class="pi">:</span> <span class="c1"># YOUR_SEARCH_ENGINE_ID</span>
+  <span class="na">instant_search</span><span class="pi">:</span> <span class="c1"># false (default), true</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Site author: your social informations
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">author</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="nv">*name</span>
+  <span class="na">avatar</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/assets/images/avatar.jpg'</span> <span class="c1"># path of avatar image, e.g. "/assets/images/bio-photo.jpg"</span>
+  <span class="na">bio</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Love</span><span class="nv"> </span><span class="s">people</span><span class="nv"> </span><span class="s">who</span><span class="nv"> </span><span class="s">code'</span>
+  <span class="na">location</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Paris,</span><span class="nv"> </span><span class="s">France'</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s1">'</span><span class="s">tienduy.nguyen.dev@gmail.com'</span>
+  <span class="na">links</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Website'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fas</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-link'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">https://tienduy-nguyen.github.io'</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Twitter'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-twitter-square'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nl">&amp;twitterUrl</span> <span class="s1">'</span><span class="s">https://twitter.com/tienduy_nguyen'</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">LinkedIn'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-linkedin'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nl">&amp;linkedinUrl</span> <span class="s1">'</span><span class="s">https://linkedin.com/in/tienduy-nguyen'</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">GitHub'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-github'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nl">&amp;githubUrl</span> <span class="s1">'</span><span class="s">https://github.com/tienduy-nguyen'</span>
+    <span class="c1"># - label: 'Facebook'</span>
+    <span class="c1">#   icon: 'fab fa-fw fa-facebook-square'</span>
+    <span class="c1">#   url: &amp;fbUrl 'https://www.facebook.com/'</span>
+    <span class="c1"># - label: 'StackOverflow'</span>
+    <span class="c1">#   icon: 'fab fa-fw fa-stack-overflow'</span>
+    <span class="c1">#   url: &amp;stackOverflowUrl 'https://stackoverflow.com/'</span>
+      
+<span class="c1"># Site Footer</span>
+<span class="na">footer</span><span class="pi">:</span>
+  <span class="na">links</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Twitter'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-twitter-square'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nv">*twitterUrl</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">LinkedIn'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-linkedin'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nv">*linkedinUrl</span>
+    <span class="pi">-</span> <span class="na">label</span><span class="pi">:</span> <span class="s1">'</span><span class="s">GitHub'</span>
+      <span class="na">icon</span><span class="pi">:</span> <span class="s1">'</span><span class="s">fab</span><span class="nv"> </span><span class="s">fa-fw</span><span class="nv"> </span><span class="s">fa-github'</span>
+      <span class="na">url</span><span class="pi">:</span> <span class="nv">*githubUrl</span>
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Gem plugin using. Here I add one plugin more: jemoji which allow us use the emoji markdown on our page.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+  <span class="pi">-</span> <span class="s">jekyll-gist</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-include-cache</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+<span class="na">whitelist</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-paginate</span>
+  <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
+  <span class="pi">-</span> <span class="s">jekyll-gist</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+  <span class="pi">-</span> <span class="s">jekyll-include-cache</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+</code></pre></div>    </div>
+    <p>We can provide the technology comment as facebook, disqus … and google analytic for out website in this <code class="highlighter-rouge">_config.yml</code>. But I don’t need it for this moment.</p>
+  </li>
+</ul>
+
+<p>Ok, that’s is the priciple tag wee need to customize. Now we will add the gem dependencies in gems files</p>
+
+<h3 id="252-gemfile">2.5.2 Gemfile</h3>
+
+<p>You Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you <code class="highlighter-rouge">_config.yml</code> file.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s2">"https://rubygems.org"</span>
+
+<span class="c1"># Hello! This is where you manage which Jekyll version is used to run.</span>
+<span class="c1"># When you want to use a different version, change it below, save the</span>
+<span class="c1"># file and run `bundle install`. Run Jekyll with `bundle exec`, like so:</span>
+<span class="c1">#</span>
+<span class="c1">#     bundle exec jekyll serve</span>
+<span class="c1">#</span>
+<span class="c1"># This will help ensure the proper Jekyll version is running.</span>
+<span class="c1"># Happy Jekylling!</span>
+<span class="n">ruby</span> <span class="s2">"2.7.1"</span>
+<span class="n">gem</span> <span class="s2">"jekyll"</span><span class="p">,</span> <span class="s2">"~&gt; 3.8.5"</span>
+
+<span class="c1"># This is the default theme for new Jekyll sites. You may change this to anything you like.</span>
+<span class="c1"># gem "minima", "~&gt; 2.0"</span>
+<span class="n">gem</span> <span class="s2">"minimal-mistakes-jekyll"</span>
+
+<span class="c1"># If you want to use GitHub Pages, remove the "gem "jekyll"" above and</span>
+<span class="c1"># uncomment the line below. To upgrade, run `bundle update github-pages`.</span>
+<span class="c1"># gem "github-pages", group: :jekyll_plugins</span>
+
+<span class="c1"># If you have any plugins, put them here!</span>
+<span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-remote-theme"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-paginate"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-sitemap"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-gist"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-feed"</span><span class="p">,</span> <span class="s2">"~&gt; 0.6"</span>
+  <span class="n">gem</span> <span class="s2">"jemoji"</span>
+  <span class="n">gem</span> <span class="s2">"jekyll-include-cache"</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>After modified your gem file, we will return in the terminal:</p>
+
+<h3 id="253-run-server">2.5.3 Run server</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="c"># install all gems in Gemfile</span>
+bundle update <span class="c"># update multiple gems</span>
+</code></pre></div></div>
+
+<p>and to run serve, you tap</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+
+<p>Open you browser at <code class="highlighter-rouge">localhost:4000</code> and watch the result now.</p>
+
+<div align="center">
+<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png" alt="second page" />
+</div>
+
+<p>That is better, isn’t it?</p>
+
+<p>You are almost finished the customization, we will go create the first posts and customize our navbar.</p>
+
+<h3 id="254-create-posts">2.5.4 Create posts</h3>
+
+<p>We need to put all the posts in the <code class="highlighter-rouge">_posts</code> folder. If you don’t find it, you just creat a new one with the same name.</p>
+
+<p>When you clone the mmistakes folder from github. You will have two folder who name: <code class="highlighter-rouge">docs</code> and <code class="highlighter-rouge">test</code>. Two these folder contain the documentations and the examples for each type of post. It will help you very much.</p>
+
+<p>To make quicky a demo, I will copy all the posts in the <code class="highlighter-rouge">test/_posts</code> in my <code class="highlighter-rouge">_posts</code> folder. For the posts, you can use both the mardown file and html file. In my case, I prefer mardown file because it faster to write and customize.</p>
+
+<p>If you don’t know how to write in mardown file, you can take a look on the tutorial <a href="https://www.markdownguide.org/getting-started/">markdownguide.org</a>.</p>
+
+<p>So what we need to write in mardown for each post to make sure the website work properly?</p>
+
+<p>The important things are</p>
+<ul>
+  <li>title</li>
+  <li>categories</li>
+  <li>tag</li>
+</ul>
+
+<p>The first part of one post:</p>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Markup:</span><span class="nv"> </span><span class="s">HTML</span><span class="nv"> </span><span class="s">Tags</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Formatting"</span>
+<span class="na">header</span><span class="pi">:</span>
+  <span class="na">teaser</span><span class="pi">:</span> <span class="s2">"</span><span class="s">assets/images/markup-syntax-highlighting-teaser.jpg"</span>
+<span class="na">categories</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">Markup</span>
+<span class="na">tags</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">content</span>
+  <span class="pi">-</span> <span class="s">css</span>
+  <span class="pi">-</span> <span class="s">formatting</span>
+  <span class="pi">-</span> <span class="s">html</span>
+  <span class="pi">-</span> <span class="s">markup</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p>The more features, you will find in the documentations of this theme.</p>
+<div class="language-md highlighter-rouge"><div class="highlight"><pre class="highlight"><code>A variety of common markup showing how the theme styles them.
+
+<span class="gu">## Header two</span>
+
+<span class="gu">### Header three</span>
+
+<span class="gu">#### Header four</span>
+
+<span class="gu">##### Header five</span>
+
+<span class="gu">###### Header six</span>
+
+<span class="gu">## Blockquotes</span>
+
+Single line blockquote:
+<span class="gt">
+&gt; Stay hungry. Stay foolish.</span>
+
+Multi line blockquote with a cite reference:
+<span class="gt">
+&gt; People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.</span>
+
+<span class="nt">&lt;cite&gt;</span>Steve Jobs<span class="nt">&lt;/cite&gt;</span> --- Apple Worldwide Developers' Conference, 1997
+{: .small}
+
+<span class="gu">## Tables                        |</span>
+
+| Header1                       | Header2 | Header3 |
+| :---------------------------- | :-----: | ------: |
+| cell1                         |  cell2  |   cell3 |
+| cell4                         |  cell5  |   cell6 |
+| ----------------------------- |
+| cell1                         |  cell2  |   cell3 |
+| cell4                         |  cell5  |   cell6 |
+| ============================= |
+| Foot1                         |  Foot2  |   Foot3 |
+</code></pre></div></div>
+
+<p>Here is some example of our pages when we added already the posts:</p>
+
+<div align="center">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png" alt="third page" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png" alt="post detail" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png" alt="post detail" />
+</div>
+
+<p>As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:</p>
+<ul>
+  <li>Paginations, next page</li>
+  <li>Menu of header in each post</li>
+  <li>Custom type header of post with image, video, overlay image</li>
+  <li>Group articles by categories and tags, category archives, tag archives</li>
+  <li>Feature share article to twiter, facebook, linkedin</li>
+  <li>Show the related articles in the last of post</li>
+  <li>Highlight syntax</li>
+  <li>Search engine</li>
+  <li>Reponsive</li>
+  <li>And so much more …</li>
+</ul>
+
+<p>I realy love this theme. Thank again for <a href="https://mademistakes.com/">Michael</a>.</p>
+
+<p>So, the last thing we need to do in this article is <strong>navigation</strong>.</p>
+
+<h3 id="255-navigation">2.5.5 Navigation</h3>
+
+<p>It’s very simple because Michael did it for us. We just make some changes.</p>
+
+<p>You look in the tree folder, we have an folder who name <code class="highlighter-rouge">_data</code> and we can find <code class="highlighter-rouge">navigation.yml</code>.</p>
+
+<p>You will customize like this:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># main links</span>
+<span class="na">main</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">About'</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">https://mmistakes.github.io/minimal-mistakes/about/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Posts'</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">/posts/</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Categories'</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/categories'</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Tags'</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/tags'</span>
+  <span class="pi">-</span> <span class="na">title</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Search'</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s1">'</span><span class="s">/search'</span>
+</code></pre></div></div>
+
+<p>The result is:</p>
+<div align="center">
+  Posts page
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png" alt="third page" />
+
+  Categories page
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png" alt="post detail" />
+
+  Tag pages
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail" />
+</div>
+
+<p>Are you currious about the jekyll? Checkout at <a href="https://jekyllrb.com/docs/">Jekyll quickstart</a></p>
+
+<h3 id="build">Build</h3>
+
+<p>When you finish an article, you need to build file with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll build
+</code></pre></div></div>
+<p>It will build automatic to the html, css files in the <code class="highlighter-rouge">site</code> folder.</p>
+
+<h2 id="deploy-on-github-pages">Deploy on github pages</h2>
+
+<p>Push and commit all the changes to your github repository.</p>
+
+<p>If you do not set github pages for this repo, you need to do it.</p>
+
+<p>Go to the <code class="highlighter-rouge">Settings</code> of repository on Github, active the github pages.</p>
+
+<p>Detail on <a href="https://guides.github.com/features/pages/">guide github page</a>.</p>
+
+<p>When you are all done that, you will have your beautiful website on <code class="highlighter-rouge">your-github-user-name.github.io</code>.</p>
+
+<hr />
+
+<p>So that is a demo I want to show you. Now you can start to write your first articles. I maybe miss some details because this demo is already quite long. But I hope you will not have problems with that. Good luck!</p>
+
+<hr />
 
 <h1 id="extra--topics">Extra  topics</h1>
 
 <ul>
-  <li>Using your domain name</li>
+  <li>Using your own domain name. It’s not expensive.</li>
   <li><a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site">Managing a custom domain for your GitHub Pages site</a></li>
+  <li>Other static site generator: Gastbyjs, nextjs, nuxtjs, hugo …</li>
 </ul>
+
+<h1 id="reference">Reference</h1>
+
+<ul>
+  <li>
+    <p>My repo demo github []</p>
+  </li>
+  <li>Jekyll home page of Jekyll <a href="https://jekyllrb.com/">https://jekyllrb.com/</a></li>
+  <li>Documentation of minimal mistake theme <a href="https://mmistakes.github.io/minimal-mistakes/">[minimal mistake theme](https://mmistakes.github.io/minimal-mistakes/)</a></li>
+  <li>Interesting blog about jekyll <a href="https://blog.webjeda.com/">https://blog.webjeda.com/</a></li>
+  <li>Using github pages <a href="https://pages.github.com/">https://pages.github.com/</a></li>
+</ul>
+
 
                 </div>
             </section>

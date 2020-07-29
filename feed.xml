@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-29T10:55:01+02:00</updated><id>/feed.xml</id><title type="html">Adev42</title><subtitle>Learning is an endless journey</subtitle><entry><title type="html">Rails 5 or Rails 6 ?</title><link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" /><published>2020-07-29T10:00:00+02:00</published><updated>2020-07-29T10:00:00+02:00</updated><id>/rails-5-or-rails-6</id><content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-29T19:57:30+02:00</updated><id>/feed.xml</id><title type="html">Adev42</title><subtitle>Learning is an endless journey</subtitle><entry><title type="html">Rails 5 or Rails 6 ?</title><link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" /><published>2020-07-29T10:00:00+02:00</published><updated>2020-07-29T10:00:00+02:00</updated><id>/rails-5-or-rails-6</id><content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
 
 &lt;p&gt;At &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;:&lt;/p&gt;
 
@@ -138,77 +138,90 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;So that is two ways I used. I hope it will be helpful for you.&lt;/p&gt;</content><author><name>TienDuy</name></author><category term="ruby" /><summary type="html">When you want to use multiple versions of rails on your computer, how to switch between them?</summary></entry><entry><title type="html">Build your personal website without spending any money using Jekyll and Github pages</title><link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" /><published>2020-07-25T12:00:00+02:00</published><updated>2020-07-25T12:00:00+02:00</updated><id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id><content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
-&lt;h1 id=&quot;static-site-generator&quot;&gt;STATIC SITE GENERATOR&lt;/h1&gt;
+&lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
+
+&lt;p&gt;It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …But for my case, I need a website to:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;JAM stack&lt;/li&gt;
-  &lt;li&gt;Fast, security, ..&lt;/li&gt;
-  &lt;li&gt;Some famous static site generator&lt;/li&gt;
-  &lt;li&gt;Theme available, fast build, fast maintaince&lt;/li&gt;
+  &lt;li&gt;Showcase my projects,&lt;/li&gt;
+  &lt;li&gt;Blog about my experiences, my knowleges in the programming and my other interests&lt;/li&gt;
+  &lt;li&gt;Share informations about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.&lt;/li&gt;
+  &lt;li&gt;Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We have a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;
-&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;Static Site Generator&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a alot of time to complete it. That does not include the time I need to customize the website for each post.&lt;/p&gt;
+
+&lt;p&gt;I search the solution on the internet, and I found the awesome technology “Static Site Generator”.&lt;/p&gt;
+
+&lt;h1 id=&quot;i-static-site-generator&quot;&gt;I. STATIC SITE GENERATOR&lt;/h1&gt;
+
+&lt;p&gt;You may be hear already about the static site generator. They aren’t new. They were what we used to build the web before dynamic CMSs (WordPress, Drupal, etc.) took over.&lt;/p&gt;
+
+&lt;p&gt;What’s new, then? Modern tools—like static site generators—came out over the last years and expanded the capabilities of static sites.&lt;/p&gt;
+
+&lt;p&gt;Static site generotor is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+
+&lt;p&gt;With the growth of the &lt;a href=&quot;https://jamstack.org/&quot;&gt;JAMstack&lt;/a&gt; and its community, Static Site Generators are becoming more and more popular.&lt;/p&gt;
+
+&lt;p&gt;So why static generator?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Fast&lt;/li&gt;
+  &lt;li&gt;Security&lt;/li&gt;
+  &lt;li&gt;Development work flow: no need to create the backend serve. This makes it incredibly easy to run your site locally, automate builds, switch to a different host, etc.&lt;/li&gt;
+  &lt;li&gt;Alot of themes available, fast build, easy for maintaince. That’s true. You even build a beautiful website after some minutes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;STG&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;In this article I will present one of them : Jekyll&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
 
-&lt;h3 id=&quot;why-i-choose-jekyll&quot;&gt;Why I choose Jekyll&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ruby developer&lt;/li&gt;
-  &lt;li&gt;Compatible with Github pages&lt;/li&gt;
-  &lt;li&gt;We will you Jekyll and the github pages to create our blog&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
 
-&lt;h3 id=&quot;infomations-of-jekyll&quot;&gt;Infomations of Jekyll&lt;/h3&gt;
+&lt;p&gt;Jekyll is built with Ruby programming languague. I’am now learning the web developement with Ruby &amp;amp; Ruby on Rails at &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;The Hacking Project&lt;/a&gt;. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.&lt;/p&gt;
 
-&lt;p&gt;Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll is also the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.&lt;/p&gt;
+&lt;p&gt;So let’s see how I create my personal blog. &lt;strong&gt;And don’t forget that will be totally free.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth: we are a product (a brand) with unique skills to offer to prospective employees and customers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
-
-&lt;p&gt;I need a website to:&lt;/p&gt;
-
-&lt;p&gt;Showcase my projects,
-Blog about programming and my other interests, and
-Share information about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.&lt;/p&gt;
-
-&lt;p&gt;Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.&lt;/p&gt;
-
-&lt;p&gt;One day I watched a talk on YouTube by a content management system (CMS) evangelist. He discussed the benefits of using a CMS to generate a website composed of content from markdown and text files. This promotes separation of content from code and better security and speed at which content is delivered. Some CMS are either git-backed or talk to an API.&lt;/p&gt;
-
-&lt;p&gt;I researched different options for static site generators. My criteria are:&lt;/p&gt;
-
-&lt;p&gt;Speed - This includes speed of development (getting a website up and running quickly), and the performance of the website at delivering content.
-Popularity - A very important but often overlooked aspect of choosing a technology is how many people use it. When a technology is popular, you’d be able to get more community support (e.g. StackOverflow, tutorials, sample projects) and the creators of the tools have an incentive to continue to support and improve upon their product.
-Customization - This is a fringe criterion. Style and uniqueness of the website are not super important for me. I want my website to be a place to share information about me and having too unique of a website could make it more difficult for visitors of the website to find information. Still, it’d be nice if I have the option to choose from different layouts for my website and some customization like fonts.&lt;/p&gt;
-
-&lt;p&gt;Jekyll: Built with Ruby and uses Liquid templates. Very popular, created by the founder of Github, and offers free hosting on Github.&lt;/p&gt;
-
-&lt;h1 id=&quot;installation--build&quot;&gt;INSTALLATION &amp;amp; BUILD&lt;/h1&gt;
+&lt;h1 id=&quot;ii-installation--build&quot;&gt;II. INSTALLATION &amp;amp; BUILD&lt;/h1&gt;
 
 &lt;p&gt;There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Install Jekyll locally via the command line, create a new boilerplate website using &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;, build it locally with &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, then serve it. Make sure you installed jekyll on your machine &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install bundler jekyll&lt;/code&gt;. For the full installation, you can check out on the official guide &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;jekyllrb.com&lt;/strong&gt;&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Take a Jekyll theme and clone it to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it. (You can also fork a starting point and make changes it)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install Jekyll locally via the command line, create a new boilerplate website using &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new&lt;/code&gt;, build it locally with &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll build&lt;/code&gt;, then serve it.&lt;/p&gt;
+
+    &lt;p&gt;Make sure you installed jekyll on your machine &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install bundler jekyll&lt;/code&gt;. For the full installation, you can check out on the official guide &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;&lt;strong&gt;jekyllrb.com&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Take a Jekyll theme and clone it to your local machine, install Jekyll locally via the command line, make updates to your website, build it locally, and then serve it. (You can also fork a starting point and make changes it)&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;We’ll get start with the easiest option: Take a available theme of Jekyll. This will only get us up and running in a few minutes.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;So, let’s choose a theme together&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website. You can check somes execellent paid Jekyll themes &lt;a href=&quot;https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;amp;iradid=275988&amp;amp;iradtype=ONLINE_TRACKING_LINK&amp;amp;irgwc=1&amp;amp;irmptype=mediapartner&amp;amp;irpid=2056025&amp;amp;utm_campaign=af_impact_radius_2056025&amp;amp;utm_medium=affiliate&amp;amp;utm_source=impact_radius&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website.&lt;/p&gt;
+
+&lt;p&gt;You can check somes execellent paid Jekyll themes &lt;a href=&quot;https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;amp;iradid=275988&amp;amp;iradtype=ONLINE_TRACKING_LINK&amp;amp;irgwc=1&amp;amp;irmptype=mediapartner&amp;amp;irpid=2056025&amp;amp;utm_campaign=af_impact_radius_2056025&amp;amp;utm_medium=affiliate&amp;amp;utm_source=impact_radius&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;But as the title I wrote, we will build our website without paying anything, we’ll choose only the free themes.&lt;/p&gt;
 
-&lt;p&gt;You can found almost the free Jekyll themes on the &lt;a href=&quot;https://jekyllthemes.io/free&quot;&gt;Free Jekyll Themes&lt;/a&gt; and choose the one you prefer. It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …&lt;/p&gt;
+&lt;p&gt;You can found almost the free Jekyll themes on the &lt;a href=&quot;https://jekyllthemes.io/free&quot;&gt;Free Jekyll Themes&lt;/a&gt; and choose the one you prefer.&lt;/p&gt;
 
-&lt;h2 id=&quot;minimal-mistakes-jekyll-theme&quot;&gt;Minimal mistakes Jekyll theme&lt;/h2&gt;
+&lt;h2 id=&quot;21-minimal-mistakes-jekyll-theme&quot;&gt;2.1 Minimal mistakes Jekyll theme&lt;/h2&gt;
 
-&lt;p&gt;Before writing this article, I really want to create a professionaly blog using the static site technology. After some searches, I found a really good one for a blog and I want to make a demo Jekyll with this awesome theme.&lt;/p&gt;
+&lt;p&gt;I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by &lt;a href=&quot;https://github.com/mmistakes&quot;&gt;Michael Rose&lt;/a&gt;. Thank so much &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt; has provide an awesome Jekyll theme for the comunity.&lt;/p&gt;
 
 &lt;p&gt;Its advantages:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Free theme&lt;/li&gt;
   &lt;li&gt;Very recommended by community: 7k starts and 12k forks on github &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Source Github mmistakes&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Full features for blog.&lt;/li&gt;
+  &lt;li&gt;Reponsive mobile, tablet, desktop&lt;/li&gt;
   &lt;li&gt;Compatible with GitHub Pages.&lt;/li&gt;
   &lt;li&gt;Support for Jekyll’s built-in Sass/SCSS preprocessor.&lt;/li&gt;
   &lt;li&gt;Nine different skins (color variations).&lt;/li&gt;
@@ -217,15 +230,15 @@ Customization - This is a fringe criterion. Style and uniqueness of the website 
   &lt;li&gt;Google Analytics support.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;We have already a starting point, now we need to install this theme on your machine.&lt;/p&gt;
+&lt;p&gt;We have already a starting point, the thing we need to do now is install this theme on your machine.&lt;/p&gt;
 
-&lt;h2 id=&quot;clone-minimal-mistakes-theme-to-your-machine&quot;&gt;Clone Minimal mistakes theme to your machine&lt;/h2&gt;
+&lt;h2 id=&quot;22-clone-minimal-mistakes-theme-to-your-machine&quot;&gt;2.2 Clone Minimal mistakes theme to your machine&lt;/h2&gt;
 
 &lt;p&gt;As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on github.&lt;/p&gt;
 
 &lt;p&gt;You may probably no need to do the same way because there are many differents ways to do it. This way is just a simpler way for me.&lt;/p&gt;
 
-&lt;h3 id=&quot;init-repository-on-the-local-machine&quot;&gt;Init repository on the local machine&lt;/h3&gt;
+&lt;h2 id=&quot;23-init-repository-on-the-local-machine&quot;&gt;2.3 Init repository on the local machine&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Create a repository on Github&lt;/p&gt;
@@ -236,20 +249,32 @@ Customization - This is a fringe criterion. Style and uniqueness of the website 
 
     &lt;p&gt;With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitingore&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt;.
 I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmtakes&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;If you want to this website is the origine github pages&lt;/strong&gt;. It means the domain name of your website is &lt;em&gt;github-user-name.github.io&lt;/em&gt;. You will need to create a repository with this name: “github-user-name.github.io”.&lt;/p&gt;
+
+    &lt;p&gt;For example my github pages: &lt;strong&gt;tienduy-nguyen.github.io&lt;/strong&gt;, so I need to create a repository named: “tienduy-nguyen.github.io”.&lt;/p&gt;
+
+    &lt;p&gt;You can check to know how to create a github pages on the official document of github: &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;https://guides.github.com/features/pages/&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;After we clone the reposiroty that we just created with &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; on local machine.&lt;/li&gt;
-  &lt;li&gt;Now, we will clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;mmistakes repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Now, we will clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;mmistakes repository&lt;/a&gt;.&lt;/p&gt;
+
+    &lt;div alin=&quot;center&quot;&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png&quot; /&gt;
+&lt;/div&gt;
+  &lt;/li&gt;
   &lt;li&gt;Enter in the directory of mmistakes, remove &lt;strong&gt;.git&lt;/strong&gt;, &lt;strong&gt;LICENSE&lt;/strong&gt;, and &lt;strong&gt;README&lt;/strong&gt; file&lt;/li&gt;
   &lt;li&gt;Then we move all files in mmistakes directory to our local repository: &lt;strong&gt;demo-jekyll-mmistakes&lt;/strong&gt;&lt;/li&gt;
   &lt;li&gt;Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+&lt;h2 id=&quot;24-setup-development-enviroment&quot;&gt;2.4 Setup development enviroment&lt;/h2&gt;
 
 &lt;p&gt;First, let’s make sure that your development environment is ready.&lt;/p&gt;
 
-&lt;p&gt;-,Make sure you installed &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/&quot;&gt;Ruby gems&lt;/a&gt;, and &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; on your computer.&lt;/p&gt;
 &lt;ul&gt;
+  &lt;li&gt;Make sure you installed &lt;a href=&quot;https://www.ruby-lang.org/en/&quot;&gt;Ruby&lt;/a&gt; and &lt;a href=&quot;https://rubygems.org/&quot;&gt;Ruby gems&lt;/a&gt;, and &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; on your computer.&lt;/li&gt;
   &lt;li&gt;You’ll be using your own text editor and terminal app.&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;When your development is ready, you can try run server to look your page how it is.&lt;/p&gt;
@@ -258,19 +283,372 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
 
     &lt;p&gt;The result on your browser:&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;First page&quot; /&gt;&lt;/p&gt;
+    &lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;first page&quot; /&gt;
+&lt;/div&gt;
 
     &lt;p&gt;We have nothing to show on the page now, because, we need to customize the mmistake theme and create a new post.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;customize-theme&quot;&gt;Customize theme&lt;/h3&gt;
+&lt;h2 id=&quot;25-customize-mmistake-theme&quot;&gt;2.5 Customize mmistake theme&lt;/h2&gt;
+
+&lt;h3 id=&quot;251-configurations&quot;&gt;2.5.1 Configurations&lt;/h3&gt;
+
+&lt;p&gt;Tree folder of our project before customize&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png&quot; alt=&quot;tree folder&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To customize your website, you need modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; to create the initial settings for your website.&lt;/p&gt;
+
+&lt;p&gt;In the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;, Michael has been detailed very clearly the signification of each tag.&lt;/p&gt;
+
+&lt;p&gt;For example, I modified the &lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt; file for my blog:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The basic information of website
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# theme: 'minimal-mistakes-jekyll'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;remote_theme           &lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mmistakes/minimal-mistakes&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;minimal_mistakes_skin&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;mint'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# &quot;air&quot;, &quot;aqua&quot;, &quot;contrast&quot;, &quot;dark&quot;, &quot;dirt&quot;, &quot;neon&quot;, &quot;mint&quot;, &quot;plum&quot;, &quot;sunrise&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Site Settings&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;locale&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;en-US'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Adev42&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;blog'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title_separator&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;|'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;subtitle&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# site tagline that appears below site title in masthead&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Tien&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Duy'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Software&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Fullstack&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Web&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;developper'&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;&amp;amp;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://tienduy-nguyen.github.io'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the base hostname &amp;amp; protocol for your site e.g. &quot;https://mmistakes.github.io&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;baseurl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# the subpath of your site, e.g. &quot;/blog&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;repository&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;tienduy-nguyen/demo-jekyll-mmistakes'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# GitHub username/repo-name e.g. &quot;mmistakes/minimal-mistakes&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;teaser&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/assets/images/page-cover.png'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# path of fallback teaser image, e.g. &quot;/assets/images/500x300.png&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;logo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# path of logo image to display in the masthead, e.g. &quot;/assets/images/88x88.png&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;masthead_title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# overrides the website title displayed in the masthead, use &quot; &quot; for no title&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;breadcrumbs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true, false (default)&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;words_per_minute&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;200&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;minimal_mistake_skin: 'mint&lt;/code&gt; is the background color for your website. There 9 options to choose: “air”, “aqua”, “contrast”, “dark”, “dirt”, “neon”, “mint”, “plum”, “sunrise”. Check detail  how it looks at &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;skin mmistake&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Search provider: I use “lurn” by default. If you want to use “algolia” you can change it.
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true, false (default)&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;search_full_content&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true, false (default)&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;search_provider&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lunr&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# lunr (default), algolia, google&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;algolia&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;application_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# YOUR_APPLICATION_ID&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;index_name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# YOUR_INDEX_NAME&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;search_only_api_key&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# YOUR_SEARCH_ONLY_API_KEY&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;powered_by&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true (default), false&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;google&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;search_engine_id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# YOUR_SEARCH_ENGINE_ID&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;instant_search&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# false (default), true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Site author: your social informations
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;*name&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/assets/images/avatar.jpg'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# path of avatar image, e.g. &quot;/assets/images/bio-photo.jpg&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;bio&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Love&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;who&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;code'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Paris,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;France'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;tienduy.nguyen.dev@gmail.com'&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Website'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fas&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-link'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://tienduy-nguyen.github.io'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Twitter'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-twitter-square'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;&amp;amp;twitterUrl&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://twitter.com/tienduy_nguyen'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;LinkedIn'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-linkedin'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;&amp;amp;linkedinUrl&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://linkedin.com/in/tienduy-nguyen'&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;GitHub'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-github'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;&amp;amp;githubUrl&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;https://github.com/tienduy-nguyen'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# - label: 'Facebook'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   icon: 'fab fa-fw fa-facebook-square'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   url: &amp;amp;fbUrl 'https://www.facebook.com/'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# - label: 'StackOverflow'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   icon: 'fab fa-fw fa-stack-overflow'&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#   url: &amp;amp;stackOverflowUrl 'https://stackoverflow.com/'&lt;/span&gt;
+      
+&lt;span class=&quot;c1&quot;&gt;# Site Footer&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;footer&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;links&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Twitter'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-twitter-square'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;*twitterUrl&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;LinkedIn'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-linkedin'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;*linkedinUrl&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;GitHub'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fab&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-fw&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;fa-github'&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;*githubUrl&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gem plugin using. Here I add one plugin more: jemoji which allow us use the emoji markdown on our page.&lt;/p&gt;
+
+    &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-paginate&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-sitemap&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-gist&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-feed&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-include-cache&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jemoji&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;whitelist&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-paginate&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-sitemap&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-gist&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-feed&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-include-cache&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jemoji&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;We can provide the technology comment as facebook, disqus … and google analytic for out website in this &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. But I don’t need it for this moment.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ok, that’s is the priciple tag wee need to customize. Now we will add the gem dependencies in gems files&lt;/p&gt;
+
+&lt;h3 id=&quot;252-gemfile&quot;&gt;2.5.2 Gemfile&lt;/h3&gt;
+
+&lt;p&gt;You Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://rubygems.org&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Hello! This is where you manage which Jekyll version is used to run.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# When you want to use a different version, change it below, save the&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#     bundle exec jekyll serve&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# This will help ensure the proper Jekyll version is running.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Happy Jekylling!&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2.7.1&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 3.8.5&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# This is the default theme for new Jekyll sites. You may change this to anything you like.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# gem &quot;minima&quot;, &quot;~&amp;gt; 2.0&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;minimal-mistakes-jekyll&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# If you want to use GitHub Pages, remove the &quot;gem &quot;jekyll&quot;&quot; above and&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# uncomment the line below. To upgrade, run `bundle update github-pages`.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# gem &quot;github-pages&quot;, group: :jekyll_plugins&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# If you have any plugins, put them here!&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-remote-theme&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-paginate&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-sitemap&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-gist&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-feed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.6&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jemoji&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-include-cache&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After modified your gem file, we will return in the terminal:&lt;/p&gt;
+
+&lt;h3 id=&quot;253-run-server&quot;&gt;2.5.3 Run server&lt;/h3&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# install all gems in Gemfile&lt;/span&gt;
+bundle update &lt;span class=&quot;c&quot;&gt;# update multiple gems&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;and to run serve, you tap&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Open you browser at &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; and watch the result now.&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;
+&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png&quot; alt=&quot;second page&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;That is better, isn’t it?&lt;/p&gt;
+
+&lt;p&gt;You are almost finished the customization, we will go create the first posts and customize our navbar.&lt;/p&gt;
+
+&lt;h3 id=&quot;254-create-posts&quot;&gt;2.5.4 Create posts&lt;/h3&gt;
+
+&lt;p&gt;We need to put all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. If you don’t find it, you just creat a new one with the same name.&lt;/p&gt;
+
+&lt;p&gt;When you clone the mmistakes folder from github. You will have two folder who name: &lt;code class=&quot;highlighter-rouge&quot;&gt;docs&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;. Two these folder contain the documentations and the examples for each type of post. It will help you very much.&lt;/p&gt;
+
+&lt;p&gt;To make quicky a demo, I will copy all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;test/_posts&lt;/code&gt; in my &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. For the posts, you can use both the mardown file and html file. In my case, I prefer mardown file because it faster to write and customize.&lt;/p&gt;
+
+&lt;p&gt;If you don’t know how to write in mardown file, you can take a look on the tutorial &lt;a href=&quot;https://www.markdownguide.org/getting-started/&quot;&gt;markdownguide.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So what we need to write in mardown for each post to make sure the website work properly?&lt;/p&gt;
+
+&lt;p&gt;The important things are&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;title&lt;/li&gt;
+  &lt;li&gt;categories&lt;/li&gt;
+  &lt;li&gt;tag&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The first part of one post:&lt;/p&gt;
+
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Markup:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;HTML&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Tags&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Formatting&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;teaser&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;assets/images/markup-syntax-highlighting-teaser.jpg&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Markup&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;tags&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;content&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;css&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;formatting&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;html&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;markup&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The more features, you will find in the documentations of this theme.&lt;/p&gt;
+&lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A variety of common markup showing how the theme styles them.
+
+&lt;span class=&quot;gu&quot;&gt;## Header two&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;### Header three&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;#### Header four&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;##### Header five&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;###### Header six&lt;/span&gt;
+
+&lt;span class=&quot;gu&quot;&gt;## Blockquotes&lt;/span&gt;
+
+Single line blockquote:
+&lt;span class=&quot;gt&quot;&gt;
+&amp;gt; Stay hungry. Stay foolish.&lt;/span&gt;
+
+Multi line blockquote with a cite reference:
+&lt;span class=&quot;gt&quot;&gt;
+&amp;gt; People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;cite&amp;gt;&lt;/span&gt;Steve Jobs&lt;span class=&quot;nt&quot;&gt;&amp;lt;/cite&amp;gt;&lt;/span&gt; --- Apple Worldwide Developers' Conference, 1997
+{: .small}
+
+&lt;span class=&quot;gu&quot;&gt;## Tables                        |&lt;/span&gt;
+
+| Header1                       | Header2 | Header3 |
+| :---------------------------- | :-----: | ------: |
+| cell1                         |  cell2  |   cell3 |
+| cell4                         |  cell5  |   cell6 |
+| ----------------------------- |
+| cell1                         |  cell2  |   cell3 |
+| cell4                         |  cell5  |   cell6 |
+| ============================= |
+| Foot1                         |  Foot2  |   Foot3 |
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is some example of our pages when we added already the posts:&lt;/p&gt;
+
+&lt;div align=&quot;center&quot;&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png&quot; alt=&quot;third page&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png&quot; alt=&quot;post detail&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png&quot; alt=&quot;post detail&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Paginations, next page&lt;/li&gt;
+  &lt;li&gt;Menu of header in each post&lt;/li&gt;
+  &lt;li&gt;Custom type header of post with image, video, overlay image&lt;/li&gt;
+  &lt;li&gt;Group articles by categories and tags, category archives, tag archives&lt;/li&gt;
+  &lt;li&gt;Feature share article to twiter, facebook, linkedin&lt;/li&gt;
+  &lt;li&gt;Show the related articles in the last of post&lt;/li&gt;
+  &lt;li&gt;Highlight syntax&lt;/li&gt;
+  &lt;li&gt;Search engine&lt;/li&gt;
+  &lt;li&gt;Reponsive&lt;/li&gt;
+  &lt;li&gt;And so much more …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I realy love this theme. Thank again for &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, the last thing we need to do in this article is &lt;strong&gt;navigation&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;255-navigation&quot;&gt;2.5.5 Navigation&lt;/h3&gt;
+
+&lt;p&gt;It’s very simple because Michael did it for us. We just make some changes.&lt;/p&gt;
+
+&lt;p&gt;You look in the tree folder, we have an folder who name &lt;code class=&quot;highlighter-rouge&quot;&gt;_data&lt;/code&gt; and we can find &lt;code class=&quot;highlighter-rouge&quot;&gt;navigation.yml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will customize like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# main links&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;About'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://mmistakes.github.io/minimal-mistakes/about/&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Posts'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/posts/&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Categories'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/categories'&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Tags'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/tags'&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Search'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/search'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The result is:&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;
+  Posts page
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png&quot; alt=&quot;third page&quot; /&gt;
+
+  Categories page
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png&quot; alt=&quot;post detail&quot; /&gt;
+
+  Tag pages
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png&quot; alt=&quot;post detail&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Are you currious about the jekyll? Checkout at &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll quickstart&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;p&gt;When you finish an article, you need to build file with:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It will build automatic to the html, css files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;h2 id=&quot;deploy-on-github-pages&quot;&gt;Deploy on github pages&lt;/h2&gt;
+
+&lt;p&gt;Push and commit all the changes to your github repository.&lt;/p&gt;
+
+&lt;p&gt;If you do not set github pages for this repo, you need to do it.&lt;/p&gt;
+
+&lt;p&gt;Go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; of repository on Github, active the github pages.&lt;/p&gt;
+
+&lt;p&gt;Detail on &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;guide github page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When you are all done that, you will have your beautiful website on &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-user-name.github.io&lt;/code&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;So that is a demo I want to show you. Now you can start to write your first articles. I maybe miss some details because this demo is already quite long. But I hope you will not have problems with that. Good luck!&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;h1 id=&quot;extra--topics&quot;&gt;Extra  topics&lt;/h1&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Using your domain name&lt;/li&gt;
+  &lt;li&gt;Using your own domain name. It’s not expensive.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site&quot;&gt;Managing a custom domain for your GitHub Pages site&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Other static site generator: Gastbyjs, nextjs, nuxtjs, hugo …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;My repo demo github []&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jekyll home page of Jekyll &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Documentation of minimal mistake theme &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;[minimal mistake theme](https://mmistakes.github.io/minimal-mistakes/)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Interesting blog about jekyll &lt;a href=&quot;https://blog.webjeda.com/&quot;&gt;https://blog.webjeda.com/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Using github pages &lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>TienDuy</name></author><category term="Web Development" /><summary type="html">In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.</summary></entry><entry><title type="html">Ruby Coding Challenges with TheHackingProject - 01</title><link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" /><published>2020-07-17T12:00:00+02:00</published><updated>2020-07-17T12:00:00+02:00</updated><id>/ruby-codling-challenges-with-the-hacking-project-01</id><content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
