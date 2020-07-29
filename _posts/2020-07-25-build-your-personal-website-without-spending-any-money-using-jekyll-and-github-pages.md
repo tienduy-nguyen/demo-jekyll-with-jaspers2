@@ -11,7 +11,7 @@ subclass: 'post'
 author: tienduy
 ---
 
-In this article, we'll walk through how to setup a jekyll powered blog using the Minimal mistakes theme.
+In this article, we'll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.
 
 # STATIC SITE GENERATOR
 - JAM stack
@@ -19,7 +19,7 @@ In this article, we'll walk through how to setup a jekyll powered blog using the
 - Some famous static site generator
 - Theme available, fast build, fast maintaince
 
-We have a lot of static site generator, check out on [staticgen.com](https://www.staticgen.com/)
+We have a lot of static site generators, check out on [staticgen.com](https://www.staticgen.com/)
 ![Static Site Generator](../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png)
 
 ## Jekyll

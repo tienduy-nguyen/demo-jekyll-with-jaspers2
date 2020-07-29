@@ -21,4 +21,4 @@ journey:
 ruby:
   name: ruby
   desdription: False
-  cover: False
+  cover: assets/images/post-covers/red-sky.jpeg
