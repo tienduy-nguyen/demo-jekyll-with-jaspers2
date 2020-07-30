@@ -11,7 +11,7 @@ subclass: 'post'
 author: tienduy
 ---
 
-In this article, we'll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.
+In this article, we'll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.
 
 It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.
 
@@ -56,7 +56,7 @@ In this article I will present one of them : Jekyll
 
 Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner's popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.
 
-Jekyll is built with Ruby programming language. I'am now learning the web developement with Ruby & Ruby on Rails at [The Hacking Project](https://www.thehackingproject.org/). So if you're coming from a Ruby/ROR background like me, you'll want to check in with Jekyll.
+Jekyll is built with Ruby programming language. I'm now learning the web development with Ruby & Ruby on Rails at [The Hacking Project](https://www.thehackingproject.org/). So if you're coming from a Ruby/ROR background like me, you'll want to check in with Jekyll.
 
 So let's see how I create my personal blog. **And don't forget that will be totally free.**
 
@@ -74,7 +74,7 @@ We'll get start with the easiest option: Take a available theme of Jekyll. This 
 
 Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website.
 
-You can check somes execellent paid Jekyll themes [here](https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=mediapartner&irpid=2056025&utm_campaign=af_impact_radius_2056025&utm_medium=affiliate&utm_source=impact_radius).
+You can check some excellent paid Jekyll themes [here](https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&iradid=275988&iradtype=ONLINE_TRACKING_LINK&irgwc=1&irmptype=mediapartner&irpid=2056025&utm_campaign=af_impact_radius_2056025&utm_medium=affiliate&utm_source=impact_radius).
 
 But as the title I wrote, we will build our website without paying anything, we'll choose only the free themes. 
 
@@ -83,13 +83,13 @@ You can found almost the free Jekyll themes on the [Free Jekyll Themes](https://
 
 ## 2.1 Minimal mistakes Jekyll theme
 
-I will show you a really good one theme for building a blog. It is "Minimal mistake theme", create by [Michael Rose](https://github.com/mmistakes). Thank so much [Michael](https://mademistakes.com/) has provide an awesome Jekyll theme for the comunity.
+I will show you a really good one theme for building a blog. It is "Minimal mistake theme", create by [Michael Rose](https://Github.com/mmistakes). Thank so much [Michael](https://mademistakes.com/) has provide an awesome Jekyll theme for the community.
 
 Its advantages:
   - Free theme
-  - Very recommended by community: 7k starts and 12k forks on github [Source Github mmistakes](https://github.com/mmistakes/minimal-mistakes)
+  - Very recommended by community: 7k starts and 12k forks on Github [Source Github mmistakes](https://github.com/mmistakes/minimal-mistakes)
   - Full features for blog.
-  - Reponsive mobile, tablet, desktop
+  - Responsive mobile, tablet, desktop
   - Compatible with GitHub Pages.
   - Support for Jekyll's built-in Sass/SCSS preprocessor.
   - Nine different skins (color variations).
@@ -102,14 +102,14 @@ We have already a starting point, the thing we need to do now is install this th
 
 ## 2.2 Clone Minimal mistakes theme to your machine
 
-As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on github. 
+As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on Github. 
 
-You may probably no need to do the same way because there are many differents ways to do it. This way is just a simpler way for me.
+You may probably no need to do the same way because there are many different ways to do it. This way is just a simpler way for me.
 
 ## 2.3 Init repository on the local machine
 - Create a repository on Github
   
-  I don't use the `git init` via the command line, but I create directely it on github.
+  I don't use the `git init` via the command line, but I create directly it on Github.
 
   ![create new repo](../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png)
   
@@ -117,16 +117,16 @@ You may probably no need to do the same way because there are many differents wa
   With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of `.gitingore` and `LICENSE`.
   I named this repo [demo-jekyll-mmtakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)
 
-  **If you want to this website is the origine github pages**. It means the domain name of your website is *github-user-name.github.io*. You will need to create a repository with this name: "github-user-name.github.io".
+  **If you want to this website is the origine Github pages**. It means the domain name of your website is *github-user-name.github.io*. You will need to create a repository with this name: "github-user-name.github.io".
 
-  For example my github pages: **tienduy-nguyen.github.io**, so I need to create a repository named: "tienduy-nguyen.github.io".
+  For example my Github pages: **tienduy-nguyen.github.io**, so I need to create a repository named: "tienduy-nguyen.github.io".
 
-  You can check to know how to create a github pages on the official document of github: [https://guides.github.com/features/pages/](https://guides.github.com/features/pages/)
+  You can check to know how to create a Github pages on the official document of github: [https://guides.github.com/features/pages/](https://guides.github.com/features/pages/)
 
-- After we clone the reposiroty that we just created with `git clone` on local machine.
+- After we clone the repository that we just created with `git clone` on local machine.
 - Now, we will clone [mmistakes repository](https://github.com/mmistakes/minimal-mistakes).
   
-  <div alin="center">
+  <div align="center">
     <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png">
   </div>
 
@@ -135,7 +135,7 @@ You may probably no need to do the same way because there are many differents wa
 - Then we move all files in mmistakes directory to our local repository: **demo-jekyll-mmistakes**
 - Don't hesitate to make a git commit when you finish that step with a message "Init mmistake theme" for example.
 
-## 2.4 Setup development enviroment
+## 2.4 Setup development environment
 
 First, let’s make sure that your development environment is ready.
 
@@ -151,9 +151,9 @@ First, let’s make sure that your development environment is ready.
     <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page">
   </div>
 
-  We have nothing to show on the page now, because, we need to customize the mmistake theme and create a new post.
+  We have nothing to show on the page now, because, we need to customize the mmistakes theme and create a new post.
 
-## 2.5 Customize mmistake theme
+## 2.5 Customize mmistakes theme
 
 ### 2.5.1 Configurations
 
@@ -208,7 +208,7 @@ For example, I modified the `config.yml` file for my blog:
       search_engine_id: # YOUR_SEARCH_ENGINE_ID
       instant_search: # false (default), true
     ```
-  - Site author: your social informations
+  - Site author: your social information
     ```yml
     author:
       name: *name
@@ -268,13 +268,13 @@ For example, I modified the `config.yml` file for my blog:
       - jekyll-include-cache
       - jemoji
     ```
-We can provide the technology comment as facebook, disqus ... and google analytic for out website in this `_config.yml`. But I don't need it for this moment.
+We can provide the technology comment as Facebook, Disqus ... and google analytic for out website in this `_config.yml`. But I don't need it for this moment.
 
-Ok, that's is the priciple tag wee need to customize. Now we will add the gem dependencies in gems files
+Ok, that's is the principle tags wee need to customize. Now we will add the gem dependencies in gems files
 
 ### 2.5.2 Gemfile
 
-You Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you `_config.yml` file.
+Your Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you `_config.yml` file.
 
 ```ruby
 source "https://rubygems.org"
@@ -336,15 +336,15 @@ You are almost finished the customization, we will go create the first posts and
 
 ### 2.5.4 Create posts
 
-We need to put all the posts in the `_posts` folder. If you don't find it, you just creat a new one with the same name.
+We need to put all the posts in the `_posts` folder. If you don't find it, you just create a new one with the same name.
 
-When you clone the mmistakes folder from github. You will have two folder who name: `docs` and `test`. Two these folder contain the documentations and the examples for each type of post. It will help you very much.
+When you clone the mmistakes folder from Github. You will have two folder who name: `docs` and `test`. Two these folder contain the documentations and the examples for each type of post. It will help you very much.
 
-To make quicky a demo, I will copy all the posts in the `test/_posts` in my `_posts` folder. For the posts, you can use both the mardown file and html file. In my case, I prefer mardown file because it faster to write and customize.
+To make quickly a demo, I will copy all the posts in the `test/_posts` in my `_posts` folder. For the posts, you can use both the markdown file and html file. In my case, I prefer markdown file because it faster to write and customize.
 
-If you don't know how to write in mardown file, you can take a look on the tutorial [markdownguide.org](https://www.markdownguide.org/getting-started/).
+If you don't know how to write in markdown file, you can take a look on the tutorial [markdownguide.org](https://www.markdownguide.org/getting-started/).
 
-So what we need to write in mardown for each post to make sure the website work properly?
+So what we need to write in markdown for each post to make sure the website work properly?
 
 The important things are
 - title
@@ -368,7 +368,7 @@ tags:
   - markup
 ---
 ```
-The more features, you will find in the documentations of this theme.
+The second part is your content of post. 
 ```md
 A variety of common markup showing how the theme styles them.
 
@@ -407,6 +407,7 @@ Multi line blockquote with a cite reference:
 | ============================= |
 | Foot1                         |  Foot2  |   Foot3 |
 ```
+The more features, you will find in the documentations of this theme.
 
 Here is some example of our pages when we added already the posts:
 
@@ -417,19 +418,19 @@ Here is some example of our pages when we added already the posts:
 </div>
 
 
-As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:
-- Paginations, next page, previous page
+As you can see, the minimal mistakes theme is really excellent. It helps us to have a modern blog with the very awesome features:
+- Pagination, next page, previous page
 - Menu of header in each post
 - Custom type header of post with image, video, overlay image
 - Group articles by categories and tags, category archives, tag archives
-- Feature share article to twiter, facebook, linkedin
+- Feature share article to Twitter, Facebook, Linkedin
 - Show the related articles in the last of post
 - Highlight syntax
 - Search engine
-- Reponsive
+- Responsive
 - And so much more ...
 
-I realy love this theme. Thank again for [Michael](https://mademistakes.com/).
+I really love this theme. Thank again for [Michael](https://mademistakes.com/).
 
 So, the last thing we need to do in this article is **navigation**.
 
@@ -468,7 +469,7 @@ The result is:
   <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail">
 </div>
 
-Are you currious about the jekyll? Checkout at [Jekyll quickstart](https://jekyllrb.com/docs/)
+Are you curious about the jekyll? Checkout at [Jekyll quickstart](https://jekyllrb.com/docs/)
 
 ### Build
 
@@ -479,15 +480,15 @@ bundle exec jekyll build
 ```
 It will build automatic to the html, css files in the `site` folder. 
 
-## Deploy on github pages
+## Deploy on Github pages
 
 Push and commit all the changes to your github repository.
 
-If you do not set github pages for this repo, you need to do it.
+If you do not set Github pages for this repo, you need to do it.
 
-Go to the `Settings` of repository on Github, active the github pages.
+Go to the `Settings` of repository on Github, active the Github pages.
 
-Detail on [guide github page](https://guides.github.com/features/pages/).
+Detail on [guide Github page](https://guides.github.com/features/pages/).
 
 When you are all done that, you will have your beautiful website on `your-github-user-name.github.io`.
 
@@ -507,7 +508,7 @@ So that is a demo I want to show you. Now you can start to write your first arti
 
 # Reference
 - My article on medium [Build your personal website without spending any money](https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08)
-- My repo demo github [demo-jekyll-mmistakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)
+- My repo demo Github [demo-jekyll-mmistakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)
 - Jekyll home page of Jekyll [https://jekyllrb.com/](https://jekyllrb.com/)
 - Documentation of minimal mistake theme [https://mmistakes.github.io/minimal-mistakes/](https://mmistakes.github.io/minimal-mistakes/)
 - Interesting blog about jekyll [https://blog.webjeda.com/](https://blog.webjeda.com/)
