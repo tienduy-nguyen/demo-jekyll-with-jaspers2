@@ -11,17 +11,17 @@ subclass: 'post'
 author: tienduy
 ---
 
-In this article, we'll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.
+In this article, we'll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.
 
 It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.
 
-It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose ...But for my case, I need a website to:
+It depends on the purpose of website that you want to build for example blog, portfolio, landing page, multi-purpose ...But for my case, I need a website to:
 - Showcase my projects
-- Blog about my experiences, my knowleges in the programming and my other interests
-- Share informations about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.
+- Blog about my experiences, my knowledge in the programming and my other interests
+- Share information about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.
 - Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.
 
-In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a alot of time to complete it. That does not include the time I need to customize the website for each post.
+In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a a lot of time to complete it. That does not include the time I need to customize the website for each post.
 
 I search the solution on the internet, and I found the awesome technology "Static Site Generator". 
 
@@ -32,7 +32,7 @@ You may be hear already about the static site generator. They aren't new. They w
 
 What's new, then? Modern tools—like static site generators—came out over the last years and expanded the capabilities of static sites.
 
-Static site generotor is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
+Static site generator is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.
 
 With the growth of the [JAMstack](https://jamstack.org/) and its community, Static Site Generators are becoming more and more popular.
 
@@ -40,7 +40,7 @@ So why static generator?
 - Fast
 - Security
 - Development work flow: no need to create the backend serve. This makes it incredibly easy to run your site locally, automate builds, switch to a different host, etc.
-- Alot of themes available, fast build, easy for maintaince. That's true. You even build a beautiful website after some minutes.
+- A lot of themes available, fast build, easy for maintenance. That's true. You even build a beautiful website after some minutes.
 
 There a lot of static site generators, check out on [staticgen.com](https://www.staticgen.com/)
 
@@ -56,7 +56,7 @@ In this article I will present one of them : Jekyll
 
 Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner's popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.
 
-Jekyll is built with Ruby programming languague. I'am now learning the web developement with Ruby & Ruby on Rails at [The Hacking Project](https://www.thehackingproject.org/). So if you're coming from a Ruby/ROR background like me, you'll want to check in with Jekyll.
+Jekyll is built with Ruby programming language. I'am now learning the web developement with Ruby & Ruby on Rails at [The Hacking Project](https://www.thehackingproject.org/). So if you're coming from a Ruby/ROR background like me, you'll want to check in with Jekyll.
 
 So let's see how I create my personal blog. **And don't forget that will be totally free.**
 
