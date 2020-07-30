@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-29T19:57:30+02:00</updated><id>/feed.xml</id><title type="html">Adev42</title><subtitle>Learning is an endless journey</subtitle><entry><title type="html">Rails 5 or Rails 6 ?</title><link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" /><published>2020-07-29T10:00:00+02:00</published><updated>2020-07-29T10:00:00+02:00</updated><id>/rails-5-or-rails-6</id><content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2020-07-30T09:45:38+02:00</updated><id>/feed.xml</id><title type="html">Adev42</title><subtitle>Learning is an endless journey</subtitle><entry><title type="html">Rails 5 or Rails 6 ?</title><link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" /><published>2020-07-29T10:00:00+02:00</published><updated>2020-07-29T10:00:00+02:00</updated><id>/rails-5-or-rails-6</id><content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
 
 &lt;p&gt;At &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;:&lt;/p&gt;
 
@@ -136,19 +136,19 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rails new new_app&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;So that is two ways I used. I hope it will be helpful for you.&lt;/p&gt;</content><author><name>TienDuy</name></author><category term="ruby" /><summary type="html">When you want to use multiple versions of rails on your computer, how to switch between them?</summary></entry><entry><title type="html">Build your personal website without spending any money using Jekyll and Github pages</title><link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" /><published>2020-07-25T12:00:00+02:00</published><updated>2020-07-25T12:00:00+02:00</updated><id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id><content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+&lt;p&gt;So that is two ways I used. I hope it will be helpful for you.&lt;/p&gt;</content><author><name>TienDuy</name></author><category term="ruby" /><summary type="html">When you want to use multiple versions of rails on your computer, how to switch between them?</summary></entry><entry><title type="html">Build your personal website without spending any money using Jekyll and Github pages</title><link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" /><published>2020-07-25T12:00:00+02:00</published><updated>2020-07-25T12:00:00+02:00</updated><id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id><content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
 &lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
 
-&lt;p&gt;It depends on the purpose of website that you want to bluid for example blog, porfolio, landing page, multi-purpose …But for my case, I need a website to:&lt;/p&gt;
+&lt;p&gt;It depends on the purpose of website that you want to build for example blog, portfolio, landing page, multi-purpose …But for my case, I need a website to:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Showcase my projects,&lt;/li&gt;
-  &lt;li&gt;Blog about my experiences, my knowleges in the programming and my other interests&lt;/li&gt;
-  &lt;li&gt;Share informations about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.&lt;/li&gt;
+  &lt;li&gt;Showcase my projects&lt;/li&gt;
+  &lt;li&gt;Blog about my experiences, my knowledge in the programming and my other interests&lt;/li&gt;
+  &lt;li&gt;Share information about me that would be of interest to a recruiter, including my resume, email, and links to my Github, Medium, and LinkedIn pages.&lt;/li&gt;
   &lt;li&gt;Being able to easily generate and publish blog posts is another extremely beneficial, but not required featured.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a alot of time to complete it. That does not include the time I need to customize the website for each post.&lt;/p&gt;
+&lt;p&gt;In the first time, I tried to create my website with the pages html, css and serve its with github pages. But I would need a a lot of time to complete it. That does not include the time I need to customize the website for each post.&lt;/p&gt;
 
 &lt;p&gt;I search the solution on the internet, and I found the awesome technology “Static Site Generator”.&lt;/p&gt;
 
@@ -158,7 +158,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;What’s new, then? Modern tools—like static site generators—came out over the last years and expanded the capabilities of static sites.&lt;/p&gt;
 
-&lt;p&gt;Static site generotor is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
+&lt;p&gt;Static site generator is an application takes a template directory containing raw text files in various formats, runs it through a converter (like Markdown) and its Liquid renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server.&lt;/p&gt;
 
 &lt;p&gt;With the growth of the &lt;a href=&quot;https://jamstack.org/&quot;&gt;JAMstack&lt;/a&gt; and its community, Static Site Generators are becoming more and more popular.&lt;/p&gt;
 
@@ -167,7 +167,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
   &lt;li&gt;Fast&lt;/li&gt;
   &lt;li&gt;Security&lt;/li&gt;
   &lt;li&gt;Development work flow: no need to create the backend serve. This makes it incredibly easy to run your site locally, automate builds, switch to a different host, etc.&lt;/li&gt;
-  &lt;li&gt;Alot of themes available, fast build, easy for maintaince. That’s true. You even build a beautiful website after some minutes.&lt;/li&gt;
+  &lt;li&gt;A lot of themes available, fast build, easy for maintenance. That’s true. You even build a beautiful website after some minutes.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;There a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;&lt;/p&gt;
@@ -182,7 +182,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
 
-&lt;p&gt;Jekyll is built with Ruby programming languague. I’am now learning the web developement with Ruby &amp;amp; Ruby on Rails at &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;The Hacking Project&lt;/a&gt;. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.&lt;/p&gt;
+&lt;p&gt;Jekyll is built with Ruby programming language. I’am now learning the web developement with Ruby &amp;amp; Ruby on Rails at &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;The Hacking Project&lt;/a&gt;. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.&lt;/p&gt;
 
 &lt;p&gt;So let’s see how I create my personal blog. &lt;strong&gt;And don’t forget that will be totally free.&lt;/strong&gt;&lt;/p&gt;
 
@@ -553,7 +553,7 @@ Multi line blockquote with a cite reference:
 
 &lt;p&gt;As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Paginations, next page&lt;/li&gt;
+  &lt;li&gt;Paginations, next page, previous page&lt;/li&gt;
   &lt;li&gt;Menu of header in each post&lt;/li&gt;
   &lt;li&gt;Custom type header of post with image, video, overlay image&lt;/li&gt;
   &lt;li&gt;Group articles by categories and tags, category archives, tag archives&lt;/li&gt;
@@ -640,16 +640,14 @@ Multi line blockquote with a cite reference:
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;My repo demo github []&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;My article on medium &lt;a href=&quot;https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08&quot;&gt;Build your personal website without spending any money&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My repo demo github &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmistakes&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Jekyll home page of Jekyll &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Documentation of minimal mistake theme &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;[minimal mistake theme](https://mmistakes.github.io/minimal-mistakes/)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Documentation of minimal mistake theme &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;https://mmistakes.github.io/minimal-mistakes/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Interesting blog about jekyll &lt;a href=&quot;https://blog.webjeda.com/&quot;&gt;https://blog.webjeda.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Using github pages &lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>TienDuy</name></author><category term="Web Development" /><summary type="html">In this article, we’ll walkthrough how to setup a jekyll powered blog using the Minimal mistakes theme.</summary></entry><entry><title type="html">Ruby Coding Challenges with TheHackingProject - 01</title><link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" /><published>2020-07-17T12:00:00+02:00</published><updated>2020-07-17T12:00:00+02:00</updated><id>/ruby-codling-challenges-with-the-hacking-project-01</id><content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>TienDuy</name></author><category term="Web Development" /><summary type="html">In this article, we’ll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.</summary></entry><entry><title type="html">Ruby Coding Challenges with TheHackingProject - 01</title><link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" /><published>2020-07-17T12:00:00+02:00</published><updated>2020-07-17T12:00:00+02:00</updated><id>/ruby-codling-challenges-with-the-hacking-project-01</id><content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
