@@ -17,7 +17,7 @@ At [THP](https://www.thehackingproject.org/), when we start learning rails, we a
 
 Why we don't install directly the version rails 6.0?
 
-And he said: "One word `webpack`. I don't understand so much, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .
+And he said: "One word: `webpack`. I always don't understand so much for the "webpack", and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .
 
 I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you're still OK on Rails 5 (especially 5.2 or higher)
