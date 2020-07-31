@@ -15,14 +15,14 @@ What version of rails you use in your projects, today?
 
 At [THP](https://www.thehackingproject.org/), when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of [THP](https://www.thehackingproject.org/): 
 
-Why we don't install directely the version rails 6.0?
+Why we don't install directly the version rails 6.0?
 
-And he said: "On is `webpack`. I don't understand so much, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .
+And he said: "One word `webpack`. I don't understand so much, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .
 
 I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you're still OK on Rails 5 (especially 5.2 or higher)
 
-Now We will see 4 amazings features of rails 6.
+Now We will see 4 amazing features of rails 6.
 
 ## Parralled Testing
 
