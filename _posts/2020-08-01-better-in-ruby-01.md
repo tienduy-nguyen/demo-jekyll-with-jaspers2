@@ -1,22 +1,32 @@
 ---
-layout: single
-header:
-  image: /assets/imgages/headers/skate.png
-  teaser: /assets/images/teasers/ruby.png
-title: 'Better In Ruby - 01'
-date: 2020-07-22 09:00:00 +0100
-categories: Ruby
-tags:
-  - Ruby
-  - Tips
-  - Tricks
+layout: post
+current: post
+cover:  assets/images/post-covers/default.jpeg
+navigation: True
+title: Better In Ruby - 01
+date: 2020-08-01 10:00:00
+tags: ruby
+class: post-template
+subclass: 'post'
+author: tienduy
 ---
 
 Some tips you probably don't know in Ruby.
 
-<sub>_I'am learning and trying to improve my English. So I'm really sorry if my grammar mistakes annoy you. Thank you for your understanding._</sub>
+## 📄 Table Of Content
+1. [Assigning the rest of an array to a variable](#assigning-rest-array)
+2. [Word array](#word-array)
+3. [Concate array](#concate-array)
+4. [Format decimal](#format-decimal)
+5. [Remove folder](#remove-folder)
+6. [Massive assignment](#massive-assignment)
+7. [Deep copy](#deep-copy)
+8. [Create an array with the random values](#random-array)
+
+Today, I will make a series that I learned about tips and tricks in ruby.
 
 ## Assigning the rest of an array to a variable
+<a style="padding:0px, margin:0px" name="assigning-rest-array" ></a>
 
 When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern
 
@@ -29,9 +39,10 @@ When destructuring an array, you can unpack and assign the remaining part of it 
   a    # => [1, 2, 3]
 ```
 
-## Word Array
+## Word array
+<a style="padding:0px, margin:0px" name="word-array"></a>
 
-When we want to add a seperator in the string
+When we want to add a separator in the string
 
 ```ruby
 %w{This is a string, I want to separate by a comma} * ", "
@@ -39,6 +50,7 @@ When we want to add a seperator in the string
 ```
 
 ## Concate array
+<a style="padding:0px, margin:0px" name="concate-array"></a>
 
 ```ruby
 [1, 2, 3] * 3 == [1, 2, 3, 1, 2, 3, 1, 2, 3] # true
@@ -46,6 +58,7 @@ new_array = Array.new([0], 5) # [0,0,0,0,0]
 ```
 
 ## Format decimal
+<a style="padding:0px, margin:0px" name="format-decimal"></a>
 
 ```ruby
 number = 9.5
@@ -54,6 +67,7 @@ number.round(2)
 ```
 
 ## Remove a folder
+<a style="padding:0px, margin:0px" name="remove-folder"></a>
 
 This is a relatively common job of developer. There a many different ways to delete a folder and this is one of the shortest and fastest way to do:
 
@@ -62,15 +76,16 @@ require 'fileutils'
 FileUtils.rm_r 'somedir'
 ```
 
-## Massive Assignment
+## Massive assignment
+<a style="padding:0px, margin:0px" name="massive-assignment"></a>
 
-Massive assignement allow us to declare many variavles in the same time
+Massive assignment allow us to declare many variables at the same time
 
 ```ruby
 a,b,c,d = 1,2,3,4
 ```
 
-This feature will be very usefull in the method with many parameters
+This feature will be very useful in the method with many parameters
 
 ```ruby
 def my_method(*args)
@@ -79,6 +94,7 @@ end
 ```
 
 ## Deep copy
+<a style="padding:0px, margin:0px" name="deep-copy"></a>
 
 When we copy an object that contains others objects inside, array for example, you only copy references to those objects
 
@@ -98,10 +114,9 @@ def deep_copy(obj)
 end
 ```
 
-See the result
+See the result:
 
-```
-ruby
+```ruby
 ObjectSpace.each_object(String).select{|x| x == food.first}.count
 => 54
 deep_copy(food).map &:object_id
@@ -116,7 +131,7 @@ ObjectSpace.each_object(String).select{|x| x == food.first}.count
 - Clone also singleton class of copied object
 - Keep the frozen state of copied object
 
-For example
+For example:
 
 - Singleton methods
   ```ruby
@@ -146,19 +161,8 @@ For example
   => true
   ```
 
-## The different ways to call lambda
-
-```ruby
-my_lambda = -> { puts 'Hello' }
-
-my_lambda.call
-my_lambda[]
-my_lambda.()
-my_lambda.===
-
-```
-
 ## Create a an array with random values
+<a style="padding:0px, margin:0px" name="random-array"></a>
 
 ```ruby
 Array.new(10) { rand 300 }
@@ -166,7 +170,11 @@ Array.new(10) { rand 300 }
 
 It will create an array with 10 item that have the random values from 0 to 299
 
+---
+Thanks you for reading! Stay tunned to update the next chapter.
+
 # Reference
 
-[codehub.vn]()
-[viblo.asia]()
+[codehub.vn](https://www.codehub.vn/)
+
+[viblo.asia](https://viblo.asia/followings)

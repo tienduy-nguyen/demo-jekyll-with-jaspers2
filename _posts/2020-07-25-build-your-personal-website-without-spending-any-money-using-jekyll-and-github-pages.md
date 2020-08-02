@@ -507,6 +507,7 @@ So that is a demo I want to show you. Now you can start to write your first arti
 
 
 # Reference
+- Demo online [https://adev42.com/demo-jekyll-mmistakes/](https://adev42.com/demo-jekyll-mmistakes/)
 - My article on medium [Build your personal website without spending any money](https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08)
 - My repo demo Github [demo-jekyll-mmistakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)
 - Jekyll home page of Jekyll [https://jekyllrb.com/](https://jekyllrb.com/)
