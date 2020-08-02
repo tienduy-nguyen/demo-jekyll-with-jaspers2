@@ -6,7 +6,7 @@ highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-paginate: 100 # it will paginate after this number
+paginate: 50 # it will paginate after this number
 language: 'en-uk'
 words_per_minute: 200
 
@@ -47,7 +47,7 @@ disqus: False
 disqus_shortname: jekyller # replace with your disqus username
 
 # Google Analytics
-google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+google_analytics: UA-165413288-1 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
@@ -129,7 +129,6 @@ relative_source: ../blog/
 destination: ../gh-pages/
 production_url: https://blog.adev42.com/
 source_url: https://github.com/tienduy-nguyen/blog/
-url: https://blog.adev42.com/
 
 exclude:
   - assets/css
