@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="/tag/algorithms/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-07-30T09:45:38+02:00</updated>
-  <id>/tag/algorithms/feed.xml</id>
+  <link href="http://localhost:4000/tag/algorithms/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-08-02T21:17:14+02:00</updated>
+  <id>http://localhost:4000/tag/algorithms/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 03</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-03</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -358,11 +358,11 @@ With these solutions, I can learn more about a method “.succ” and “.next�
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 02</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-02</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -552,11 +552,11 @@ I need to learn more about using the block code of the gsub like them.&lt;/p&gt;
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 01</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-01</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 

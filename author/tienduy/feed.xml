@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-07-30T09:45:38+02:00</updated>
-  <id>/author/tienduy/feed.xml</id>
+  <link href="http://localhost:4000/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2020-08-02T21:17:14+02:00</updated>
+  <id>http://localhost:4000/author/tienduy/feed.xml</id>
 
   
   
@@ -32,23 +32,219 @@
 
   
     <entry>
+      <title type="html">Better In Ruby - 01</title>
+      <link href="http://localhost:4000/better-in-ruby-01" rel="alternate" type="text/html" title="Better In Ruby - 01" />
+      <published>2020-08-01T12:00:00+02:00</published>
+      <updated>2020-08-01T12:00:00+02:00</updated>
+      <id>http://localhost:4000/better-in-ruby-01</id>
+      <content type="html" xml:base="http://localhost:4000/better-in-ruby-01">&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
+
+&lt;h2 id=&quot;-table-of-content&quot;&gt;📄 Table Of Content&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#assigning-rest-array&quot;&gt;Assigning the rest of an array to a variable&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#word-array&quot;&gt;Word array&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#concate-array&quot;&gt;Concate array&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#format-decimal&quot;&gt;Format decimal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#remove-folder&quot;&gt;Remove folder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#massive-assignment&quot;&gt;Massive assignment&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#deep-copy&quot;&gt;Deep copy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#random-array&quot;&gt;Create an array with the random values&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Today, I will make a series that I learned about tips and tricks in ruby.&lt;/p&gt;
+
+&lt;h2 id=&quot;assigning-the-rest-of-an-array-to-a-variable&quot;&gt;Assigning the rest of an array to a variable&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;assigning-rest-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When destructuring an array, you can unpack and assign the remaining part of it to a variable using the rest pattern&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 1&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;rest&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [2, 3]&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; [1, 2, 3]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;word-array&quot;&gt;Word array&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;word-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When we want to add a separator in the string&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;sx&quot;&gt;%w{This is a string, I want to separate by a comma}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;, &quot;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# &quot;This, is, a, string,, I, want, to, separate, by, a, comma&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;concate-array&quot;&gt;Concate array&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;concate-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# true&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;new_array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# [0,0,0,0,0]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;format-decimal&quot;&gt;Format decimal&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;format-decimal&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;9.5&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;%.2f&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;9.50&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;round&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;remove-a-folder&quot;&gt;Remove a folder&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;remove-folder&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a relatively common job of developer. There a many different ways to delete a folder and this is one of the shortest and fastest way to do:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fileutils'&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;FileUtils&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rm_r&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'somedir'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;massive-assignment&quot;&gt;Massive assignment&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;massive-assignment&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Massive assignment allow us to declare many variables at the same time&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This feature will be very useful in the method with many parameters&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;my_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;deep-copy&quot;&gt;Deep copy&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;deep-copy&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When we copy an object that contains others objects inside, array for example, you only copy references to those objects&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w( bread milk orange )&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:object_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69612840&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69612820&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69612800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;122&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;clone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:object_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;69612840&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69612820&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;69612800&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Using &lt;code&gt;Marshal&lt;/code&gt; (usually use for &lt;a href=&quot;https://en.wikipedia.org/wiki/Serialization&quot;&gt;serialization&lt;/a&gt;), you can create a deep copy.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;deep_copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Marshal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dump&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;See the result:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;ObjectSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;count&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;54&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;deep_copy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:object_id&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;77564660&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;77564420&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;77564300&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;ObjectSpace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;count&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;56&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: Difference between &lt;code&gt;clone&lt;/code&gt; and &lt;code&gt;dup&lt;/code&gt;(They are almost the same, but there are two points that &lt;strong&gt;dup&lt;/strong&gt; doesn’t have)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Clone also singleton class of copied object&lt;/li&gt;
+  &lt;li&gt;Keep the frozen state of copied object&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Singleton methods
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:foo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:foo&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dup&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`foo' for #&amp;lt;Object:0x007f8bc395ff00&amp;gt; (NoMethodError)
+c = a.clone
+c.foo
+=&amp;gt; :foo
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Frozen state&lt;/p&gt;
+
+    &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frozen?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;dup&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frozen?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;clone&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;frozen?&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;create-a-an-array-with-random-values&quot;&gt;Create a an array with random values&lt;/h2&gt;
+&lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;random-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rand&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;300&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It will create an array with 10 item that have the random values from 0 to 299&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Thanks you for reading! Stay tunned to update the next chapter.&lt;/p&gt;
+
+&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.codehub.vn/&quot;&gt;codehub.vn&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://viblo.asia/followings&quot;&gt;viblo.asia&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ruby" />
+      
+
+      
+        <summary type="html">Some tips you probably don’t know in Ruby.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Rails 5 or Rails 6 ?</title>
-      <link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" />
+      <link href="http://localhost:4000/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" />
       <published>2020-07-29T10:00:00+02:00</published>
       <updated>2020-07-29T10:00:00+02:00</updated>
-      <id>/rails-5-or-rails-6</id>
-      <content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+      <id>http://localhost:4000/rails-5-or-rails-6</id>
+      <content type="html" xml:base="http://localhost:4000/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
 
 &lt;p&gt;At &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;Why we don’t install directely the version rails 6.0?&lt;/p&gt;
+&lt;p&gt;Why we don’t install directly the version rails 6.0?&lt;/p&gt;
 
-&lt;p&gt;And he said: “On is &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I don’t understand so much, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
+&lt;p&gt;And he said: “One word: &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
 
 &lt;p&gt;I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you’re still OK on Rails 5 (especially 5.2 or higher)&lt;/p&gt;
 
-&lt;p&gt;Now We will see 4 amazings features of rails 6.&lt;/p&gt;
+&lt;p&gt;Now We will see 4 amazing features of rails 6.&lt;/p&gt;
 
 &lt;h2 id=&quot;parralled-testing&quot;&gt;Parralled Testing&lt;/h2&gt;
 
@@ -126,11 +322,11 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
   
     <entry>
       <title type="html">How to switch to another Rails version</title>
-      <link href="/how-to-switch-to-another-rails-version" rel="alternate" type="text/html" title="How to switch to another Rails version" />
+      <link href="http://localhost:4000/how-to-switch-to-another-rails-version" rel="alternate" type="text/html" title="How to switch to another Rails version" />
       <published>2020-07-28T12:00:00+02:00</published>
       <updated>2020-07-28T12:00:00+02:00</updated>
-      <id>/how-to-switch-to-another-rails-version</id>
-      <content type="html" xml:base="/how-to-switch-to-another-rails-version">&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
+      <id>http://localhost:4000/how-to-switch-to-another-rails-version</id>
+      <content type="html" xml:base="http://localhost:4000/how-to-switch-to-another-rails-version">&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
 
 &lt;h2 id=&quot;installation-rails&quot;&gt;Installation rails&lt;/h2&gt;
 
@@ -239,11 +435,11 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
   
     <entry>
       <title type="html">Build your personal website without spending any money using Jekyll and Github pages</title>
-      <link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
+      <link href="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
       <published>2020-07-25T12:00:00+02:00</published>
       <updated>2020-07-25T12:00:00+02:00</updated>
-      <id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
-      <content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+      <id>http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
 &lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
 
@@ -289,7 +485,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
 
-&lt;p&gt;Jekyll is built with Ruby programming language. I’am now learning the web developement with Ruby &amp;amp; Ruby on Rails at &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;The Hacking Project&lt;/a&gt;. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.&lt;/p&gt;
+&lt;p&gt;Jekyll is built with Ruby programming language. I’m now learning the web development with Ruby &amp;amp; Ruby on Rails at &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;The Hacking Project&lt;/a&gt;. So if you’re coming from a Ruby/ROR background like me, you’ll want to check in with Jekyll.&lt;/p&gt;
 
 &lt;p&gt;So let’s see how I create my personal blog. &lt;strong&gt;And don’t forget that will be totally free.&lt;/strong&gt;&lt;/p&gt;
 
@@ -313,7 +509,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;Nowadays, there are a lot of Jekyll themes, both free and paid. Developers are design the templates perfectly for any corporate business and blogging website.&lt;/p&gt;
 
-&lt;p&gt;You can check somes execellent paid Jekyll themes &lt;a href=&quot;https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;amp;iradid=275988&amp;amp;iradtype=ONLINE_TRACKING_LINK&amp;amp;irgwc=1&amp;amp;irmptype=mediapartner&amp;amp;irpid=2056025&amp;amp;utm_campaign=af_impact_radius_2056025&amp;amp;utm_medium=affiliate&amp;amp;utm_source=impact_radius&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can check some excellent paid Jekyll themes &lt;a href=&quot;https://themeforest.net/category/static-site-generators?clickid=TBN2XOQfVxyOTEOwUx0Mo3EHUkiWRC0dN0eB0o0&amp;amp;iradid=275988&amp;amp;iradtype=ONLINE_TRACKING_LINK&amp;amp;irgwc=1&amp;amp;irmptype=mediapartner&amp;amp;irpid=2056025&amp;amp;utm_campaign=af_impact_radius_2056025&amp;amp;utm_medium=affiliate&amp;amp;utm_source=impact_radius&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;But as the title I wrote, we will build our website without paying anything, we’ll choose only the free themes.&lt;/p&gt;
 
@@ -321,14 +517,14 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h2 id=&quot;21-minimal-mistakes-jekyll-theme&quot;&gt;2.1 Minimal mistakes Jekyll theme&lt;/h2&gt;
 
-&lt;p&gt;I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by &lt;a href=&quot;https://github.com/mmistakes&quot;&gt;Michael Rose&lt;/a&gt;. Thank so much &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt; has provide an awesome Jekyll theme for the comunity.&lt;/p&gt;
+&lt;p&gt;I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by &lt;a href=&quot;https://Github.com/mmistakes&quot;&gt;Michael Rose&lt;/a&gt;. Thank so much &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt; has provide an awesome Jekyll theme for the community.&lt;/p&gt;
 
 &lt;p&gt;Its advantages:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Free theme&lt;/li&gt;
-  &lt;li&gt;Very recommended by community: 7k starts and 12k forks on github &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Source Github mmistakes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Very recommended by community: 7k starts and 12k forks on Github &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Source Github mmistakes&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Full features for blog.&lt;/li&gt;
-  &lt;li&gt;Reponsive mobile, tablet, desktop&lt;/li&gt;
+  &lt;li&gt;Responsive mobile, tablet, desktop&lt;/li&gt;
   &lt;li&gt;Compatible with GitHub Pages.&lt;/li&gt;
   &lt;li&gt;Support for Jekyll’s built-in Sass/SCSS preprocessor.&lt;/li&gt;
   &lt;li&gt;Nine different skins (color variations).&lt;/li&gt;
@@ -341,33 +537,33 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h2 id=&quot;22-clone-minimal-mistakes-theme-to-your-machine&quot;&gt;2.2 Clone Minimal mistakes theme to your machine&lt;/h2&gt;
 
-&lt;p&gt;As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on github.&lt;/p&gt;
+&lt;p&gt;As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on Github.&lt;/p&gt;
 
-&lt;p&gt;You may probably no need to do the same way because there are many differents ways to do it. This way is just a simpler way for me.&lt;/p&gt;
+&lt;p&gt;You may probably no need to do the same way because there are many different ways to do it. This way is just a simpler way for me.&lt;/p&gt;
 
 &lt;h2 id=&quot;23-init-repository-on-the-local-machine&quot;&gt;2.3 Init repository on the local machine&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Create a repository on Github&lt;/p&gt;
 
-    &lt;p&gt;I don’t use the &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; via the command line, but I create directely it on github.&lt;/p&gt;
+    &lt;p&gt;I don’t use the &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; via the command line, but I create directly it on Github.&lt;/p&gt;
 
     &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png&quot; alt=&quot;create new repo&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitingore&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt;.
 I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmtakes&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;strong&gt;If you want to this website is the origine github pages&lt;/strong&gt;. It means the domain name of your website is &lt;em&gt;github-user-name.github.io&lt;/em&gt;. You will need to create a repository with this name: “github-user-name.github.io”.&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;If you want to this website is the origine Github pages&lt;/strong&gt;. It means the domain name of your website is &lt;em&gt;github-user-name.github.io&lt;/em&gt;. You will need to create a repository with this name: “github-user-name.github.io”.&lt;/p&gt;
 
-    &lt;p&gt;For example my github pages: &lt;strong&gt;tienduy-nguyen.github.io&lt;/strong&gt;, so I need to create a repository named: “tienduy-nguyen.github.io”.&lt;/p&gt;
+    &lt;p&gt;For example my Github pages: &lt;strong&gt;tienduy-nguyen.github.io&lt;/strong&gt;, so I need to create a repository named: “tienduy-nguyen.github.io”.&lt;/p&gt;
 
-    &lt;p&gt;You can check to know how to create a github pages on the official document of github: &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;https://guides.github.com/features/pages/&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;You can check to know how to create a Github pages on the official document of github: &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;https://guides.github.com/features/pages/&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;After we clone the reposiroty that we just created with &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; on local machine.&lt;/li&gt;
+  &lt;li&gt;After we clone the repository that we just created with &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone&lt;/code&gt; on local machine.&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Now, we will clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;mmistakes repository&lt;/a&gt;.&lt;/p&gt;
 
-    &lt;div alin=&quot;center&quot;&gt;
+    &lt;div align=&quot;center&quot;&gt;
   &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png&quot; /&gt;
 &lt;/div&gt;
   &lt;/li&gt;
@@ -376,7 +572,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   &lt;li&gt;Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;24-setup-development-enviroment&quot;&gt;2.4 Setup development enviroment&lt;/h2&gt;
+&lt;h2 id=&quot;24-setup-development-environment&quot;&gt;2.4 Setup development environment&lt;/h2&gt;
 
 &lt;p&gt;First, let’s make sure that your development environment is ready.&lt;/p&gt;
 
@@ -394,11 +590,11 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;first page&quot; /&gt;
 &lt;/div&gt;
 
-    &lt;p&gt;We have nothing to show on the page now, because, we need to customize the mmistake theme and create a new post.&lt;/p&gt;
+    &lt;p&gt;We have nothing to show on the page now, because, we need to customize the mmistakes theme and create a new post.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;25-customize-mmistake-theme&quot;&gt;2.5 Customize mmistake theme&lt;/h2&gt;
+&lt;h2 id=&quot;25-customize-mmistakes-theme&quot;&gt;2.5 Customize mmistakes theme&lt;/h2&gt;
 
 &lt;h3 id=&quot;251-configurations&quot;&gt;2.5.1 Configurations&lt;/h3&gt;
 
@@ -452,7 +648,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   &lt;span class=&quot;na&quot;&gt;instant_search&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# false (default), true&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Site author: your social informations
+  &lt;li&gt;Site author: your social information
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;*name&lt;/span&gt;
   &lt;span class=&quot;na&quot;&gt;avatar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/assets/images/avatar.jpg'&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# path of avatar image, e.g. &quot;/assets/images/bio-photo.jpg&quot;&lt;/span&gt;
@@ -512,15 +708,15 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-include-cache&lt;/span&gt;
   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jemoji&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;We can provide the technology comment as facebook, disqus … and google analytic for out website in this &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. But I don’t need it for this moment.&lt;/p&gt;
+    &lt;p&gt;We can provide the technology comment as Facebook, Disqus … and google analytic for out website in this &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. But I don’t need it for this moment.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Ok, that’s is the priciple tag wee need to customize. Now we will add the gem dependencies in gems files&lt;/p&gt;
+&lt;p&gt;Ok, that’s is the principle tags wee need to customize. Now we will add the gem dependencies in gems files&lt;/p&gt;
 
 &lt;h3 id=&quot;252-gemfile&quot;&gt;2.5.2 Gemfile&lt;/h3&gt;
 
-&lt;p&gt;You Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Your Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://rubygems.org&quot;&lt;/span&gt;
 
@@ -578,15 +774,15 @@ bundle update &lt;span class=&quot;c&quot;&gt;# update multiple gems&lt;/span&gt
 
 &lt;h3 id=&quot;254-create-posts&quot;&gt;2.5.4 Create posts&lt;/h3&gt;
 
-&lt;p&gt;We need to put all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. If you don’t find it, you just creat a new one with the same name.&lt;/p&gt;
+&lt;p&gt;We need to put all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. If you don’t find it, you just create a new one with the same name.&lt;/p&gt;
 
-&lt;p&gt;When you clone the mmistakes folder from github. You will have two folder who name: &lt;code class=&quot;highlighter-rouge&quot;&gt;docs&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;. Two these folder contain the documentations and the examples for each type of post. It will help you very much.&lt;/p&gt;
+&lt;p&gt;When you clone the mmistakes folder from Github. You will have two folder who name: &lt;code class=&quot;highlighter-rouge&quot;&gt;docs&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;. Two these folder contain the documentations and the examples for each type of post. It will help you very much.&lt;/p&gt;
 
-&lt;p&gt;To make quicky a demo, I will copy all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;test/_posts&lt;/code&gt; in my &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. For the posts, you can use both the mardown file and html file. In my case, I prefer mardown file because it faster to write and customize.&lt;/p&gt;
+&lt;p&gt;To make quickly a demo, I will copy all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;test/_posts&lt;/code&gt; in my &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. For the posts, you can use both the markdown file and html file. In my case, I prefer markdown file because it faster to write and customize.&lt;/p&gt;
 
-&lt;p&gt;If you don’t know how to write in mardown file, you can take a look on the tutorial &lt;a href=&quot;https://www.markdownguide.org/getting-started/&quot;&gt;markdownguide.org&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you don’t know how to write in markdown file, you can take a look on the tutorial &lt;a href=&quot;https://www.markdownguide.org/getting-started/&quot;&gt;markdownguide.org&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So what we need to write in mardown for each post to make sure the website work properly?&lt;/p&gt;
+&lt;p&gt;So what we need to write in markdown for each post to make sure the website work properly?&lt;/p&gt;
 
 &lt;p&gt;The important things are&lt;/p&gt;
 &lt;ul&gt;
@@ -611,7 +807,7 @@ bundle update &lt;span class=&quot;c&quot;&gt;# update multiple gems&lt;/span&gt
   &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;markup&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;The more features, you will find in the documentations of this theme.&lt;/p&gt;
+&lt;p&gt;The second part is your content of post.&lt;/p&gt;
 &lt;div class=&quot;language-md highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A variety of common markup showing how the theme styles them.
 
 &lt;span class=&quot;gu&quot;&gt;## Header two&lt;/span&gt;
@@ -649,6 +845,7 @@ Multi line blockquote with a cite reference:
 | ============================= |
 | Foot1                         |  Foot2  |   Foot3 |
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The more features, you will find in the documentations of this theme.&lt;/p&gt;
 
 &lt;p&gt;Here is some example of our pages when we added already the posts:&lt;/p&gt;
 
@@ -658,21 +855,21 @@ Multi line blockquote with a cite reference:
   &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png&quot; alt=&quot;post detail&quot; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;As you can see, the minimal mistakes theme is really excellent. It helps us to have a mordern blog with the very awesome features:&lt;/p&gt;
+&lt;p&gt;As you can see, the minimal mistakes theme is really excellent. It helps us to have a modern blog with the very awesome features:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Paginations, next page, previous page&lt;/li&gt;
+  &lt;li&gt;Pagination, next page, previous page&lt;/li&gt;
   &lt;li&gt;Menu of header in each post&lt;/li&gt;
   &lt;li&gt;Custom type header of post with image, video, overlay image&lt;/li&gt;
   &lt;li&gt;Group articles by categories and tags, category archives, tag archives&lt;/li&gt;
-  &lt;li&gt;Feature share article to twiter, facebook, linkedin&lt;/li&gt;
+  &lt;li&gt;Feature share article to Twitter, Facebook, Linkedin&lt;/li&gt;
   &lt;li&gt;Show the related articles in the last of post&lt;/li&gt;
   &lt;li&gt;Highlight syntax&lt;/li&gt;
   &lt;li&gt;Search engine&lt;/li&gt;
-  &lt;li&gt;Reponsive&lt;/li&gt;
+  &lt;li&gt;Responsive&lt;/li&gt;
   &lt;li&gt;And so much more …&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I realy love this theme. Thank again for &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I really love this theme. Thank again for &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;So, the last thing we need to do in this article is &lt;strong&gt;navigation&lt;/strong&gt;.&lt;/p&gt;
 
@@ -710,7 +907,7 @@ Multi line blockquote with a cite reference:
   &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png&quot; alt=&quot;post detail&quot; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Are you currious about the jekyll? Checkout at &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll quickstart&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Are you curious about the jekyll? Checkout at &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll quickstart&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
 
@@ -720,15 +917,15 @@ Multi line blockquote with a cite reference:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;It will build automatic to the html, css files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt; folder.&lt;/p&gt;
 
-&lt;h2 id=&quot;deploy-on-github-pages&quot;&gt;Deploy on github pages&lt;/h2&gt;
+&lt;h2 id=&quot;deploy-on-github-pages&quot;&gt;Deploy on Github pages&lt;/h2&gt;
 
 &lt;p&gt;Push and commit all the changes to your github repository.&lt;/p&gt;
 
-&lt;p&gt;If you do not set github pages for this repo, you need to do it.&lt;/p&gt;
+&lt;p&gt;If you do not set Github pages for this repo, you need to do it.&lt;/p&gt;
 
-&lt;p&gt;Go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; of repository on Github, active the github pages.&lt;/p&gt;
+&lt;p&gt;Go to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Settings&lt;/code&gt; of repository on Github, active the Github pages.&lt;/p&gt;
 
-&lt;p&gt;Detail on &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;guide github page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Detail on &lt;a href=&quot;https://guides.github.com/features/pages/&quot;&gt;guide Github page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;When you are all done that, you will have your beautiful website on &lt;code class=&quot;highlighter-rouge&quot;&gt;your-github-user-name.github.io&lt;/code&gt;.&lt;/p&gt;
 
@@ -748,8 +945,9 @@ Multi line blockquote with a cite reference:
 
 &lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
 &lt;ul&gt;
+  &lt;li&gt;Demo online &lt;a href=&quot;https://adev42.com/demo-jekyll-mmistakes/&quot;&gt;https://adev42.com/demo-jekyll-mmistakes/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;My article on medium &lt;a href=&quot;https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08&quot;&gt;Build your personal website without spending any money&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;My repo demo github &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmistakes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;My repo demo Github &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmistakes&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Jekyll home page of Jekyll &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;https://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Documentation of minimal mistake theme &lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;https://mmistakes.github.io/minimal-mistakes/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Interesting blog about jekyll &lt;a href=&quot;https://blog.webjeda.com/&quot;&gt;https://blog.webjeda.com/&lt;/a&gt;&lt;/li&gt;
@@ -775,7 +973,7 @@ Multi line blockquote with a cite reference:
       
 
       
-        <summary type="html">In this article, we’ll walk-through how to setup a jekyll powered blog using the Minimal mistakes theme.</summary>
+        <summary type="html">In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.</summary>
       
 
       
@@ -784,11 +982,11 @@ Multi line blockquote with a cite reference:
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 01</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 01" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-01</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -1311,11 +1509,11 @@ Should return: 160 (the only even number)
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 02</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 02" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-02</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -1505,11 +1703,11 @@ I need to learn more about using the block code of the gsub like them.&lt;/p&gt;
   
     <entry>
       <title type="html">Ruby Coding Challenges with TheHackingProject - 03</title>
-      <link href="/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
+      <link href="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03" rel="alternate" type="text/html" title="Ruby Coding Challenges with TheHackingProject - 03" />
       <published>2020-07-17T12:00:00+02:00</published>
       <updated>2020-07-17T12:00:00+02:00</updated>
-      <id>/ruby-codling-challenges-with-the-hacking-project-03</id>
-      <content type="html" xml:base="/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+      <id>http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03</id>
+      <content type="html" xml:base="http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03">&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
 
 &lt;p&gt;&lt;sub&gt;&lt;em&gt;I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.&lt;/em&gt;&lt;/sub&gt;&lt;/p&gt;
 
@@ -1830,11 +2028,11 @@ With these solutions, I can learn more about a method “.succ” and “.next�
   
     <entry>
       <title type="html">Getting started</title>
-      <link href="/welcome" rel="alternate" type="text/html" title="Getting started" />
+      <link href="http://localhost:4000/welcome" rel="alternate" type="text/html" title="Getting started" />
       <published>2020-07-15T12:00:00+02:00</published>
       <updated>2020-07-15T12:00:00+02:00</updated>
-      <id>/welcome</id>
-      <content type="html" xml:base="/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
+      <id>http://localhost:4000/welcome</id>
+      <content type="html" xml:base="http://localhost:4000/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
 
 &lt;h2 id=&quot;about-me-and-my-blog&quot;&gt;About me and my blog&lt;/h2&gt;
 
