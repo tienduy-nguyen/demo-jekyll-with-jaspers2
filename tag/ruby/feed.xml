@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="http://localhost:4000/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-08-02T21:17:14+02:00</updated>
-  <id>http://localhost:4000/tag/ruby/feed.xml</id>
+  <link href="/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-08-03T01:56:45+02:00</updated>
+  <id>/tag/ruby/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Better In Ruby - 01</title>
-      <link href="http://localhost:4000/better-in-ruby-01" rel="alternate" type="text/html" title="Better In Ruby - 01" />
+      <link href="/better-in-ruby-01" rel="alternate" type="text/html" title="Better In Ruby - 01" />
       <published>2020-08-01T12:00:00+02:00</published>
       <updated>2020-08-01T12:00:00+02:00</updated>
-      <id>http://localhost:4000/better-in-ruby-01</id>
-      <content type="html" xml:base="http://localhost:4000/better-in-ruby-01">&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
+      <id>/better-in-ruby-01</id>
+      <content type="html" xml:base="/better-in-ruby-01">&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
 
 &lt;h2 id=&quot;-table-of-content&quot;&gt;📄 Table Of Content&lt;/h2&gt;
 &lt;ol&gt;
@@ -229,11 +229,11 @@ c.foo
   
     <entry>
       <title type="html">Rails 5 or Rails 6 ?</title>
-      <link href="http://localhost:4000/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" />
+      <link href="/rails-5-or-rails-6" rel="alternate" type="text/html" title="Rails 5 or Rails 6 ?" />
       <published>2020-07-29T10:00:00+02:00</published>
       <updated>2020-07-29T10:00:00+02:00</updated>
-      <id>http://localhost:4000/rails-5-or-rails-6</id>
-      <content type="html" xml:base="http://localhost:4000/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+      <id>/rails-5-or-rails-6</id>
+      <content type="html" xml:base="/rails-5-or-rails-6">&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
 
 &lt;p&gt;At &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of &lt;a href=&quot;https://www.thehackingproject.org/&quot;&gt;THP&lt;/a&gt;:&lt;/p&gt;
 
@@ -322,11 +322,11 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
   
     <entry>
       <title type="html">How to switch to another Rails version</title>
-      <link href="http://localhost:4000/how-to-switch-to-another-rails-version" rel="alternate" type="text/html" title="How to switch to another Rails version" />
+      <link href="/how-to-switch-to-another-rails-version" rel="alternate" type="text/html" title="How to switch to another Rails version" />
       <published>2020-07-28T12:00:00+02:00</published>
       <updated>2020-07-28T12:00:00+02:00</updated>
-      <id>http://localhost:4000/how-to-switch-to-another-rails-version</id>
-      <content type="html" xml:base="http://localhost:4000/how-to-switch-to-another-rails-version">&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
+      <id>/how-to-switch-to-another-rails-version</id>
+      <content type="html" xml:base="/how-to-switch-to-another-rails-version">&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
 
 &lt;h2 id=&quot;installation-rails&quot;&gt;Installation rails&lt;/h2&gt;
 

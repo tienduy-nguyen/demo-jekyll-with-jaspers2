@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="http://localhost:4000/tag/me/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-08-02T21:17:14+02:00</updated>
-  <id>http://localhost:4000/tag/me/feed.xml</id>
+  <link href="/tag/me/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-08-03T01:56:45+02:00</updated>
+  <id>/tag/me/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Getting started</title>
-      <link href="http://localhost:4000/welcome" rel="alternate" type="text/html" title="Getting started" />
+      <link href="/welcome" rel="alternate" type="text/html" title="Getting started" />
       <published>2020-07-15T12:00:00+02:00</published>
       <updated>2020-07-15T12:00:00+02:00</updated>
-      <id>http://localhost:4000/welcome</id>
-      <content type="html" xml:base="http://localhost:4000/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
+      <id>/welcome</id>
+      <content type="html" xml:base="/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
 
 &lt;h2 id=&quot;about-me-and-my-blog&quot;&gt;About me and my blog&lt;/h2&gt;
 

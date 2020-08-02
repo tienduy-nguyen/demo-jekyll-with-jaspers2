@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
-  <link href="http://localhost:4000/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2020-08-02T21:17:14+02:00</updated>
-  <id>http://localhost:4000/tag/web-development/feed.xml</id>
+  <link href="/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-08-03T01:56:45+02:00</updated>
+  <id>/tag/web-development/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Build your personal website without spending any money using Jekyll and Github pages</title>
-      <link href="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
+      <link href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages" rel="alternate" type="text/html" title="Build your personal website without spending any money using Jekyll and Github pages" />
       <published>2020-07-25T12:00:00+02:00</published>
       <updated>2020-07-25T12:00:00+02:00</updated>
-      <id>http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
-      <content type="html" xml:base="http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+      <id>/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</id>
+      <content type="html" xml:base="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">&lt;p&gt;In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
 
 &lt;p&gt;It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.&lt;/p&gt;
 

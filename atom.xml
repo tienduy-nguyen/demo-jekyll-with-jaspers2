@@ -4,7 +4,7 @@
     <title> - Articles</title>
     <description>Learning is an endless journey</description>
     <link>
-    http://localhost:4000</link>
+    </link>
     
       
       <item>
@@ -16,8 +16,8 @@
         
         <pubDate>Sat, 01 Aug 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/better-in-ruby-01</link>
-        <guid isPermaLink="true">http://localhost:4000/better-in-ruby-01</guid>
+        /better-in-ruby-01</link>
+        <guid isPermaLink="true">/better-in-ruby-01</guid>
       </item>
       
     
@@ -31,8 +31,8 @@
         
         <pubDate>Wed, 29 Jul 2020 10:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/rails-5-or-rails-6</link>
-        <guid isPermaLink="true">http://localhost:4000/rails-5-or-rails-6</guid>
+        /rails-5-or-rails-6</link>
+        <guid isPermaLink="true">/rails-5-or-rails-6</guid>
       </item>
       
     
@@ -46,8 +46,8 @@
         
         <pubDate>Tue, 28 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/how-to-switch-to-another-rails-version</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-switch-to-another-rails-version</guid>
+        /how-to-switch-to-another-rails-version</link>
+        <guid isPermaLink="true">/how-to-switch-to-another-rails-version</guid>
       </item>
       
     
@@ -61,8 +61,8 @@
         
         <pubDate>Sat, 25 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</link>
-        <guid isPermaLink="true">http://localhost:4000/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</guid>
+        /build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</link>
+        <guid isPermaLink="true">/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages</guid>
       </item>
       
     
@@ -76,8 +76,8 @@
         
         <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03</link>
-        <guid isPermaLink="true">http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-03</guid>
+        /ruby-codling-challenges-with-the-hacking-project-03</link>
+        <guid isPermaLink="true">/ruby-codling-challenges-with-the-hacking-project-03</guid>
       </item>
       
     
@@ -91,8 +91,8 @@
         
         <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02</link>
-        <guid isPermaLink="true">http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-02</guid>
+        /ruby-codling-challenges-with-the-hacking-project-02</link>
+        <guid isPermaLink="true">/ruby-codling-challenges-with-the-hacking-project-02</guid>
       </item>
       
     
@@ -106,8 +106,8 @@
         
         <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01</link>
-        <guid isPermaLink="true">http://localhost:4000/ruby-codling-challenges-with-the-hacking-project-01</guid>
+        /ruby-codling-challenges-with-the-hacking-project-01</link>
+        <guid isPermaLink="true">/ruby-codling-challenges-with-the-hacking-project-01</guid>
       </item>
       
     
@@ -121,8 +121,8 @@
         
         <pubDate>Wed, 15 Jul 2020 12:00:00 +0200</pubDate>
         <link>
-        http://localhost:4000/welcome</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome</guid>
+        /welcome</link>
+        <guid isPermaLink="true">/welcome</guid>
       </item>
       
     
