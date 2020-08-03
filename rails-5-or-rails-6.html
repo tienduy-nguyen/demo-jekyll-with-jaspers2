@@ -16,9 +16,11 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
 
   <style>
     .hljs {
@@ -104,7 +106,6 @@
 
 <body
   class="post-template">
-
   <div class="site-wrapper">
     <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
     <!-- default -->
@@ -113,8 +114,8 @@
 into the {body} of the default.hbs template -->
 
 <header class="site-header outer">
-    <div class="inner">
-        <nav class="site-nav">
+  <div class="inner">
+    <nav class="site-nav">
   <div class="site-nav-left">
     
     
@@ -152,42 +153,87 @@ into the {body} of the default.hbs template -->
       
     </div>
     
+    <a class="subscribe-button" href="#subscribe">Subscribe</a>
+    
   </div>
 </nav>
-    </div>
+  </div>
 </header>
 
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
 
 <main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
+  <div class="inner">
 
-        <article class="post-full  tag-ruby post ">
+    <article
+      class="post-full  tag-ruby post ">
 
-            <header class="post-full-header">
-                <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="29 July 2020">29 July 2020</time>
-                    
-                        <span class="date-divider">/</span>
-                        
-                            
-                               <a href='/tag/ruby/'>RUBY</a>
-                            
-                        
-                    
-                </section>
-                <h1 class="post-full-title">Rails 5 or Rails 6 ?</h1>
-            </header>
+      <header class="post-full-header">
+        <section class="post-full-meta">
+          <time class="post-full-meta-date"
+            datetime="29 July 2020">29 July 2020</time>
+          
+          <span class="date-divider">/</span>
+          
+          
+          <a href='/tag/ruby/'>RUBY</a>
+          
+          
+          
+        </section>
+        <h1 class="post-full-title">Rails 5 or Rails 6 ?</h1>
+      </header>
 
-            
-            <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/rails.jpeg)">
-            </figure>
-            
+      
+      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/rails.jpeg)">
+      </figure>
+      
 
-            <section class="post-full-content">
-                <div class="kg-card-markdown">
-                    <p>What version of rails you use in your projects, today?</p>
+
+
+
+      <section class="post-full-content-wrapper">
+        <section class="page__content" itemprop="text">
+          
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header>
+                <h4 class="nav__title"><i class="fas fa-file-alt"></i>
+                  Menu
+                </h4>
+              </header>
+              <ul>
+  <li><a href="#parralled-testing">Parralled Testing</a></li>
+  <li><a href="#native-webpacker-support">Native Webpacker Support</a></li>
+  <li><a href="#multi-database-support">Multi Database Support</a></li>
+  <li><a href="#zeitwerk">Zeitwerk</a>
+    <ul>
+      <li><a href="#so-to-reponse-the-question-of-article">So to reponse the question of article?</a></li>
+    </ul>
+  </li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+<style type="text/css">
+  div#table-of-content {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #ecf6ec;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25);
+  }
+</style>
+            </nav>
+          </aside>
+          
+        </section>
+
+        <div class="post-full-content">
+          <div class="kg-card-markdown">
+            <p>What version of rails you use in your projects, today?</p>
 
 <p>At <a href="https://www.thehackingproject.org/">THP</a>, when we start learning rails, we are required to install rails version 5.2.3. But I when I see that the new version of rails has been released is already 6.0. So we have posed a question for our technical manager of <a href="https://www.thehackingproject.org/">THP</a>:</p>
 
@@ -248,120 +294,147 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 <p>Check out on <a href="https://dev.to/chrisachard/rails-6-released-what-does-that-mean-for-you-3591">dev.to</a> and <a href="https://naturaily.com/blog/4-features-ruby-on-rails-6">naturaily.com</a></p>
 
-                </div>
-            </section>
+          </div>
 
-            <!-- Email subscribe form at the bottom of the page -->
+        </div>
+      </section>
+
+      <!-- Email subscribe form at the bottom of the page -->
+      
+      <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Subscribe to Adev42</h3>
+        <p>Get the latest posts delivered right to your inbox</p>
+        <form method="post" action="/subscribe/" class="">
+  <input class="confirm" type="hidden" name="confirm" /><input class="location" type="hidden" name="location" /><input
+    class="referrer" type="hidden" name="referrer" />
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com" />
+  </div>
+  <button class="" type="submit" ><span>Subscribe</span></button>
+  <script type="text/javascript">
+    (function (g, h, o, s, t) {
+      h[o]('.location')[s] = h[o]('.location')[s] || g.location.href;
+      h[o]('.referrer')[s] = h[o]('.referrer')[s] || h.referrer;
+    })(window, document, 'querySelector', 'value');
+  </script>
+  <script id="mcjs">
+    ! function (c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/76a44760065c375891a13400c/ddcb929de6adf7767b029651f.js");
+  </script>
+</form>
+      </section>
+      
+
+      <footer class="post-full-footer">
+        <!-- Everything inside the #author tags pulls data from the author -->
+        <!-- #author-->
+        
+        
+        <section class="author-card">
+          
+          <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="tienduy" />
+          
+          <section class="author-card-content">
+            <h4 class="author-card-name"><a href="/author/tienduy">TienDuy</a>
+            </h4>
             
+            <p>Tien Duy is a full-stack web developer. He loves coding, solving problems and learning from others.</p>
+            
+          </section>
+        </section>
+        <div class="post-full-footer-right">
+          <a class="author-card-button" href="/author/tienduy">Read More</a>
+        </div>
+        
+        
+        <!-- /author  -->
+      </footer>
 
-            <footer class="post-full-footer">
-                <!-- Everything inside the #author tags pulls data from the author -->
-                <!-- #author-->
-                
-                    
-                        <section class="author-card">
-                            
-                                <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="tienduy" />
-                            
-                            <section class="author-card-content">
-                                <h4 class="author-card-name"><a href="/author/tienduy">TienDuy</a></h4>
-                                
-                                    <p>Tien Duy is a full-stack web developer. He loves coding, solving problems and learning from others.</p>
-                                
-                            </section>
-                        </section>
-                        <div class="post-full-footer-right">
-                            <a class="author-card-button" href="/author/tienduy">Read More</a>
-                        </div>
-                    
-                
-                <!-- /author  -->
-            </footer>
-
-            <!-- If you use Disqus comments, just uncomment this block.
+      <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
-            
+      
 
-        </article>
+    </article>
 
-    </div>
+  </div>
 </main>
 
 <!-- Links to Previous/Next posts -->
 <aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            
-                
-                
-                
-                
-                    <article class="read-next-card"
-                        
-                            style="background-image: url(/assets/images/blog-cover3.jpeg)"
-                        
-                    >
-                        <header class="read-next-card-header">
-                            <small class="read-next-card-header-sitetitle">&mdash; Adev42 &mdash;</small>
-                            
-                                <h3 class="read-next-card-header-title"><a href="/tag/ruby/">Ruby</a></h3>
-                            
-                        </header>
-                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+  <div class="inner">
+    <div class="read-next-feed">
+      
+      
+      
+      
+      
+      <article class="read-next-card" 
+        style="background-image: url(/assets/images/blog-cover3.jpeg)" >
+        <header class="read-next-card-header">
+          <small class="read-next-card-header-sitetitle">&mdash; Adev42 &mdash;</small>
+          
+          <h3 class="read-next-card-header-title"><a
+              href="/tag/ruby/">Ruby</a></h3>
+          
+        </header>
+        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
 </div>
-                        <div class="read-next-card-content">
-                            <ul>
-                                
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/better-in-ruby-01">Better In Ruby - 01</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                    
-                                  
-                                
-                                  
-                                    
-                                        
-                                        
-                                            <li><a href="/how-to-switch-to-another-rails-version">How to switch to another Rails version</a></li>
-                                        
-                                    
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                                  
-                                
-                            </ul>
-                        </div>
-                        <footer class="read-next-card-footer">
-                            <a href="/tag/ruby/">
-                                
-                                    See all 2 posts  →
-                                
-                            </a>
-                        </footer>
-                    </article>
-                
+        <div class="read-next-card-content">
+          <ul>
             
+            
+            
+            
+            
+            
+            <li><a href="/better-in-ruby-01">Better In Ruby - 01</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/how-to-switch-to-another-rails-version">How to switch to another Rails version</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+        <footer class="read-next-card-footer">
+          <a href="/tag/ruby/">
+            
+            See all 2 posts →
+            
+          </a>
+        </footer>
+      </article>
+      
+      
 
-            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
+      <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
 
     <article class="post-card post-template">
         
@@ -409,11 +482,11 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
         </div>
     </article>
 
-            
+      
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
+      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
 
     <article class="post-card post-template">
         
@@ -461,10 +534,10 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
         </div>
     </article>
 
-            
+      
 
-        </div>
     </div>
+  </div>
 </aside>
 
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
@@ -507,7 +580,6 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 <!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
 
-
     <!-- Previous/next page links - displayed on every page -->
     
 
@@ -532,6 +604,39 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
   <!-- The big email subscribe modal content -->
   
+  <div id="subscribe" class="subscribe-overlay">
+    <a class="subscribe-overlay-close" href="#"></a>
+    <div class="subscribe-overlay-content">
+      
+      <img class="subscribe-overlay-logo" src="/assets/images/blog-icon-200.png" alt="Adev42" />
+      
+      <h1 class="subscribe-overlay-title">Subscribe to Adev42</h1>
+      <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
+        straight to your inbox</p>
+      <form method="post" action="/subscribe/" class="">
+  <input class="confirm" type="hidden" name="confirm" /><input class="location" type="hidden" name="location" /><input
+    class="referrer" type="hidden" name="referrer" />
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com" />
+  </div>
+  <button class="" type="submit" ><span>Subscribe</span></button>
+  <script type="text/javascript">
+    (function (g, h, o, s, t) {
+      h[o]('.location')[s] = h[o]('.location')[s] || g.location.href;
+      h[o]('.referrer')[s] = h[o]('.referrer')[s] || h.referrer;
+    })(window, document, 'querySelector', 'value');
+  </script>
+  <script id="mcjs">
+    ! function (c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/76a44760065c375891a13400c/ddcb929de6adf7767b029651f.js");
+  </script>
+</form>
+    </div>
+  </div>
+  
 
 
   <!-- jQuery + Fitvids, which makes all video embeds responsive -->
@@ -539,15 +644,6 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-
-
-  <!-- Paginator increased to "infinit" in _config.yml -->
-  <!-- if paginator.posts  -->
-  <!-- <script>
-        var maxPages = parseInt('');
-    </script>
-    <script src="/assets/js/infinitescroll.js"></script> -->
-  <!-- /endif -->
 
   
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
   <link href="/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-08-03T01:56:45+02:00</updated>
+  <updated>2020-08-03T12:26:50+02:00</updated>
   <id>/author/tienduy/feed.xml</id>
 
   
@@ -38,18 +38,6 @@
       <updated>2020-08-01T12:00:00+02:00</updated>
       <id>/better-in-ruby-01</id>
       <content type="html" xml:base="/better-in-ruby-01">&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
-
-&lt;h2 id=&quot;-table-of-content&quot;&gt;📄 Table Of Content&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#assigning-rest-array&quot;&gt;Assigning the rest of an array to a variable&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#word-array&quot;&gt;Word array&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#concate-array&quot;&gt;Concate array&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#format-decimal&quot;&gt;Format decimal&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#remove-folder&quot;&gt;Remove folder&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#massive-assignment&quot;&gt;Massive assignment&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#deep-copy&quot;&gt;Deep copy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#random-array&quot;&gt;Create an array with the random values&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;p&gt;Today, I will make a series that I learned about tips and tricks in ruby.&lt;/p&gt;
 
@@ -455,7 +443,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;I search the solution on the internet, and I found the awesome technology “Static Site Generator”.&lt;/p&gt;
 
-&lt;h1 id=&quot;i-static-site-generator&quot;&gt;I. STATIC SITE GENERATOR&lt;/h1&gt;
+&lt;h2 id=&quot;static-site-generator&quot;&gt;STATIC SITE GENERATOR&lt;/h2&gt;
 
 &lt;p&gt;You may be hear already about the static site generator. They aren’t new. They were what we used to build the web before dynamic CMSs (WordPress, Drupal, etc.) took over.&lt;/p&gt;
 
@@ -476,12 +464,12 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 &lt;p&gt;There a lot of static site generators, check out on &lt;a href=&quot;https://www.staticgen.com/&quot;&gt;staticgen.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;STG&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png&quot; alt=&quot;STG&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;In this article I will present one of them : Jekyll&lt;/p&gt;
 
-&lt;h2 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h2&gt;
+&lt;h3 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h3&gt;
 
 &lt;p&gt;Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.&lt;/p&gt;
 
@@ -489,7 +477,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;So let’s see how I create my personal blog. &lt;strong&gt;And don’t forget that will be totally free.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;ii-installation--build&quot;&gt;II. INSTALLATION &amp;amp; BUILD&lt;/h1&gt;
+&lt;h2 id=&quot;installation--build&quot;&gt;INSTALLATION &amp;amp; BUILD&lt;/h2&gt;
 
 &lt;p&gt;There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:&lt;/p&gt;
 &lt;ul&gt;
@@ -515,7 +503,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;You can found almost the free Jekyll themes on the &lt;a href=&quot;https://jekyllthemes.io/free&quot;&gt;Free Jekyll Themes&lt;/a&gt; and choose the one you prefer.&lt;/p&gt;
 
-&lt;h2 id=&quot;21-minimal-mistakes-jekyll-theme&quot;&gt;2.1 Minimal mistakes Jekyll theme&lt;/h2&gt;
+&lt;h3 id=&quot;21-minimal-mistakes-jekyll-theme&quot;&gt;2.1 Minimal mistakes Jekyll theme&lt;/h3&gt;
 
 &lt;p&gt;I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by &lt;a href=&quot;https://Github.com/mmistakes&quot;&gt;Michael Rose&lt;/a&gt;. Thank so much &lt;a href=&quot;https://mademistakes.com/&quot;&gt;Michael&lt;/a&gt; has provide an awesome Jekyll theme for the community.&lt;/p&gt;
 
@@ -535,20 +523,20 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;We have already a starting point, the thing we need to do now is install this theme on your machine.&lt;/p&gt;
 
-&lt;h2 id=&quot;22-clone-minimal-mistakes-theme-to-your-machine&quot;&gt;2.2 Clone Minimal mistakes theme to your machine&lt;/h2&gt;
+&lt;h3 id=&quot;22-clone-minimal-mistakes-theme-to-your-machine&quot;&gt;2.2 Clone Minimal mistakes theme to your machine&lt;/h3&gt;
 
 &lt;p&gt;As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on Github.&lt;/p&gt;
 
 &lt;p&gt;You may probably no need to do the same way because there are many different ways to do it. This way is just a simpler way for me.&lt;/p&gt;
 
-&lt;h2 id=&quot;23-init-repository-on-the-local-machine&quot;&gt;2.3 Init repository on the local machine&lt;/h2&gt;
+&lt;h3 id=&quot;23-init-repository-on-the-local-machine&quot;&gt;2.3 Init repository on the local machine&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Create a repository on Github&lt;/p&gt;
 
     &lt;p&gt;I don’t use the &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; via the command line, but I create directly it on Github.&lt;/p&gt;
 
-    &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png&quot; alt=&quot;create new repo&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png&quot; alt=&quot;create new repo&quot; class=&quot;lazyload&quot; /&gt;&lt;/p&gt;
 
     &lt;p&gt;With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of &lt;code class=&quot;highlighter-rouge&quot;&gt;.gitingore&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;LICENSE&lt;/code&gt;.
 I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll-mmistakes&quot;&gt;demo-jekyll-mmtakes&lt;/a&gt;&lt;/p&gt;
@@ -564,7 +552,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
     &lt;p&gt;Now, we will clone &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;mmistakes repository&lt;/a&gt;.&lt;/p&gt;
 
     &lt;div align=&quot;center&quot;&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png&quot; alt=&quot;&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;Enter in the directory of mmistakes, remove &lt;strong&gt;.git&lt;/strong&gt;, &lt;strong&gt;LICENSE&lt;/strong&gt;, and &lt;strong&gt;README&lt;/strong&gt; file&lt;/li&gt;
@@ -572,7 +560,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
   &lt;li&gt;Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;24-setup-development-environment&quot;&gt;2.4 Setup development environment&lt;/h2&gt;
+&lt;h3 id=&quot;24-setup-development-environment&quot;&gt;2.4 Setup development environment&lt;/h3&gt;
 
 &lt;p&gt;First, let’s make sure that your development environment is ready.&lt;/p&gt;
 
@@ -587,20 +575,20 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
     &lt;p&gt;The result on your browser:&lt;/p&gt;
 
     &lt;div align=&quot;center&quot;&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;first page&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png&quot; alt=&quot;first page&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
     &lt;p&gt;We have nothing to show on the page now, because, we need to customize the mmistakes theme and create a new post.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;25-customize-mmistakes-theme&quot;&gt;2.5 Customize mmistakes theme&lt;/h2&gt;
+&lt;h3 id=&quot;25-customize-mmistakes-theme&quot;&gt;2.5 Customize mmistakes theme&lt;/h3&gt;
 
-&lt;h3 id=&quot;251-configurations&quot;&gt;2.5.1 Configurations&lt;/h3&gt;
+&lt;h4 id=&quot;251-configurations&quot;&gt;2.5.1 Configurations&lt;/h4&gt;
 
 &lt;p&gt;Tree folder of our project before customize&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png&quot; alt=&quot;tree folder&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png&quot; alt=&quot;tree folder&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;To customize your website, you need modify the &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; to create the initial settings for your website.&lt;/p&gt;
@@ -714,7 +702,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
 
 &lt;p&gt;Ok, that’s is the principle tags wee need to customize. Now we will add the gem dependencies in gems files&lt;/p&gt;
 
-&lt;h3 id=&quot;252-gemfile&quot;&gt;2.5.2 Gemfile&lt;/h3&gt;
+&lt;h4 id=&quot;252-gemfile&quot;&gt;2.5.2 Gemfile&lt;/h4&gt;
 
 &lt;p&gt;Your Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; file.&lt;/p&gt;
 
@@ -752,7 +740,7 @@ I named this repo &lt;a href=&quot;https://github.com/tienduy-nguyen/demo-jekyll
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;After modified your gem file, we will return in the terminal:&lt;/p&gt;
 
-&lt;h3 id=&quot;253-run-server&quot;&gt;2.5.3 Run server&lt;/h3&gt;
+&lt;h4 id=&quot;253-run-server&quot;&gt;2.5.3 Run server&lt;/h4&gt;
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# install all gems in Gemfile&lt;/span&gt;
 bundle update &lt;span class=&quot;c&quot;&gt;# update multiple gems&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -765,14 +753,14 @@ bundle update &lt;span class=&quot;c&quot;&gt;# update multiple gems&lt;/span&gt
 &lt;p&gt;Open you browser at &lt;code class=&quot;highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt; and watch the result now.&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
-&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png&quot; alt=&quot;second page&quot; /&gt;
+&lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png&quot; alt=&quot;second page&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;That is better, isn’t it?&lt;/p&gt;
 
 &lt;p&gt;You are almost finished the customization, we will go create the first posts and customize our navbar.&lt;/p&gt;
 
-&lt;h3 id=&quot;254-create-posts&quot;&gt;2.5.4 Create posts&lt;/h3&gt;
+&lt;h4 id=&quot;254-create-posts&quot;&gt;2.5.4 Create posts&lt;/h4&gt;
 
 &lt;p&gt;We need to put all the posts in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. If you don’t find it, you just create a new one with the same name.&lt;/p&gt;
 
@@ -850,9 +838,9 @@ Multi line blockquote with a cite reference:
 &lt;p&gt;Here is some example of our pages when we added already the posts:&lt;/p&gt;
 
 &lt;div align=&quot;center&quot;&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png&quot; alt=&quot;third page&quot; /&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png&quot; alt=&quot;post detail&quot; /&gt;
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png&quot; alt=&quot;post detail&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png&quot; alt=&quot;third page&quot; loading=&quot;lazy&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png&quot; alt=&quot;post detail&quot; loading=&quot;lazy&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png&quot; alt=&quot;post detail&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;As you can see, the minimal mistakes theme is really excellent. It helps us to have a modern blog with the very awesome features:&lt;/p&gt;
@@ -873,7 +861,7 @@ Multi line blockquote with a cite reference:
 
 &lt;p&gt;So, the last thing we need to do in this article is &lt;strong&gt;navigation&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;255-navigation&quot;&gt;2.5.5 Navigation&lt;/h3&gt;
+&lt;h4 id=&quot;255-navigation&quot;&gt;2.5.5 Navigation&lt;/h4&gt;
 
 &lt;p&gt;It’s very simple because Michael did it for us. We just make some changes.&lt;/p&gt;
 
@@ -898,18 +886,18 @@ Multi line blockquote with a cite reference:
 &lt;p&gt;The result is:&lt;/p&gt;
 &lt;div align=&quot;center&quot;&gt;
   Posts page
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png&quot; alt=&quot;third page&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png&quot; alt=&quot;third page&quot; loading=&quot;lazy&quot; /&gt;
 
   Categories page
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png&quot; alt=&quot;post detail&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png&quot; alt=&quot;post detail&quot; loading=&quot;lazy&quot; /&gt;
 
   Tag pages
-  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png&quot; alt=&quot;post detail&quot; /&gt;
+  &lt;img src=&quot;../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png&quot; alt=&quot;post detail&quot; loading=&quot;lazy&quot; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Are you curious about the jekyll? Checkout at &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;Jekyll quickstart&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+&lt;h4 id=&quot;256-build&quot;&gt;2.5.6 Build&lt;/h4&gt;
 
 &lt;p&gt;When you finish an article, you need to build file with:&lt;/p&gt;
 
@@ -917,7 +905,7 @@ Multi line blockquote with a cite reference:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;It will build automatic to the html, css files in the &lt;code class=&quot;highlighter-rouge&quot;&gt;site&lt;/code&gt; folder.&lt;/p&gt;
 
-&lt;h2 id=&quot;deploy-on-github-pages&quot;&gt;Deploy on Github pages&lt;/h2&gt;
+&lt;h3 id=&quot;26-deploy-on-github-pages&quot;&gt;2.6 Deploy on Github pages&lt;/h3&gt;
 
 &lt;p&gt;Push and commit all the changes to your github repository.&lt;/p&gt;
 
@@ -935,7 +923,7 @@ Multi line blockquote with a cite reference:
 
 &lt;hr /&gt;
 
-&lt;h1 id=&quot;extra--topics&quot;&gt;Extra  topics&lt;/h1&gt;
+&lt;h2 id=&quot;extra--topics&quot;&gt;Extra  topics&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Using your own domain name. It’s not expensive.&lt;/li&gt;
@@ -943,7 +931,7 @@ Multi line blockquote with a cite reference:
   &lt;li&gt;Other static site generator: Gastbyjs, nextjs, nuxtjs, hugo …&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;reference&quot;&gt;Reference&lt;/h1&gt;
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Demo online &lt;a href=&quot;https://adev42.com/demo-jekyll-mmistakes/&quot;&gt;https://adev42.com/demo-jekyll-mmistakes/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;My article on medium &lt;a href=&quot;https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08&quot;&gt;Build your personal website without spending any money&lt;/a&gt;&lt;/li&gt;

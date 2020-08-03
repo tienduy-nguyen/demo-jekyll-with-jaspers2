@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
   <link href="/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-08-03T01:56:45+02:00</updated>
+  <updated>2020-08-03T12:26:50+02:00</updated>
   <id>/tag/ruby/feed.xml</id>
 
   
@@ -38,18 +38,6 @@
       <updated>2020-08-01T12:00:00+02:00</updated>
       <id>/better-in-ruby-01</id>
       <content type="html" xml:base="/better-in-ruby-01">&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
-
-&lt;h2 id=&quot;-table-of-content&quot;&gt;📄 Table Of Content&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;#assigning-rest-array&quot;&gt;Assigning the rest of an array to a variable&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#word-array&quot;&gt;Word array&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#concate-array&quot;&gt;Concate array&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#format-decimal&quot;&gt;Format decimal&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#remove-folder&quot;&gt;Remove folder&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#massive-assignment&quot;&gt;Massive assignment&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#deep-copy&quot;&gt;Deep copy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#random-array&quot;&gt;Create an array with the random values&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 
 &lt;p&gt;Today, I will make a series that I learned about tips and tricks in ruby.&lt;/p&gt;
 

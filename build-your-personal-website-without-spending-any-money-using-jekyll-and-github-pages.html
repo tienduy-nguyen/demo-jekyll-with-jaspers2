@@ -16,9 +16,11 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
   <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
 
   <style>
     .hljs {
@@ -104,7 +106,6 @@
 
 <body
   class="post-template">
-
   <div class="site-wrapper">
     <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
     <!-- default -->
@@ -113,8 +114,8 @@
 into the {body} of the default.hbs template -->
 
 <header class="site-header outer">
-    <div class="inner">
-        <nav class="site-nav">
+  <div class="inner">
+    <nav class="site-nav">
   <div class="site-nav-left">
     
     
@@ -152,42 +153,104 @@ into the {body} of the default.hbs template -->
       
     </div>
     
+    <a class="subscribe-button" href="#subscribe">Subscribe</a>
+    
   </div>
 </nav>
-    </div>
+  </div>
 </header>
 
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
 
 <main id="site-main" class="site-main outer" role="main">
-    <div class="inner">
+  <div class="inner">
 
-        <article class="post-full  tag-web-development post ">
+    <article
+      class="post-full  tag-web-development post ">
 
-            <header class="post-full-header">
-                <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="25 July 2020">25 July 2020</time>
-                    
-                        <span class="date-divider">/</span>
-                        
-                            
-                               <a href='/tag/web-development/'>WEB DEVELOPMENT</a>
-                            
-                        
-                    
-                </section>
-                <h1 class="post-full-title">Build your personal website without spending any money using Jekyll and Github pages</h1>
-            </header>
+      <header class="post-full-header">
+        <section class="post-full-meta">
+          <time class="post-full-meta-date"
+            datetime="25 July 2020">25 July 2020</time>
+          
+          <span class="date-divider">/</span>
+          
+          
+          <a href='/tag/web-development/'>WEB DEVELOPMENT</a>
+          
+          
+          
+        </section>
+        <h1 class="post-full-title">Build your personal website without spending any money using Jekyll and Github pages</h1>
+      </header>
 
-            
-            <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/free-website.jpeg)">
-            </figure>
-            
+      
+      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/free-website.jpeg)">
+      </figure>
+      
 
-            <section class="post-full-content">
-                <div class="kg-card-markdown">
-                    <p>In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.</p>
+
+
+
+      <section class="post-full-content-wrapper">
+        <section class="page__content" itemprop="text">
+          
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header>
+                <h4 class="nav__title"><i class="fas fa-file-alt"></i>
+                  Menu
+                </h4>
+              </header>
+              <ul>
+  <li><a href="#static-site-generator">STATIC SITE GENERATOR</a>
+    <ul>
+      <li><a href="#jekyll">Jekyll</a></li>
+    </ul>
+  </li>
+  <li><a href="#installation--build">INSTALLATION &amp; BUILD</a>
+    <ul>
+      <li><a href="#21-minimal-mistakes-jekyll-theme">2.1 Minimal mistakes Jekyll theme</a></li>
+      <li><a href="#22-clone-minimal-mistakes-theme-to-your-machine">2.2 Clone Minimal mistakes theme to your machine</a></li>
+      <li><a href="#23-init-repository-on-the-local-machine">2.3 Init repository on the local machine</a></li>
+      <li><a href="#24-setup-development-environment">2.4 Setup development environment</a></li>
+      <li><a href="#25-customize-mmistakes-theme">2.5 Customize mmistakes theme</a>
+        <ul>
+          <li><a href="#251-configurations">2.5.1 Configurations</a></li>
+          <li><a href="#252-gemfile">2.5.2 Gemfile</a></li>
+          <li><a href="#253-run-server">2.5.3 Run server</a></li>
+          <li><a href="#254-create-posts">2.5.4 Create posts</a></li>
+          <li><a href="#255-navigation">2.5.5 Navigation</a></li>
+          <li><a href="#256-build">2.5.6 Build</a></li>
+        </ul>
+      </li>
+      <li><a href="#26-deploy-on-github-pages">2.6 Deploy on Github pages</a></li>
+    </ul>
+  </li>
+  <li><a href="#extra--topics">Extra  topics</a></li>
+  <li><a href="#reference">Reference</a></li>
+</ul>
+<style type="text/css">
+  div#table-of-content {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #ecf6ec;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25);
+  }
+</style>
+            </nav>
+          </aside>
+          
+        </section>
+
+        <div class="post-full-content">
+          <div class="kg-card-markdown">
+            <p>In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.</p>
 
 <p>It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.</p>
 
@@ -203,7 +266,7 @@ into the {body} of the default.hbs template -->
 
 <p>I search the solution on the internet, and I found the awesome technology “Static Site Generator”.</p>
 
-<h1 id="i-static-site-generator">I. STATIC SITE GENERATOR</h1>
+<h2 id="static-site-generator">STATIC SITE GENERATOR</h2>
 
 <p>You may be hear already about the static site generator. They aren’t new. They were what we used to build the web before dynamic CMSs (WordPress, Drupal, etc.) took over.</p>
 
@@ -224,12 +287,12 @@ into the {body} of the default.hbs template -->
 <p>There a lot of static site generators, check out on <a href="https://www.staticgen.com/">staticgen.com</a></p>
 
 <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="STG" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="STG" loading="lazy" />
 </div>
 
 <p>In this article I will present one of them : Jekyll</p>
 
-<h2 id="jekyll">Jekyll</h2>
+<h3 id="jekyll">Jekyll</h3>
 
 <p>Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner’s popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.</p>
 
@@ -237,7 +300,7 @@ into the {body} of the default.hbs template -->
 
 <p>So let’s see how I create my personal blog. <strong>And don’t forget that will be totally free.</strong></p>
 
-<h1 id="ii-installation--build">II. INSTALLATION &amp; BUILD</h1>
+<h2 id="installation--build">INSTALLATION &amp; BUILD</h2>
 
 <p>There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:</p>
 <ul>
@@ -263,7 +326,7 @@ into the {body} of the default.hbs template -->
 
 <p>You can found almost the free Jekyll themes on the <a href="https://jekyllthemes.io/free">Free Jekyll Themes</a> and choose the one you prefer.</p>
 
-<h2 id="21-minimal-mistakes-jekyll-theme">2.1 Minimal mistakes Jekyll theme</h2>
+<h3 id="21-minimal-mistakes-jekyll-theme">2.1 Minimal mistakes Jekyll theme</h3>
 
 <p>I will show you a really good one theme for building a blog. It is “Minimal mistake theme”, create by <a href="https://Github.com/mmistakes">Michael Rose</a>. Thank so much <a href="https://mademistakes.com/">Michael</a> has provide an awesome Jekyll theme for the community.</p>
 
@@ -283,20 +346,20 @@ into the {body} of the default.hbs template -->
 
 <p>We have already a starting point, the thing we need to do now is install this theme on your machine.</p>
 
-<h2 id="22-clone-minimal-mistakes-theme-to-your-machine">2.2 Clone Minimal mistakes theme to your machine</h2>
+<h3 id="22-clone-minimal-mistakes-theme-to-your-machine">2.2 Clone Minimal mistakes theme to your machine</h3>
 
 <p>As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on Github.</p>
 
 <p>You may probably no need to do the same way because there are many different ways to do it. This way is just a simpler way for me.</p>
 
-<h2 id="23-init-repository-on-the-local-machine">2.3 Init repository on the local machine</h2>
+<h3 id="23-init-repository-on-the-local-machine">2.3 Init repository on the local machine</h3>
 <ul>
   <li>
     <p>Create a repository on Github</p>
 
     <p>I don’t use the <code class="highlighter-rouge">git init</code> via the command line, but I create directly it on Github.</p>
 
-    <p><img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png" alt="create new repo" /></p>
+    <p><img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png" alt="create new repo" class="lazyload" /></p>
 
     <p>With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of <code class="highlighter-rouge">.gitingore</code> and <code class="highlighter-rouge">LICENSE</code>.
 I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistakes">demo-jekyll-mmtakes</a></p>
@@ -312,7 +375,7 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
     <p>Now, we will clone <a href="https://github.com/mmistakes/minimal-mistakes">mmistakes repository</a>.</p>
 
     <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png" alt="" loading="lazy" />
 </div>
   </li>
   <li>Enter in the directory of mmistakes, remove <strong>.git</strong>, <strong>LICENSE</strong>, and <strong>README</strong> file</li>
@@ -320,7 +383,7 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
   <li>Don’t hesitate to make a git commit when you finish that step with a message “Init mmistake theme” for example.</li>
 </ul>
 
-<h2 id="24-setup-development-environment">2.4 Setup development environment</h2>
+<h3 id="24-setup-development-environment">2.4 Setup development environment</h3>
 
 <p>First, let’s make sure that your development environment is ready.</p>
 
@@ -335,20 +398,20 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
     <p>The result on your browser:</p>
 
     <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page" loading="lazy" />
 </div>
 
     <p>We have nothing to show on the page now, because, we need to customize the mmistakes theme and create a new post.</p>
   </li>
 </ul>
 
-<h2 id="25-customize-mmistakes-theme">2.5 Customize mmistakes theme</h2>
+<h3 id="25-customize-mmistakes-theme">2.5 Customize mmistakes theme</h3>
 
-<h3 id="251-configurations">2.5.1 Configurations</h3>
+<h4 id="251-configurations">2.5.1 Configurations</h4>
 
 <p>Tree folder of our project before customize</p>
 <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png" alt="tree folder" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png" alt="tree folder" loading="lazy" />
 </div>
 
 <p>To customize your website, you need modify the <code class="highlighter-rouge">_config.yml</code> to create the initial settings for your website.</p>
@@ -462,7 +525,7 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
 
 <p>Ok, that’s is the principle tags wee need to customize. Now we will add the gem dependencies in gems files</p>
 
-<h3 id="252-gemfile">2.5.2 Gemfile</h3>
+<h4 id="252-gemfile">2.5.2 Gemfile</h4>
 
 <p>Your Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you <code class="highlighter-rouge">_config.yml</code> file.</p>
 
@@ -500,7 +563,7 @@ I named this repo <a href="https://github.com/tienduy-nguyen/demo-jekyll-mmistak
 </code></pre></div></div>
 <p>After modified your gem file, we will return in the terminal:</p>
 
-<h3 id="253-run-server">2.5.3 Run server</h3>
+<h4 id="253-run-server">2.5.3 Run server</h4>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="c"># install all gems in Gemfile</span>
 bundle update <span class="c"># update multiple gems</span>
 </code></pre></div></div>
@@ -513,14 +576,14 @@ bundle update <span class="c"># update multiple gems</span>
 <p>Open you browser at <code class="highlighter-rouge">localhost:4000</code> and watch the result now.</p>
 
 <div align="center">
-<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png" alt="second page" />
+<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png" alt="second page" loading="lazy" />
 </div>
 
 <p>That is better, isn’t it?</p>
 
 <p>You are almost finished the customization, we will go create the first posts and customize our navbar.</p>
 
-<h3 id="254-create-posts">2.5.4 Create posts</h3>
+<h4 id="254-create-posts">2.5.4 Create posts</h4>
 
 <p>We need to put all the posts in the <code class="highlighter-rouge">_posts</code> folder. If you don’t find it, you just create a new one with the same name.</p>
 
@@ -598,9 +661,9 @@ Multi line blockquote with a cite reference:
 <p>Here is some example of our pages when we added already the posts:</p>
 
 <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png" alt="third page" />
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png" alt="post detail" />
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png" alt="post detail" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png" alt="third page" loading="lazy" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png" alt="post detail" loading="lazy" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png" alt="post detail" loading="lazy" />
 </div>
 
 <p>As you can see, the minimal mistakes theme is really excellent. It helps us to have a modern blog with the very awesome features:</p>
@@ -621,7 +684,7 @@ Multi line blockquote with a cite reference:
 
 <p>So, the last thing we need to do in this article is <strong>navigation</strong>.</p>
 
-<h3 id="255-navigation">2.5.5 Navigation</h3>
+<h4 id="255-navigation">2.5.5 Navigation</h4>
 
 <p>It’s very simple because Michael did it for us. We just make some changes.</p>
 
@@ -646,18 +709,18 @@ Multi line blockquote with a cite reference:
 <p>The result is:</p>
 <div align="center">
   Posts page
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png" alt="third page" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png" alt="third page" loading="lazy" />
 
   Categories page
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png" alt="post detail" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png" alt="post detail" loading="lazy" />
 
   Tag pages
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail" />
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail" loading="lazy" />
 </div>
 
 <p>Are you curious about the jekyll? Checkout at <a href="https://jekyllrb.com/docs/">Jekyll quickstart</a></p>
 
-<h3 id="build">Build</h3>
+<h4 id="256-build">2.5.6 Build</h4>
 
 <p>When you finish an article, you need to build file with:</p>
 
@@ -665,7 +728,7 @@ Multi line blockquote with a cite reference:
 </code></pre></div></div>
 <p>It will build automatic to the html, css files in the <code class="highlighter-rouge">site</code> folder.</p>
 
-<h2 id="deploy-on-github-pages">Deploy on Github pages</h2>
+<h3 id="26-deploy-on-github-pages">2.6 Deploy on Github pages</h3>
 
 <p>Push and commit all the changes to your github repository.</p>
 
@@ -683,7 +746,7 @@ Multi line blockquote with a cite reference:
 
 <hr />
 
-<h1 id="extra--topics">Extra  topics</h1>
+<h2 id="extra--topics">Extra  topics</h2>
 
 <ul>
   <li>Using your own domain name. It’s not expensive.</li>
@@ -691,7 +754,7 @@ Multi line blockquote with a cite reference:
   <li>Other static site generator: Gastbyjs, nextjs, nuxtjs, hugo …</li>
 </ul>
 
-<h1 id="reference">Reference</h1>
+<h2 id="reference">Reference</h2>
 <ul>
   <li>Demo online <a href="https://adev42.com/demo-jekyll-mmistakes/">https://adev42.com/demo-jekyll-mmistakes/</a></li>
   <li>My article on medium <a href="https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08">Build your personal website without spending any money</a></li>
@@ -703,60 +766,89 @@ Multi line blockquote with a cite reference:
 </ul>
 
 
-                </div>
-            </section>
+          </div>
 
-            <!-- Email subscribe form at the bottom of the page -->
+        </div>
+      </section>
+
+      <!-- Email subscribe form at the bottom of the page -->
+      
+      <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Subscribe to Adev42</h3>
+        <p>Get the latest posts delivered right to your inbox</p>
+        <form method="post" action="/subscribe/" class="">
+  <input class="confirm" type="hidden" name="confirm" /><input class="location" type="hidden" name="location" /><input
+    class="referrer" type="hidden" name="referrer" />
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com" />
+  </div>
+  <button class="" type="submit" ><span>Subscribe</span></button>
+  <script type="text/javascript">
+    (function (g, h, o, s, t) {
+      h[o]('.location')[s] = h[o]('.location')[s] || g.location.href;
+      h[o]('.referrer')[s] = h[o]('.referrer')[s] || h.referrer;
+    })(window, document, 'querySelector', 'value');
+  </script>
+  <script id="mcjs">
+    ! function (c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/76a44760065c375891a13400c/ddcb929de6adf7767b029651f.js");
+  </script>
+</form>
+      </section>
+      
+
+      <footer class="post-full-footer">
+        <!-- Everything inside the #author tags pulls data from the author -->
+        <!-- #author-->
+        
+        
+        <section class="author-card">
+          
+          <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="tienduy" />
+          
+          <section class="author-card-content">
+            <h4 class="author-card-name"><a href="/author/tienduy">TienDuy</a>
+            </h4>
             
+            <p>Tien Duy is a full-stack web developer. He loves coding, solving problems and learning from others.</p>
+            
+          </section>
+        </section>
+        <div class="post-full-footer-right">
+          <a class="author-card-button" href="/author/tienduy">Read More</a>
+        </div>
+        
+        
+        <!-- /author  -->
+      </footer>
 
-            <footer class="post-full-footer">
-                <!-- Everything inside the #author tags pulls data from the author -->
-                <!-- #author-->
-                
-                    
-                        <section class="author-card">
-                            
-                                <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="tienduy" />
-                            
-                            <section class="author-card-content">
-                                <h4 class="author-card-name"><a href="/author/tienduy">TienDuy</a></h4>
-                                
-                                    <p>Tien Duy is a full-stack web developer. He loves coding, solving problems and learning from others.</p>
-                                
-                            </section>
-                        </section>
-                        <div class="post-full-footer-right">
-                            <a class="author-card-button" href="/author/tienduy">Read More</a>
-                        </div>
-                    
-                
-                <!-- /author  -->
-            </footer>
-
-            <!-- If you use Disqus comments, just uncomment this block.
+      <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
-            
+      
 
-        </article>
+    </article>
 
-    </div>
+  </div>
 </main>
 
 <!-- Links to Previous/Next posts -->
 <aside class="read-next outer">
-    <div class="inner">
-        <div class="read-next-feed">
-            
-                
-                
-                
-                
-            
+  <div class="inner">
+    <div class="read-next-feed">
+      
+      
+      
+      
+      
+      
 
-            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
+      <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
 
     <article class="post-card post-template">
         
@@ -804,11 +896,11 @@ Multi line blockquote with a cite reference:
         </div>
     </article>
 
-            
+      
 
-            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-            
-                
+      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
 
     <article class="post-card post-template">
         
@@ -856,10 +948,10 @@ Multi line blockquote with a cite reference:
         </div>
     </article>
 
-            
+      
 
-        </div>
     </div>
+  </div>
 </aside>
 
 <!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
@@ -902,7 +994,6 @@ Multi line blockquote with a cite reference:
 
 <!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
 
-
     <!-- Previous/next page links - displayed on every page -->
     
 
@@ -927,6 +1018,39 @@ Multi line blockquote with a cite reference:
 
   <!-- The big email subscribe modal content -->
   
+  <div id="subscribe" class="subscribe-overlay">
+    <a class="subscribe-overlay-close" href="#"></a>
+    <div class="subscribe-overlay-content">
+      
+      <img class="subscribe-overlay-logo" src="/assets/images/blog-icon-200.png" alt="Adev42" />
+      
+      <h1 class="subscribe-overlay-title">Subscribe to Adev42</h1>
+      <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
+        straight to your inbox</p>
+      <form method="post" action="/subscribe/" class="">
+  <input class="confirm" type="hidden" name="confirm" /><input class="location" type="hidden" name="location" /><input
+    class="referrer" type="hidden" name="referrer" />
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com" />
+  </div>
+  <button class="" type="submit" ><span>Subscribe</span></button>
+  <script type="text/javascript">
+    (function (g, h, o, s, t) {
+      h[o]('.location')[s] = h[o]('.location')[s] || g.location.href;
+      h[o]('.referrer')[s] = h[o]('.referrer')[s] || h.referrer;
+    })(window, document, 'querySelector', 'value');
+  </script>
+  <script id="mcjs">
+    ! function (c, h, i, m, p) {
+      m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+    }(document, "script",
+      "https://chimpstatic.com/mcjs-connected/js/users/76a44760065c375891a13400c/ddcb929de6adf7767b029651f.js");
+  </script>
+</form>
+    </div>
+  </div>
+  
 
 
   <!-- jQuery + Fitvids, which makes all video embeds responsive -->
@@ -934,15 +1058,6 @@ Multi line blockquote with a cite reference:
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-
-
-  <!-- Paginator increased to "infinit" in _config.yml -->
-  <!-- if paginator.posts  -->
-  <!-- <script>
-        var maxPages = parseInt('');
-    </script>
-    <script src="/assets/js/infinitescroll.js"></script> -->
-  <!-- /endif -->
 
   
 
