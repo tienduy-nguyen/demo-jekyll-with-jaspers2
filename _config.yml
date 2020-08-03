@@ -7,6 +7,7 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 paginate: 50 # it will paginate after this number
+paginate_path: /page:num/
 language: 'en-uk'
 words_per_minute: 200
 
@@ -35,7 +36,8 @@ CNAME: #add cname for website to be created
 
 # Social info
 navigation: True # show the navbar links
-subscribers: False # you need to connect an external service for this to work,
+subscribers: True # you need to connect an external service for this to work,
+subscribe: True
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
 linkedin: tienduy-nguyen
@@ -80,7 +82,6 @@ whitelist:
 
 feed:
   path: feed.xml
-
   # Sass/SCSS
 sass:
   sass_dir: _sass
@@ -102,6 +103,13 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
 # Additional settings available on the front-matter
 # Site logo in the index.html (as in demo.ghost.io)
 # Author's page cover in _layouts/author.html
@@ -121,7 +129,6 @@ tag_archive:
 # Branch defaults to "source" for USERNAME.github.io
 # or "master" otherwise
 safe: False
-lsi: False
 username: tienduy-nguyen
 repo: blog
 branch: master
@@ -149,3 +156,25 @@ exclude:
   - '*.Rmd'
   - .git*
   - vendor
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
+      read_time: true
+      toc: true
+      toc_label: 'Menu'
+      toc_icon: 'file-alt'
+      comments: true # true
+      share: true
+      related: true
+      autoads: true
+      class: post-template
+      subclass: 'post'
+      author: tienduy
+      navigation: True
+      current: post

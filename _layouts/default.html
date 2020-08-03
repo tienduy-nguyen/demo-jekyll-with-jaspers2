@@ -13,9 +13,11 @@
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/syntax.css" />
+
 
   <style>
     .hljs {
@@ -31,7 +33,6 @@
 
 <body
   class="{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{% endif %}">
-
   <div class="site-wrapper">
     <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
     {{ content }}
@@ -93,15 +94,6 @@
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
-
-
-  <!-- Paginator increased to "infinit" in _config.yml -->
-  <!-- if paginator.posts  -->
-  <!-- <script>
-        var maxPages = parseInt('{{ paginator.total_pages }}');
-    </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
-  <!-- /endif -->
 
   {% if paginator.total_pages > site.paginate %}
   <script>

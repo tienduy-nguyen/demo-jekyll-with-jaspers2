@@ -1,27 +1,14 @@
 ---
 layout: post
-current: post
 cover:  assets/images/post-covers/default.jpeg
-navigation: True
 title: Better In Ruby - 01
 date: 2020-08-01 10:00:00
 tags: ruby
-class: post-template
-subclass: 'post'
-author: tienduy
+
 ---
 
 Some tips you probably don't know in Ruby.
 
-## 📄 Table Of Content
-1. [Assigning the rest of an array to a variable](#assigning-rest-array)
-2. [Word array](#word-array)
-3. [Concate array](#concate-array)
-4. [Format decimal](#format-decimal)
-5. [Remove folder](#remove-folder)
-6. [Massive assignment](#massive-assignment)
-7. [Deep copy](#deep-copy)
-8. [Create an array with the random values](#random-array)
 
 Today, I will make a series that I learned about tips and tricks in ruby.
 

@@ -1,14 +1,10 @@
 ---
 layout: post
-current: post
 cover:  assets/images/post-covers/multi-hats.jpeg
-navigation: True
 title: How to switch to another Rails version
 date: 2020-07-28 10:00:00
 tags: ruby
-class: post-template
-subclass: 'post'
-author: tienduy
+
 ---
 
 When you want to use multiple versions of rails on your computer, how to switch between them?

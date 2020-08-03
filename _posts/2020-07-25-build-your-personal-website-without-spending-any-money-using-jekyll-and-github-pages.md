@@ -1,17 +1,15 @@
 ---
 layout: post
-current: post
 cover:  assets/images/post-covers/free-website.jpeg
-navigation: True
 title: Build your personal website without spending any money using Jekyll and Github pages
 date: 2020-07-25 10:00:00
 tags:  [Web Development]
-class: post-template
-subclass: 'post'
-author: tienduy
 ---
 
+
 In this article, we'll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.
+
+
 
 It’s not always clear why we need need a personal website. But here’s the truth, mostly if we are developers. A website is an effective medium to let the world know who we are, what we are capable of, and what our values are.
 
@@ -26,7 +24,7 @@ In the first time, I tried to create my website with the pages html, css and ser
 I search the solution on the internet, and I found the awesome technology "Static Site Generator". 
 
 
-# I. STATIC SITE GENERATOR
+## STATIC SITE GENERATOR
 
 You may be hear already about the static site generator. They aren't new. They were what we used to build the web before dynamic CMSs (WordPress, Drupal, etc.) took over.
 
@@ -45,14 +43,14 @@ So why static generator?
 There a lot of static site generators, check out on [staticgen.com](https://www.staticgen.com/)
 
 <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="STG">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/static-site-generator.png" alt="STG" loading="lazy">
 </div>
 
 
 
 In this article I will present one of them : Jekyll
 
-## Jekyll
+### Jekyll
 
 Jekyll is a static site generator extremely popular. It is GitHub co-founder Tom Preston-Werner's popular Ruby open source program. It prompts developers to transform your plain text into static websites and blogs. Jekyll is the engine behind GitHub Pages, which you can use to host sites right from your GitHub repositories.
 
@@ -60,7 +58,7 @@ Jekyll is built with Ruby programming language. I'm now learning the web develop
 
 So let's see how I create my personal blog. **And don't forget that will be totally free.**
 
-# II. INSTALLATION & BUILD
+## INSTALLATION & BUILD
 
 There are multiple ways to get started with Jekyll, each with its own variations. Here a few options:
 - Install Jekyll locally via the command line, create a new boilerplate website using `jekyll new`, build it locally with `jekyll build`, then serve it.
@@ -81,7 +79,7 @@ But as the title I wrote, we will build our website without paying anything, we'
 You can found almost the free Jekyll themes on the [Free Jekyll Themes](https://jekyllthemes.io/free) and choose the one you prefer. 
 
 
-## 2.1 Minimal mistakes Jekyll theme
+### 2.1 Minimal mistakes Jekyll theme
 
 I will show you a really good one theme for building a blog. It is "Minimal mistake theme", create by [Michael Rose](https://Github.com/mmistakes). Thank so much [Michael](https://mademistakes.com/) has provide an awesome Jekyll theme for the community.
 
@@ -100,18 +98,18 @@ Its advantages:
 
 We have already a starting point, the thing we need to do now is install this theme on your machine.
 
-## 2.2 Clone Minimal mistakes theme to your machine
+### 2.2 Clone Minimal mistakes theme to your machine
 
 As we will use the Github page to serve our blog. So,before we clone it on the local machine, I will present how I create a new repository on Github. 
 
 You may probably no need to do the same way because there are many different ways to do it. This way is just a simpler way for me.
 
-## 2.3 Init repository on the local machine
+### 2.3 Init repository on the local machine
 - Create a repository on Github
   
   I don't use the `git init` via the command line, but I create directly it on Github.
 
-  ![create new repo](../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png)
+  ![create new repo](../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/create-repo-github.png){:class="lazyload"}
   
 
   With this way, we can define easily the visibility of repos: public or private and we can initialize with the template of `.gitingore` and `LICENSE`.
@@ -127,7 +125,7 @@ You may probably no need to do the same way because there are many different way
 - Now, we will clone [mmistakes repository](https://github.com/mmistakes/minimal-mistakes).
   
   <div align="center">
-    <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png">
+    <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/mmistakes-repo.png" alt="" loading="lazy">
   </div>
 
 
@@ -135,7 +133,7 @@ You may probably no need to do the same way because there are many different way
 - Then we move all files in mmistakes directory to our local repository: **demo-jekyll-mmistakes**
 - Don't hesitate to make a git commit when you finish that step with a message "Init mmistake theme" for example.
 
-## 2.4 Setup development environment
+### 2.4 Setup development environment
 
 First, let’s make sure that your development environment is ready.
 
@@ -148,18 +146,18 @@ First, let’s make sure that your development environment is ready.
   The result on your browser:
 
   <div align="center">
-    <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page">
+    <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/first-page.png" alt="first page" loading="lazy">
   </div>
 
   We have nothing to show on the page now, because, we need to customize the mmistakes theme and create a new post.
 
-## 2.5 Customize mmistakes theme
+### 2.5 Customize mmistakes theme
 
-### 2.5.1 Configurations
+#### 2.5.1 Configurations
 
 Tree folder of our project before customize 
 <div align="center">
-  <img src = "../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png" alt="tree folder">
+  <img src = "../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tree-folder.png" alt="tree folder" loading="lazy">
 </div>
 
 To customize your website, you need modify the `_config.yml` to create the initial settings for your website.
@@ -272,7 +270,7 @@ We can provide the technology comment as Facebook, Disqus ... and google analyti
 
 Ok, that's is the principle tags wee need to customize. Now we will add the gem dependencies in gems files
 
-### 2.5.2 Gemfile
+#### 2.5.2 Gemfile
 
 Your Gemfile now is empty, you need to add some jekyll plugin that you have been declared in you `_config.yml` file.
 
@@ -311,7 +309,7 @@ end
 ```
 After modified your gem file, we will return in the terminal:
 
-### 2.5.3 Run server
+#### 2.5.3 Run server
 ```bash
 bundle install # install all gems in Gemfile
 bundle update # update multiple gems
@@ -327,14 +325,14 @@ Open you browser at `localhost:4000` and watch the result now.
 
 
 <div align="center">
-<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png" alt="second page">
+<img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/second-page.png" alt="second page" loading="lazy">
 </div>
 
 That is better, isn't it?
 
 You are almost finished the customization, we will go create the first posts and customize our navbar.
 
-### 2.5.4 Create posts
+#### 2.5.4 Create posts
 
 We need to put all the posts in the `_posts` folder. If you don't find it, you just create a new one with the same name.
 
@@ -412,9 +410,9 @@ The more features, you will find in the documentations of this theme.
 Here is some example of our pages when we added already the posts:
 
 <div align="center">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png" alt="third page">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png" alt="post detail">
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png" alt="post detail">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/third-page.png" alt="third page" loading="lazy">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail-0.png" alt="post detail" loading="lazy">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/post-detail.png" alt="post detail" loading="lazy">
 </div>
 
 
@@ -434,7 +432,7 @@ I really love this theme. Thank again for [Michael](https://mademistakes.com/).
 
 So, the last thing we need to do in this article is **navigation**.
 
-### 2.5.5 Navigation
+#### 2.5.5 Navigation
 
 It's very simple because Michael did it for us. We just make some changes.
 
@@ -460,18 +458,19 @@ main:
 The result is: 
 <div align="center">
   Posts page
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png" alt="third page">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/posts-nav.png" alt="third page" loading="lazy">
 
   Categories page
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png" alt="post detail">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/categories-nav.png" alt="post detail" loading="lazy">
 
   Tag pages
-  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail">
+  <img src="../assets/images/2020-07-25-using-jekyll-to-build-your-personal-website/tags-nav.png" alt="post detail" loading="lazy">
 </div>
+
 
 Are you curious about the jekyll? Checkout at [Jekyll quickstart](https://jekyllrb.com/docs/)
 
-### Build
+#### 2.5.6 Build
 
 When you finish an article, you need to build file with:
 
@@ -480,7 +479,7 @@ bundle exec jekyll build
 ```
 It will build automatic to the html, css files in the `site` folder. 
 
-## Deploy on Github pages
+### 2.6 Deploy on Github pages
 
 Push and commit all the changes to your github repository.
 
@@ -499,14 +498,14 @@ So that is a demo I want to show you. Now you can start to write your first arti
 ------------------------------
 
 
-# Extra  topics
+## Extra  topics
 
 - Using your own domain name. It's not expensive.
 - [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site)
 - Other static site generator: Gastbyjs, nextjs, nuxtjs, hugo ...
 
 
-# Reference
+## Reference
 - Demo online [https://adev42.com/demo-jekyll-mmistakes/](https://adev42.com/demo-jekyll-mmistakes/)
 - My article on medium [Build your personal website without spending any money](https://medium.com/@tienduy/build-your-personal-website-without-spending-any-money-30e6b2264e08)
 - My repo demo Github [demo-jekyll-mmistakes](https://github.com/tienduy-nguyen/demo-jekyll-mmistakes)

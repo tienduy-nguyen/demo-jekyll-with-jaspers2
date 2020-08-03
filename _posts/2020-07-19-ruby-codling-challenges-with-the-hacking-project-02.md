@@ -1,14 +1,9 @@
 ---
 layout: post
-current: post
 cover:  assets/images/post-covers/challenge.jpeg
-navigation: True
 title: Ruby Coding Challenges with TheHackingProject - 02
 date: 2020-07-17 10:00:00
 tags: algorithms
-class: post-template
-subclass: 'post'
-author: tienduy
 ---
 
 Doing coding challenges is an excellent way to imporve your programming language & problem-solvings skills.

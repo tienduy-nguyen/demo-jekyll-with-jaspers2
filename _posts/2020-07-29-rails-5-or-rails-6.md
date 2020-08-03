@@ -1,14 +1,12 @@
 ---
 layout: post
-current: post
 cover:  assets/images/post-covers/rails.jpeg
 navigation: True
 title: Rails 5 or Rails 6 ?
 date: 2020-07-29 08:00:00
 tags: ruby
-class: post-template
-subclass: 'post'
-author: tienduy
+
+
 ---
 
 What version of rails you use in your projects, today?

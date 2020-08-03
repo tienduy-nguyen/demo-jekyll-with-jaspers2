@@ -931,6 +931,11 @@ body {
     height: 400px;
   }
 }
+.post-full-content-wrapper {
+  position: relative;
+  margin: 0 0;
+  width: 100%;
+}
 .post-full-content {
   position: relative;
   margin: 0 0;
@@ -2088,3 +2093,220 @@ img.emoji {
   }
 }
 /*# sourceMappingURL=screen.css.map */
+
+/*
+     Table of contents navigation
+     ========================================================================== */
+.page__content .notice h4 {
+  margin-bottom: 0;
+  font-size: 1em;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+}
+nav ul li,
+nav ol li {
+  margin-bottom: 0;
+}
+nav li ul,
+nav li ol {
+  margin-top: 0;
+}
+.nav__title {
+  margin: 0;
+  padding: 0.8rem 0.75rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.sidebar {
+  clear: both;
+}
+.sidebar::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+@media (min-width: 64em) {
+  .sidebar {
+    float: left;
+    width: calc(200px - 1em);
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .sidebar:hover {
+    opacity: 1;
+  }
+  .sidebar.sticky {
+    overflow-y: auto;
+    max-height: calc(100vh - 2em - 2em);
+  }
+}
+@media (min-width: 80em) {
+  .sidebar {
+    width: calc(300px - 1em);
+  }
+}
+.sidebar > * {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5,
+.sidebar h6 {
+  margin-bottom: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+}
+.sidebar p,
+.sidebar li {
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+.sidebar img {
+  width: 100%;
+}
+.sidebar img.emoji {
+  width: 20px;
+  height: 20px;
+}
+.sidebar__right {
+  margin-bottom: 1em;
+}
+@media (min-width: 80em) {
+  .sidebar__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    margin-right: -200px;
+    padding-left: 1em;
+    z-index: 10;
+  }
+  .sidebar__right.sticky {
+    clear: both;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    float: right;
+  }
+  .sidebar__right.sticky::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+@media (min-width: 90em) {
+  .sidebar__right {
+    width: 300px;
+    margin-right: -300px;
+  }
+}
+@media (min-width: 80em) {
+  .splash .sidebar__right {
+    position: relative;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 90em) {
+  .splash .sidebar__right {
+    margin-right: 0;
+  }
+}
+.toc {
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
+    'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
+  color: #7a8288;
+  background-color: #f3f6f6;
+  border: 1px solid #cfd4d3;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+.toc .nav__title {
+  color: #fff;
+  font-size: 0.75em;
+  background: #11999e;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.toc .active a {
+  background-color: #cfebec;
+  color: #3d4144;
+}
+/* .toc ul --> toc__menu class */
+.toc ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  font-size: 1em;
+}
+@media (min-width: 64em) {
+  .toc ul {
+    font-size: 1em;
+  }
+}
+
+.toc ul a {
+  display: block;
+  padding: 0.25rem 0.75rem;
+  color: #40514e;
+  font-weight: bold;
+  line-height: 1.5;
+  border-bottom: 1px solid #cfd4d3;
+}
+.toc ul a:hover {
+  color: #40514e;
+}
+.toc ul li ul > li a {
+  padding-left: 1.25rem;
+  font-weight: normal;
+}
+.toc ul li ul li ul > li a {
+  padding-left: 1.75rem;
+}
+.toc ul li ul li ul li ul > li a {
+  padding-left: 2.25rem;
+}
+.toc ul li ul li ul li ul li ul > li a {
+  padding-left: 2.75rem;
+}
+.toc ul li ul li ul li ul li ul li ul > li a {
+  padding-left: 3.25rem;
+}
