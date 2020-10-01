@@ -2248,11 +2248,17 @@ nav li ol {
     margin-right: 0;
   }
 }
+:root {
+  --toc-header-origin: #11999e;
+  --toc-header-black: #070808;
+  --toc-white: #fff;
+}
+
 .toc {
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI',
     'Helvetica Neue', 'Lucida Grande', Arial, sans-serif;
   color: #7a8288;
-  background-color: #f3f6f6;
+  background-color: #fff;
   border: 1px solid #cfd4d3;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125);
@@ -2261,7 +2267,7 @@ nav li ol {
 .toc .nav__title {
   color: #fff;
   font-size: 0.75em;
-  background: #11999e;
+  background: #070808;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
