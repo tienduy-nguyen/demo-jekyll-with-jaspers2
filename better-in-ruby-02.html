@@ -12,7 +12,7 @@
 
 
 
-  <title>How to switch to another Rails version</title>
+  <title>Better In Ruby - 02</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
@@ -34,7 +34,7 @@
   content="Learning is an endless journey" />
 <link rel="shortcut icon" href="https://blog.adev42.com//assets/images/favicon.png" type="image/png" />
 <link rel="canonical"
-  href="/how-to-switch-to-another-rails-version" />
+  href="/better-in-ruby-02" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
 
@@ -42,29 +42,29 @@
 <meta property="og:site_name" content="Adev42" />
 <meta property="og:type" content="website" />
 <meta property="og:title"
-  content="How to switch to another Rails version" />
+  content="Better In Ruby - 02" />
 <meta property="og:description"
-  content="When you want to use multiple versions of rails on your computer, how to switch between them? Installation rails Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is" />
+  content="Some tips you probably don’t know in Ruby - 02 In this article, I want to show you some nice Ruby features that you may know or not. Anyway, it’s a quick read and it’s always interesting to learn new stuff, right?! Create a hash from a list of values" />
 <meta property="og:url"
-  content="/how-to-switch-to-another-rails-version" />
+  content="/better-in-ruby-02" />
 <meta property="og:image"
-  content="/assets/images/post-covers/multi-hats.jpeg" />
+  content="/assets/images/post-covers/default.jpeg" />
 <meta property="article:publisher" content="https://www.facebook.com/" />
 <meta property="article:author" content="https://www.facebook.com/" />
 <meta property="article:published_time"
-  content="2020-07-28T12:00:00+02:00" />
+  content="2020-08-30T12:00:00+02:00" />
 <meta property="article:modified_time"
-  content="2020-07-28T12:00:00+02:00" />
+  content="2020-08-30T12:00:00+02:00" />
 
 <meta property="article:tag" content="Ruby" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title"
-  content="How to switch to another Rails version" />
+  content="Better In Ruby - 02" />
 <meta name="twitter:description"
-  content="When you want to use multiple versions of rails on your computer, how to switch between them? Installation rails Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is" />
+  content="Some tips you probably don’t know in Ruby - 02 In this article, I want to show you some nice Ruby features that you may know or not. Anyway, it’s a quick read and it’s always interesting to learn new stuff, right?! Create a hash from a list of values" />
 <meta name="twitter:url" content="/" />
 <meta name="twitter:image"
-  content="/assets/images/post-covers/multi-hats.jpeg" />
+  content="/assets/images/post-covers/default.jpeg" />
 <meta name="twitter:label1" content="Written by" />
 <meta name="twitter:data1" content="Adev42" />
 <meta name="twitter:label2" content="Filed under" />
@@ -83,24 +83,24 @@
       "name": "Adev42",
       "logo": "/assets/images/blog-icon-200.png"
     },
-    "url": "/how-to-switch-to-another-rails-version",
+    "url": "/better-in-ruby-02",
     "image": {
       "@type": "ImageObject",
-      "url": "/assets/images/post-covers/multi-hats.jpeg",
+      "url": "/assets/images/post-covers/default.jpeg",
       "width": 2000,
       "height": 666
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "/how-to-switch-to-another-rails-version"
+      "@id": "/better-in-ruby-02"
     },
-    "description": "When you want to use multiple versions of rails on your computer, how to switch between them? Installation rails Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is"
+    "description": "Some tips you probably don’t know in Ruby - 02 In this article, I want to show you some nice Ruby features that you may know or not. Anyway, it’s a quick read and it’s always interesting to learn new stuff, right?! Create a hash from a list of values"
   }
 </script>
 
 <meta name="generator" content="Jekyll 3.6.2" />
 <link rel="alternate" type="application/rss+xml"
-  title="How to switch to another Rails version" href="/feed.xml" />
+  title="Better In Ruby - 02" href="/feed.xml" />
 
 </head>
 
@@ -172,7 +172,7 @@ into the {body} of the default.hbs template -->
       <header class="post-full-header">
         <section class="post-full-meta">
           <time class="post-full-meta-date"
-            datetime="28 July 2020">28 July 2020</time>
+            datetime="30 August 2020">30 August 2020</time>
           
           <span class="date-divider">/</span>
           
@@ -182,11 +182,11 @@ into the {body} of the default.hbs template -->
           
           
         </section>
-        <h1 class="post-full-title">How to switch to another Rails version</h1>
+        <h1 class="post-full-title">Better In Ruby - 02</h1>
       </header>
 
       
-      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/multi-hats.jpeg)">
+      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/default.jpeg)">
       </figure>
       
 
@@ -204,13 +204,14 @@ into the {body} of the default.hbs template -->
                 </h4>
               </header>
               <ul>
-  <li><a href="#installation-rails">Installation rails</a></li>
-  <li><a href="#create-a-project-ruby-on-rails-with-a-specific-version-of-rails">Create a project Ruby on Rails with a specific version of rails</a>
-    <ul>
-      <li><a href="#using-ruby-package-manager-rbenv">Using ruby package manager (rbenv)</a></li>
-      <li><a href="#using-bundler">Using bundler</a></li>
-    </ul>
-  </li>
+  <li><a href="#create-a-hash-from-a-list-of-values">Create a hash from a list of values</a></li>
+  <li><a href="#lambda-literal--">Lambda Literal -&gt;</a></li>
+  <li><a href="#double-star-">Double star (**)</a></li>
+  <li><a href="#handle-single-object-and-array-in-the-same-way">Handle single object and array in the same way</a></li>
+  <li><a href="#double-pipe-equals-">Double Pipe Equals ||=</a></li>
+  <li><a href="#mandatory-hash-parameters">Mandatory hash parameters</a></li>
+  <li><a href="#generate-array-of-alphabet-or-numbers">Generate array of alphabet or numbers</a></li>
+  <li><a href="#tap">Tap</a></li>
 </ul>
 <style type="text/css">
   div#table-of-content {
@@ -231,86 +232,201 @@ into the {body} of the default.hbs template -->
 
         <div class="post-full-content">
           <div class="kg-card-markdown">
-            <p>When you want to use multiple versions of rails on your computer, how to switch between them?</p>
+            <p>Some tips you probably don’t know in Ruby - 02</p>
 
-<h2 id="installation-rails">Installation rails</h2>
+<p>In this article, I want to show you some nice Ruby features that you may know or not. Anyway, it’s a quick read and it’s always interesting to learn new stuff, right?!</p>
 
-<p>Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is <code class="highlighter-rouge">rbenv</code> and I will use it for this tuto.</p>
+<h2 id="create-a-hash-from-a-list-of-values">Create a hash from a list of values</h2>
+<p><a style="padding:0px, margin:0px" name="assigning-rest-array"></a></p>
 
-<p>If you are using another ruby package manager like <code class="highlighter-rouge">rvm</code>, you should look at <code class="highlighter-rouge">rbenv</code> and its advantage. <code class="highlighter-rouge">rbenv</code> is more lighter and faster than the <code class="highlighter-rouge">rvm</code> and <code class="highlighter-rouge">rbenv</code> is very recommended by a a lot of developers.</p>
+<p>You can create a hash from a list of values by using Hash[…]. It will create a hash like below:</p>
 
-<p>There is an article on <a href="https://dev.to/">dev.to</a> help you understand more clearly: <a href="https://dev.to/krtb/why-and-how-i-replaced-rvm-with-rbenv-23ad">Why and How I Replaced RVM with RBENV</a>.</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Hash</span><span class="p">[</span><span class="s1">'key1'</span><span class="p">,</span> <span class="s1">'value1'</span><span class="p">,</span> <span class="s1">'key2'</span><span class="p">,</span> <span class="s1">'value2'</span><span class="p">]</span>
 
-<p>Ok, now go on our article.</p>
-
-<p>To install whatever version(s) of rails you want:</p>
-
-<p><code class="highlighter-rouge">gem install rails -v 6.0.3.2</code></p>
-
-<p>To know all rails versions released, you check out on <a href="https://rubygems.org/gems/rails/versions">all rails versions</a>.</p>
-
-<p>You can also do it with your terminal with the command line <code class="highlighter-rouge">gem list rails --remote --all | grep "^rails "</code>.</p>
-
-<p>I you want to install rails on another version of ruby, you need to switch version of ruby and re-install version of rails.</p>
-
-<p><code class="highlighter-rouge">rbenv install 2.5.1</code></p>
-
-<p><code class="highlighter-rouge">rbenv global 2.5.1</code></p>
-
-<p>You can check list gems to see if you installed succesfullly:</p>
-
-<p><code class="highlighter-rouge">gem list --local</code> # result: rails(5.2.4.2,5.2.3)</p>
-
-<p>now you tap <code class="highlighter-rouge">rails version</code> to see the current version of rails using, but it shows only</p>
-
-<p>When you install multi version of rails on your machine, it will always take the lastest version of rails. So the question is how can create a new project rails with the version wanted?</p>
-
-<h2 id="create-a-project-ruby-on-rails-with-a-specific-version-of-rails">Create a project Ruby on Rails with a specific version of rails</h2>
-
-<p>I founded two ways to solve it:</p>
-<ul>
-  <li>Using ruby package manager(rbenv)</li>
-  <li>Using <code class="highlighter-rouge">gem bundler</code></li>
-</ul>
-
-<h3 id="using-ruby-package-manager-rbenv">Using ruby package manager (rbenv)</h3>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv <span class="nb">exec </span>rails _&lt;version_rails&gt;_ new my_project
+<span class="c1"># =&gt; {"key1"=&gt;"value1", "key2"=&gt;"value2"}</span>
 </code></pre></div></div>
 
-<p>for example:</p>
+<h2 id="lambda-literal--">Lambda Literal -&gt;</h2>
+<p><a style="padding:0px, margin:0px" name="word-array"></a></p>
 
-<p>if i want to create a project with rails 5.2.4.2</p>
+<p>Lambda Literal is a anonymous function like lambda in python, <code class="highlighter-rouge">=&gt;</code> in JS or C#, allows you to create lambda easily.</p>
 
-<p><code class="highlighter-rouge">rbenv exec rails _5.2.4.2_ new my_project</code></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">call</span>
+<span class="c1"># =&gt; 2</span>
 
-<p>You can check the version of rails in the <code class="highlighter-rouge">Gemfile</code> when the new app has been created:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ruby</span> <span class="s1">'2.7.1'</span>
-<span class="c1"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</span>
-<span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="s1">'~&gt; 5.2.4'</span><span class="p">,</span> <span class="s1">'&gt;= 5.2.4.2'</span> <span class="c1">#version of rails using to create the project</span>
+<span class="n">a</span> <span class="o">=</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="n">v</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># =&gt; 3</span>
 </code></pre></div></div>
 
-<h3 id="using-bundler">Using bundler</h3>
+<h2 id="double-star-">Double star (**)</h2>
+<p><a style="padding:0px, margin:0px" name="concate-array"></a></p>
 
-<p>The second way is using <code class="highlighter-rouge">bundler</code>.</p>
-
-<p>You just do like another gem dependencies. That means you will specify version of rails in your <code class="highlighter-rouge">Gemfile</code>.</p>
-
-<p>for example:</p>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
-<span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="s1">'6.0.3'</span>
+<p>The double star is a neat little trick in Ruby. See the following method:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="o">**</span><span class="n">c</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
+<span class="k">end</span>
 </code></pre></div></div>
-<p>Very simple, isn’t it?</p>
 
-<p>Make sure you don’t forget <code class="highlighter-rouge">bundle install</code> to install all the dependencies from your Gemfile.</p>
+<p><code class="highlighter-rouge">a</code> is a regular parameter. <code class="highlighter-rouge">*b</code> will take all the parameters passed after the first one and put them in an array. <code class="highlighter-rouge">**c</code> will take any parameter given in the format key: value at the end of the method call.</p>
 
-<p>And then, what we need to do, just finish with:</p>
+<p>See the following examples:</p>
 
-<p><code class="highlighter-rouge">rails new new_app</code></p>
+<p>One parameter</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, [], {}]</span>
+</code></pre></div></div>
 
-<p>So that is two ways I used. I hope it will be helpful for you.</p>
+<p>More than one parameter</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, [2, 3, 4], {}]</span>
+</code></pre></div></div>
+<p>More than one parameter + hash-style parameters</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="ss">a: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">b: </span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, [2, 3, 4], {:a=&gt;1, :b=&gt;2}]</span>
+</code></pre></div></div>
+<h2 id="handle-single-object-and-array-in-the-same-way">Handle single object and array in the same way</h2>
+<p><a style="padding:0px, margin:0px" name="format-decimal"></a></p>
+
+<p>Sometimes you might want to give the option to either accept a single object or an array of objects. Instead of checking for the type of object you’ve received, you could use <code class="highlighter-rouge">[*something] or Array(something)</code>.</p>
+
+<p>Let’s assign two variables. The first one is a single digit and the second one is an array of digits.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">stuff</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">stuff_arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</code></pre></div></div>
+<p>In the following example, I use <code class="highlighter-rouge">[*...]</code> to loop through whatever is give</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="o">*</span><span class="n">stuff</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span> <span class="p">}</span>
+<span class="p">[</span><span class="o">*</span><span class="n">stuff_arr</span><span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span> <span class="p">}</span>
+</code></pre></div></div>
+<p>Same in this one but using Array(…).</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Array</span><span class="p">(</span><span class="n">stuff</span><span class="p">).</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span> <span class="p">}</span>
+<span class="no">Array</span><span class="p">(</span><span class="n">stuff_arr</span><span class="p">).</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="double-pipe-equals-">Double Pipe Equals ||=</h2>
+<p><a style="padding:0px, margin:0px" name="remove-folder"></a></p>
+
+<p>The Double Pipe Equals is a great tool to write concise code.</p>
+
+<p>It’s actually equivalent to the following:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">||</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="c1"># Correct</span>
+</code></pre></div></div>
+
+<p>And not this one, as a lot of people think:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">||</span> <span class="n">b</span> <span class="c1"># Wrong</span>
+</code></pre></div></div>
+
+<p>The second one doesn’t make sense because there is no point reassigning a if we already have it!</p>
+
+<p>This operator can be used to create methods like this in your classes. I love to use it for calculations.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">total</span>
+  <span class="vi">@total</span> <span class="o">||=</span> <span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">100000000</span><span class="p">).</span><span class="nf">to_a</span><span class="p">.</span><span class="nf">inject</span><span class="p">(:</span><span class="o">+</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Now you could have other method calling total to get the total value but it will only be calculated the first time.</p>
+
+<h2 id="mandatory-hash-parameters">Mandatory hash parameters</h2>
+<p><a style="padding:0px, margin:0px" name="massive-assignment"></a></p>
+
+<p>This one was introduced in Ruby 2.0. Instead of just defining a method that takes a hash in parameters like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_method</span><span class="p">({})</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>You can specify the keys that you are waiting for and even define default values for them! a and b are mandatory keys.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_method</span><span class="p">(</span><span class="n">a</span><span class="p">:,</span> <span class="n">b</span><span class="p">:,</span> <span class="ss">c: </span><span class="s1">'default'</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>We can try to call it without giving a value for b but it won’t work.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="ss">a: </span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># =&gt; ArgumentError: missing keyword: b</span>
+</code></pre></div></div>
+
+<p>Since c has a default value, we can just call the method with a and b.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="ss">a: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">b: </span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, 2, "default"]</span>
+</code></pre></div></div>
+
+<p>Or with all of them.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_method</span><span class="p">(</span><span class="ss">a: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">b: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">c: </span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, 2, 3]</span>
+</code></pre></div></div>
+
+<p>All we are doing is passing a hash and using some visual shortcuts but obviously, you can also pass a hash like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">hash</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">a: </span><span class="mi">1</span><span class="p">,</span> <span class="ss">b: </span><span class="mi">2</span><span class="p">,</span> <span class="ss">c: </span><span class="mi">3</span> <span class="p">}</span>
+<span class="n">my_method</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span>
+<span class="c1"># =&gt; [1, 2, 3]</span>
+</code></pre></div></div>
+
+<h2 id="generate-array-of-alphabet-or-numbers">Generate array of alphabet or numbers</h2>
+<p><a style="padding:0px, margin:0px" name="deep-copy"></a></p>
+
+<p>You might want to generate a list of numbers or put the entire alphabet inside an array. Well, you can use ruby ranges to do this.</p>
+
+<p>A to Z</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="s1">'a'</span><span class="o">..</span><span class="s1">'z'</span><span class="p">).</span><span class="nf">to_a</span>
+<span class="c1"># =&gt; ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]</span>
+</code></pre></div></div>
+
+<p>1 to 10</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">10</span><span class="p">).</span><span class="nf">to_a</span>
+<span class="c1"># =&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</code></pre></div></div>
+
+<h2 id="tap">Tap</h2>
+<p><a style="padding:0px, margin:0px" name="random-array"></a></p>
+
+<p>Tap is a nice little method that improves code readability. Let’s take the following class as an example.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span>
+  <span class="nb">attr_accessor</span> <span class="ss">:a</span><span class="p">,</span> <span class="ss">:b</span><span class="p">,</span> <span class="ss">:c</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Now let’s say you want to instantiate a new user and assign a value to each of its attributes. You could do it like this:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_method</span>
+  <span class="n">o</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span>
+  <span class="n">o</span><span class="p">.</span><span class="nf">a</span> <span class="o">=</span> <span class="mi">1</span>
+  <span class="n">o</span><span class="p">.</span><span class="nf">b</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">o</span><span class="p">.</span><span class="nf">c</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="n">o</span>
+<span class="k">end</span>
+
+</code></pre></div></div>
+<p>Or you could use tap to do it like this.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">my_method</span>
+  <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">tap</span> <span class="k">do</span> <span class="o">|</span><span class="n">o</span><span class="o">|</span>
+    <span class="n">o</span><span class="p">.</span><span class="nf">a</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">o</span><span class="p">.</span><span class="nf">b</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">o</span><span class="p">.</span><span class="nf">c</span> <span class="o">=</span> <span class="mi">3</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+</code></pre></div></div>
+
+<p>Basically, the tap method yields the calling object to the block and returns it.</p>
+
+<hr />
+<p>Thanks you for reading! Stay tunned to update the next chapter.</p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://devblast.com/b/ruby-tricks-improve-code">Source</a></p>
 
           </div>
 
@@ -410,11 +526,6 @@ into the {body} of the default.hbs template -->
             
             
             
-            <li><a href="/better-in-ruby-02">Better In Ruby - 02</a></li>
-            
-            
-            
-            
             
             
             
@@ -433,6 +544,11 @@ into the {body} of the default.hbs template -->
             
             
             
+            
+            
+            
+            
+            <li><a href="/how-to-switch-to-another-rails-version">How to switch to another Rails version</a></li>
             
             
             
@@ -462,16 +578,19 @@ into the {body} of the default.hbs template -->
 
       <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
       
+
+      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+      
       
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/rails-5-or-rails-6">
-                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/rails.jpeg)"></div>
+            <a class="post-card-image-link" href="/better-in-ruby-01">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/default.jpeg)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/rails-5-or-rails-6">
+            <a class="post-card-content-link" href="/better-in-ruby-01">
                 <header class="post-card-header">
                     
                         
@@ -481,59 +600,7 @@ into the {body} of the default.hbs template -->
                         
                     
 
-                    <h2 class="post-card-title">Rails 5 or Rails 6 ?</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/tienduy/">TienDuy</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-      
-
-      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-      
-      
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">
-                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/free-website.jpeg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/build-your-personal-website-without-spending-any-money-using-jekyll-and-github-pages">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Web development</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Build your personal website without spending any money using Jekyll and Github pages</h2>
+                    <h2 class="post-card-title">Better In Ruby - 01</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -579,18 +646,18 @@ into the {body} of the default.hbs template -->
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">How to switch to another Rails version</div>
+    <div class="floating-header-title">Better In Ruby - 02</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=How+to+switch+to+another+Rails+version&amp;url=https://blog.adev42.com/how-to-switch-to-another-rails-version"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Better+In+Ruby+-+02&amp;url=https://blog.adev42.com/better-in-ruby-02"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.adev42.com/how-to-switch-to-another-rails-version"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.adev42.com/better-in-ruby-02"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 
