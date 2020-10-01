@@ -37,6 +37,10 @@
 <lastmod>2020-08-30T12:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>/python-vs-javascript</loc>
+<lastmod>2020-09-05T12:00:00+02:00</lastmod>
+</url>
+<url>
 <loc>/</loc>
 </url>
 <url>
@@ -56,5 +60,8 @@
 </url>
 <url>
 <loc>/tag/ruby/</loc>
+</url>
+<url>
+<loc>/tag/programming/</loc>
 </url>
 </urlset>
