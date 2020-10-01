@@ -91,7 +91,8 @@ into the {body} of the default.hbs template -->
         {% if author[1].username == page.author %}
         <section class="author-card">
           {% if author[1].picture %}
-          <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ page.author }}" />
+          <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ page.author }}"
+            loading="lazy" />
           {% endif %}
           <section class="author-card-content">
             <h4 class="author-card-name"><a href="{{ site.baseurl }}author/{{ page.author }}">{{ author[1].name }}</a>
