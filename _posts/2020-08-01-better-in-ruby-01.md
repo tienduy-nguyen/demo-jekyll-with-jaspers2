@@ -1,6 +1,6 @@
 ---
 layout: post
-cover:  assets/images/post-covers/default.jpeg
+cover:  assets/images/post-covers/ruby.png
 title: Better In Ruby - 01
 date: 2020-08-01 10:00:00
 tags: ruby
