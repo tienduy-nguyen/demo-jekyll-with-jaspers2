@@ -12,7 +12,7 @@
 
 
 
-  <title>Basic Setup Webpack</title>
+  <title>Setup Webpack TypeScript</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Styles'n'Scripts -->
@@ -34,7 +34,7 @@
   content="Learning is an endless journey" />
 <link rel="shortcut icon" href="https://blog.adev42.com//assets/images/favicon.png" type="image/png" />
 <link rel="canonical"
-  href="/basic-setup-webpack" />
+  href="/setup-webpack-with-typescript" />
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
 
@@ -42,29 +42,29 @@
 <meta property="og:site_name" content="Adev42" />
 <meta property="og:type" content="website" />
 <meta property="og:title"
-  content="Basic Setup Webpack" />
+  content="Setup Webpack TypeScript" />
 <meta property="og:description"
-  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
+  content="How to setup a webpack project with TypeScript? We continue from the previous article basic setup webpack. In this article, we will discover how to setup a webpack project with TypeScript and using plugin in Webpack. Install webpack and loaders packages Create project files Configuration tsconfig.json Code Explanation webpack.config.js Code" />
 <meta property="og:url"
-  content="/basic-setup-webpack" />
+  content="/setup-webpack-with-typescript" />
 <meta property="og:image"
-  content="/assets/images/post-covers/webpack.png" />
+  content="/assets/images/post-covers/webpack-typescript.png" />
 <meta property="article:publisher" content="https://www.facebook.com/" />
 <meta property="article:author" content="https://www.facebook.com/" />
 <meta property="article:published_time"
-  content="2020-11-13T11:00:00+01:00" />
+  content="2020-11-14T11:00:00+01:00" />
 <meta property="article:modified_time"
-  content="2020-11-13T11:00:00+01:00" />
+  content="2020-11-14T11:00:00+01:00" />
 
 <meta property="article:tag" content="Web Development" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title"
-  content="Basic Setup Webpack" />
+  content="Setup Webpack TypeScript" />
 <meta name="twitter:description"
-  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
+  content="How to setup a webpack project with TypeScript? We continue from the previous article basic setup webpack. In this article, we will discover how to setup a webpack project with TypeScript and using plugin in Webpack. Install webpack and loaders packages Create project files Configuration tsconfig.json Code Explanation webpack.config.js Code" />
 <meta name="twitter:url" content="/" />
 <meta name="twitter:image"
-  content="/assets/images/post-covers/webpack.png" />
+  content="/assets/images/post-covers/webpack-typescript.png" />
 <meta name="twitter:label1" content="Written by" />
 <meta name="twitter:data1" content="Adev42" />
 <meta name="twitter:label2" content="Filed under" />
@@ -83,24 +83,24 @@
       "name": "Adev42",
       "logo": "/assets/images/blog-icon-200.png"
     },
-    "url": "/basic-setup-webpack",
+    "url": "/setup-webpack-with-typescript",
     "image": {
       "@type": "ImageObject",
-      "url": "/assets/images/post-covers/webpack.png",
+      "url": "/assets/images/post-covers/webpack-typescript.png",
       "width": 2000,
       "height": 666
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "/basic-setup-webpack"
+      "@id": "/setup-webpack-with-typescript"
     },
-    "description": "Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler."
+    "description": "How to setup a webpack project with TypeScript? We continue from the previous article basic setup webpack. In this article, we will discover how to setup a webpack project with TypeScript and using plugin in Webpack. Install webpack and loaders packages Create project files Configuration tsconfig.json Code Explanation webpack.config.js Code"
   }
 </script>
 
 <meta name="generator" content="Jekyll 3.6.2" />
 <link rel="alternate" type="application/rss+xml"
-  title="Basic Setup Webpack" href="/feed.xml" />
+  title="Setup Webpack TypeScript" href="/feed.xml" />
 
 </head>
 
@@ -172,7 +172,7 @@ into the {body} of the default.hbs template -->
       <header class="post-full-header">
         <section class="post-full-meta">
           <time class="post-full-meta-date"
-            datetime="13 November 2020">13 November 2020</time>
+            datetime="14 November 2020">14 November 2020</time>
           
           <span class="date-divider">/</span>
           
@@ -182,11 +182,11 @@ into the {body} of the default.hbs template -->
           
           
         </section>
-        <h1 class="post-full-title">Basic Setup Webpack</h1>
+        <h1 class="post-full-title">Setup Webpack TypeScript</h1>
       </header>
 
       
-      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/webpack.png)">
+      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/webpack-typescript.png)">
       </figure>
       
 
@@ -204,24 +204,26 @@ into the {body} of the default.hbs template -->
                 </h4>
               </header>
               <ul>
-  <li><a href="#webpack-basics">Webpack basics</a>
+  <li><a href="#install-webpack-and-loaders-packages">Install webpack and loaders packages</a></li>
+  <li><a href="#create-project-files">Create project files</a></li>
+  <li><a href="#configuration">Configuration</a>
     <ul>
-      <li><a href="#setup-a-webpack-project">Setup a webpack project</a></li>
-      <li><a href="#setup-babel">Setup Babel</a></li>
-      <li><a href="#install-style-loader--file-loader">Install Style-loader &amp; File loader</a></li>
-    </ul>
-  </li>
-  <li><a href="#setup-webpack">Setup Webpack</a>
-    <ul>
-      <li><a href="#demo-code">Demo code</a></li>
-      <li><a href="#explanation">Explanation</a>
+      <li><a href="#tsconfigjson">tsconfig.json</a>
         <ul>
-          <li><a href="#configuration-in-webpackconfigjs-file">Configuration in webpack.config.js file</a></li>
-          <li><a href="#tree-shaking-in-webpack">Tree Shaking in Webpack</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#explanation">Explanation</a></li>
         </ul>
       </li>
+      <li><a href="#webpackconfigjs">webpack.config.js</a>
+        <ul>
+          <li><a href="#code-1">Code</a></li>
+          <li><a href="#explanation-1">Explanation</a></li>
+        </ul>
+      </li>
+      <li><a href="#structure-of-project">Structure of project</a></li>
     </ul>
   </li>
+  <li><a href="#reference">Reference</a></li>
 </ul>
 <style type="text/css">
   div#table-of-content {
@@ -242,133 +244,220 @@ into the {body} of the default.hbs template -->
 
         <div class="post-full-content">
           <div class="kg-card-markdown">
-            <p>Webpack fundamentals for fast learning and step by step to setup a project with webpack.</p>
+            <p>How to setup a webpack project with TypeScript?</p>
+
+<p>We continue from the previous article <a href="https://blog.adev42.com/basic-setup-webpack">basic setup webpack</a>. In this article, we will discover how to setup a webpack project with TypeScript and using plugin in Webpack.</p>
 
 <ul>
-  <li><a href="#webpack">webpack</a>
+  <li><a href="#install-webpack-and-loaders-packages">Install webpack and loaders packages</a></li>
+  <li><a href="#create-project-files">Create project files</a></li>
+  <li><a href="#configuration">Configuration</a>
     <ul>
-      <li><a href="#webpack-basics">Webpack basics</a>
+      <li><a href="#tsconfigjson"><code class="highlighter-rouge">tsconfig.json</code></a>
         <ul>
-          <li><a href="#setup-a-webpack-project">Setup a webpack project</a></li>
-          <li><a href="#setup-babel">Setup Babel</a></li>
-          <li><a href="#install-style-loader--file-loader">Install Style-loader &amp; File loader</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#explanation">Explanation</a></li>
         </ul>
       </li>
-      <li><a href="#setup-webpack">Setup Webpack</a>
+      <li><a href="#webpackconfigjs"><code class="highlighter-rouge">webpack.config.js</code></a>
         <ul>
-          <li><a href="#demo-code">Demo code</a></li>
-          <li><a href="#explanation">Explanation</a>
-            <ul>
-              <li><a href="#configuration-in-webpackconfigjs-file">Configuration in <code class="highlighter-rouge">webpack.config.js</code> file</a></li>
-              <li><a href="#tree-shaking-in-webpack">Tree Shaking in Webpack</a></li>
-            </ul>
-          </li>
+          <li><a href="#code-1">Code</a></li>
+          <li><a href="#explanation-1">Explanation</a></li>
         </ul>
       </li>
+      <li><a href="#structure-of-project">Structure of project</a></li>
     </ul>
   </li>
   <li><a href="#reference">Reference</a></li>
 </ul>
 
-<h2 id="webpack-basics">Webpack basics</h2>
+<h2 id="install-webpack-and-loaders-packages">Install webpack and loaders packages</h2>
 
-<p><code class="highlighter-rouge">Webpack</code> is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …</p>
-
-<p>Understand more for webpack on <a href="https://webpack.js.org/">Webpack website</a></p>
-
-<h3 id="setup-a-webpack-project">Setup a webpack project</h3>
 <ul>
-  <li>Create project and init <code class="highlighter-rouge">package.json</code> file
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>webpack-basic
-<span class="nv">$ </span><span class="nb">cd </span>webpack-basic
+  <li>Create new project and install packages dependencies
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>webpack-typescript
+<span class="nv">$ </span><span class="nb">cd </span>webpack-typescript
 <span class="nv">$ </span>npm init <span class="nt">-y</span>
+<span class="nv">$ </span>yarn add webpack webpack-cli webpack-dev-server style-loader css-loader sass sass-loader file-loader <span class="nt">-D</span>
 </code></pre></div>    </div>
+
+    <p>To understand each dependencies means, checkout my previous article <a href="https://blog.adev42.com/basic-setup-webpack">basic setup webpack</a></p>
   </li>
-  <li>In the root project create <code class="highlighter-rouge">public</code> folder and <code class="highlighter-rouge">index.html file</code>
+  <li>
+    <p>Install HTMLWebpackPlugin</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add html-webpack-plugin <span class="nt">-D</span>
+</code></pre></div>    </div>
+
+    <p>This plugin will help use import automatically the new <code class="highlighter-rouge">bundle.js</code> file after build into <code class="highlighter-rouge">index.html</code> build file. You will see more explanation below.</p>
+  </li>
+  <li>
+    <p>Install TypeScript
+<a href="https://www.typescriptlang.org/">TypeScript</a> extends JavaScript by adding types. By understanding JavaScript, TypeScript saves you time catching errors, debug adn providing fixes before you run code. Any browser, any OS, anywhere JavaScript runs.</p>
+
+    <p>We can use TypeScript to compile to the compatible JavaScript version, so we don’t need use <code class="highlighter-rouge">babel</code> in this case.</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add typescript ts-loader <span class="nt">-D</span>
+</code></pre></div>    </div>
+    <ul>
+      <li><strong>typescript</strong>: install TypeScript language for your project. You can also install TypeScript on your machine as <code class="highlighter-rouge">Nodejs</code>, <code class="highlighter-rouge">Python</code> and the other programming languages with command: <code class="highlighter-rouge">yarn add global typescript</code>.</li>
+      <li><strong>ts-loader</strong>: allow integrate TypeScript to webpack</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="create-project-files">Create project files</h2>
+
+<p>We will create a simple project to understand each config for webpack project using TypeScript. This project will be the same the <a href="https://github.com/tienduy-nguyen/webpack/tree/master/webpack-basic">previous project</a>. But we will code in TypeScript.</p>
+
+<ul>
+  <li>
+    <p><code class="highlighter-rouge">public/index.html</code> file</p>
+
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
   <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 
   <span class="nt">&lt;head&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Document<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Webpack<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;/head&gt;</span>
 
   <span class="nt">&lt;body&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"root"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;h1&gt;</span>Webpack basic<span class="nt">&lt;/h1&gt;</span>
+      <span class="nt">&lt;h1&gt;</span>Webpack with TypeScript<span class="nt">&lt;/h1&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"../dist/bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
 
+  <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>    </div>
-    <h3 id="setup-babel">Setup Babel</h3>
+    <p>Notice: you can see, we don’t import any <code class="highlighter-rouge">js</code> file. The reason is <code class="highlighter-rouge">HtmlWebpackPlugin</code>, will be explained below.</p>
   </li>
-</ul>
+  <li><code class="highlighter-rouge">src/add.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span> <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">treeShaking</span> <span class="o">=</span> <span class="p">():</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This phrase will not appear on build file</span><span class="dl">'</span><span class="p">);</span>
+<span class="p">};</span>
 
-<p>Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.</p>
-
-<p>See the website <a href="https://babeljs.io/">babeljs.io</a> for more information.</p>
-
-<ul>
-  <li>Installation
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add @babel/core @babel/preset-env babel-loader
-<span class="c"># Or using npm</span>
-<span class="nv">$ </span>npm i <span class="nt">-D</span> @babel/core @babel/preset-env babel-loader
 </code></pre></div>    </div>
-
-    <ul>
-      <li><code class="highlighter-rouge">@babel/core</code>: Core of babel contains algorithms of its</li>
-      <li><code class="highlighter-rouge">@babel/preset-env</code>: is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!. Check official website of <a href="https://babeljs.io/docs/en/babel-preset-env#:~:text=%40babel%2Fpreset%2Denv%20is,Install">@babel/preset-env</a> for more details.</li>
-      <li><code class="highlighter-rouge">babel-loader</code>: This package allows transpiling JavaScript files using Babel and webpack. Check <a href="https://github.com/babel/babel-loader">babel-loader github</a>.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="install-style-loader--file-loader">Install Style-loader &amp; File loader</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add css-loader file-loader sass sass-loader style-loader <span class="nt">-D</span>
-</code></pre></div></div>
-<ul>
-  <li><code class="highlighter-rouge">style-loader</code>, <code class="highlighter-rouge">css-loader</code>: help you to import <code class="highlighter-rouge">css</code> into <code class="highlighter-rouge">js</code> file</li>
-  <li><code class="highlighter-rouge">sass</code>, <code class="highlighter-rouge">sass-loader</code> help you compile <code class="highlighter-rouge">scss</code> to <code class="highlighter-rouge">css</code></li>
-  <li><code class="highlighter-rouge">file-loader</code>: help you import file as <code class="highlighter-rouge">image</code>, <code class="highlighter-rouge">video</code> to <code class="highlighter-rouge">js</code> file</li>
-</ul>
-
-<h2 id="setup-webpack">Setup Webpack</h2>
-<ul>
-  <li>Installation
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install </span>webpack webpack-cli webpack-dev-server <span class="nt">-D</span>
-</code></pre></div>    </div>
-    <ul>
-      <li><code class="highlighter-rouge">webpack</code>: core of webpack</li>
-      <li><code class="highlighter-rouge">webpack-cli</code>: allow us to use command of webpack on the terminal</li>
-      <li><code class="highlighter-rouge">webpack-dev-server</code>: can be use to create a <code class="highlighter-rouge">local server</code> for dev environment</li>
-    </ul>
   </li>
   <li>
-    <p>Configuration</p>
+    <p><code class="highlighter-rouge">src/app.d.ts</code></p>
 
-    <p>Create <code class="highlighter-rouge">webpack.config.js</code> file in the root project and paste the following code.</p>
+    <p>Why this file? TypeScript is a strong type, it will not consider files as images, videos as modules, and we can’t import them. So we need declare the type for each file type.</p>
 
-    <p>[See explanation in the last of article]</p>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.png</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
+<span class="p">}</span>
+<span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.jpg</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
+<span class="p">}</span>
+<span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.jpeg</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+  <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">src/index.scss</code>
+    <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$color</span><span class="p">:</span> <span class="mh">#ddd</span><span class="p">;</span>
+<span class="nn">#root</span> <span class="p">{</span>
+  <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="nv">$color</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">src/loadImage.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.png</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="p">():</span> <span class="nx">HTMLElement</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="na">element</span><span class="p">:</span> <span class="nx">HTMLDivElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="na">webpackLogo</span><span class="p">:</span> <span class="nx">HTMLImageElement</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+  <span class="nx">webpackLogo</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">logo</span><span class="p">;</span>
+  <span class="nx">webpackLogo</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
+  <span class="nx">element</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">webpackLogo</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">element</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)?.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">component</span><span class="p">());</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">src/subtract.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">subtract</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">b</span><span class="p">:</span> <span class="nx">number</span><span class="p">):</span> <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li><code class="highlighter-rouge">src/index.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">subtract</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./subtract</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">add</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./add</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./loadImage</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="dl">'</span><span class="s1">./index.scss</span><span class="dl">'</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`1 + 2 = </span><span class="p">${</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span><span class="s2">`</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`8 - 2 = </span><span class="p">${</span><span class="nx">subtract</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span><span class="s2">`</span><span class="p">);</span>
 
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <h2 id="configuration">Configuration</h2>
+    <h3 id="tsconfigjson"><code class="highlighter-rouge">tsconfig.json</code></h3>
+  </li>
+</ul>
+
+<p>This file contains de configuration to compile the TypeScript code to Js code.</p>
+
+<p>Create compileOption for TypeScript: <code class="highlighter-rouge">tsc --init</code> or create directly <code class="highlighter-rouge">tsconfig.json</code> in the root folder and paste the following code.</p>
+<h4 id="code">Code</h4>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"target"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ES6"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"allowJs"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"strict"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"module"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ESNext"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"moduleResolution"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"noImplicitAny"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sourceMap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"outDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./dist/"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"baseUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"paths"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src/*"</span><span class="p">],</span><span class="w">
+        </span><span class="nl">"@@/*"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./*"</span><span class="p">]</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"allowSyntheticDefaultImports"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"esModuleInterop"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"include"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"src/**/*"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For more information about <a href="https://www.typescriptlang.org/tsconfig">tsconfig</a></p>
+
+<h4 id="explanation">Explanation</h4>
+
+<p>How <code class="highlighter-rouge">tsconfig.json</code> file works?</p>
+
+<ul>
+  <li><strong>target</strong>: Version javascript that we want to build from TypeScript. Here is <code class="highlighter-rouge">ES6</code></li>
+  <li><strong>allowJs</strong>: Allow use using <code class="highlighter-rouge">js</code> file in TypeScript project</li>
+  <li><strong>strict</strong>: <code class="highlighter-rouge">Strict mode</code> for Typescript</li>
+  <li><strong>module</strong>: After compiling the js, the codes will be written as ESNext module. There are many option here, but we do not recommend use the option <code class="highlighter-rouge">commonJS</code> because il will lose the <a href="https://webpack.js.org/guides/tree-shaking/">Tree-shaking</a> feature of webpack. See this feature in <a href="https://blog.adev42.com/basic-setup-webpack#tree-shaking-in-webpack">my previous post</a></li>
+  <li><strong>noImplicitAny</strong>: Do not allow any implicit understanding</li>
+  <li><strong>sourceMap</strong>: easier to debug in dev enviroment. We need use it in both <code class="highlighter-rouge">tsconfig</code> and <code class="highlighter-rouge">webpack.config</code></li>
+  <li><strong>baseUrl</strong>: The base path, usually “./”. If you use the <code class="highlighter-rouge">path</code> option below, you must specify baseUrl</li>
+  <li><strong>paths</strong>: Create alias to facilitate import. For example, instead of using <code class="highlighter-rouge">../../../</code> now you can shorten it to <code class="highlighter-rouge">@/</code>. Configuring the alias in <code class="highlighter-rouge">tsconfig.json</code> just helps the editor to understand it, it doesn’t work with webpack. So you have to configure with alias with the webpack below as well.</li>
+  <li><strong>include</strong>: Specifies the files to be used in the project.</li>
+</ul>
+
+<h3 id="webpackconfigjs"><code class="highlighter-rouge">webpack.config.js</code></h3>
+<h4 id="code-1">Code</h4>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">agrv</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="nx">isDev</span> <span class="o">=</span> <span class="nx">agrv</span><span class="p">.</span><span class="nx">mode</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">development</span><span class="dl">'</span>
   <span class="k">return</span> <span class="p">{</span>
-    <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.js</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">entry</span><span class="p">:</span> <span class="dl">'</span><span class="s1">./src/index.ts</span><span class="dl">'</span><span class="p">,</span>
     <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
       <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">js|jsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
-          <span class="na">exclude</span><span class="p">:</span> <span class="sr">/</span><span class="se">(</span><span class="sr">node_modules|bower_components</span><span class="se">)</span><span class="sr">/</span><span class="p">,</span>
-          <span class="na">use</span><span class="p">:</span> <span class="p">{</span>
-            <span class="na">loader</span><span class="p">:</span> <span class="dl">'</span><span class="s1">babel-loader</span><span class="dl">'</span><span class="p">,</span>
-            <span class="na">options</span><span class="p">:</span> <span class="p">{</span>
-              <span class="na">presets</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">@babel/preset-env</span><span class="dl">'</span><span class="p">]</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
+          <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">ts|tsx</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
+          <span class="na">use</span><span class="p">:</span> <span class="dl">'</span><span class="s1">ts-loader</span><span class="dl">'</span><span class="p">,</span>
+          <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span>
         <span class="p">},</span>
         <span class="p">{</span>
           <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.(</span><span class="sr">s</span><span class="se">[</span><span class="sr">ac</span><span class="se">]</span><span class="sr">ss|css</span><span class="se">)</span><span class="sr">$/</span><span class="p">,</span>
@@ -397,11 +486,17 @@ into the {body} of the default.hbs template -->
         <span class="p">}</span>
       <span class="p">]</span>
     <span class="p">},</span>
-    <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span> <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">.js</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.jsx</span><span class="dl">'</span><span class="p">]</span> <span class="p">},</span>
+    <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">.ts</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.tsx</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.js</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">.jsx</span><span class="dl">'</span><span class="p">],</span>
+      <span class="na">alias</span><span class="p">:</span> <span class="p">{</span>
+        <span class="dl">'</span><span class="s1">@</span><span class="dl">'</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">src</span><span class="dl">'</span><span class="p">),</span>
+        <span class="dl">'</span><span class="s1">@@</span><span class="dl">'</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">()</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
     <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
       <span class="na">path</span><span class="p">:</span> <span class="nx">path</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">dist</span><span class="dl">'</span><span class="p">),</span>
-      <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">../dist/</span><span class="dl">'</span><span class="p">,</span>
-      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.js</span><span class="dl">'</span><span class="p">,</span>
+      <span class="na">publicPath</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
+      <span class="na">filename</span><span class="p">:</span> <span class="dl">'</span><span class="s1">bundle.[hash:6].js</span><span class="dl">'</span><span class="p">,</span>
       <span class="na">environment</span><span class="p">:</span> <span class="p">{</span>
         <span class="na">arrowFunction</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="na">bigIntLiteral</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -417,122 +512,24 @@ into the {body} of the default.hbs template -->
       <span class="na">contentBase</span><span class="p">:</span> <span class="dl">'</span><span class="s1">public</span><span class="dl">'</span><span class="p">,</span>
       <span class="na">port</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
       <span class="na">hot</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="na">publicPath</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/dist/</span><span class="dl">'</span><span class="p">,</span>
       <span class="na">watchContentBase</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+      <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+        <span class="na">template</span><span class="p">:</span> <span class="dl">'</span><span class="s1">public/index.html</span><span class="dl">'</span>
+      <span class="p">})</span>
+    <span class="p">]</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Script to run server
-Edit script in <code class="highlighter-rouge">package.json</code> file to run and build server.</p>
+</code></pre></div></div>
 
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --mode production"</span><span class="w">
-  </span><span class="p">}</span><span class="err">,</span><span class="w">
-</span></code></pre></div>    </div>
-    <h3 id="demo-code">Demo code</h3>
-    <p>To understand better how webpack works, we will create some simple demo code</p>
-  </li>
-  <li>Create <code class="highlighter-rouge">src</code> folder in the root of project and a <code class="highlighter-rouge">src/add.js</code> file
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//src/add.js</span>
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">treeShaking</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span><span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This phrase will be not in the build file</span><span class="dl">'</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>Create more filter helper
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/substract.js</span>
-<span class="k">export</span> <span class="kd">const</span> <span class="nx">substract</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">;</span>
+<h4 id="explanation-1">Explanation</h4>
 
-</code></pre></div>    </div>
-
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/loadImage.js</span>
-<span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.png</span><span class="dl">'</span>
-
-<span class="kd">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span><span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
-  <span class="kd">const</span> <span class="nx">webpackLogo</span>  <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
-  <span class="nx">webpackLogo</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">logo</span><span class="p">;</span>
-  <span class="nx">webpackLogo</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="mi">200</span><span class="p">;</span>
-  <span class="nx">element</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">webpackLogo</span><span class="p">);</span>
-  <span class="k">return</span> <span class="nx">element</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">component</span><span class="p">())</span>
-</code></pre></div>    </div>
-
-    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/index.js</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">substract</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./substract</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">add</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./add</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">./loadImage</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="dl">'</span><span class="s1">.index.scss</span><span class="dl">'</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`1 + 2 = </span><span class="p">${</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">}</span><span class="s2">`</span><span class="p">)</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`8 - 2 = </span><span class="p">${</span><span class="nx">substract</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="s2">`)
-</span></code></pre></div>    </div>
-    <p>And we have a tree folder:</p>
-
-    <pre><code class="language-tree"># webpack-basic project
-.
-├── node_modules
-├── package.json
-├── package-lock.json
-├── public
-│   └── index.html
-├── src
-│   ├── add.js
-│   ├── index.js
-│   ├── index.scss
-│   ├── loadImage.js
-│   ├── logo.png
-│   └── substract.js
-├── webpack.config.js
-└── yarn.lock
-</code></pre>
-  </li>
-  <li>Run server to see the result at <a href="http://localhost:3000">http://localhost:3000</a>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm run start
-<span class="c"># or</span>
-<span class="nv">$ </span>yarn start
-</code></pre></div>    </div>
-
-    <p>If you want to build webpack:</p>
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn build
-</code></pre></div>    </div>
-    <h3 id="explanation">Explanation</h3>
-    <h4 id="configuration-in-webpackconfigjs-file">Configuration in <code class="highlighter-rouge">webpack.config.js</code> file</h4>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">Definition</code>: This is the main configuration webpack file. Webpack configs allow you to configure and extend Webpack’s basic functionality. A Webpack config is a JavaScript object that configures one of Webpack’s options.</p>
-
-    <p>When we run <code class="highlighter-rouge">webpack</code> command in the <code class="highlighter-rouge">package.json</code> file, webpack will be take automatically the configuration in this file.</p>
-
-    <p>For more information of configuration of webpack <a href="https://webpack.js.org/configuration/">webpack configuration</a></p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">Exporting</code>: In the <code class="highlighter-rouge">config</code> file, we can export an <strong>object</strong>, a <strong>function</strong>, an <strong>array</strong> or a <strong>promise</strong>. In this article, we will see how to export a function, because it allows us to use the arguments passed from outside. Check <a href="https://webpack.js.org/configuration/configuration-types/">Webpack configuration type</a>.</p>
-  </li>
-  <li>
-    <p><code class="highlighter-rouge">Mode</code>: We need to provide a <strong>mode</strong> configuration option when configure webpack. Each mode has its own a config settings. Check <a href="https://webpack.js.org/configuration/mode/">Webpack mode</a></p>
-
-    <p>If you remember, we have used this mode to run 2 different cases for server in the <code class="highlighter-rouge">package.json</code> file, for the <strong>development</strong> and <strong>production</strong> mode.</p>
-
-    <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="err">,</span><span class="w">
-</span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --mode production"</span><span class="w">
-</span></code></pre></div>    </div>
-
-    <p>And in the <code class="highlighter-rouge">webpack.config.js</code> we can define the mode by using <code class="highlighter-rouge">argv.mode</code></p>
-  </li>
+<ul>
   <li><code class="highlighter-rouge">Entry</code>: Entry points of your project where you put the main code to run your server. Check <a href="https://webpack.js.org/concepts/entry-points/">Webpack entry point</a></li>
   <li><code class="highlighter-rouge">module.rules</code>: Array contains the <code class="highlighter-rouge">loaders</code></li>
   <li>
     <p><code class="highlighter-rouge">test</code>: Using <strong>regex</strong> to determine the file type. If it is <code class="highlighter-rouge">true</code> then it will run the loader.</p>
-
-    <p>The <code class="highlighter-rouge">babel-loader</code> will run the <code class="highlighter-rouge">js</code> or <code class="highlighter-rouge">jsx</code> file. <code class="highlighter-rouge">style-loader</code> will run <code class="highlighter-rouge">sass</code>, <code class="highlighter-rouge">scss</code> and <code class="highlighter-rouge">css</code> file.</p>
 
     <p><code class="highlighter-rouge">file-loader</code> will run png, svg, jpg, gif… (image and video) file.</p>
   </li>
@@ -545,6 +542,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
     </ul>
   </li>
   <li><code class="highlighter-rouge">resolve: { extensions: [‘.js’, ‘.jsx’] }</code>: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file</li>
+  <li><code class="highlighter-rouge">alias</code>: Create alias to facilitate import in webpack</li>
   <li><code class="highlighter-rouge">output</code>: configuration of build file webpack
     <ul>
       <li><code class="highlighter-rouge">output.path</code>: the absolute path to the directory after build. For the absolute path, we usually use <code class="highlighter-rouge">path.resolve()</code> or <code class="highlighter-rouge">path.join()</code> in combination with the global variable <code class="highlighter-rouge">__dirname</code>.</li>
@@ -553,7 +551,20 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
 
     <p>For example: in the file <code class="highlighter-rouge">loadImage.js</code>, we import logo, the logo variable will be become: <code class="highlighter-rouge">output.publicPath + 'src/logo.png</code>. If after the build, we run the <code class="highlighter-rouge">index.html</code> file in a different location not in <strong>the public directory</strong>, we will accidentally make the logo variable wrong.</p>
     <ul>
-      <li><code class="highlighter-rouge">output.filename</code>: filename of js bundle after build</li>
+      <li><code class="highlighter-rouge">output.filename</code>: filename of js bundle after build.</li>
+    </ul>
+
+    <p>Here we use <code class="highlighter-rouge">[hash:6]</code> means the bundle will add 6 random characters to the bundle file in each build (ex: <code class="highlighter-rouge">bundle.bbc536.js</code>).</p>
+
+    <p>This is aimed at restricting your browser to cache Javascript when you update a new Javascript version for your website.</p>
+
+    <p>But we have a problem. Each time of build, we will have a new bundle file. So do we need edit the src of script import in the <code class="highlighter-rouge">public/index.html</code> file?</p>
+
+    <p>We don’t. Because we use the plugin <code class="highlighter-rouge">HtmlWebpackPlugin</code>. It will help use create a new <code class="highlighter-rouge">index.html</code> file from the original html file.</p>
+
+    <p>This new <code class="highlighter-rouge">html</code> file will use the template as the <code class="highlighter-rouge">public/index.html</code> and automatically build to <code class="highlighter-rouge">dist/src/index.html</code> and import new <code class="highlighter-rouge">bundle.....js</code> file.</p>
+
+    <ul>
       <li><code class="highlighter-rouge">output.environment</code>: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the <code class="highlighter-rouge">output.environment</code>
         <ul>
           <li><strong>arrowFunction</strong>: support arrow function.</li>
@@ -583,28 +594,43 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
   </li>
 </ul>
 
-<h4 id="tree-shaking-in-webpack">Tree Shaking in Webpack</h4>
-
-<p>If you pay attention, in the <code class="highlighter-rouge">src/add.js</code> file, we added a function <code class="highlighter-rouge">treeShaking</code>. This function is exported but we did not use it anywhere in project. So webpack will not use this function and you cant find it in the build file.</p>
-
-<p>This is a called the <a href="https://webpack.js.org/guides/tree-shaking/">tree shaking</a> feature to help us to reduce unused module export.</p>
-
-<p>But this feature only works with code using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES Module syntax </a> (<strong>import export …</strong>)</p>
-
-<p>A typical example is the <a href="https://lodash.com/">lodash</a> library. If you <code class="highlighter-rouge">import {get} from 'lodash'</code>, webpack won’t tree shake. It will still import a huge lodash library to your bundle file. There are no different from : <code class="highlighter-rouge">import _ from 'lodash'</code></p>
-
-<p>To fix this problem, we can use the syntax <code class="highlighter-rouge">import get from 'lodash/get</code>. Or simply use the <a href="https://www.npmjs.com/package/lodash-es">lodash es</a> library.</p>
-
-<p>For more detail <a href="https://webpack.js.org/guides/tree-shaking/">Tree Shaking Webpack</a></p>
-
+<h3 id="structure-of-project">Structure of project</h3>
+<pre><code class="language-tree">.
+├── dist
+│   ├── bundle.bbc536.js
+│   ├── index.html
+│   └── src
+│       └── logo.png
+├── package.json
+├── public
+│   └── index.html
+├── README.md
+├── src
+│   ├── add.ts
+│   ├── app.d.ts
+│   ├── index.scss
+│   ├── index.ts
+│   ├── loadImage.ts
+│   ├── logo.png
+│   └── subtract.ts
+├── tsconfig.json
+├── webpack.config.js
+└── yarn.lock
+</code></pre>
 <hr />
-<p>Yeezze! That’s it. Practice yourselves to understand better the configuration of webpack.</p>
 
-<h1 id="reference">Reference</h1>
-
-<p><a href="https://github.com/tienduy-nguyen/webpack/tree/master/webpack-basic">Source code GitHub</a></p>
-
-<p><a href="https://xdevclass.com/webpack-sieu-toc-cau-hinh-dev-server-babel-loader-style-loader-file-loader/">Ref</a></p>
+<h2 id="reference">Reference</h2>
+<ul>
+  <li>
+    <p><a href="https://github.com/tienduy-nguyen/webpack/tree/master/webpack-typescript">Source code GitHub</a></p>
+  </li>
+  <li>
+    <p><a href="https://blog.adev42.com/basic-setup-webpack">Previous post - basic setup webpack</a></p>
+  </li>
+  <li>
+    <p><a href="https://xdevclass.com/webpack-sieu-toc-2-cau-hinh-typescript-alias-hash-bundle/">Ref</a></p>
+  </li>
+</ul>
 
           </div>
 
@@ -704,11 +730,11 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
             
             
             
-            <li><a href="/setup-webpack-with-typescript">Setup Webpack TypeScript</a></li>
             
             
             
             
+            <li><a href="/basic-setup-webpack">Basic Setup Webpack</a></li>
             
             
             
@@ -755,16 +781,19 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
 
       <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
       
+
+      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+      
       
 
     <article class="post-card post-template">
         
-            <a class="post-card-image-link" href="/setup-webpack-with-typescript">
-                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/webpack-typescript.png)"></div>
+            <a class="post-card-image-link" href="/basic-setup-webpack">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/webpack.png)"></div>
             </a>
         
         <div class="post-card-content">
-            <a class="post-card-content-link" href="/setup-webpack-with-typescript">
+            <a class="post-card-content-link" href="/basic-setup-webpack">
                 <header class="post-card-header">
                     
                         
@@ -774,59 +803,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
                         
                     
 
-                    <h2 class="post-card-title">Setup Webpack TypeScript</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p></p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/tienduy/">TienDuy</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-      
-
-      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
-      
-      
-
-    <article class="post-card post-template">
-        
-            <a class="post-card-image-link" href="/python-vs-javascript">
-                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/default.jpeg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/python-vs-javascript">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Programming</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">Syntax Python vs Javascript</h2>
+                    <h2 class="post-card-title">Basic Setup Webpack</h2>
                 </header>
                 <section class="post-card-excerpt">
                     
@@ -872,18 +849,18 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
         </a>
     </div>
     <span class="floating-header-divider">&mdash;</span>
-    <div class="floating-header-title">Basic Setup Webpack</div>
+    <div class="floating-header-title">Setup Webpack TypeScript</div>
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
 </svg>
 </div>
-        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Basic+Setup+Webpack&amp;url=https://blog.adev42.com/basic-setup-webpack"
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Setup+Webpack+TypeScript&amp;url=https://blog.adev42.com/setup-webpack-with-typescript"
             onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
 
         </a>
-        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.adev42.com/basic-setup-webpack"
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.adev42.com/setup-webpack-with-typescript"
             onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
 

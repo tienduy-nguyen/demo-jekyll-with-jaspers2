@@ -8,13 +8,28 @@
     
       
       <item>
+        <title>Setup Webpack TypeScript</title>
+        
+          <description>&lt;p&gt;How to setup a webpack project with TypeScript?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 14 Nov 2020 11:00:00 +0100</pubDate>
+        <link>
+        /setup-webpack-with-typescript</link>
+        <guid isPermaLink="true">/setup-webpack-with-typescript</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Basic Setup Webpack</title>
         
           <description>&lt;p&gt;Webpack fundamentals for fast learning and step by step to setup a project with webpack.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sat, 14 Nov 2020 11:00:00 +0100</pubDate>
+        <pubDate>Fri, 13 Nov 2020 11:00:00 +0100</pubDate>
         <link>
         /basic-setup-webpack</link>
         <guid isPermaLink="true">/basic-setup-webpack</guid>
