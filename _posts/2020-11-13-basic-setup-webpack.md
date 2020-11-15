@@ -2,7 +2,7 @@
 layout: post
 cover:  assets/images/post-covers/webpack.png
 title: Basic Setup Webpack
-date: 2020-11-14 10:00:00
+date: 2020-11-13 10:00:00
 tags: [Web Development]
 
 ---
