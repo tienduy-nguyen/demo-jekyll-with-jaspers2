@@ -1,6 +1,6 @@
 ---
 layout: post
-cover:  assets/images/post-covers/webpack-react-typescript.jpg
+cover:  assets/images/post-covers/webpack-ts-react.jpg
 title: Setup Webpack React TypeScript
 date: 2020-11-15 10:00:00
 tags: [Web Development]
@@ -9,23 +9,14 @@ tags: [Web Development]
 
 How to setup a React project with Webpack and TypeScript?
 
+---
 
-With [create-react-app](https://github.com/facebook/create-react-app), it only takes a fex clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that `create-react-app` brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It's the time to configure manually `webpack`.
+With [create-react-app](https://github.com/facebook/create-react-app), it only takes a few clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that `create-react-app` brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It's the time to configure manually `webpack`.
 
 
 If you do not have any knowledge about webpack, you can refer my two previous articles:
 - [Setup basic webpack](https://blog.adev42.com/basic-setup-webpack)
 - [Webpack & TypeScript](https://blog.adev42.com/setup-webpack-with-typescript)
-
-
-- [Init project](#init-project)
-- [Configuration](#configuration)
-  - [Config `tsconfig.json`](#config-tsconfigjson)
-  - [Config `webpack.config.js`](#config-webpackconfigjs)
-- [Demo code](#demo-code)
-- [Structure folder](#structure-folder)
-- [Reference](#reference)
-
 
 ## Init project
 - Install dependencies packages
@@ -279,7 +270,7 @@ If you do not have any knowledge about webpack, you can refer my two previous ar
   - `isDev`: We have 2 modes: **development** and **production** equivalent to dev and build. These two modes are passed through the `--mode` in the script in `package.json`.
   - `isAnalyze`: To define use `BundleAnalyzerPlugin` or not
   - `basePlugins`: plugins use in dev mode 
-  - CopyPlugin: copy all files in **public** folder to **build** folder, except `index.html`. Because we have already plugin `HtmlWebpackPlugin` do it.
+  - `CopyPlugin`: copy all files in **public** folder to **build** folder, except `index.html`. Because we have already plugin `HtmlWebpackPlugin` do it.
   - `webpack.ProgressPlugin()` show by percentage of progress when run webpack
   - `CompressionPlugin()`: compress build files to **gzip**
   - `prodPlugins`: plugins used in mode production.
@@ -308,8 +299,9 @@ If you do not have any knowledge about webpack, you can refer my two previous ar
 
   </html>
   ```
-  All others codes are created as a template of Webpack React TS project.
-- Run and build
+  All others codes are created as a template of Webpack React TS project. Check [code GitHub](https://github.com/tienduy-nguyen/webpack/tree/master/webpack-react-typescript) for more details.
+
+- Run and build project
   ```bash
   $ yarn start # Run dev enviroment
   $ yarn build # Build
@@ -431,5 +423,5 @@ If you do not have any knowledge about webpack, you can refer my two previous ar
 Stay tunned to keep update my next articles and understand how I use the structures project like that.
 ## Reference
 
-- [Gihub code demo](https://github.com/tienduy-nguyen)
+- [Gihub code demo](https://github.com/tienduy-nguyen/webpack/tree/master/webpack-react-typescript)
 - [Ref](https://xdevclass.com/webpack-sieu-toc-3-cau-hinh-react-typescript-eslint-prettier-hoan-chinh-tu-a-z/)
