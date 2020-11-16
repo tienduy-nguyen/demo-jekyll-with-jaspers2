@@ -44,7 +44,7 @@
 <meta property="og:title"
   content="Basic Setup Webpack" />
 <meta property="og:description"
-  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
+  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. Webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
 <meta property="og:url"
   content="/basic-setup-webpack" />
 <meta property="og:image"
@@ -61,7 +61,7 @@
 <meta name="twitter:title"
   content="Basic Setup Webpack" />
 <meta name="twitter:description"
-  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
+  content="Webpack fundamentals for fast learning and step by step to setup a project with webpack. Webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler." />
 <meta name="twitter:url" content="/" />
 <meta name="twitter:image"
   content="/assets/images/post-covers/webpack.png" />
@@ -94,7 +94,7 @@
       "@type": "WebPage",
       "@id": "/basic-setup-webpack"
     },
-    "description": "Webpack fundamentals for fast learning and step by step to setup a project with webpack. webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler."
+    "description": "Webpack fundamentals for fast learning and step by step to setup a project with webpack. Webpack Webpack basics Setup a webpack project Setup Babel Install Style-loader &amp; File loader Setup Webpack Demo code Explanation Configuration in webpack.config.js file Tree Shaking in Webpack Reference Webpack basics Webpack is a module bundler."
   }
 </script>
 
@@ -245,7 +245,7 @@ into the {body} of the default.hbs template -->
             <p>Webpack fundamentals for fast learning and step by step to setup a project with webpack.</p>
 
 <ul>
-  <li><a href="#webpack">webpack</a>
+  <li><a href="#webpack">Webpack</a>
     <ul>
       <li><a href="#webpack-basics">Webpack basics</a>
         <ul>
@@ -274,7 +274,7 @@ into the {body} of the default.hbs template -->
 
 <p><code class="highlighter-rouge">Webpack</code> is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …</p>
 
-<p>Understand more for webpack on <a href="https://webpack.js.org/">Webpack website</a></p>
+<p>Check more information on <a href="https://webpack.js.org/">Webpack website</a></p>
 
 <h3 id="setup-a-webpack-project">Setup a webpack project</h3>
 <ul>
@@ -350,8 +350,6 @@ into the {body} of the default.hbs template -->
     <p>Configuration</p>
 
     <p>Create <code class="highlighter-rouge">webpack.config.js</code> file in the root project and paste the following code.</p>
-
-    <p>[See explanation in the last of article]</p>
 
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">agrv</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -431,7 +429,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --mode production"</span><span class="w">
-  </span><span class="p">}</span><span class="err">,</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
     <h3 id="demo-code">Demo code</h3>
     <p>To understand better how webpack works, we will create some simple demo code</p>
@@ -444,7 +442,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li>Create more filter helper
+  <li>Create more functions
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// src/substract.js</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">substract</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span><span class="o">=&gt;</span> <span class="nx">a</span><span class="o">-</span><span class="nx">b</span><span class="p">;</span>
 
@@ -704,6 +702,15 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
             
             
             
+            <li><a href="/setup-webpack-react-typescript">Setup Webpack React TypeScript</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
             <li><a href="/setup-webpack-with-typescript">Setup Webpack TypeScript</a></li>
             
             
@@ -745,7 +752,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
         <footer class="read-next-card-footer">
           <a href="/tag/web-development/">
             
-            See all 2 posts →
+            See all 3 posts →
             
           </a>
         </footer>

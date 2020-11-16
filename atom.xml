@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Setup Webpack React TypeScript</title>
+        
+          <description>&lt;p&gt;How to setup a React project with Webpack and TypeScript?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Nov 2020 11:00:00 +0100</pubDate>
+        <link>
+        /setup-webpack-react-typescript</link>
+        <guid isPermaLink="true">/setup-webpack-react-typescript</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Setup Webpack TypeScript</title>
         
           <description>&lt;p&gt;How to setup a webpack project with TypeScript?&lt;/p&gt;
