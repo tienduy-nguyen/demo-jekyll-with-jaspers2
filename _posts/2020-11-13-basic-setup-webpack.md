@@ -9,7 +9,7 @@ tags: [Web Development]
 
 Webpack fundamentals for fast learning and step by step to setup a project with webpack.
 
-- [webpack](#webpack)
+- [Webpack](#webpack)
   - [Webpack basics](#webpack-basics)
     - [Setup a webpack project](#setup-a-webpack-project)
     - [Setup Babel](#setup-babel)
@@ -26,7 +26,7 @@ Webpack fundamentals for fast learning and step by step to setup a project with 
 
 `Webpack` is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging ...
 
-Understand more for webpack on [Webpack website](https://webpack.js.org/)
+Check more information on [Webpack website](https://webpack.js.org/)
 
 ### Setup a webpack project
 - Create project and init `package.json` file
@@ -92,8 +92,6 @@ $ yarn add css-loader file-loader sass sass-loader style-loader -D
 - Configuration
   
   Create `webpack.config.js` file in the root project and paste the following code.
-
-  [See explanation in the last of article]
 
   ```js
   const path = require('path')
@@ -173,7 +171,7 @@ $ yarn add css-loader file-loader sass sass-loader style-loader -D
   "scripts": {
       "start": "webpack serve --mode development",
       "build": "webpack --mode production"
-    },
+    }
   ```
 ### Demo code
 To understand better how webpack works, we will create some simple demo code
@@ -186,7 +184,7 @@ To understand better how webpack works, we will create some simple demo code
     console.log('This phrase will be not in the build file')
   }
   ```
-- Create more filter helper
+- Create more functions
   ```js
   // src/substract.js
   export const substract = (a, b)=> a-b;
