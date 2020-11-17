@@ -2,7 +2,7 @@
 layout: post
 cover:  assets/images/post-covers/eslint-prettier.jpg
 title: Config ESLint, Prettier for React App in VSCode
-date: 2020-11-17 10:00:00
+date: 2020-11-17 00:00:00
 tags: [Web Development]
 
 ---
@@ -11,9 +11,13 @@ As a developer, you will understand how important of quality of code in your pro
 
 ---
 
+
 In this article, you will understand how to setup ESLint & Prettier in your React project and on text-editor VSCode.
 
-**ESlint**
+
+## What are ESLint and Prettier?
+
+### ESlint
 
 It is a static code analyzer, that means it tells you errors and mistakes that you may make while you are developing.
 
@@ -23,7 +27,7 @@ Simple syntax errors eg. not closing a function declaration with }.
 Dead code detection eg. unused variables, code written after a return statement.
 Violating code guidelines, these are rules defined by yourself or a combination of predefined standards like the Airbnb styled guide or Google's style guide etc.
 
-**Prettier**
+### Prettier
 Prettier is a code formatter, it's only concerned with how your code looks, do you want ensure consistent indentation in the entire project?
 Do you want to ensure there're no semicolons in the project? Make your promise chains look perfectly consistent and readable? Prettier can be enabled for the entire project and instead of your team disagreeing about formatting styles, you can just leave it all to Prettier to figure out.
 
@@ -40,7 +44,7 @@ Do you want to ensure there're no semicolons in the project? Make your promise c
 - Built-in Git integration
 - IntelliSense: It is a feature which is used by programmers for smart code completion, parameter info, content assist, quick info and the code hinting. VSC provides IntelliSense for JavaScript, CSS, HTML, TypeScript, JSON, Sass and Less programming languages. For other languages, we can use IntelliSense by adding its extensions.
   
-VSCode has much more other advantages. If you do not use this text-editor yet. I think you should take a look, you will quickly fall in love with it.
+VSCode has much more other advantages. If you don't use this text-editor yet. I think you should take a look, I'm pretty sure that you will fall in love quickly with it.
 
 
 
@@ -153,7 +157,7 @@ Here, I use [create-react-app](https://github.com/facebook/create-react-app), so
     "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src/",
     "prettier": "prettier --check \"src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)\"",
     "prettier:fix": "prettier --write \"src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)\""
-  },
+  }
   ```
   So we can use `yarn lint`, `yarn lint:fix` ... to check or fix code style with these tools.
 
@@ -210,7 +214,6 @@ Here, I use [create-react-app](https://github.com/facebook/create-react-app), so
   ```
   /src/serviceWorker.js
   /src/setupTests.js/js
-
   ```
 
 ## Conclusion
