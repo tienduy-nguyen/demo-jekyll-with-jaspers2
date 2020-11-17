@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
   <link href="/tag/web-development/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-11-16T01:09:37+01:00</updated>
+  <updated>2020-11-17T10:53:27+01:00</updated>
   <id>/tag/web-development/feed.xml</id>
 
   
@@ -30,6 +30,267 @@
   
   
 
+  
+    <entry>
+      <title type="html">Config ESLint, Prettier for React App in VSCode</title>
+      <link href="/config-esling-prettier-react-app" rel="alternate" type="text/html" title="Config ESLint, Prettier for React App in VSCode" />
+      <published>2020-11-17T01:00:00+01:00</published>
+      <updated>2020-11-17T01:00:00+01:00</updated>
+      <id>/config-esling-prettier-react-app</id>
+      <content type="html" xml:base="/config-esling-prettier-react-app">&lt;p&gt;As a developer, you will understand how important of quality of code in your project. ESlint and Prettier are great tools helps you for formatting and style of code.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In this article, you will understand how to setup ESLint &amp;amp; Prettier in your React project and on text-editor VSCode.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-are-eslint-and-prettier&quot;&gt;What are ESLint and Prettier?&lt;/h2&gt;
+
+&lt;h3 id=&quot;eslint&quot;&gt;ESlint&lt;/h3&gt;
+
+&lt;p&gt;It is a static code analyzer, that means it tells you errors and mistakes that you may make while you are developing.&lt;/p&gt;
+
+&lt;p&gt;These errors can be stuff like -&lt;/p&gt;
+
+&lt;p&gt;Simple syntax errors eg. not closing a function declaration with }.
+Dead code detection eg. unused variables, code written after a return statement.
+Violating code guidelines, these are rules defined by yourself or a combination of predefined standards like the Airbnb styled guide or Google’s style guide etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;prettier&quot;&gt;Prettier&lt;/h3&gt;
+&lt;p&gt;Prettier is a code formatter, it’s only concerned with how your code looks, do you want ensure consistent indentation in the entire project?
+Do you want to ensure there’re no semicolons in the project? Make your promise chains look perfectly consistent and readable? Prettier can be enabled for the entire project and instead of your team disagreeing about formatting styles, you can just leave it all to Prettier to figure out.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-vscode&quot;&gt;Why VSCode?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visual Studio Code (VSCode) is a very popular coding editor used by millions of developers around the world.&lt;/li&gt;
+  &lt;li&gt;VSCode is a source code editor while Visual Studio is a complete IDE.&lt;/li&gt;
+  &lt;li&gt;Visual Studio Code is a cross-platform which works on Windows, Linux and macOS whereas Visual Studio only works on Windows and macOS.&lt;/li&gt;
+  &lt;li&gt;VSCode is fast and lightweight, and Visual Studio 2015 is not as fast but consists of a multitude of features. It is very easy to use.&lt;/li&gt;
+  &lt;li&gt;It support  myriads of programming languages. It supports Python, JavaScript, HTML, CSS, TypeScript, C++, Java, PHP, Go, C#, PHP, SQL, Ruby, Objective-C and much more.&lt;/li&gt;
+  &lt;li&gt;Built-in Git integration&lt;/li&gt;
+  &lt;li&gt;IntelliSense: It is a feature which is used by programmers for smart code completion, parameter info, content assist, quick info and the code hinting. VSC provides IntelliSense for JavaScript, CSS, HTML, TypeScript, JSON, Sass and Less programming languages. For other languages, we can use IntelliSense by adding its extensions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;VSCode has much more other advantages. If you don’t use this text-editor yet. I think you should take a look, I’m pretty sure that you will fall in love quickly with it.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup-vscode&quot;&gt;Setup VSCode&lt;/h2&gt;
+
+&lt;h3 id=&quot;install-extensions&quot;&gt;Install extensions&lt;/h3&gt;
+
+&lt;p&gt;To use ESLint &amp;amp; Prettier tool, first of all, you need to install these extensions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ESLint&lt;/strong&gt;: ESLint for editor&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Prettier&lt;/strong&gt;: Format code&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;vscode-styled-components&lt;/strong&gt;: Highlight &amp;amp; auto-complete for styled-component&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Auto Rename Tag&lt;/strong&gt;: Auto rename tag when code HTML, JSX&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Auto Close Tag&lt;/strong&gt;: As its name, it allows auto close tag when code HTML, JSX, TSX… Auto Close Tag and Auto Rename Tag are a great duo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Editor Config for VSCode&lt;/strong&gt;: Allow to run &lt;code class=&quot;highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;setup-workspace-setting-in-vscode&quot;&gt;Setup Workspace Setting in VSCode&lt;/h3&gt;
+
+&lt;p&gt;So  when all extensions already, we will take some configurations for settings in VScode.&lt;/p&gt;
+
+&lt;p&gt;For anyone who don’t know, VSCode has 2 settings, one is for &lt;strong&gt;user&lt;/strong&gt;, the orther for &lt;strong&gt;workspace&lt;/strong&gt;. If you don’t setup for &lt;strong&gt;workspace&lt;/strong&gt;, by default VSCode will get settings directly at the &lt;strong&gt;user settings&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;user settings&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt; file of VSCode&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;workspace settings&lt;/strong&gt;: Create a folder and file &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this article, I just explain how to setup for the &lt;strong&gt;workspace&lt;/strong&gt;. You do the same for settings of user.&lt;/p&gt;
+
+&lt;p&gt;Now, start setting up.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create file &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.defaultFormatter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.codeActionsOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;source.fixAll.eslint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;It means:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;editor.defaultFormatter&lt;/code&gt;: take &lt;strong&gt;Prettier&lt;/strong&gt; as default formater&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;editor.formatOnSave: true&lt;/code&gt;: format automatically the code when saving files&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;eslint.format.enable: true&lt;/code&gt;: enable formatting code of ESlint&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;source.fixAll.eslint: true&lt;/code&gt;: fix auto code with ESLint. Sometime we need to fix manually.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/extensions.json&lt;/code&gt; file and paste the following code. It will recommend use install the following extension when open this project on their VScode.
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;recommendations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mikael.angular-beastcode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;angular.ng-template&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;coenraads.bracket-pair-colorizer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mikestead.dotenv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dsznajder.es7-react-js-snippets&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dbaeumer.vscode-eslint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mkxml.vscode-filesize&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ritwickdey.liveserver&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;davidanson.vscode-markdownlint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;pkief.material-icon-theme&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;zhuangtongfa.material-theme&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;syler.sass-indented&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;octref.vetur&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ms-vscode.vscode-typescript-tslint-plugin&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;visualstudioexptteam.vscodeintellicode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;formulahendry.code-runner&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;It’s very helpful when we work in  team. We just share the folder &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file each other. But in that case, don’t add &lt;strong&gt;.vscode&lt;/strong&gt; in &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add file &lt;code class=&quot;highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; in the root project&lt;/p&gt;
+
+    &lt;p&gt;If you don’t know, &lt;strong&gt;.editorconfig&lt;/strong&gt; was created to unify standards between different editors.&lt;/p&gt;
+
+    &lt;p&gt;For example: user would use &lt;strong&gt;indent&lt;/strong&gt; as &lt;strong&gt;space&lt;/strong&gt;, some peoples would use &lt;strong&gt;tag&lt;/strong&gt;. Some users want to &lt;strong&gt;2&lt;/strong&gt; for indent, the others want to &lt;strong&gt;4&lt;/strong&gt;. So &lt;strong&gt;.editorconfig&lt;/strong&gt; helps our code to be consistent, easy to read and maintain.&lt;/p&gt;
+
+    &lt;p&gt;Because we already have the &lt;strong&gt;Editor Config&lt;/strong&gt; extension, installed above, when we created this file, the VSCode will automatically take these settings.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[*]
+end_of_line = lf
+indent_style = space
+indent_size = 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setup-eslint-and-prettier-for-react&quot;&gt;Setup ESLint and Prettier for React&lt;/h2&gt;
+
+&lt;h3 id=&quot;why-configuration-for-react-app-&quot;&gt;Why configuration for React App ?&lt;/h3&gt;
+
+&lt;p&gt;The setup in this article isn’t only for React app, but also we can setup similarly for other framework as Angular, Vue or any front-end project. React is just a framework that I have familiar with for this moment.&lt;/p&gt;
+
+&lt;h3 id=&quot;setup&quot;&gt;Setup&lt;/h3&gt;
+
+&lt;p&gt;Here, I use &lt;a href=&quot;https://github.com/facebook/create-react-app&quot;&gt;create-react-app&lt;/a&gt;, so by default they have the basic ESLint installed, I just need to install a few more dependencies.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.env&lt;/code&gt; in the root folder of project and add  the value &lt;code class=&quot;highlighter-rouge&quot;&gt;EXTEND_ESLINT=true&lt;/code&gt;. It allows us to add more others linter to &lt;strong&gt;React&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Install more packages
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; prettier eslint-config-prettier eslint-plugin-prettier
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add &lt;strong&gt;script&lt;/strong&gt; to run them in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file
+    &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;eject&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts eject&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lint&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint --ext js,jsx,ts,tsx src/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;lint:fix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;eslint --fix --ext js,jsx,ts,tsx src/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;prettier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --check &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;prettier:fix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --write &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;So we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint:fix&lt;/code&gt; … to check or fix code style with these tools.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;It contains the rules for &lt;strong&gt;Prettier&lt;/strong&gt;&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;arrowParens&quot;: &quot;avoid&quot;,
+  &quot;semi&quot;: false,
+  &quot;trailingComma&quot;: &quot;none&quot;,
+  &quot;endOfLine&quot;: &quot;lf&quot;,
+  &quot;tabWidth&quot;: 2,
+  &quot;printWidth&quot;: 80,
+  &quot;useTabs&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt;
+&lt;strong&gt;Prettier&lt;/strong&gt; will ignore and will not check these files.
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.cache
+package-lock.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;This file intend to expand the ESLint React configuration. It helps to catch erros on the terminal. If you have installed the ESLint extension ESlint, it will rely on this file to catch errors directly on the editor.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+  &quot;extends&quot;: [&quot;react-app&quot;, &quot;prettier&quot;],
+  &quot;plugins&quot;: [&quot;react&quot;, &quot;prettier&quot;],
+  &quot;rules&quot;: {
+    &quot;prettier/prettier&quot;: [
+      &quot;warn&quot;,
+      {
+        &quot;arrowParens&quot;: &quot;avoid&quot;,
+        &quot;semi&quot;: false,
+        &quot;trailingComma&quot;: &quot;none&quot;,
+        &quot;endOfLine&quot;: &quot;lf&quot;,
+        &quot;tabWidth&quot;: 2,
+        &quot;printWidth&quot;: 80,
+        &quot;useTabs&quot;: false
+      }
+    ],
+    &quot;no-console&quot;: &quot;warn&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;We have added some &lt;strong&gt;prettier&lt;/strong&gt; rules like we added in &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt; to ESlint. So that ESlint will catch errors in case we format to format code.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintignore&lt;/code&gt;
+Ignore files that we don’t want to catch errors.&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/serviceWorker.js
+/src/setupTests.js/js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So that’s it. Hope you learned something new. Eslint is endlessly customizable and you should explore more to find some plugins and configs that best benefit your project.&lt;/p&gt;
+
+&lt;p&gt;All the code snippets can be found here on &lt;a href=&quot;https://github.com/tienduy-nguyen/webpack-react-typescript-template&quot;&gt;my GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tienduy-nguyen/webpack-react-typescript-template&quot;&gt;Code GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.to/onygami/eslint-and-prettier-for-react-apps-bonus-next-js-and-typescript-3e46&quot;&gt;Setup eslint prettier from scratch on dev.to&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://xdevclass.com/cai-dat-moi-truong-code-react-toi-uu-vs-code-prettier-eslint/&quot;&gt;Other Ref&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="Web Development" />
+      
+
+      
+        <summary type="html">As a developer, you will understand how important of quality of code in your project. ESlint and Prettier are great tools helps you for formatting and style of code.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Setup Webpack React TypeScript</title>

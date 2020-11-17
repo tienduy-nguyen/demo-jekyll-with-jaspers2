@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Config ESLint, Prettier for React App in VSCode</title>
+        
+          <description>&lt;p&gt;As a developer, you will understand how important of quality of code in your project. ESlint and Prettier are great tools helps you for formatting and style of code.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 17 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /config-esling-prettier-react-app</link>
+        <guid isPermaLink="true">/config-esling-prettier-react-app</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Setup Webpack React TypeScript</title>
         
           <description>&lt;p&gt;How to setup a React project with Webpack and TypeScript?&lt;/p&gt;
