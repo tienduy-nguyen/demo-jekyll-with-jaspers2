@@ -24,5 +24,5 @@ ruby:
   cover: assets/images/post-covers/red-sky.jpeg
 docker:
   name: docker
-  description: All things about Docker
+  description: Things I learned about Docker
   cover: assets/images/post-covers/docker.png

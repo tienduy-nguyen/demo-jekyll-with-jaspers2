@@ -234,6 +234,7 @@ How to get a Node.js application into a Docker container?
   ```
 
 ## Reference
+- [Code GitHub example](https://github.com/tienduy-nguyen/try-docker/tree/master/01.dive-into-docker/simple-nodejs)
 - [Official Nodejs Docker image](https://hub.docker.com/_/node/)
 - [Nodejs Docker best practice guide](https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md)
 - [Official Docker documentation](https://docs.docker.com/)
