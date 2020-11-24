@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Create simple web app Nodejs with Docker</title>
+        
+          <description>&lt;p&gt;How to get a Node.js application into a Docker container?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 22 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /create-simple-project-nodejs-with-docker</link>
+        <guid isPermaLink="true">/create-simple-project-nodejs-with-docker</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Config ESLint, Prettier for React App in VSCode</title>
         
           <description>&lt;p&gt;As a developer, you will understand how important of quality of code in your project. ESlint and Prettier are great tools helps you for formatting and style of code.&lt;/p&gt;

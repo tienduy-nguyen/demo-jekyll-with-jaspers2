@@ -57,6 +57,10 @@
 <lastmod>2020-11-17T01:00:00+01:00</lastmod>
 </url>
 <url>
+<loc>/create-simple-project-nodejs-with-docker</loc>
+<lastmod>2020-11-22T01:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>/</loc>
 </url>
 <url>
@@ -79,5 +83,8 @@
 </url>
 <url>
 <loc>/tag/programming/</loc>
+</url>
+<url>
+<loc>/tag/docker/</loc>
 </url>
 </urlset>
