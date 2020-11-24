@@ -1,0 +1,1 @@
+https://viblo.asia/p/so-sanh-joins-trong-mongodb-va-postgresql-eW65GvmOlDO

@@ -10,11 +10,11 @@ algorithms:
   name: algorithms
   description: False
   cover: assets/images/post-covers/algorithms.jpeg
-journey:
-  name: journey
-  description: My journey to become a full-stack web developer
-  cover: assets/images/post-covers/journey.jpeg
 ruby:
   name: ruby
   description: False
+  cover: False
+docker:
+  name: docker
+  description: About Docker
   cover: False
