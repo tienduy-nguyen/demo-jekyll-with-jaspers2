@@ -16,5 +16,5 @@ journey:
   cover: assets/images/post-covers/journey.jpeg
 ruby:
   name: ruby
-  desdription: False
+  description: False
   cover: False

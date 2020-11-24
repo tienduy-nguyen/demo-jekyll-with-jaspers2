@@ -20,5 +20,9 @@ journey:
   cover: assets/images/post-covers/journey.jpeg
 ruby:
   name: ruby
-  desdription: False
+  description: False
   cover: assets/images/post-covers/red-sky.jpeg
+docker:
+  name: docker
+  description: All things about Docker
+  cover: assets/images/post-covers/docker.png
