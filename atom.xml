@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Why use Docker compose</title>
+        
+          <description>&lt;p&gt;Demo using Docker compose with Nodejs&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 24 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /why-use-dockercompose</link>
+        <guid isPermaLink="true">/why-use-dockercompose</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Create simple web app Nodejs with Docker</title>
         
           <description>&lt;p&gt;How to get a Node.js application into a Docker container?&lt;/p&gt;
