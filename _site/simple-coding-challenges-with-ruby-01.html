@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Document Settings -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Base Meta -->
+  <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+  <title>Simple coding challenges with Ruby - 01</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Styles'n'Scripts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+
+
+  <style>
+    .hljs {
+      background: none;
+    }
+  </style>
+
+
+  <!-- This tag outputs SEO meta+structured data and other important settings -->
+  <meta name="description"
+  content="Learning is an endless journey" />
+<link rel="shortcut icon" href="https://blog.adev42.com//assets/images/favicon.png" type="image/png" />
+<link rel="canonical"
+  href="/simple-coding-challenges-with-ruby-01" />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+
+<!--title below is coming from _includes/dynamic_title-->
+<meta property="og:site_name" content="Adev42" />
+<meta property="og:type" content="website" />
+<meta property="og:title"
+  content="Simple coding challenges with Ruby - 01" />
+<meta property="og:description"
+  content="Doing coding challenges is an excellent way to imporve your programming language &amp; problem-solvings skills. I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding. The Hacking Project (THP) You may be asking: “What is The Hacking" />
+<meta property="og:url"
+  content="/simple-coding-challenges-with-ruby-01" />
+<meta property="og:image"
+  content="/assets/images/post-covers/challenge.jpeg" />
+<meta property="article:publisher" content="https://www.facebook.com/" />
+<meta property="article:author" content="https://www.facebook.com/" />
+<meta property="article:published_time"
+  content="2020-07-17T12:00:00+02:00" />
+<meta property="article:modified_time"
+  content="2020-07-17T12:00:00+02:00" />
+
+<meta property="article:tag" content="Algorithms" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title"
+  content="Simple coding challenges with Ruby - 01" />
+<meta name="twitter:description"
+  content="Doing coding challenges is an excellent way to imporve your programming language &amp; problem-solvings skills. I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding. The Hacking Project (THP) You may be asking: “What is The Hacking" />
+<meta name="twitter:url" content="/" />
+<meta name="twitter:image"
+  content="/assets/images/post-covers/challenge.jpeg" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="Adev42" />
+<meta name="twitter:label2" content="Filed under" />
+<meta name="twitter:data2" content="Algorithms" />
+<meta name="twitter:site" content="@tienduy_nguyen" />
+<meta name="twitter:creator" content="@tienduy_nguyen" />
+<meta property="og:image:width" content="1400" />
+<meta property="og:image:height" content="933" />
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Adev42",
+      "logo": "/assets/images/blog-icon-200.png"
+    },
+    "url": "/simple-coding-challenges-with-ruby-01",
+    "image": {
+      "@type": "ImageObject",
+      "url": "/assets/images/post-covers/challenge.jpeg",
+      "width": 2000,
+      "height": 666
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "/simple-coding-challenges-with-ruby-01"
+    },
+    "description": "Doing coding challenges is an excellent way to imporve your programming language &amp; problem-solvings skills. I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding. The Hacking Project (THP) You may be asking: “What is The Hacking"
+  }
+</script>
+
+<meta name="generator" content="Jekyll 3.6.2" />
+<link rel="alternate" type="application/rss+xml"
+  title="Simple coding challenges with Ruby - 01" href="/feed.xml" />
+
+</head>
+
+<body
+  class="post-template">
+  <div class="site-wrapper">
+    <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+    <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+  <div class="inner">
+    <nav class="site-nav">
+  <div class="site-nav-left">
+    
+    
+    <a class="site-nav-logo" href="/"><img src="/assets/images/blog-icon-200.png" alt="Adev42"></a>
+    
+    
+    
+    <ul class="nav" role="menu">
+  <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+  <li class="nav-getting-started" role="menuitem">
+<a href="/tag/me/">Me</a>
+  </li>
+  <li class="nav-getting-started" role="menuitem">
+<a href="/tag/web-development/">Web Development</a>
+  </li>
+  <li class="nav-getting-started" role="menuitem">
+<a href="/tag/algorithms/">Algorithms</a>
+  </li>
+  <li class="nav-getting-started" role="menuitem">
+<a href="/tag/docker/">Docker</a>
+  </li>
+  <li class="nav-about" role="menuitem"><a href="/about/">Contact</a></li>
+</ul>
+    
+  </div>
+  <div class="site-nav-right">
+    <div class="social-links">
+      
+      
+      <a class="social-link social-link-tw" href="https://twitter.com/tienduy_nguyen" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+</a>
+      
+      
+      <a class="social-link social-link-lkin" href="https://linkedin.com/in/tienduy-nguyen" target="_blank" rel="noopener"><svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="16px" height="16px">
+  <path d="M 21.800781 0 L 2.199219 0 C 1 0 0 1 0 2.199219 L 0 21.800781 C 0 23 1 24 2.199219 24 L 21.800781 24 C 23 24 24 23 24 21.800781 L 24 2.199219 C 24 1 23 0 21.800781 0 Z M 7 20 L 3 20 L 3 9 L 7 9 Z M 5 7.699219 C 3.800781 7.699219 3 6.898438 3 5.898438 C 3 4.800781 3.800781 4 5 4 C 6.199219 4 7 4.800781 7 5.800781 C 7 6.898438 6.199219 7.699219 5 7.699219 Z M 21 20 L 17 20 L 17 14 C 17 12.398438 15.898438 12 15.601563 12 C 15.300781 12 14 12.199219 14 14 C 14 14.199219 14 20 14 20 L 10 20 L 10 9 L 14 9 L 14 10.601563 C 14.601563 9.699219 15.601563 9 17.5 9 C 19.398438 9 21 10.5 21 14 Z"></path>
+</svg></a>
+      
+    </div>
+    
+    <a class="subscribe-button" href="#subscribe">Subscribe</a>
+    
+  </div>
+</nav>
+  </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+
+    <article class="post-full  tag-algorithms post ">
+
+      <header class="post-full-header">
+        <section class="post-full-meta">
+          <time class="post-full-meta-date" datetime="17 July 2020">17 July 2020</time>
+          
+          <span class="date-divider">/</span>
+          
+          
+          <a href="/tag/algorithms/">ALGORITHMS</a>
+          
+          
+          
+        </section>
+        <h1 class="post-full-title">Simple coding challenges with Ruby - 01</h1>
+      </header>
+
+      
+      <figure class="post-full-image" style="background-image: url(/assets/images/post-covers/challenge.jpeg)">
+      </figure>
+      
+
+
+
+
+      <section class="post-full-content-wrapper">
+        <section class="page__content" itemprop="text">
+          
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header>
+                <h4 class="nav__title">
+<i class="fas fa-file-alt"></i>
+                  Menu
+                </h4>
+              </header>
+              <ul>
+  <li><a href="#the-hacking-project-thp">The Hacking Project (THP)</a></li>
+  <li><a href="#why-this-serie-ruby-coding-challenges-with-thp">Why this serie “Ruby Coding Challenges with THP”?</a></li>
+  <li>
+<a href="#kata-challenges">Kata challenges</a>
+    <ul>
+      <li><a href="#1-vowel-count-7kyu">1. Vowel count (7kyu)</a></li>
+      <li><a href="#2-remove-the-minimum-7kyu">2. Remove the minimum (7kyu)</a></li>
+      <li><a href="#3-get-the-middle-caracter-7kyu">3. Get the middle caracter (7kyu)</a></li>
+      <li><a href="#4-jade-casing-strings-7kyu">4. Jade casing strings (7kyu)</a></li>
+      <li><a href="#5-disemvowel-trolls-7kyu">5. Disemvowel trolls (7kyu)</a></li>
+      <li><a href="#6-square-every-digit-7kyu">6. Square every digit (7kyu)</a></li>
+      <li><a href="#7-shortest-word-7kyu">7. Shortest word (7kyu)</a></li>
+      <li><a href="#8-list-filtering-7kyu">8. List filtering (7kyu)</a></li>
+      <li><a href="#9-credit-card-mark-7kyu">9. Credit card mark (7kyu)</a></li>
+      <li><a href="#10-categorize-new-member-7kyu">10. Categorize new member (7kyu)</a></li>
+      <li><a href="#11-find-the-parity-outlier-6kyu">11. Find The Parity Outlier (6kyu)</a></li>
+    </ul>
+  </li>
+  <li><a href="#reference">Reference</a></li>
+  <li><a href="#series-ruby-coding-challenges">Series Ruby Coding Challenges</a></li>
+</ul>
+<style type="text/css">
+  div#table-of-content {
+    margin: 2em 0 !important;
+    padding: 1em;
+    color: #494e52;
+    font-size: .75em !important;
+    text-indent: initial;
+    background-color: #ecf6ec;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(63, 166, 63, 0.25);
+  }
+</style>
+            </nav>
+          </aside>
+          
+        </section>
+
+        <div class="post-full-content">
+          <div class="kg-card-markdown">
+            <p>Doing coding challenges is an excellent way to imporve your programming language &amp; problem-solvings skills.</p>
+
+<p><sub><em>I’am learning and trying to improve my English. So I’m really sorry if my grammar mistakes annoy you. Thank you for your understanding.</em></sub></p>
+
+<h2 id="the-hacking-project-thp">The Hacking Project (THP)</h2>
+
+<p><em>You may be asking: “What is The Hacking Project?”</em></p>
+
+<p><strong>The Hacking Project</strong> (THP) is a type coding bootcamps within 12 weeks for the full-stack web development on Ruby &amp; Ruby on Rails. The Hacking Project has been created in France since 2017 to help the people who want to learn a new coding skills, who want to create a startup or even for the people who want to make their career change into web development.</p>
+
+<p>In 12 weeks, you will learn how to create a web application with the front-end skills (HMLT, CSS, JavaScript), the back-end skills with Ruby, Ruby on Rails and many others skills in IT developement.</p>
+
+<p><strong>This bootcamps is now free for every one.</strong> It’s very impressive, isn’t it?</p>
+
+<p>If you interessed in THP, you can check out the website <a href="https://www.thehackingproject.org/">The Hacking Project</a> for more details.</p>
+
+<h2 id="why-this-serie-ruby-coding-challenges-with-thp">Why this serie “Ruby Coding Challenges with THP”?</h2>
+
+<p>I’m a student of THP since 29/06/2020 (we are now in the 13e promo). In the second week, we started learning to code with Ruby language. After do the basic exercies, in the last day of that week, we have been suggested to complete some coding challenges on <strong>Codewars</strong>. If you don’t know <a href="https://www.codewars.com/"><strong>Codewars</strong></a> yet, it is a excelent plateform for software developers where contains a lot of programming puzzles with the different levels of difficulty. Those challenges have known also as “Kata Challenges”. We can solve them with any programming language.</p>
+
+<p>Practing katas suggested by THP helped me a lot to understand the fundamentals of Ruby and take some best practices in this language. It also help me to improve my problem-solving skills that is very important in the IT developement. I really love the Codewars now.</p>
+
+<p>So, I write this serie to teach me again, more deep learning and also to share my though, my idea on each katas.</p>
+
+<p>Let’s talk about it!</p>
+
+<h2 id="kata-challenges">Kata challenges</h2>
+
+<p>As the beginer in Ruby, THP given us some fundamental challenges (7kyu level)</p>
+
+<p>(<em>Level of difficulty on Codewars: easy to difficult =&gt; 7kyu - 1kyu</em>).</p>
+
+<p>If you have already familiarized with Ruby, this first chapter may be not interesting for you. You can skip it and take the next one.</p>
+
+<h3 id="1-vowel-count-7kyu">1. Vowel count (7kyu)</h3>
+
+<p>For the first challenge, we will count the number of vowel in a given string.</p>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/54ff3102c1bad923760001f3">Vowel count</a></p>
+
+<blockquote>
+  <p>Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<p>I use the method <strong>scan</strong> of String. It allows us to interate through a string, and matching with a given pattern of regular expression. If you don’t know regular expression yet, you can take a look on <a href="https://ruby-doc.org/core-2.5.1/Regexp.html">Regular Expression Ruby</a>.</p>
+
+<p>Regular expression give us a lot of incredibles methods to work with string and it is also used in all programming languages.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_count</span><span class="p">(</span><span class="n">inputStr</span><span class="p">)</span>
+    <span class="n">inputStr</span><span class="p">.</span><span class="nf">scan</span><span class="p">(</span><span class="sr">/[aeiou]/</span><span class="p">).</span><span class="nf">size</span>
+    <span class="c1"># [aeiou]: search all volwel caracter</span>
+    <span class="c1"># .scan: return new array which matching with the pattern</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getCount</span><span class="p">(</span><span class="n">inputStr</span><span class="p">)</span>
+    <span class="n">inputStr</span><span class="p">.</span><span class="nf">count</span><span class="p">(</span><span class="s2">"aeiou"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Another big advantage of codewars is learning to solve the problem from each other. When you submit your solution successfully, you can see the solution of others. There are a lot of developers who give the best practice and the very clever ideas to solve problems.</p>
+
+<h3 id="2-remove-the-minimum-7kyu">2. Remove the minimum (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/563cf89eb4747c5fb100001b">Remove the minimum</a></p>
+
+<blockquote>
+  <p>Given an array of integers, remove the smallest value. <strong>Do not mutate the original array/list</strong>. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
+ex: remove_smallest([1,2,3,4,5]) = [2,3,4,5]</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>If the input array is empty, I will return an empty array</li>
+  <li>We can’t mutate the original array/list, so I create a clone array with the method “.dup” to keep the original.</li>
+  <li>To remove the smallest values, I use the method “.delete”_at and give an index of the min values in array</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">remove_smallest</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">size</span> <span class="o">&lt;</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="p">[]</span>
+  <span class="k">end</span>
+  <span class="nb">clone</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">dup</span>
+  <span class="nb">clone</span><span class="p">.</span><span class="nf">delete_at</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="nf">index</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="nf">min</span><span class="p">))</span>
+  <span class="nb">clone</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">remove_smallest</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="n">numbers</span><span class="p">.</span><span class="nf">reject</span><span class="p">.</span><span class="nf">with_index</span> <span class="p">{</span> <span class="o">|</span><span class="n">_</span><span class="p">,</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">==</span> <span class="n">numbers</span><span class="p">.</span><span class="nf">index</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="nf">min</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Method “reject” is a reverse method of “select”, we remove the items of array by condition. This method does not change the original array.</p>
+
+<h3 id="3-get-the-middle-caracter-7kyu">3. Get the middle caracter (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/56747fd5cb988479af000028">Get the middle caracter</a></p>
+
+<blockquote>
+  <p>You are going to be given a word. Your job is to return the middle character of the word. If the word’s length is odd, return the middle character. If the word’s length is even, return the middle 2 characters.
+ex: Kata.getMiddle(“test”) should return “es”
+ex:Kata.getMiddle(“testing”) should return “t”</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_middle</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="n">len</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="nf">length</span>
+  <span class="k">if</span> <span class="n">len</span> <span class="o">&lt;=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">s</span>
+  <span class="k">end</span>
+  <span class="k">if</span> <span class="n">len</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">len</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">len</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+  <span class="k">else</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="n">len</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_middle</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="n">s</span><span class="p">[(</span><span class="n">s</span><span class="p">.</span><span class="nf">size</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">..</span><span class="n">s</span><span class="p">.</span><span class="nf">size</span><span class="o">/</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_middle</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+ <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="nf">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">length</span><span class="p">.</span><span class="nf">odd?</span> <span class="p">?</span> <span class="n">s</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span> <span class="p">:</span> <span class="n">s</span><span class="p">[</span><span class="n">mid</span><span class="o">..</span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>Very impressive, is’nt it?</p>
+</blockquote>
+
+<h3 id="4-jade-casing-strings-7kyu">4. Jade casing strings (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/56747fd5cb988479af000028">Jade casing strings</a></p>
+
+<blockquote>
+  <p>Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+ex: Not Jaden-Cased: “How can mirrors be real if our eyes aren’t real”
+ex: Jaden-Cased: “How Can Mirrors Be Real If Our Eyes Aren’t Real”</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<p>This kata is quite simple, I just use the “.map” method and convert each word with “capitalize” method.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">to_jade_case</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:capitalize</span><span class="p">).</span><span class="nf">join</span><span class="p">(</span><span class="s1">' '</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Finally, I got a first success on codewars, because I have the same solution with the best solution on codewars <img class="emoji" title=":blush:" alt=":blush:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f60a.png" height="20" width="20"></p>
+
+<h3 id="5-disemvowel-trolls-7kyu">5. Disemvowel trolls (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/52fba66badcd10859f00097e">Disemvowel trolls</a></p>
+
+<blockquote>
+  <p>Your task is to write a function that takes a string and return a new string with all vowels removed.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example, the string “This website is for losers LOL!” would become “Ths wbst s fr lsrs LL!”.</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>The regular expression is very strong with string. So I will use it for this solution.</li>
+  <li>gsub: is a method to replace all caracters in string which match with the given text or pattern.</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">disemvowel</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="n">str</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/[aeiouAEIOU]/</span><span class="p">,</span><span class="s1">''</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">disemvowel</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="n">str</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="s1">'aeiouAEIOU'</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>So they use a method “delete” more simple that I don’t know yet. So cool!</p>
+
+<h3 id="6-square-every-digit-7kyu">6. Square every digit (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/546e2562b03326a88e000020">Square every digit</a></p>
+
+<blockquote>
+  <p>YWelcome. In this kata, you are asked to square every digit of a number.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>Using “.map” method to solve this problem</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">square_digits</span> <span class="n">num</span>
+  <span class="n">num</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s1">''</span><span class="p">).</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">to_i</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">}.</span><span class="nf">join</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">square_digits</span> <span class="n">num</span>
+  <span class="n">num</span><span class="p">.</span><span class="nf">to_s</span><span class="p">.</span><span class="nf">chars</span><span class="p">.</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">.</span><span class="nf">to_i</span><span class="o">**</span><span class="mi">2</span><span class="p">}.</span><span class="nf">join</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">square_digits</span> <span class="n">num</span>
+  <span class="n">num</span><span class="p">.</span><span class="nf">digits</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">d</span><span class="o">|</span> <span class="n">d</span><span class="o">*</span><span class="n">d</span> <span class="p">}</span> <span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">join</span><span class="p">.</span><span class="nf">to_i</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>I see that there are many ways to solve this problem. With Codewars, I can learn more some tricks from others.</p>
+
+<h3 id="7-shortest-word-7kyu">7. Shortest word (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9">Shortest word</a></p>
+
+<blockquote>
+  <p>Welcome. In this kata, you are asked to square every digit of a number.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.</p>
+</blockquote>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>Using “.min_by” method</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_short</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">s</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">min_by</span><span class="p">{</span><span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">word</span><span class="p">.</span><span class="nf">length</span><span class="p">}.</span><span class="nf">length</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_short</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">split</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:size</span><span class="p">).</span><span class="nf">min</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>An alternative better way to solve it!</p>
+
+<h3 id="8-list-filtering-7kyu">8. List filtering (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/53dbd5315a3c69eed20002dd">List filtering</a></p>
+
+<blockquote>
+  <p>In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">filter_list</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">l</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">item</span><span class="o">|</span> <span class="n">item</span><span class="p">.</span><span class="nf">is_a?</span> <span class="no">Numeric</span><span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">filter_list</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+  <span class="n">l</span><span class="p">.</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="p">.</span><span class="nf">is_a?</span> <span class="no">String</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="9-credit-card-mark-7kyu">9. Credit card mark (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/53dbd5315a3c69eed20002dd">Credit card mark</a></p>
+
+<blockquote>
+  <p>Usually when you buy something, you’re asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don’t want that shown on your screen. Instead, we mask it. Your task is to write a function maskify, which changes all but the last four characters into ‘#’.</p>
+</blockquote>
+
+<blockquote>
+  <p>For example</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>maskify('4556364607935616') # should return '############5616'
+maskify('64607935616')      # should return '#######5616'
+maskify('1')                # should return '1'
+maskify('')                 # should return ''
+
+# "What was the name of your first pet?"
+maskify('Skippy')                                   # should return '##ippy'
+maskify('Nananananananananananananananana Batman!') # should return '####################################man!'
+
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>I keep only 4 last caracters of string, and add the “#” (string.length-4) times in the first.</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maskify</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">cc</span><span class="p">.</span><span class="nf">length</span> <span class="o">&lt;=</span> <span class="mi">4</span> <span class="p">?</span> <span class="n">cc</span> <span class="p">:</span> <span class="p">(</span><span class="s1">'#'</span> <span class="o">*</span> <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="nf">length</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span> <span class="o">+</span> <span class="n">cc</span><span class="p">[</span><span class="n">cc</span><span class="p">.</span><span class="nf">length</span><span class="o">-</span><span class="mi">4</span><span class="o">..</span><span class="n">cc</span><span class="p">.</span><span class="nf">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maskify</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+   <span class="n">cc</span><span class="p">.</span><span class="nf">gsub</span><span class="p">(</span><span class="sr">/.(?=....)/</span><span class="p">,</span> <span class="s1">'#'</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maskify</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+  <span class="n">cc</span><span class="p">.</span><span class="nf">size</span> <span class="o">&lt;=</span> <span class="mi">4</span> <span class="p">?</span> <span class="n">cc</span> <span class="p">:</span> <span class="s2">"#"</span> <span class="o">*</span> <span class="p">(</span><span class="n">cc</span><span class="p">.</span><span class="nf">length</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">cc</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="o">..-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Very easy to read the code with the best solutions on codewars.</p>
+
+<h3 id="10-categorize-new-member-7kyu">10. Categorize new member (7kyu)</h3>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/53dbd5315a3c69eed20002dd">Categorize new member</a></p>
+
+<blockquote>
+  <p>The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.</p>
+</blockquote>
+
+<blockquote>
+  <p>To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.</p>
+</blockquote>
+
+<blockquote>
+  <p>Example input</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[18, 20],[45, 2],[61, 12],[37, 6],[21, 21],[78, 9]]
+</code></pre></div></div>
+
+<blockquote>
+  <p>Example output</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>["Open", "Open", "Senior", "Open", "Open", "Senior"]
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>The method “.map” is again take the job done</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">open_or_senior</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">data</span><span class="p">.</span><span class="nf">map</span><span class="p">{</span><span class="o">|</span><span class="n">person</span><span class="o">|</span> <span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">55</span> <span class="o">&amp;&amp;</span> <span class="n">person</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">7</span><span class="p">)</span> <span class="p">?</span> <span class="s2">"Senior"</span><span class="p">:</span> <span class="s2">"Open"</span><span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">openOrSenior1</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+  <span class="n">data</span><span class="p">.</span><span class="nf">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">age</span><span class="p">,</span> <span class="n">handicap</span><span class="o">|</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">55</span> <span class="o">&amp;&amp;</span> <span class="n">handicap</span> <span class="o">&gt;</span> <span class="mi">7</span> <span class="p">?</span> <span class="s2">"Senior"</span> <span class="p">:</span> <span class="s2">"Open"</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="11-find-the-parity-outlier-6kyu">11. Find The Parity Outlier (6kyu)</h3>
+
+<p>For the last challenge, i will take an kata of 6kyu.
+It will be a little more complex of the previous challenges.</p>
+
+<p><img class="emoji" title=":bell:" alt=":bell:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f514.png" height="20" width="20"> Task: <a href="https://www.codewars.com/kata/5526fc09a1bbd946250002dc">Find The Parity Outlier</a></p>
+
+<blockquote>
+  <p>You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this “outlier” N..</p>
+</blockquote>
+
+<blockquote>
+  <p>For example</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[2, 4, 0, 100, 4, 11, 2602, 36]
+Should return: 11 (the only odd number)
+
+[160, 3, 1719, 19, 11, 13, -21]
+Should return: 160 (the only even number)
+
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":arrow_right:" alt=":arrow_right:" src="https://github.githubassets.com/images/icons/emoji/unicode/27a1.png" height="20" width="20"> My solution:</p>
+
+<ul>
+  <li>Because our array contains an unique even number or odd number. So I will check 3 first items in array. If it contains 2 and more even number, so the number that we need to find is a odd number, and vice versa.</li>
+  <li>After checking, we can easily find the result with the method “.select”</li>
+</ul>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maskify</span><span class="p">(</span><span class="n">cc</span><span class="p">)</span>
+  <span class="n">is_all_even</span> <span class="o">=</span> <span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">2</span><span class="p">].</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span><span class="mi">0</span><span class="p">}.</span><span class="nf">size</span> <span class="o">&gt;</span> <span class="mi">1</span>
+  <span class="k">return</span> <span class="n">is_all_even</span> <span class="p">?</span> <span class="n">integers</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">}[</span><span class="mi">0</span><span class="p">]</span> <span class="p">:</span> <span class="n">integers</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">}[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<hr>
+
+<p><img class="emoji" title=":heavy_check_mark:" alt=":heavy_check_mark:" src="https://github.githubassets.com/images/icons/emoji/unicode/2714.png" height="20" width="20"> Best solution on codewars</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_outlier</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span>
+  <span class="n">integers</span><span class="p">.</span><span class="nf">partition</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:odd?</span><span class="p">).</span><span class="nf">find</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:one?</span><span class="p">).</span><span class="nf">first</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_outlier</span><span class="p">(</span><span class="n">integers</span><span class="p">)</span>
+  <span class="n">outlier</span> <span class="o">=</span> <span class="n">integers</span><span class="p">.</span><span class="nf">first</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nf">count</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:even?</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="p">?</span> <span class="ss">:even?</span> <span class="p">:</span> <span class="ss">:odd?</span>
+  <span class="n">integers</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="o">&amp;</span><span class="n">outlier</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Thanks to the developers on the codewars, I could learn about the “partition” method. That return two arrays by the given condition. I could not never know this method if I just learn on the basic document.</p>
+
+<h2 id="reference">Reference</h2>
+
+<p>You can find the code in my github repository <i class="fab fa-github"></i> <a href="https://github.com/tienduy-nguyen/coding-challenge/tree/master/codewars-ruby">Codewars Ruby</a></p>
+
+<p>You can also check out my another repository that contains all the programs day by day I worked with The Hacking project <i class="fab fa-github"></i> <a href="https://github.com/tienduy-nguyen/thehackingproject">thehackingproject</a></p>
+
+<p>The Hacking Project website <a href="https://www.thehackingproject.org/">thehackingproject.org</a></p>
+
+<p>Codeware website <a href="https://codewars.com">coderwars.com</a></p>
+
+<h2 id="series-ruby-coding-challenges">Series Ruby Coding Challenges</h2>
+
+<ol>
+  <li><a href="/simple-coding-challenges-with-ruby-01">Ruby Coding Challenges with TheHackingProject - 01</a></li>
+  <li><a href="/simple-coding-challenges-with-ruby-02">Ruby Coding Challenges with TheHackingProject - 02</a></li>
+  <li><a href="/simple-coding-challenges-with-ruby-03">Ruby Coding Challenges with TheHackingProject - 03</a></li>
+</ol>
+
+<p><strong>I hope you like this serie. The next challenges will be so much more instesting.</strong></p>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Email subscribe form at the bottom of the page -->
+      
+      <section class="subscribe-form">
+        <h3 class="subscribe-form-title">Subscribe to Adev42</h3>
+        <p>Get the latest posts delivered right to your inbox</p>
+        <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Adev42', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com">
+  </div>
+
+  <input type="hidden" value="Adev42" name="uri">
+
+  <input type="hidden" name="loc" value="en_US">
+
+
+  <button class="" type="submit"><span>Subscribe</span></button>
+
+</form>
+      </section>
+      
+
+      <footer class="post-full-footer">
+        <!-- Everything inside the #author tags pulls data from the author -->
+        <!-- #author-->
+        
+        
+        <section class="author-card">
+          
+          <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="tienduy" loading="lazy">
+          
+          <section class="author-card-content">
+            <h4 class="author-card-name">
+<a href="/author/tienduy">TienDuy</a>
+            </h4>
+            
+            <p>Tien Duy is a full-stack web developer. He loves coding, solving problems and learning from others.</p>
+            
+          </section>
+        </section>
+        <div class="post-full-footer-right">
+          <a class="author-card-button" href="/author/tienduy">Read More</a>
+        </div>
+        
+        
+        <!-- /author  -->
+      </footer>
+
+      <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/simple-coding-challenges-with-ruby-01", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
+      
+
+    </article>
+
+  </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+  <div class="inner">
+    <div class="read-next-feed">
+      
+      
+      
+      
+      
+      <article class="read-next-card" style="background-image: url(/assets/images/blog-cover3.jpeg)">
+        <header class="read-next-card-header">
+          <small class="read-next-card-header-sitetitle">— Adev42 —</small>
+          
+          <h3 class="read-next-card-header-title"><a href="/tag/algorithms/">Algorithms</a></h3>
+          
+        </header>
+        <div class="read-next-divider">
+<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+</div>
+        <div class="read-next-card-content">
+          <ul>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/simple-coding-challenges-with-ruby-03">Simple coding challenges with Ruby - 03</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="/simple-coding-challenges-with-ruby-02">Simple coding challenges with Ruby - 02</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </ul>
+        </div>
+        <footer class="read-next-card-footer">
+          <a href="/tag/algorithms/">
+            
+            See all 2 posts →
+            
+          </a>
+        </footer>
+      </article>
+      
+      
+
+      <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/simple-coding-challenges-with-ruby-02">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/challenge.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/simple-coding-challenges-with-ruby-02">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Algorithms</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Simple coding challenges with Ruby - 02</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy">
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tienduy/">TienDuy</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+      
+
+      <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+      
+      
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/welcome">
+                <div class="post-card-image" style="background-image: url(/assets/images/post-covers/begin.jpeg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/welcome">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Me</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Getting started</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p></p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/blog-icon-200.png" alt="TienDuy">
+                        
+                        <span class="post-card-author">
+                            <a href="/author/tienduy/">TienDuy</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+      
+
+    </div>
+  </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/favicon.png" alt="Adev42 icon">
+            
+            <span>Adev42</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">—</span>
+    <div class="floating-header-title">Simple coding challenges with Ruby - 01</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Simple+coding+challenges+with+Ruby+-+01&amp;url=https://blog.adev42.com/simple-coding-challenges-with-ruby-01" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.adev42.com/simple-coding-challenges-with-ruby-01" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+    <!-- Previous/next page links - displayed on every page -->
+    
+
+    <!-- The footer at the very bottom of the screen -->
+    <footer class="site-footer outer">
+      <div class="site-footer-content inner">
+        <section class="copyright"><a href="/">Adev42</a> ©
+          2020</section>
+        <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a></section>
+        <nav class="site-footer-nav">
+          <a href="/">Latest Posts</a>
+          
+          <a href="https://twitter.com/tienduy_nguyen" target="_blank" rel="noopener">Twitter</a>
+          <a href="https://linkedin.com/in/tienduy-nguyen" target="_blank" rel="noopener">Linkedin</a>
+        </nav>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- The big email subscribe modal content -->
+  
+  <div id="subscribe" class="subscribe-overlay">
+    <a class="subscribe-overlay-close" href="#"></a>
+    <div class="subscribe-overlay-content">
+      
+      <img class="subscribe-overlay-logo" src="/assets/images/blog-icon-200.png" alt="Adev42">
+      
+      <h1 class="subscribe-overlay-title">Subscribe to Adev42</h1>
+      <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
+        straight to your inbox</p>
+      <form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Adev42', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+
+  <div class="form-group">
+    <input class="subscribe-email" type="email" name="email" placeholder="youremail@example.com">
+  </div>
+
+  <input type="hidden" value="Adev42" name="uri">
+
+  <input type="hidden" name="loc" value="en_US">
+
+
+  <button class="" type="submit"><span>Subscribe</span></button>
+
+</form>
+    </div>
+  </div>
+  
+
+
+  <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+
+  
+
+
+  <!-- Add Google Analytics  -->
+  <!-- Google Analytics Tracking code -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'G-MTSKWTNVW3', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+  
+  <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+  
+
+
+</body>
+
+</html>

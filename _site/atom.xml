@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Learning is an endless journey</description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>Why use Docker compose</title>
+        
+          <description>&lt;p&gt;Demo using Docker compose with Nodejs&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 24 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /why-use-dockercompose</link>
+        <guid isPermaLink="true">/why-use-dockercompose</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Create simple web app Nodejs with Docker</title>
+        
+          <description>&lt;p&gt;How to get a Node.js application into a Docker container?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 22 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /create-simple-project-nodejs-with-docker</link>
+        <guid isPermaLink="true">/create-simple-project-nodejs-with-docker</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Config ESLint, Prettier for React App in VSCode</title>
+        
+          <description>&lt;p&gt;As a developer, you will understand how important of quality of code in your project. ESlint and Prettier are great tools helps you for formatting and style of code.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 17 Nov 2020 01:00:00 +0100</pubDate>
+        <link>
+        /config-esling-prettier-react-app</link>
+        <guid isPermaLink="true">/config-esling-prettier-react-app</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Setup Webpack React TypeScript</title>
+        
+          <description>&lt;p&gt;How to setup a React project with Webpack and TypeScript?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Nov 2020 11:00:00 +0100</pubDate>
+        <link>
+        /setup-webpack-react-typescript</link>
+        <guid isPermaLink="true">/setup-webpack-react-typescript</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Setup Webpack TypeScript</title>
+        
+          <description>&lt;p&gt;How to setup a webpack project with TypeScript?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 14 Nov 2020 11:00:00 +0100</pubDate>
+        <link>
+        /setup-webpack-with-typescript</link>
+        <guid isPermaLink="true">/setup-webpack-with-typescript</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Basic Setup Webpack</title>
+        
+          <description>&lt;p&gt;Webpack fundamentals for fast learning and step by step to setup a project with webpack.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 13 Nov 2020 11:00:00 +0100</pubDate>
+        <link>
+        /basic-setup-webpack</link>
+        <guid isPermaLink="true">/basic-setup-webpack</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Syntax Python vs Javascript</title>
+        
+          <description>&lt;p&gt;Programming in a new language can feel unfamiliar, intimidating, and tricky to navigate at first. There are new rules, syntax, and nuances to learn.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 05 Sep 2020 12:00:00 +0200</pubDate>
+        <link>
+        /python-vs-javascript</link>
+        <guid isPermaLink="true">/python-vs-javascript</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Better In Ruby - 02</title>
+        
+          <description>&lt;p&gt;Some tips you probably don’t know in Ruby - 02&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 30 Aug 2020 12:00:00 +0200</pubDate>
+        <link>
+        /better-in-ruby-02</link>
+        <guid isPermaLink="true">/better-in-ruby-02</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Better In Ruby - 01</title>
+        
+          <description>&lt;p&gt;Some tips you probably don’t know in Ruby.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 01 Aug 2020 12:00:00 +0200</pubDate>
+        <link>
+        /better-in-ruby-01</link>
+        <guid isPermaLink="true">/better-in-ruby-01</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Rails 5 or Rails 6 ?</title>
+        
+          <description>&lt;p&gt;What version of rails you use in your projects, today?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 29 Jul 2020 10:00:00 +0200</pubDate>
+        <link>
+        /rails-5-or-rails-6</link>
+        <guid isPermaLink="true">/rails-5-or-rails-6</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>How to switch to another Rails version</title>
+        
+          <description>&lt;p&gt;When you want to use multiple versions of rails on your computer, how to switch between them?&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Tue, 28 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /how-to-switch-to-another-rails-version</link>
+        <guid isPermaLink="true">/how-to-switch-to-another-rails-version</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Build free your personal website using Jekyll</title>
+        
+          <description>&lt;p&gt;In this article, we’ll walk-through how to setup a Jekyll powered blog using the Minimal mistakes theme.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 25 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /build-free-your-personal-website-using-jekyll</link>
+        <guid isPermaLink="true">/build-free-your-personal-website-using-jekyll</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Simple coding challenges with Ruby - 03</title>
+        
+          <description>&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /simple-coding-challenges-with-ruby-03</link>
+        <guid isPermaLink="true">/simple-coding-challenges-with-ruby-03</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Simple coding challenges with Ruby - 02</title>
+        
+          <description>&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /simple-coding-challenges-with-ruby-02</link>
+        <guid isPermaLink="true">/simple-coding-challenges-with-ruby-02</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Simple coding challenges with Ruby - 01</title>
+        
+          <description>&lt;p&gt;Doing coding challenges is an excellent way to imporve your programming language &amp;amp; problem-solvings skills.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 17 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /simple-coding-challenges-with-ruby-01</link>
+        <guid isPermaLink="true">/simple-coding-challenges-with-ruby-01</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Getting started</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 15 Jul 2020 12:00:00 +0200</pubDate>
+        <link>
+        /welcome</link>
+        <guid isPermaLink="true">/welcome</guid>
+      </item>
+      
+    
+  </channel>
+</rss>

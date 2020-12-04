@@ -149,7 +149,8 @@ username: tienduy-nguyen
 repo: blog
 branch: master
 relative_source: ../blog/
-destination: ../gh-pages/
+# destination: ../gh-pages/   #for deploy with github-pages
+destination: _site/ #for deploy with netlify
 production_url: https://blog.adev42.com/
 source_url: https://github.com/tienduy-nguyen/blog/
 

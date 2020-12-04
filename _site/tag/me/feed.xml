@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="/tag/me/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="/" rel="alternate" type="text/html" />
+  <updated>2020-12-04T21:07:11+01:00</updated>
+  <id>/tag/me/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Adev42 | </title>
+  
+
+  
+    <subtitle>Learning is an endless journey</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Getting started</title>
+      <link href="/welcome" rel="alternate" type="text/html" title="Getting started" />
+      <published>2020-07-15T12:00:00+02:00</published>
+      <updated>2020-07-15T12:00:00+02:00</updated>
+      <id>/welcome</id>
+      <content type="html" xml:base="/welcome">&lt;p&gt;Hey! Welcome to my blog, it’s great to have you :)&lt;/p&gt;
+
+&lt;h2 id=&quot;about-me-and-my-blog&quot;&gt;About me and my blog&lt;/h2&gt;
+
+&lt;p&gt;I’am Tien Duy, an Civil Engineering &amp;amp; BIM engineer, working in Paris, France.&lt;/p&gt;
+
+&lt;p&gt;I said “BIM engineer”, what it is? BIM full word, is Building Information Modeling. It is an intellingent 3D model-based process that gives architecture, engineering, and construction(AEC) professionals the insight and tools to more efficiently plan, desing, construct, and manage buildings and infrastructure.&lt;/p&gt;
+
+&lt;p&gt;I has always impressed with the new technologies, especially in the programming. Thanks to BIM, I has the opportunity to interact and learn programmings languages as VBA, Dynamo(visual programing), and C#. I use them to solve and optimize my work. I keep continue to self-study C# and discover other languagues as Python, Javascript. And I discovered more and more the amazing things in the programming word. That makes me fall in love with programming.&lt;/p&gt;
+
+&lt;p&gt;Learning code while working a full time job to become an true developer, it is not simple or at least it will take us so long time. And we must know that the world of technology change very fast.&lt;/p&gt;
+
+&lt;p&gt;At 26 years old, after more 2 years worked as an BIM Engineer for VINCI Construction France in France, at Juin 2020, I decided to quite my job to follow my passion that I really want to do in my life: “Become a software or full-stack web developer”. This decision will help me to have more time and more concentrate to learn the programming language.&lt;/p&gt;
+
+&lt;p&gt;Maybe this age is a little bit old to learn to become a developer. But I am not too concerned about that. I know what I can do.&lt;/p&gt;
+
+&lt;p&gt;So in this blog, I will write about my journey before becoming a full-stack developper.
+The blog helps me share my perspectives and experiences in the technologies that I learned.&lt;/p&gt;
+
+&lt;p&gt;Hope it will also help you have a better view of the programming problem, as honestly as possible.&lt;/p&gt;
+
+&lt;p&gt;See you soon! :heart_eyes:&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>TienDuy</name>
+        
+        
+      </author>
+
+      
+        <category term="me" />
+      
+
+      
+        <category term="me" />
+      
+
+      
+        <summary type="html">Hey! Welcome to my blog, it’s great to have you :)</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

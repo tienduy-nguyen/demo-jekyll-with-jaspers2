@@ -1,0 +1,1 @@
+{"version":3,"sources":["testGulp.css"],"names":[],"mappings":"AACA,YACE,qBAAwB,CACzB","file":"testGulp.css","sourcesContent":["/* I'am a css file */\n.test-class {\n  background-color: black;\n}\n"],"sourceRoot":"/source/"}
