@@ -54,14 +54,14 @@ gitalk:
   # Note: A GitHub Application is needed for authorization, if you don't have one, going to https://github.com/settings/applications/new register a new one.
   # You must specify the website domain url in the Authorization callback URL field.
   isUsed: True
-  clientID: 47d9028ad954579e29a1 # GitHub Application Client ID
-  clientSecret: 0fc3a929bc1c7d9db3678dd52952f1342c01cf2c # GitHub Application Client Secret,
+  clientID: <Add code here> # GitHub Application Client ID
+  clientSecret: <Add code here> # GitHub Application Client Secret,
   repo: tienduy-nguyen # Storage gittalk's repository
   owner: tienduy-nguyen # GitHub repo owner,
   admin: tienduy-nguyen # GitHub repo owner and collaborators, only these guys can initialize github issues eg. 'colynn,daattali'
 
 # Google Analytics
-google_analytics: G-MTSKWTNVW3 # replace with your GA tracking identifier
+google_analytics: G-DFDQFLJDFMJ # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title

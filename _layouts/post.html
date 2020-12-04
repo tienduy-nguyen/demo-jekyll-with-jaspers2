@@ -3,6 +3,7 @@ layout: default
 current: post
 class: post-template
 disqus: false
+gitalk: true
 ---
 
 <!-- default -->
@@ -117,21 +118,14 @@ into the {body} of the default.hbs template -->
             should be replaced with your own Disqus site-id. -->
       {% if site.disqus or page.disqus %}
       <section class="post-full-comments">
-        <div id="disqus_thread"></div>
-        <script>
-          var disqus_config = function () {
-            this.page.url = '{{ site.url }}{{ page.url }}';
-            this.page.identifier = '{{ page.id }}';
-            this.page.title = '{{ page.title }}';
-          };
-          (function () {
-            var d = document,
-              s = d.createElement('script');
-            s.src = 'https://{{ site.disqus_shortname }}.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-          })();
-        </script>
+        {% include disqus_comment.html %}
+      </section>
+      {% endif %}
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      {% if site.gitalk.isUsed or page.gitalk %}
+      <section class="post-full-comments">
+        {% include gitalk_comment.html %}
       </section>
       {% endif %}
 

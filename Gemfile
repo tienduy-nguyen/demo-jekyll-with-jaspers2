@@ -13,6 +13,7 @@ gem "jekyll-gist"
 gem "jekyll-feed", "~> 0.6"
 gem "jemoji"
 gem "jekyll-include-cache"
+gem 'jekyll-environment-variables'
 
 
 # group :jekyll_plugins do
