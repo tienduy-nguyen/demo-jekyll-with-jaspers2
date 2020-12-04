@@ -32,5 +32,3 @@ Gemfile.lock
 node_modules
 .env
 vendor
-_config.yml
-_abc.yml
