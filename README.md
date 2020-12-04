@@ -7,3 +7,4 @@ Build travis failed ...
 - Static site generator: [Jekyll](https://jekyllrb.com/)
 - Ghost's defaut theme Casper using Jekyll [jasper2](https://github.com/jekyller/jasper2)
 - [Ghost blog](https://ghost.org/)
+- [Gosh blog free for developer](https://github.com/TryGhost/Ghost)
