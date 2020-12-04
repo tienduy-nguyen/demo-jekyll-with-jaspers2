@@ -149,7 +149,7 @@ username: tienduy-nguyen
 repo: blog
 branch: master
 relative_source: ../blog/
-destination: ../gh-auto/
+destination: ../gh-pages/
 production_url: https://blog.adev42.com/
 source_url: https://github.com/tienduy-nguyen/blog/
 
