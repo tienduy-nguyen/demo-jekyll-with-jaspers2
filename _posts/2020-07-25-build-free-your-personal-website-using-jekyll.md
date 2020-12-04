@@ -1,7 +1,7 @@
 ---
 layout: post
 cover:  assets/images/post-covers/free-website.jpeg
-title: Build your personal website without spending any money using Jekyll and Github pages
+title: Build free your personal website using Jekyll
 date: 2020-07-25 10:00:00
 tags:  [Web Development]
 ---

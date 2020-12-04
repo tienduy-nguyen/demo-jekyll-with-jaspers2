@@ -1,7 +1,7 @@
 ---
 layout: post
 cover:  assets/images/post-covers/challenge.jpeg
-title: Ruby Coding Challenges with TheHackingProject - 02
+title: Simple coding challenges with Ruby - 02
 date: 2020-07-17 10:00:00
 tags: algorithms
 ---
