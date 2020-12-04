@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/algorithms/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-12-04T15:28:12+01:00</updated>
+  <updated>2020-12-04T15:44:34+01:00</updated>
   <id>/tag/algorithms/feed.xml</id>
 
   
@@ -325,9 +325,9 @@ With these solutions, I can learn more about a method “.succ” and “.next�
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content>
 
       
@@ -517,9 +517,9 @@ I need to learn more about using the block code of the gsub like them.&lt;/p&gt;
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;I hope it make more sense or at least it is helpful for you.&lt;/strong&gt;&lt;/p&gt;</content>
@@ -1044,9 +1044,9 @@ Should return: 160 (the only even number)
 &lt;h2 id=&quot;series-ruby-coding-challenges&quot;&gt;Series Ruby Coding Challenges&lt;/h2&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-01&quot;&gt;Ruby Coding Challenges with TheHackingProject - 01&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-02&quot;&gt;Ruby Coding Challenges with TheHackingProject - 02&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/simple-coding-challenges-with-ruby-03&quot;&gt;Ruby Coding Challenges with TheHackingProject - 03&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;I hope you like this serie. The next challenges will be so much more instesting.&lt;/strong&gt;&lt;/p&gt;</content>
