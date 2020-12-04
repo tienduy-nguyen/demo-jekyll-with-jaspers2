@@ -467,8 +467,8 @@ Codeware website [coderwars.com](https://codewars.com)
 
 ## Series Ruby Coding Challenges
 
-1. [Ruby Coding Challenges with TheHackingProject - 01](/coding-challenges/ruby-codling-challenges-with-the-hacking-project-01)
-2. [Ruby Coding Challenges with TheHackingProject - 02](/coding-challenges/ruby-codling-challenges-with-the-hacking-project-02)
-3. [Ruby Coding Challenges with TheHackingProject - 03](/coding-challenges/ruby-codling-challenges-with-the-hacking-project-03)
+1. [Ruby Coding Challenges with TheHackingProject - 01](/simple-coding-challenges-with-ruby-01)
+2. [Ruby Coding Challenges with TheHackingProject - 02](/simple-coding-challenges-with-ruby-02)
+3. [Ruby Coding Challenges with TheHackingProject - 03](/simple-coding-challenges-with-ruby-03)
 
 **I hope you like this serie. The next challenges will be so much more instesting.**
