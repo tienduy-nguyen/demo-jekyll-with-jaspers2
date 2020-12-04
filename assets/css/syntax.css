@@ -1,4 +1,5 @@
 @import 'global.css';
+/* Hightlight syntax for code */
 .highlight pre {
   background: color(var(--darkgrey) l(-3%));
 }
