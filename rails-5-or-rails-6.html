@@ -241,7 +241,7 @@ into the {body} of the default.hbs template -->
 
 <p>Why we don’t install directly the version rails 6.0?</p>
 
-<p>And he said: “One word: <code class="highlighter-rouge">webpack</code>. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .</p>
+<p>And he said: “One word: <code class="language-plaintext highlighter-rouge">webpack</code>. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .</p>
 
 <p>I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you’re still OK on Rails 5 (especially 5.2 or higher)</p>
@@ -254,7 +254,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 <p>As you probably already know, the way of implementing tests is very important. We try to implement as many suitable tests as we can. It’s great news for us as more tests will no longer have that much of an impact on the execution time. (Stay tuned for our guide on how to write great tests in Rails!)</p>
 
-<p>“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in <code class="highlighter-rouge">rails_helper.rb</code>.</p>
+<p>“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in <code class="language-plaintext highlighter-rouge">rails_helper.rb</code>.</p>
 
 <h2 id="native-webpacker-support">Native Webpacker Support</h2>
 
@@ -274,7 +274,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 <h2 id="zeitwerk">Zeitwerk</h2>
 
-<p>With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write <code class="highlighter-rouge">require</code> calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.</p>
+<p>With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write <code class="language-plaintext highlighter-rouge">require</code> calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.</p>
 
 <p>Still curious for more? You can find more new stuff over at <a href="https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/">rubyonrails.org</a>.</p>
 
@@ -359,6 +359,33 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/rails-5-or-rails-6", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -676,17 +703,22 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

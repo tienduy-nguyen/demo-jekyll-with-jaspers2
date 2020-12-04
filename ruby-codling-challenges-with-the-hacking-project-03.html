@@ -263,7 +263,7 @@ into the {body} of the default.hbs template -->
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"grfg" == rot13("test")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"grfg" == rot13("test")
 "Grfg" == rot13("Test")
 </code></pre></div></div>
 
@@ -321,7 +321,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 <p>dice values</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Three 1's =&gt; 1000 points
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Three 1's =&gt; 1000 points
   Three 6's =&gt;  600 points
   Three 5's =&gt;  500 points
   Three 4's =&gt;  400 points
@@ -333,7 +333,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Throw       Score
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Throw       Score
 ---------   ------------------
 5 1 3 4 1   250:  50 (for the 5) + 2 * 100 (for the 1s)
 1 1 1 3 1   1100: 1000 (for three 1s) + 100 (for the other 1)
@@ -455,7 +455,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo -&gt; foo1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>foo -&gt; foo1
 
 foobar23 -&gt; foobar24
 
@@ -590,6 +590,33 @@ With these solutions, I can learn more about a method “.succ” and “.next�
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/ruby-codling-challenges-with-the-hacking-project-03", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -893,17 +920,22 @@ With these solutions, I can learn more about a method “.succ” and “.next�
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

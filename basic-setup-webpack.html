@@ -261,7 +261,7 @@ into the {body} of the default.hbs template -->
           <li><a href="#demo-code">Demo code</a></li>
           <li><a href="#explanation">Explanation</a>
             <ul>
-              <li><a href="#configuration-in-webpackconfigjs-file">Configuration in <code class="highlighter-rouge">webpack.config.js</code> file</a></li>
+              <li><a href="#configuration-in-webpackconfigjs-file">Configuration in <code class="language-plaintext highlighter-rouge">webpack.config.js</code> file</a></li>
               <li><a href="#tree-shaking-in-webpack">Tree Shaking in Webpack</a></li>
             </ul>
           </li>
@@ -274,19 +274,19 @@ into the {body} of the default.hbs template -->
 
 <h2 id="webpack-basics">Webpack basics</h2>
 
-<p><code class="highlighter-rouge">Webpack</code> is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …</p>
+<p><code class="language-plaintext highlighter-rouge">Webpack</code> is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …</p>
 
 <p>Check more information on <a href="https://webpack.js.org/">Webpack website</a></p>
 
 <h3 id="setup-a-webpack-project">Setup a webpack project</h3>
 <ul>
-  <li>Create project and init <code class="highlighter-rouge">package.json</code> file
+  <li>Create project and init <code class="language-plaintext highlighter-rouge">package.json</code> file
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>webpack-basic
 <span class="nv">$ </span><span class="nb">cd </span>webpack-basic
 <span class="nv">$ </span>npm init <span class="nt">-y</span>
 </code></pre></div>    </div>
   </li>
-  <li>In the root project create <code class="highlighter-rouge">public</code> folder and <code class="highlighter-rouge">index.html file</code>
+  <li>In the root project create <code class="language-plaintext highlighter-rouge">public</code> folder and <code class="language-plaintext highlighter-rouge">index.html file</code>
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
   <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 
@@ -321,9 +321,9 @@ into the {body} of the default.hbs template -->
 </code></pre></div>    </div>
 
     <ul>
-      <li><code class="highlighter-rouge">@babel/core</code>: Core of babel contains algorithms of its</li>
-      <li><code class="highlighter-rouge">@babel/preset-env</code>: is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!. Check official website of <a href="https://babeljs.io/docs/en/babel-preset-env#:~:text=%40babel%2Fpreset%2Denv%20is,Install">@babel/preset-env</a> for more details.</li>
-      <li><code class="highlighter-rouge">babel-loader</code>: This package allows transpiling JavaScript files using Babel and webpack. Check <a href="https://github.com/babel/babel-loader">babel-loader github</a>.</li>
+      <li><code class="language-plaintext highlighter-rouge">@babel/core</code>: Core of babel contains algorithms of its</li>
+      <li><code class="language-plaintext highlighter-rouge">@babel/preset-env</code>: is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!. Check official website of <a href="https://babeljs.io/docs/en/babel-preset-env#:~:text=%40babel%2Fpreset%2Denv%20is,Install">@babel/preset-env</a> for more details.</li>
+      <li><code class="language-plaintext highlighter-rouge">babel-loader</code>: This package allows transpiling JavaScript files using Babel and webpack. Check <a href="https://github.com/babel/babel-loader">babel-loader github</a>.</li>
     </ul>
   </li>
 </ul>
@@ -332,9 +332,9 @@ into the {body} of the default.hbs template -->
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add css-loader file-loader sass sass-loader style-loader <span class="nt">-D</span>
 </code></pre></div></div>
 <ul>
-  <li><code class="highlighter-rouge">style-loader</code>, <code class="highlighter-rouge">css-loader</code>: help you to import <code class="highlighter-rouge">css</code> into <code class="highlighter-rouge">js</code> file</li>
-  <li><code class="highlighter-rouge">sass</code>, <code class="highlighter-rouge">sass-loader</code> help you compile <code class="highlighter-rouge">scss</code> to <code class="highlighter-rouge">css</code></li>
-  <li><code class="highlighter-rouge">file-loader</code>: help you import file as <code class="highlighter-rouge">image</code>, <code class="highlighter-rouge">video</code> to <code class="highlighter-rouge">js</code> file</li>
+  <li><code class="language-plaintext highlighter-rouge">style-loader</code>, <code class="language-plaintext highlighter-rouge">css-loader</code>: help you to import <code class="language-plaintext highlighter-rouge">css</code> into <code class="language-plaintext highlighter-rouge">js</code> file</li>
+  <li><code class="language-plaintext highlighter-rouge">sass</code>, <code class="language-plaintext highlighter-rouge">sass-loader</code> help you compile <code class="language-plaintext highlighter-rouge">scss</code> to <code class="language-plaintext highlighter-rouge">css</code></li>
+  <li><code class="language-plaintext highlighter-rouge">file-loader</code>: help you import file as <code class="language-plaintext highlighter-rouge">image</code>, <code class="language-plaintext highlighter-rouge">video</code> to <code class="language-plaintext highlighter-rouge">js</code> file</li>
 </ul>
 
 <h2 id="setup-webpack">Setup Webpack</h2>
@@ -343,15 +343,15 @@ into the {body} of the default.hbs template -->
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>npm <span class="nb">install </span>webpack webpack-cli webpack-dev-server <span class="nt">-D</span>
 </code></pre></div>    </div>
     <ul>
-      <li><code class="highlighter-rouge">webpack</code>: core of webpack</li>
-      <li><code class="highlighter-rouge">webpack-cli</code>: allow us to use command of webpack on the terminal</li>
-      <li><code class="highlighter-rouge">webpack-dev-server</code>: can be use to create a <code class="highlighter-rouge">local server</code> for dev environment</li>
+      <li><code class="language-plaintext highlighter-rouge">webpack</code>: core of webpack</li>
+      <li><code class="language-plaintext highlighter-rouge">webpack-cli</code>: allow us to use command of webpack on the terminal</li>
+      <li><code class="language-plaintext highlighter-rouge">webpack-dev-server</code>: can be use to create a <code class="language-plaintext highlighter-rouge">local server</code> for dev environment</li>
     </ul>
   </li>
   <li>
     <p>Configuration</p>
 
-    <p>Create <code class="highlighter-rouge">webpack.config.js</code> file in the root project and paste the following code.</p>
+    <p>Create <code class="language-plaintext highlighter-rouge">webpack.config.js</code> file in the root project and paste the following code.</p>
 
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">(</span><span class="nx">env</span><span class="p">,</span> <span class="nx">agrv</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
@@ -426,7 +426,7 @@ into the {body} of the default.hbs template -->
   </li>
   <li>
     <p>Script to run server
-Edit script in <code class="highlighter-rouge">package.json</code> file to run and build server.</p>
+Edit script in <code class="language-plaintext highlighter-rouge">package.json</code> file to run and build server.</p>
 
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="p">,</span><span class="w">
@@ -436,7 +436,7 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
     <h3 id="demo-code">Demo code</h3>
     <p>To understand better how webpack works, we will create some simple demo code</p>
   </li>
-  <li>Create <code class="highlighter-rouge">src</code> folder in the root of project and a <code class="highlighter-rouge">src/add.js</code> file
+  <li>Create <code class="language-plaintext highlighter-rouge">src</code> folder in the root of project and a <code class="language-plaintext highlighter-rouge">src/add.js</code> file
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//src/add.js</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">a</span><span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">treeShaking</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span><span class="p">{</span>
@@ -504,96 +504,96 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn build
 </code></pre></div>    </div>
     <h3 id="explanation">Explanation</h3>
-    <h4 id="configuration-in-webpackconfigjs-file">Configuration in <code class="highlighter-rouge">webpack.config.js</code> file</h4>
+    <h4 id="configuration-in-webpackconfigjs-file">Configuration in <code class="language-plaintext highlighter-rouge">webpack.config.js</code> file</h4>
   </li>
   <li>
-    <p><code class="highlighter-rouge">Definition</code>: This is the main configuration webpack file. Webpack configs allow you to configure and extend Webpack’s basic functionality. A Webpack config is a JavaScript object that configures one of Webpack’s options.</p>
+    <p><code class="language-plaintext highlighter-rouge">Definition</code>: This is the main configuration webpack file. Webpack configs allow you to configure and extend Webpack’s basic functionality. A Webpack config is a JavaScript object that configures one of Webpack’s options.</p>
 
-    <p>When we run <code class="highlighter-rouge">webpack</code> command in the <code class="highlighter-rouge">package.json</code> file, webpack will be take automatically the configuration in this file.</p>
+    <p>When we run <code class="language-plaintext highlighter-rouge">webpack</code> command in the <code class="language-plaintext highlighter-rouge">package.json</code> file, webpack will be take automatically the configuration in this file.</p>
 
     <p>For more information of configuration of webpack <a href="https://webpack.js.org/configuration/">webpack configuration</a></p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">Exporting</code>: In the <code class="highlighter-rouge">config</code> file, we can export an <strong>object</strong>, a <strong>function</strong>, an <strong>array</strong> or a <strong>promise</strong>. In this article, we will see how to export a function, because it allows us to use the arguments passed from outside. Check <a href="https://webpack.js.org/configuration/configuration-types/">Webpack configuration type</a>.</p>
+    <p><code class="language-plaintext highlighter-rouge">Exporting</code>: In the <code class="language-plaintext highlighter-rouge">config</code> file, we can export an <strong>object</strong>, a <strong>function</strong>, an <strong>array</strong> or a <strong>promise</strong>. In this article, we will see how to export a function, because it allows us to use the arguments passed from outside. Check <a href="https://webpack.js.org/configuration/configuration-types/">Webpack configuration type</a>.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">Mode</code>: We need to provide a <strong>mode</strong> configuration option when configure webpack. Each mode has its own a config settings. Check <a href="https://webpack.js.org/configuration/mode/">Webpack mode</a></p>
+    <p><code class="language-plaintext highlighter-rouge">Mode</code>: We need to provide a <strong>mode</strong> configuration option when configure webpack. Each mode has its own a config settings. Check <a href="https://webpack.js.org/configuration/mode/">Webpack mode</a></p>
 
-    <p>If you remember, we have used this mode to run 2 different cases for server in the <code class="highlighter-rouge">package.json</code> file, for the <strong>development</strong> and <strong>production</strong> mode.</p>
+    <p>If you remember, we have used this mode to run 2 different cases for server in the <code class="language-plaintext highlighter-rouge">package.json</code> file, for the <strong>development</strong> and <strong>production</strong> mode.</p>
 
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="err">,</span><span class="w">
 </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --mode production"</span><span class="w">
 </span></code></pre></div>    </div>
 
-    <p>And in the <code class="highlighter-rouge">webpack.config.js</code> we can define the mode by using <code class="highlighter-rouge">argv.mode</code></p>
+    <p>And in the <code class="language-plaintext highlighter-rouge">webpack.config.js</code> we can define the mode by using <code class="language-plaintext highlighter-rouge">argv.mode</code></p>
   </li>
-  <li><code class="highlighter-rouge">Entry</code>: Entry points of your project where you put the main code to run your server. Check <a href="https://webpack.js.org/concepts/entry-points/">Webpack entry point</a></li>
-  <li><code class="highlighter-rouge">module.rules</code>: Array contains the <code class="highlighter-rouge">loaders</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Entry</code>: Entry points of your project where you put the main code to run your server. Check <a href="https://webpack.js.org/concepts/entry-points/">Webpack entry point</a></li>
+  <li><code class="language-plaintext highlighter-rouge">module.rules</code>: Array contains the <code class="language-plaintext highlighter-rouge">loaders</code></li>
   <li>
-    <p><code class="highlighter-rouge">test</code>: Using <strong>regex</strong> to determine the file type. If it is <code class="highlighter-rouge">true</code> then it will run the loader.</p>
+    <p><code class="language-plaintext highlighter-rouge">test</code>: Using <strong>regex</strong> to determine the file type. If it is <code class="language-plaintext highlighter-rouge">true</code> then it will run the loader.</p>
 
-    <p>The <code class="highlighter-rouge">babel-loader</code> will run the <code class="highlighter-rouge">js</code> or <code class="highlighter-rouge">jsx</code> file. <code class="highlighter-rouge">style-loader</code> will run <code class="highlighter-rouge">sass</code>, <code class="highlighter-rouge">scss</code> and <code class="highlighter-rouge">css</code> file.</p>
+    <p>The <code class="language-plaintext highlighter-rouge">babel-loader</code> will run the <code class="language-plaintext highlighter-rouge">js</code> or <code class="language-plaintext highlighter-rouge">jsx</code> file. <code class="language-plaintext highlighter-rouge">style-loader</code> will run <code class="language-plaintext highlighter-rouge">sass</code>, <code class="language-plaintext highlighter-rouge">scss</code> and <code class="language-plaintext highlighter-rouge">css</code> file.</p>
 
-    <p><code class="highlighter-rouge">file-loader</code> will run png, svg, jpg, gif… (image and video) file.</p>
+    <p><code class="language-plaintext highlighter-rouge">file-loader</code> will run png, svg, jpg, gif… (image and video) file.</p>
   </li>
-  <li><code class="highlighter-rouge">exclude</code>: Enter a <strong>regex</strong>, the <code class="highlighter-rouge">loader</code> will ignore these file and folder.</li>
-  <li><code class="highlighter-rouge">use</code>: Retrieve an object or an array containing loader information.
+  <li><code class="language-plaintext highlighter-rouge">exclude</code>: Enter a <strong>regex</strong>, the <code class="language-plaintext highlighter-rouge">loader</code> will ignore these file and folder.</li>
+  <li><code class="language-plaintext highlighter-rouge">use</code>: Retrieve an object or an array containing loader information.
     <ul>
-      <li>Notice for <code class="highlighter-rouge">babel-loader</code>: using presets <code class="highlighter-rouge">@babel/preset</code> by default. It will compile to ES5 syntax.</li>
-      <li>Notice for <code class="highlighter-rouge">style-loader</code>: using <strong>sourMap</strong> to easier debug when dev.</li>
-      <li>Notice for <code class="highlighter-rouge">file-loader</code>: using <code class="highlighter-rouge">[path][name].[ext]</code> means after build, the files will be created with the similar names in similar folder. For example: if you have <code class="highlighter-rouge">src/logo.png</code> file, when you build it, you will have <code class="highlighter-rouge">dist/src/logo.png</code>.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">babel-loader</code>: using presets <code class="language-plaintext highlighter-rouge">@babel/preset</code> by default. It will compile to ES5 syntax.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">style-loader</code>: using <strong>sourMap</strong> to easier debug when dev.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">file-loader</code>: using <code class="language-plaintext highlighter-rouge">[path][name].[ext]</code> means after build, the files will be created with the similar names in similar folder. For example: if you have <code class="language-plaintext highlighter-rouge">src/logo.png</code> file, when you build it, you will have <code class="language-plaintext highlighter-rouge">dist/src/logo.png</code>.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">resolve: { extensions: [‘.js’, ‘.jsx’] }</code>: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file</li>
-  <li><code class="highlighter-rouge">output</code>: configuration of build file webpack
+  <li><code class="language-plaintext highlighter-rouge">resolve: { extensions: [‘.js’, ‘.jsx’] }</code>: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file</li>
+  <li><code class="language-plaintext highlighter-rouge">output</code>: configuration of build file webpack
     <ul>
-      <li><code class="highlighter-rouge">output.path</code>: the absolute path to the directory after build. For the absolute path, we usually use <code class="highlighter-rouge">path.resolve()</code> or <code class="highlighter-rouge">path.join()</code> in combination with the global variable <code class="highlighter-rouge">__dirname</code>.</li>
-      <li><code class="highlighter-rouge">output.publicPath</code>: the relative path from the <code class="highlighter-rouge">index.html</code> file pointing to the files in the <strong>dist</strong> directory after build.</li>
+      <li><code class="language-plaintext highlighter-rouge">output.path</code>: the absolute path to the directory after build. For the absolute path, we usually use <code class="language-plaintext highlighter-rouge">path.resolve()</code> or <code class="language-plaintext highlighter-rouge">path.join()</code> in combination with the global variable <code class="language-plaintext highlighter-rouge">__dirname</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">output.publicPath</code>: the relative path from the <code class="language-plaintext highlighter-rouge">index.html</code> file pointing to the files in the <strong>dist</strong> directory after build.</li>
     </ul>
 
-    <p>For example: in the file <code class="highlighter-rouge">loadImage.js</code>, we import logo, the logo variable will be become: <code class="highlighter-rouge">output.publicPath + 'src/logo.png</code>. If after the build, we run the <code class="highlighter-rouge">index.html</code> file in a different location not in <strong>the public directory</strong>, we will accidentally make the logo variable wrong.</p>
+    <p>For example: in the file <code class="language-plaintext highlighter-rouge">loadImage.js</code>, we import logo, the logo variable will be become: <code class="language-plaintext highlighter-rouge">output.publicPath + 'src/logo.png</code>. If after the build, we run the <code class="language-plaintext highlighter-rouge">index.html</code> file in a different location not in <strong>the public directory</strong>, we will accidentally make the logo variable wrong.</p>
     <ul>
-      <li><code class="highlighter-rouge">output.filename</code>: filename of js bundle after build</li>
-      <li><code class="highlighter-rouge">output.environment</code>: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the <code class="highlighter-rouge">output.environment</code>
+      <li><code class="language-plaintext highlighter-rouge">output.filename</code>: filename of js bundle after build</li>
+      <li><code class="language-plaintext highlighter-rouge">output.environment</code>: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the <code class="language-plaintext highlighter-rouge">output.environment</code>
         <ul>
           <li><strong>arrowFunction</strong>: support arrow function.</li>
           <li><strong>bigIntLiteral</strong>: support BigInt</li>
-          <li><strong>const</strong>: support declaration <code class="highlighter-rouge">const</code> và <code class="highlighter-rouge">let</code></li>
+          <li><strong>const</strong>: support declaration <code class="language-plaintext highlighter-rouge">const</code> và <code class="language-plaintext highlighter-rouge">let</code></li>
           <li><strong>destructuring</strong>: support destructuring</li>
           <li><strong>dynamicImport</strong>: support async import</li>
-          <li><strong>forOf</strong>: support <code class="highlighter-rouge">forOf</code> for array</li>
+          <li><strong>forOf</strong>: support <code class="language-plaintext highlighter-rouge">forOf</code> for array</li>
           <li><strong>module</strong>: support moudle ES6 (import … from ‘…’)</li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <p><code class="highlighter-rouge">devtool</code>: contains the configuration file after dev or after build. When you in the dev step, you can use <code class="highlighter-rouge">source-map</code> to debug more simply. But we don’t use it in the production to reduce the volume of file when build.</p>
+    <p><code class="language-plaintext highlighter-rouge">devtool</code>: contains the configuration file after dev or after build. When you in the dev step, you can use <code class="language-plaintext highlighter-rouge">source-map</code> to debug more simply. But we don’t use it in the production to reduce the volume of file when build.</p>
 
     <p>Check <a href="https://webpack.js.org/configuration/devtool/">Devtool Webpack</a></p>
   </li>
-  <li><code class="highlighter-rouge">devServer</code>: You can imagine, it will create a server <strong>localhost</strong> at the root folder
+  <li><code class="language-plaintext highlighter-rouge">devServer</code>: You can imagine, it will create a server <strong>localhost</strong> at the root folder
     <ul>
-      <li><strong>devServer.contentBase</strong>: the path directory where contains <code class="highlighter-rouge">index.html</code> file. Here is <code class="highlighter-rouge">public</code></li>
+      <li><strong>devServer.contentBase</strong>: the path directory where contains <code class="language-plaintext highlighter-rouge">index.html</code> file. Here is <code class="language-plaintext highlighter-rouge">public</code></li>
       <li><strong>devServer.port</strong>: port of localhost</li>
-      <li><strong>devServer.hot</strong>: The mode <code class="highlighter-rouge">hot reload</code>. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The <code class="highlighter-rouge">hot reload</code> helps use to see the change but don’t need reload page.</li>
-      <li><strong>devServer.publicPath</strong>: the relative path from root directory pointing to the build directory. Here is <code class="highlighter-rouge">/dist/</code> –&gt; / is root folder</li>
-      <li><strong>devServer.watchContentBase</strong>: If you have the change in the <code class="highlighter-rouge">index.html</code>, browser will reload automatically.</li>
+      <li><strong>devServer.hot</strong>: The mode <code class="language-plaintext highlighter-rouge">hot reload</code>. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The <code class="language-plaintext highlighter-rouge">hot reload</code> helps use to see the change but don’t need reload page.</li>
+      <li><strong>devServer.publicPath</strong>: the relative path from root directory pointing to the build directory. Here is <code class="language-plaintext highlighter-rouge">/dist/</code> –&gt; / is root folder</li>
+      <li><strong>devServer.watchContentBase</strong>: If you have the change in the <code class="language-plaintext highlighter-rouge">index.html</code>, browser will reload automatically.</li>
     </ul>
   </li>
 </ul>
 
 <h4 id="tree-shaking-in-webpack">Tree Shaking in Webpack</h4>
 
-<p>If you pay attention, in the <code class="highlighter-rouge">src/add.js</code> file, we added a function <code class="highlighter-rouge">treeShaking</code>. This function is exported but we did not use it anywhere in project. So webpack will not use this function and you cant find it in the build file.</p>
+<p>If you pay attention, in the <code class="language-plaintext highlighter-rouge">src/add.js</code> file, we added a function <code class="language-plaintext highlighter-rouge">treeShaking</code>. This function is exported but we did not use it anywhere in project. So webpack will not use this function and you cant find it in the build file.</p>
 
 <p>This is a called the <a href="https://webpack.js.org/guides/tree-shaking/">tree shaking</a> feature to help us to reduce unused module export.</p>
 
 <p>But this feature only works with code using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">ES Module syntax </a> (<strong>import export …</strong>)</p>
 
-<p>A typical example is the <a href="https://lodash.com/">lodash</a> library. If you <code class="highlighter-rouge">import {get} from 'lodash'</code>, webpack won’t tree shake. It will still import a huge lodash library to your bundle file. There are no different from : <code class="highlighter-rouge">import _ from 'lodash'</code></p>
+<p>A typical example is the <a href="https://lodash.com/">lodash</a> library. If you <code class="language-plaintext highlighter-rouge">import {get} from 'lodash'</code>, webpack won’t tree shake. It will still import a huge lodash library to your bundle file. There are no different from : <code class="language-plaintext highlighter-rouge">import _ from 'lodash'</code></p>
 
-<p>To fix this problem, we can use the syntax <code class="highlighter-rouge">import get from 'lodash/get</code>. Or simply use the <a href="https://www.npmjs.com/package/lodash-es">lodash es</a> library.</p>
+<p>To fix this problem, we can use the syntax <code class="language-plaintext highlighter-rouge">import get from 'lodash/get</code>. Or simply use the <a href="https://www.npmjs.com/package/lodash-es">lodash es</a> library.</p>
 
 <p>For more detail <a href="https://webpack.js.org/guides/tree-shaking/">Tree Shaking Webpack</a></p>
 
@@ -669,6 +669,33 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/basic-setup-webpack", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -991,17 +1018,22 @@ Edit script in <code class="highlighter-rouge">package.json</code> file to run a
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

@@ -256,12 +256,12 @@ into the {body} of the default.hbs template -->
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alphabet_position("The sunset sets at twelve o' clock.")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alphabet_position("The sunset sets at twelve o' clock.")
 </code></pre></div></div>
 
 <p>Should return</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
 </code></pre></div></div>
 <hr>
 
@@ -298,7 +298,7 @@ We will see the next one.</p>
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array_diff([1,2],[1]) == [2]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>array_diff([1,2],[1]) == [2]
 array_diff([1,2],[1]) == [2]
 </code></pre></div></div>
 
@@ -310,7 +310,7 @@ array_diff([1,2],[1]) == [2]
   <li>Very simple here if we know already the set operation method of array in ruby</li>
 </ul>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>union = A | B
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>union = A | B
 isect = A &amp; B
 diff1  = A - B
 diff2  = B - A
@@ -340,7 +340,7 @@ sdiff = (A - B) | (B - A)
 
 <p>For example</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>weirdcase( "String" )#=&gt; returns "StRiNg"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>weirdcase( "String" )#=&gt; returns "StRiNg"
 weirdcase( "Weird string case" );#=&gt; returns "WeIrD StRiNg CaSe"
 </code></pre></div></div>
 
@@ -459,6 +459,33 @@ I need to learn more about using the block code of the gsub like them.</p>
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/ruby-codling-challenges-with-the-hacking-project-02", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -762,17 +789,22 @@ I need to learn more about using the block code of the gsub like them.</p>
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

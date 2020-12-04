@@ -248,9 +248,9 @@ into the {body} of the default.hbs template -->
 
 <p>With the docker-cli, we can run and execute the Docker container via <a href="https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,can%20use%20in%20a%20Dockerfile%20.">Dockerfile</a>. But with Dockerfile, we can work only with a container, but in the project, we normally work with multiple containers. In that case, we need to use <strong>Docker compose</strong>.</p>
 
-<p><strong>Docker Compose</strong> define the services that make up your app in <code class="highlighter-rouge">docker-compose.yml</code> so they can be run together in an isolated environment. It get an app running in one command by just running <code class="highlighter-rouge">docker-compose up</code>.</p>
+<p><strong>Docker Compose</strong> define the services that make up your app in <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> so they can be run together in an isolated environment. It get an app running in one command by just running <code class="language-plaintext highlighter-rouge">docker-compose up</code>.</p>
 
-<p><strong>Docker compose</strong> uses the <code class="highlighter-rouge">Dockerfile</code> if one add the build command to your project’s <code class="highlighter-rouge">docker-compose.yml</code>. Your Docker workflow should be to build a suitable <code class="highlighter-rouge">Dockerfile</code> for each image you wish to create, then use compose to assemble the images using the build command.</p>
+<p><strong>Docker compose</strong> uses the <code class="language-plaintext highlighter-rouge">Dockerfile</code> if one add the build command to your project’s <code class="language-plaintext highlighter-rouge">docker-compose.yml</code>. Your Docker workflow should be to build a suitable <code class="language-plaintext highlighter-rouge">Dockerfile</code> for each image you wish to create, then use compose to assemble the images using the build command.</p>
 
 <p>We will create a demo: simple app nodejs using Redis. You will see the problem with only <strong>Dockerfile</strong> and why use <strong>Docker compose</strong>.</p>
 
@@ -272,7 +272,7 @@ into the {body} of the default.hbs template -->
 </span></code></pre></div>    </div>
   </li>
   <li>
-    <p>Create <code class="highlighter-rouge">package.json</code> file</p>
+    <p>Create <code class="language-plaintext highlighter-rouge">package.json</code> file</p>
 
     <p>In this file, we will declare the dependencies we use for our application. This step is similar as you create the Nodejs application (without <strong>npm install</strong> or <strong>yarn add</strong> dependencies).</p>
 
@@ -298,7 +298,7 @@ into the {body} of the default.hbs template -->
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li>Create <code class="highlighter-rouge">index.js</code> file to config <code class="highlighter-rouge">express</code> and run server
+  <li>Create <code class="language-plaintext highlighter-rouge">index.js</code> file to config <code class="language-plaintext highlighter-rouge">express</code> and run server
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//index.js</span>
 <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">const</span> <span class="nx">redis</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">redis</span><span class="dl">'</span><span class="p">);</span>
@@ -345,7 +345,7 @@ into the {body} of the default.hbs template -->
     <p>You can also check an article on my blog for more information of Dockerfile: <a href="https://blog.adev42.com/create-simple-project-nodejs-with-docker">Create simple project Nodejs with Docker</a></p>
   </li>
   <li>
-    <p>Create <code class="highlighter-rouge">.dockerignore</code></p>
+    <p>Create <code class="language-plaintext highlighter-rouge">.dockerignore</code></p>
 
     <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">node_modules</span>
 <span class="s">npm-debug.log</span>
@@ -407,7 +407,7 @@ The answer is <strong>Docker compose</strong>. In this case, we need to use Dock
 
 <ul>
   <li>
-    <p>To make sure the project above running, we need simply create a <code class="highlighter-rouge">docker-compose.yml</code> file.
+    <p>To make sure the project above running, we need simply create a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file.
 It is a config file for docker-compose. It allows us to define the services (container) using in our app.</p>
 
     <div class="language-s highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">$</span><span class="w"> </span><span class="n">touch</span><span class="w"> </span><span class="n">docker</span><span class="o">-</span><span class="n">compose.yml</span><span class="w">
@@ -430,7 +430,7 @@ It is a config file for docker-compose. It allows us to define the services (con
     <p>Check <a href="https://docs.docker.com/compose/gettingstarted/">docker compose</a> for more details about configuration.</p>
   </li>
   <li>
-    <p>Update redis services to <code class="highlighter-rouge">index.js</code> file</p>
+    <p>Update redis services to <code class="language-plaintext highlighter-rouge">index.js</code> file</p>
 
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// index.js</span>
 <span class="kd">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">express</span><span class="dl">'</span><span class="p">);</span>
@@ -492,8 +492,8 @@ It is a config file for docker-compose. It allows us to define the services (con
 <ul>
   <li>Separate CLI that gets installed along with Docker</li>
   <li>Used to startup multiple Docker containers at the same time</li>
-  <li>Automate some of the long-winded arguments we were passing to <code class="highlighter-rouge">docker run</code></li>
-  <li><strong>Docker compose</strong> will start and connect all the containers Docker that you declare in the <code class="highlighter-rouge">docker-compose.yml</code> file. We will use it usually when we work with Docker.</li>
+  <li>Automate some of the long-winded arguments we were passing to <code class="language-plaintext highlighter-rouge">docker run</code></li>
+  <li><strong>Docker compose</strong> will start and connect all the containers Docker that you declare in the <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file. We will use it usually when we work with Docker.</li>
 </ul>
 
 <h2 id="reference">Reference</h2>
@@ -568,6 +568,33 @@ It is a config file for docker-compose. It allows us to define the services (con
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/why-use-dockercompose", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -822,17 +849,22 @@ It is a config file for docker-compose. It allows us to define the services (con
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

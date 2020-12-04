@@ -294,7 +294,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
   <li><strong>vscode-styled-components</strong>: Highlight &amp; auto-complete for styled-component</li>
   <li><strong>Auto Rename Tag</strong>: Auto rename tag when code HTML, JSX</li>
   <li><strong>Auto Close Tag</strong>: As its name, it allows auto close tag when code HTML, JSX, TSX… Auto Close Tag and Auto Rename Tag are a great duo.</li>
-  <li><strong>Editor Config for VSCode</strong>: Allow to run <code class="highlighter-rouge">.editorconfig</code> file.</li>
+  <li><strong>Editor Config for VSCode</strong>: Allow to run <code class="language-plaintext highlighter-rouge">.editorconfig</code> file.</li>
 </ul>
 
 <h3 id="setup-workspace-setting-in-vscode">Setup Workspace Setting in VSCode</h3>
@@ -304,8 +304,8 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 <p>For anyone who don’t know, VSCode has 2 settings, one is for <strong>user</strong>, the orther for <strong>workspace</strong>. If you don’t setup for <strong>workspace</strong>, by default VSCode will get settings directly at the <strong>user settings</strong></p>
 
 <ul>
-  <li><strong>user settings</strong>: <code class="highlighter-rouge">settings.json</code> file of VSCode</li>
-  <li><strong>workspace settings</strong>: Create a folder and file <code class="highlighter-rouge">.vscode/settings.json</code> in the root of your project.</li>
+  <li><strong>user settings</strong>: <code class="language-plaintext highlighter-rouge">settings.json</code> file of VSCode</li>
+  <li><strong>workspace settings</strong>: Create a folder and file <code class="language-plaintext highlighter-rouge">.vscode/settings.json</code> in the root of your project.</li>
 </ul>
 
 <p>In this article, I just explain how to setup for the <strong>workspace</strong>. You do the same for settings of user.</p>
@@ -313,7 +313,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 <p>Now, start setting up.</p>
 
 <ul>
-  <li>Create file <code class="highlighter-rouge">.vscode/settings.json</code> in the root of your project
+  <li>Create file <code class="language-plaintext highlighter-rouge">.vscode/settings.json</code> in the root of your project
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"editor.defaultFormatter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"esbenp.prettier-vscode"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"editor.formatOnSave"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -325,13 +325,13 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 
     <p>It means:</p>
     <ul>
-      <li><code class="highlighter-rouge">editor.defaultFormatter</code>: take <strong>Prettier</strong> as default formater</li>
-      <li><code class="highlighter-rouge">editor.formatOnSave: true</code>: format automatically the code when saving files</li>
-      <li><code class="highlighter-rouge">eslint.format.enable: true</code>: enable formatting code of ESlint</li>
-      <li><code class="highlighter-rouge">source.fixAll.eslint: true</code>: fix auto code with ESLint. Sometime we need to fix manually.</li>
+      <li><code class="language-plaintext highlighter-rouge">editor.defaultFormatter</code>: take <strong>Prettier</strong> as default formater</li>
+      <li><code class="language-plaintext highlighter-rouge">editor.formatOnSave: true</code>: format automatically the code when saving files</li>
+      <li><code class="language-plaintext highlighter-rouge">eslint.format.enable: true</code>: enable formatting code of ESlint</li>
+      <li><code class="language-plaintext highlighter-rouge">source.fixAll.eslint: true</code>: fix auto code with ESLint. Sometime we need to fix manually.</li>
     </ul>
   </li>
-  <li>Add <code class="highlighter-rouge">.vscode/extensions.json</code> file and paste the following code. It will recommend use install the following extension when open this project on their VScode.
+  <li>Add <code class="language-plaintext highlighter-rouge">.vscode/extensions.json</code> file and paste the following code. It will recommend use install the following extension when open this project on their VScode.
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"recommendations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="s2">"mikael.angular-beastcode"</span><span class="p">,</span><span class="w">
@@ -355,10 +355,10 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
 
-    <p>It’s very helpful when we work in  team. We just share the folder <code class="highlighter-rouge">.vscode</code> and <code class="highlighter-rouge">json</code> file each other. But in that case, don’t add <strong>.vscode</strong> in <strong>.gitignore</strong> file.</p>
+    <p>It’s very helpful when we work in  team. We just share the folder <code class="language-plaintext highlighter-rouge">.vscode</code> and <code class="language-plaintext highlighter-rouge">json</code> file each other. But in that case, don’t add <strong>.vscode</strong> in <strong>.gitignore</strong> file.</p>
   </li>
   <li>
-    <p>Add file <code class="highlighter-rouge">.editorconfig</code> in the root project</p>
+    <p>Add file <code class="language-plaintext highlighter-rouge">.editorconfig</code> in the root project</p>
 
     <p>If you don’t know, <strong>.editorconfig</strong> was created to unify standards between different editors.</p>
 
@@ -366,7 +366,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 
     <p>Because we already have the <strong>Editor Config</strong> extension, installed above, when we created this file, the VSCode will automatically take these settings.</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[*]
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[*]
 end_of_line = lf
 indent_style = space
 indent_size = 2
@@ -385,12 +385,12 @@ indent_size = 2
 <p>Here, I use <a href="https://github.com/facebook/create-react-app">create-react-app</a>, so by default they have the basic ESLint installed, I just need to install a few more dependencies.</p>
 
 <ul>
-  <li>Create <code class="highlighter-rouge">.env</code> in the root folder of project and add  the value <code class="highlighter-rouge">EXTEND_ESLINT=true</code>. It allows us to add more others linter to <strong>React</strong>.</li>
+  <li>Create <code class="language-plaintext highlighter-rouge">.env</code> in the root folder of project and add  the value <code class="language-plaintext highlighter-rouge">EXTEND_ESLINT=true</code>. It allows us to add more others linter to <strong>React</strong>.</li>
   <li>Install more packages
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add <span class="nt">-D</span> prettier eslint-config-prettier eslint-plugin-prettier
 </code></pre></div>    </div>
   </li>
-  <li>Add <strong>script</strong> to run them in <code class="highlighter-rouge">package.json</code> file
+  <li>Add <strong>script</strong> to run them in <code class="language-plaintext highlighter-rouge">package.json</code> file
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts start"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"react-scripts build"</span><span class="p">,</span><span class="w">
@@ -402,13 +402,13 @@ indent_size = 2
   </span><span class="nl">"prettier:fix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --write </span><span class="se">\"</span><span class="s2">src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)</span><span class="se">\"</span><span class="s2">"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>    </div>
-    <p>So we can use <code class="highlighter-rouge">yarn lint</code>, <code class="highlighter-rouge">yarn lint:fix</code> … to check or fix code style with these tools.</p>
+    <p>So we can use <code class="language-plaintext highlighter-rouge">yarn lint</code>, <code class="language-plaintext highlighter-rouge">yarn lint:fix</code> … to check or fix code style with these tools.</p>
   </li>
   <li>
-    <p>Create <code class="highlighter-rouge">.prettierrc</code></p>
+    <p>Create <code class="language-plaintext highlighter-rouge">.prettierrc</code></p>
 
     <p>It contains the rules for <strong>Prettier</strong></p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "arrowParens": "avoid",
   "semi": false,
   "trailingComma": "none",
@@ -419,18 +419,18 @@ indent_size = 2
 }
 </code></pre></div>    </div>
   </li>
-  <li>Create <code class="highlighter-rouge">.prettierignore</code>
+  <li>Create <code class="language-plaintext highlighter-rouge">.prettierignore</code>
 <strong>Prettier</strong> will ignore and will not check these files.
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cache
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cache
 package-lock.json
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Create <code class="highlighter-rouge">.eslintrc</code></p>
+    <p>Create <code class="language-plaintext highlighter-rouge">.eslintrc</code></p>
 
     <p>This file intend to expand the ESLint React configuration. It helps to catch erros on the terminal. If you have installed the ESLint extension ESlint, it will rely on this file to catch errors directly on the editor.</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   "extends": ["react-app", "prettier"],
   "plugins": ["react", "prettier"],
   "rules": {
@@ -450,13 +450,13 @@ package-lock.json
   }
 }
 </code></pre></div>    </div>
-    <p>We have added some <strong>prettier</strong> rules like we added in <code class="highlighter-rouge">.prettierrc</code> to ESlint. So that ESlint will catch errors in case we format to format code.</p>
+    <p>We have added some <strong>prettier</strong> rules like we added in <code class="language-plaintext highlighter-rouge">.prettierrc</code> to ESlint. So that ESlint will catch errors in case we format to format code.</p>
   </li>
   <li>
-    <p>Create <code class="highlighter-rouge">.eslintignore</code>
+    <p>Create <code class="language-plaintext highlighter-rouge">.eslintignore</code>
 Ignore files that we don’t want to catch errors.</p>
 
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/src/serviceWorker.js
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/src/serviceWorker.js
 /src/setupTests.js/js
 </code></pre></div>    </div>
   </li>
@@ -539,6 +539,33 @@ Ignore files that we don’t want to catch errors.</p>
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/config-esling-prettier-react-app", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -861,17 +888,22 @@ Ignore files that we don’t want to catch errors.</p>
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

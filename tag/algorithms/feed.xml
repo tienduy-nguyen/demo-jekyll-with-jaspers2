@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
-  <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/algorithms/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-11-24T19:29:35+01:00</updated>
+  <updated>2020-12-04T13:32:29+01:00</updated>
   <id>/tag/algorithms/feed.xml</id>
 
   
@@ -65,7 +65,7 @@
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;grfg&quot; == rot13(&quot;test&quot;)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;grfg&quot; == rot13(&quot;test&quot;)
 &quot;Grfg&quot; == rot13(&quot;Test&quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -123,7 +123,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 &lt;p&gt;dice values&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Three 1's =&amp;gt; 1000 points
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Three 1's =&amp;gt; 1000 points
   Three 6's =&amp;gt;  600 points
   Three 5's =&amp;gt;  500 points
   Three 4's =&amp;gt;  400 points
@@ -135,7 +135,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Throw       Score
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Throw       Score
 ---------   ------------------
 5 1 3 4 1   250:  50 (for the 5) + 2 * 100 (for the 1s)
 1 1 1 3 1   1100: 1000 (for three 1s) + 100 (for the other 1)
@@ -257,7 +257,7 @@ I don’t think the people can have a lot of super clever idea to resolve this c
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;foo -&amp;gt; foo1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;foo -&amp;gt; foo1
 
 foobar23 -&amp;gt; foobar24
 
@@ -383,12 +383,12 @@ With these solutions, I can learn more about a method “.succ” and “.next�
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alphabet_position(&quot;The sunset sets at twelve o' clock.&quot;)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alphabet_position(&quot;The sunset sets at twelve o' clock.&quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Should return&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Should return &quot;20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11&quot; (as a string)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Should return &quot;20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11&quot; (as a string)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;hr /&gt;
 
@@ -425,7 +425,7 @@ We will see the next one.&lt;/p&gt;
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array_diff([1,2],[1]) == [2]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array_diff([1,2],[1]) == [2]
 array_diff([1,2],[1]) == [2]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -437,7 +437,7 @@ array_diff([1,2],[1]) == [2]
   &lt;li&gt;Very simple here if we know already the set operation method of array in ruby&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;union = A | B
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;union = A | B
 isect = A &amp;amp; B
 diff1  = A - B
 diff2  = B - A
@@ -467,7 +467,7 @@ sdiff = (A - B) | (B - A)
 
 &lt;p&gt;For example&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;weirdcase( &quot;String&quot; )#=&amp;gt; returns &quot;StRiNg&quot;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;weirdcase( &quot;String&quot; )#=&amp;gt; returns &quot;StRiNg&quot;
 weirdcase( &quot;Weird string case&quot; );#=&amp;gt; returns &quot;WeIrD StRiNg CaSe&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -855,7 +855,7 @@ ex: Jaden-Cased: “How Can Mirrors Be Real If Our Eyes Aren’t Real”&lt;/p&g
   &lt;p&gt;For example&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;filter_list([1,2,'a','b']) == [1,2]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;filter_list([1,2,'a','b']) == [1,2]
 filter_list([1,'a','b',0,15]) == [1,0,15]
 filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -888,7 +888,7 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
   &lt;p&gt;For example&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;maskify('4556364607935616') # should return '############5616'
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;maskify('4556364607935616') # should return '############5616'
 maskify('64607935616')      # should return '#######5616'
 maskify('1')                # should return '1'
 maskify('')                 # should return ''
@@ -944,14 +944,14 @@ maskify('Nananananananananananananananana Batman!') # should return '###########
   &lt;p&gt;Example input&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[18, 20],[45, 2],[61, 12],[37, 6],[21, 21],[78, 9]]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[[18, 20],[45, 2],[61, 12],[37, 6],[21, 21],[78, 9]]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Example output&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&quot;Open&quot;, &quot;Open&quot;, &quot;Senior&quot;, &quot;Open&quot;, &quot;Open&quot;, &quot;Senior&quot;]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&quot;Open&quot;, &quot;Open&quot;, &quot;Senior&quot;, &quot;Open&quot;, &quot;Open&quot;, &quot;Senior&quot;]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
@@ -991,7 +991,7 @@ It will be a little more complex of the previous challenges.&lt;/p&gt;
   &lt;p&gt;For example&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[2, 4, 0, 100, 4, 11, 2602, 36]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[2, 4, 0, 100, 4, 11, 2602, 36]
 Should return: 11 (the only odd number)
 
 [160, 3, 1719, 19, 11, 13, -21]

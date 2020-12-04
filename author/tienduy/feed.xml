@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
-  <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/author/tienduy/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-11-24T19:29:35+01:00</updated>
+  <updated>2020-12-04T13:32:29+01:00</updated>
   <id>/author/tienduy/feed.xml</id>
 
   
@@ -49,9 +49,9 @@
 
 &lt;p&gt;With the docker-cli, we can run and execute the Docker container via &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,can%20use%20in%20a%20Dockerfile%20.&quot;&gt;Dockerfile&lt;/a&gt;. But with Dockerfile, we can work only with a container, but in the project, we normally work with multiple containers. In that case, we need to use &lt;strong&gt;Docker compose&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt; define the services that make up your app in &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; so they can be run together in an isolated environment. It get an app running in one command by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt; define the services that make up your app in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; so they can be run together in an isolated environment. It get an app running in one command by just running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; if one add the build command to your project’s &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;. Your Docker workflow should be to build a suitable &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; for each image you wish to create, then use compose to assemble the images using the build command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; if one add the build command to your project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;. Your Docker workflow should be to build a suitable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; for each image you wish to create, then use compose to assemble the images using the build command.&lt;/p&gt;
 
 &lt;p&gt;We will create a demo: simple app nodejs using Redis. You will see the problem with only &lt;strong&gt;Dockerfile&lt;/strong&gt; and why use &lt;strong&gt;Docker compose&lt;/strong&gt;.&lt;/p&gt;
 
@@ -73,7 +73,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
 
     &lt;p&gt;In this file, we will declare the dependencies we use for our application. This step is similar as you create the Nodejs application (without &lt;strong&gt;npm install&lt;/strong&gt; or &lt;strong&gt;yarn add&lt;/strong&gt; dependencies).&lt;/p&gt;
 
@@ -99,7 +99,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file to config &lt;code class=&quot;highlighter-rouge&quot;&gt;express&lt;/code&gt; and run server
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file to config &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt; and run server
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//index.js&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;redis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -146,7 +146,7 @@
     &lt;p&gt;You can also check an article on my blog for more information of Dockerfile: &lt;a href=&quot;https://blog.adev42.com/create-simple-project-nodejs-with-docker&quot;&gt;Create simple project Nodejs with Docker&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt;&lt;/p&gt;
 
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;node_modules&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;npm-debug.log&lt;/span&gt;
@@ -208,7 +208,7 @@ The answer is &lt;strong&gt;Docker compose&lt;/strong&gt;. In this case, we need
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;To make sure the project above running, we need simply create a &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file.
+    &lt;p&gt;To make sure the project above running, we need simply create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file.
 It is a config file for docker-compose. It allows us to define the services (container) using in our app.&lt;/p&gt;
 
     &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compose.yml&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -231,7 +231,7 @@ It is a config file for docker-compose. It allows us to define the services (con
     &lt;p&gt;Check &lt;a href=&quot;https://docs.docker.com/compose/gettingstarted/&quot;&gt;docker compose&lt;/a&gt; for more details about configuration.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Update redis services to &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file&lt;/p&gt;
+    &lt;p&gt;Update redis services to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file&lt;/p&gt;
 
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// index.js&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -293,8 +293,8 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;ul&gt;
   &lt;li&gt;Separate CLI that gets installed along with Docker&lt;/li&gt;
   &lt;li&gt;Used to startup multiple Docker containers at the same time&lt;/li&gt;
-  &lt;li&gt;Automate some of the long-winded arguments we were passing to &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; will start and connect all the containers Docker that you declare in the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file. We will use it usually when we work with Docker.&lt;/li&gt;
+  &lt;li&gt;Automate some of the long-winded arguments we were passing to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; will start and connect all the containers Docker that you declare in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file. We will use it usually when we work with Docker.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
@@ -358,7 +358,7 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;simple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodejs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;simple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodejs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;init-packagejson&quot;&gt;Init &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;init-packagejson&quot;&gt;Init &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -381,8 +381,8 @@ It is a config file for docker-compose. It allows us to define the services (con
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;create-indexjs-file-in-root-project&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file (in root project)&lt;/h3&gt;
-&lt;p&gt;Add the following code to run server nodejs with &lt;code class=&quot;highlighter-rouge&quot;&gt;express&lt;/code&gt; framework.&lt;/p&gt;
+&lt;h3 id=&quot;create-indexjs-file-in-root-project&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file (in root project)&lt;/h3&gt;
+&lt;p&gt;Add the following code to run server nodejs with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt; framework.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -399,7 +399,7 @@ It is a config file for docker-compose. It allows us to define the services (con
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;create-dockerfile&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;create-dockerfile&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dockerfile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -433,15 +433,15 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;span class=&quot;s&quot;&gt;COPY . .&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Your app binds to port &lt;code class=&quot;highlighter-rouge&quot;&gt;8080&lt;/code&gt; so you’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; instruction to have it mapped by the docker daemon:
+  &lt;li&gt;Your app binds to port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8080&lt;/code&gt; so you’ll use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; instruction to have it mapped by the docker daemon:
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;EXPOSE &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Last but not least, define the command to run your app using CMD which defines your runtime. Here we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;node index.js&lt;/code&gt; to start your server as write in scripts of &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.
+  &lt;li&gt;Last but not least, define the command to run your app using CMD which defines your runtime. Here we will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node index.js&lt;/code&gt; to start your server as write in scripts of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;CMD [&quot;yarn&quot;, &quot;dev&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; should now look like this:
+  &lt;li&gt;Your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; should now look like this:
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;# Specify a base image&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;FROM node:12.18.1&lt;/span&gt;
 
@@ -469,12 +469,12 @@ It is a config file for docker-compose. It allows us to define the services (con
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;create-dockerignore-file-with-the-following-content&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt; file with the following content:&lt;/h3&gt;
+&lt;h3 id=&quot;create-dockerignore-file-with-the-following-content&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt; file with the following content:&lt;/h3&gt;
 &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s&quot;&gt;node_modules&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;npm-debug.log&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;build-your-image&quot;&gt;Build your image&lt;/h3&gt;
-&lt;p&gt;Go to the directory that has your &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; and run the following command to build the Docker image. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-t&lt;/code&gt; flag lets you tag your image so it’s easier to find later using the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker images&lt;/code&gt; command:&lt;/p&gt;
+&lt;p&gt;Go to the directory that has your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; and run the following command to build the Docker image. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t&lt;/code&gt; flag lets you tag your image so it’s easier to find later using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker images&lt;/code&gt; command:&lt;/p&gt;
 
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -488,7 +488,7 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;run-the-image&quot;&gt;Run the image&lt;/h3&gt;
-&lt;p&gt;Running your image with &lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; runs the container in detached mode, leaving the container running in the background. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-p&lt;/code&gt; flag redirects a public port to a private port inside the container. Run the image you previously built:&lt;/p&gt;
+&lt;p&gt;Running your image with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-d&lt;/code&gt; runs the container in detached mode, leaving the container running in the background. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; flag redirects a public port to a private port inside the container. Run the image you previously built:&lt;/p&gt;
 
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;49160&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -638,7 +638,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
   &lt;li&gt;&lt;strong&gt;vscode-styled-components&lt;/strong&gt;: Highlight &amp;amp; auto-complete for styled-component&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Auto Rename Tag&lt;/strong&gt;: Auto rename tag when code HTML, JSX&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Auto Close Tag&lt;/strong&gt;: As its name, it allows auto close tag when code HTML, JSX, TSX… Auto Close Tag and Auto Rename Tag are a great duo.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Editor Config for VSCode&lt;/strong&gt;: Allow to run &lt;code class=&quot;highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; file.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Editor Config for VSCode&lt;/strong&gt;: Allow to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; file.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;setup-workspace-setting-in-vscode&quot;&gt;Setup Workspace Setting in VSCode&lt;/h3&gt;
@@ -648,8 +648,8 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 &lt;p&gt;For anyone who don’t know, VSCode has 2 settings, one is for &lt;strong&gt;user&lt;/strong&gt;, the orther for &lt;strong&gt;workspace&lt;/strong&gt;. If you don’t setup for &lt;strong&gt;workspace&lt;/strong&gt;, by default VSCode will get settings directly at the &lt;strong&gt;user settings&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;user settings&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.json&lt;/code&gt; file of VSCode&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;workspace settings&lt;/strong&gt;: Create a folder and file &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;user settings&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;settings.json&lt;/code&gt; file of VSCode&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;workspace settings&lt;/strong&gt;: Create a folder and file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;In this article, I just explain how to setup for the &lt;strong&gt;workspace&lt;/strong&gt;. You do the same for settings of user.&lt;/p&gt;
@@ -657,7 +657,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 &lt;p&gt;Now, start setting up.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create file &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project
+  &lt;li&gt;Create file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.vscode/settings.json&lt;/code&gt; in the root of your project
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.defaultFormatter&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;esbenp.prettier-vscode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -669,13 +669,13 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 
     &lt;p&gt;It means:&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;editor.defaultFormatter&lt;/code&gt;: take &lt;strong&gt;Prettier&lt;/strong&gt; as default formater&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;editor.formatOnSave: true&lt;/code&gt;: format automatically the code when saving files&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;eslint.format.enable: true&lt;/code&gt;: enable formatting code of ESlint&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;source.fixAll.eslint: true&lt;/code&gt;: fix auto code with ESLint. Sometime we need to fix manually.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.defaultFormatter&lt;/code&gt;: take &lt;strong&gt;Prettier&lt;/strong&gt; as default formater&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;editor.formatOnSave: true&lt;/code&gt;: format automatically the code when saving files&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eslint.format.enable: true&lt;/code&gt;: enable formatting code of ESlint&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source.fixAll.eslint: true&lt;/code&gt;: fix auto code with ESLint. Sometime we need to fix manually.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Add &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode/extensions.json&lt;/code&gt; file and paste the following code. It will recommend use install the following extension when open this project on their VScode.
+  &lt;li&gt;Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.vscode/extensions.json&lt;/code&gt; file and paste the following code. It will recommend use install the following extension when open this project on their VScode.
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;recommendations&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;mikael.angular-beastcode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -699,10 +699,10 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-    &lt;p&gt;It’s very helpful when we work in  team. We just share the folder &lt;code class=&quot;highlighter-rouge&quot;&gt;.vscode&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;json&lt;/code&gt; file each other. But in that case, don’t add &lt;strong&gt;.vscode&lt;/strong&gt; in &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
+    &lt;p&gt;It’s very helpful when we work in  team. We just share the folder &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.vscode&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; file each other. But in that case, don’t add &lt;strong&gt;.vscode&lt;/strong&gt; in &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Add file &lt;code class=&quot;highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; in the root project&lt;/p&gt;
+    &lt;p&gt;Add file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.editorconfig&lt;/code&gt; in the root project&lt;/p&gt;
 
     &lt;p&gt;If you don’t know, &lt;strong&gt;.editorconfig&lt;/strong&gt; was created to unify standards between different editors.&lt;/p&gt;
 
@@ -710,7 +710,7 @@ Do you want to ensure there’re no semicolons in the project? Make your promise
 
     &lt;p&gt;Because we already have the &lt;strong&gt;Editor Config&lt;/strong&gt; extension, installed above, when we created this file, the VSCode will automatically take these settings.&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[*]
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[*]
 end_of_line = lf
 indent_style = space
 indent_size = 2
@@ -729,12 +729,12 @@ indent_size = 2
 &lt;p&gt;Here, I use &lt;a href=&quot;https://github.com/facebook/create-react-app&quot;&gt;create-react-app&lt;/a&gt;, so by default they have the basic ESLint installed, I just need to install a few more dependencies.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.env&lt;/code&gt; in the root folder of project and add  the value &lt;code class=&quot;highlighter-rouge&quot;&gt;EXTEND_ESLINT=true&lt;/code&gt;. It allows us to add more others linter to &lt;strong&gt;React&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env&lt;/code&gt; in the root folder of project and add  the value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EXTEND_ESLINT=true&lt;/code&gt;. It allows us to add more others linter to &lt;strong&gt;React&lt;/strong&gt;.&lt;/li&gt;
   &lt;li&gt;Install more packages
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; prettier eslint-config-prettier eslint-plugin-prettier
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Add &lt;strong&gt;script&lt;/strong&gt; to run them in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file
+  &lt;li&gt;Add &lt;strong&gt;script&lt;/strong&gt; to run them in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-scripts build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -746,13 +746,13 @@ indent_size = 2
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;prettier:fix&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier --write &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;src/**/(*.tsx|*.ts|*.jsx|*.js|*.scss|*.css)&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;So we can use &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint:fix&lt;/code&gt; … to check or fix code style with these tools.&lt;/p&gt;
+    &lt;p&gt;So we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint:fix&lt;/code&gt; … to check or fix code style with these tools.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;&lt;/p&gt;
 
     &lt;p&gt;It contains the rules for &lt;strong&gt;Prettier&lt;/strong&gt;&lt;/p&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;arrowParens&quot;: &quot;avoid&quot;,
   &quot;semi&quot;: false,
   &quot;trailingComma&quot;: &quot;none&quot;,
@@ -763,18 +763,18 @@ indent_size = 2
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt;
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierignore&lt;/code&gt;
 &lt;strong&gt;Prettier&lt;/strong&gt; will ignore and will not check these files.
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.cache
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.cache
 package-lock.json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;&lt;/p&gt;
 
     &lt;p&gt;This file intend to expand the ESLint React configuration. It helps to catch erros on the terminal. If you have installed the ESLint extension ESlint, it will rely on this file to catch errors directly on the editor.&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
   &quot;extends&quot;: [&quot;react-app&quot;, &quot;prettier&quot;],
   &quot;plugins&quot;: [&quot;react&quot;, &quot;prettier&quot;],
   &quot;rules&quot;: {
@@ -794,13 +794,13 @@ package-lock.json
   }
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;We have added some &lt;strong&gt;prettier&lt;/strong&gt; rules like we added in &lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt; to ESlint. So that ESlint will catch errors in case we format to format code.&lt;/p&gt;
+    &lt;p&gt;We have added some &lt;strong&gt;prettier&lt;/strong&gt; rules like we added in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt; to ESlint. So that ESlint will catch errors in case we format to format code.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintignore&lt;/code&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintignore&lt;/code&gt;
 Ignore files that we don’t want to catch errors.&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/serviceWorker.js
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/serviceWorker.js
 /src/setupTests.js/js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -856,7 +856,7 @@ Ignore files that we don’t want to catch errors.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;With &lt;a href=&quot;https://github.com/facebook/create-react-app&quot;&gt;create-react-app&lt;/a&gt;, it only takes a few clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that &lt;code class=&quot;highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt; brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It’s the time to configure manually &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With &lt;a href=&quot;https://github.com/facebook/create-react-app&quot;&gt;create-react-app&lt;/a&gt;, it only takes a few clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt; brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It’s the time to configure manually &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;If you do not have any knowledge about webpack, you can refer my two previous articles:&lt;/p&gt;
 &lt;ul&gt;
@@ -880,21 +880,21 @@ Ignore files that we don’t want to catch errors.&lt;/p&gt;
       &lt;li&gt;&lt;strong&gt;clean-webpack-plugin&lt;/strong&gt;: A webpack plugin to remove/clean your build folder(s). Check &lt;a href=&quot;https://github.com/johnagan/clean-webpack-plugin&quot;&gt;clean-webpack-plugin&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;compression-webpack-plugin&lt;/strong&gt;: Compress asset file (css, js, html …) to &lt;strong&gt;gzip&lt;/strong&gt; Check more &lt;a href=&quot;https://webpack.js.org/plugins/compression-webpack-plugin/&quot;&gt;compression-webpack-plugin&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;copy-webpack-plugin&lt;/strong&gt;: Copies individual files or entire directories, which already exist, to the build directory. For example: you have files such as favicon.ico, robots.txt at the same level as index.html, when the build is complete, these files will also be present in the build. If you do not have this plugin, you have to copy them manually. Check &lt;a href=&quot;https://webpack.js.org/plugins/copy-webpack-plugin/&quot;&gt;copy-webpack-plugin&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;dotenv-webpack&lt;/strong&gt;: Using &lt;code class=&quot;highlighter-rouge&quot;&gt;.env&lt;/code&gt; file in your app. Check &lt;a href=&quot;https://github.com/mrsteele/dotenv-webpack&quot;&gt;dotenv-webpack&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;html-webpack-plugin&lt;/strong&gt;: Clone &lt;code class=&quot;highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file to build folder. Check how it works in my previous post &lt;a href=&quot;https://blog.adev42.com/setup-webpack-with-typescript&quot;&gt;Webpack &amp;amp; Typescript&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;mini-css-extract-plugin&lt;/strong&gt;: Normally, the &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; will be in the js file after build. When running the app, &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; will add that &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; to &lt;style&gt;&lt;/style&gt; tag. Now, if we want the &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; to be in a separate file with &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; and when app running, &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; will automatically import it with the &lt;link /&gt;&amp;lt;/link&amp;gt; tag. That is the function of this plugin.&lt;br /&gt;
+      &lt;li&gt;&lt;strong&gt;dotenv-webpack&lt;/strong&gt;: Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.env&lt;/code&gt; file in your app. Check &lt;a href=&quot;https://github.com/mrsteele/dotenv-webpack&quot;&gt;dotenv-webpack&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;html-webpack-plugin&lt;/strong&gt;: Clone &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file to build folder. Check how it works in my previous post &lt;a href=&quot;https://blog.adev42.com/setup-webpack-with-typescript&quot;&gt;Webpack &amp;amp; Typescript&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;mini-css-extract-plugin&lt;/strong&gt;: Normally, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; will be in the js file after build. When running the app, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; will add that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; to &lt;style&gt;&lt;/style&gt; tag. Now, if we want the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; to be in a separate file with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; and when app running, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; will automatically import it with the &lt;link /&gt;&amp;lt;/link&amp;gt; tag. That is the function of this plugin.&lt;br /&gt;
 Check more information for &lt;a href=&quot;https://webpack.js.org/plugins/mini-css-extract-plugin/&quot;&gt;mini-css-extract-plugin&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;webpack-bundle-analyzer&lt;/strong&gt;: It will create an interactive treemap visualization of the contents of all your bundles. Check &lt;a href=&quot;https://github.com/webpack-contrib/webpack-bundle-analyzer&quot;&gt;webpack-bundle-analyzer&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Install &lt;code class=&quot;highlighter-rouge&quot;&gt;ESLint&lt;/code&gt; &amp;amp; &lt;code class=&quot;highlighter-rouge&quot;&gt;Prettier&lt;/code&gt;
+  &lt;li&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ESLint&lt;/code&gt; &amp;amp; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Prettier&lt;/code&gt;
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt; eslint eslint-config-react-app eslint-loader eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-plugin-prettier eslint-config-prettier
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Except &lt;code class=&quot;highlighter-rouge&quot;&gt;prettier&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;eslint-config-prettier&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;eslint-plugin-prettier&lt;/code&gt; the rest are plugins used by &lt;code class=&quot;highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt;.&lt;/p&gt;
+    &lt;p&gt;Except &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prettier&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eslint-config-prettier&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eslint-plugin-prettier&lt;/code&gt; the rest are plugins used by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create-react-app&lt;/code&gt;.&lt;/p&gt;
 
     &lt;p&gt;&lt;strong&gt;Create file configuration:&lt;/strong&gt;:&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintrc&lt;/code&gt;
         &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react-app&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prettier&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -916,12 +916,12 @@ Check more information for &lt;a href=&quot;https://webpack.js.org/plugins/mini-
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.eslintignore&lt;/code&gt;
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/serviceWorker.ts
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.eslintignore&lt;/code&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/src/serviceWorker.ts
 /src/setupTests.ts
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.prettierrc&lt;/code&gt;
         &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;arrowParens&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;avoid&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;semi&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -933,14 +933,14 @@ Check more information for &lt;a href=&quot;https://webpack.js.org/plugins/mini-
 &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;prettierignore&lt;/code&gt;
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.cache
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prettierignore&lt;/code&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.cache
 package-lock.json
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Add scripts to &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;
+  &lt;li&gt;Add scripts to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack serve --mode development&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --mode production&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -955,11 +955,11 @@ package-lock.json
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
-&lt;h3 id=&quot;config-tsconfigjson&quot;&gt;Config &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;config-tsconfigjson&quot;&gt;Config &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;Code
-I will use TypeScript for this template, so I need a config file for TypeScript to compile JavaScript. If you want to use JavaScript, that will be very similar, you just need install &lt;code class=&quot;highlighter-rouge&quot;&gt;babel&lt;/code&gt; and these loader. Check my &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack&quot;&gt;previous article&lt;/a&gt; for the details.&lt;/p&gt;
+I will use TypeScript for this template, so I need a config file for TypeScript to compile JavaScript. If you want to use JavaScript, that will be very similar, you just need install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel&lt;/code&gt; and these loader. Check my &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack&quot;&gt;previous article&lt;/a&gt; for the details.&lt;/p&gt;
 
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -984,7 +984,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;config-webpackconfigjs&quot;&gt;Config &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;config-webpackconfigjs&quot;&gt;Config &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Code
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1121,18 +1121,18 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   &lt;li&gt;
     &lt;p&gt;Explanation&lt;/p&gt;
 
-    &lt;p&gt;I have explain the details of many definition in the &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file in my two previous article &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack&quot;&gt;setup webpack basic&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://blog.adev42.com/setup-webpack-with-typescript&quot;&gt;setup webpack typescript&lt;/a&gt;. In this article, I just explain the new definitions..&lt;/p&gt;
+    &lt;p&gt;I have explain the details of many definition in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file in my two previous article &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack&quot;&gt;setup webpack basic&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://blog.adev42.com/setup-webpack-with-typescript&quot;&gt;setup webpack typescript&lt;/a&gt;. In this article, I just explain the new definitions..&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;isDev&lt;/code&gt;: We have 2 modes: &lt;strong&gt;development&lt;/strong&gt; and &lt;strong&gt;production&lt;/strong&gt; equivalent to dev and build. These two modes are passed through the &lt;code class=&quot;highlighter-rouge&quot;&gt;--mode&lt;/code&gt; in the script in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;isAnalyze&lt;/code&gt;: To define use &lt;code class=&quot;highlighter-rouge&quot;&gt;BundleAnalyzerPlugin&lt;/code&gt; or not&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;basePlugins&lt;/code&gt;: plugins use in dev mode&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CopyPlugin&lt;/code&gt;: copy all files in &lt;strong&gt;public&lt;/strong&gt; folder to &lt;strong&gt;build&lt;/strong&gt; folder, except &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;. Because we have already plugin &lt;code class=&quot;highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt; do it.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.ProgressPlugin()&lt;/code&gt; show by percentage of progress when run webpack&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;CompressionPlugin()&lt;/code&gt;: compress build files to &lt;strong&gt;gzip&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;prodPlugins&lt;/code&gt;: plugins used in mode production.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;plugins&lt;/code&gt;: Contains plugins of webpack&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;performance.maxEntrypointSize&lt;/code&gt;: When a build file exceeds this limit (in bytes), it will be warned on the terminal.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isDev&lt;/code&gt;: We have 2 modes: &lt;strong&gt;development&lt;/strong&gt; and &lt;strong&gt;production&lt;/strong&gt; equivalent to dev and build. These two modes are passed through the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--mode&lt;/code&gt; in the script in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isAnalyze&lt;/code&gt;: To define use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;BundleAnalyzerPlugin&lt;/code&gt; or not&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;basePlugins&lt;/code&gt;: plugins use in dev mode&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CopyPlugin&lt;/code&gt;: copy all files in &lt;strong&gt;public&lt;/strong&gt; folder to &lt;strong&gt;build&lt;/strong&gt; folder, except &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;. Because we have already plugin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt; do it.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.ProgressPlugin()&lt;/code&gt; show by percentage of progress when run webpack&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CompressionPlugin()&lt;/code&gt;: compress build files to &lt;strong&gt;gzip&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prodPlugins&lt;/code&gt;: plugins used in mode production.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plugins&lt;/code&gt;: Contains plugins of webpack&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;performance.maxEntrypointSize&lt;/code&gt;: When a build file exceeds this limit (in bytes), it will be warned on the terminal.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1140,7 +1140,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;h2 id=&quot;demo-code&quot;&gt;Demo code&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt;
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt;
     &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
@@ -1166,7 +1166,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn build:analyze &lt;span class=&quot;c&quot;&gt;# Build and analyze project&lt;/span&gt;
   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;We can use &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn lint:fix&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn prettier&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn prettier:fix&lt;/code&gt; to run the command check and fix syntax code with eslint or prettier.&lt;/p&gt;
+    &lt;p&gt;We can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn lint:fix&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn prettier&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn prettier:fix&lt;/code&gt; to run the command check and fix syntax code with eslint or prettier.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1328,13 +1328,13 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   &lt;li&gt;&lt;a href=&quot;#create-project-files&quot;&gt;Create project files&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#configuration&quot;&gt;Configuration&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#tsconfigjson&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/a&gt;
+      &lt;li&gt;&lt;a href=&quot;#tsconfigjson&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/a&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;a href=&quot;#code&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#explanation&quot;&gt;Explanation&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#webpackconfigjs&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/a&gt;
+      &lt;li&gt;&lt;a href=&quot;#webpackconfigjs&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/a&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;a href=&quot;#code-1&quot;&gt;Code&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#explanation-1&quot;&gt;Explanation&lt;/a&gt;&lt;/li&gt;
@@ -1364,18 +1364,18 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add html-webpack-plugin &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-    &lt;p&gt;This plugin will help use import automatically the new &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.js&lt;/code&gt; file after build into &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; build file. You will see more explanation below.&lt;/p&gt;
+    &lt;p&gt;This plugin will help use import automatically the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle.js&lt;/code&gt; file after build into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; build file. You will see more explanation below.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Install TypeScript
 &lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript&lt;/a&gt; extends JavaScript by adding types. By understanding JavaScript, TypeScript saves you time catching errors, debug adn providing fixes before you run code. Any browser, any OS, anywhere JavaScript runs.&lt;/p&gt;
 
-    &lt;p&gt;We can use TypeScript to compile to the compatible JavaScript version, so we don’t need use &lt;code class=&quot;highlighter-rouge&quot;&gt;babel&lt;/code&gt; in this case.&lt;/p&gt;
+    &lt;p&gt;We can use TypeScript to compile to the compatible JavaScript version, so we don’t need use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel&lt;/code&gt; in this case.&lt;/p&gt;
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add typescript ts-loader &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;typescript&lt;/strong&gt;: install TypeScript language for your project. You can also install TypeScript on your machine as &lt;code class=&quot;highlighter-rouge&quot;&gt;Nodejs&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Python&lt;/code&gt; and the other programming languages with command: &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn add global typescript&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;typescript&lt;/strong&gt;: install TypeScript language for your project. You can also install TypeScript on your machine as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Nodejs&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python&lt;/code&gt; and the other programming languages with command: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yarn add global typescript&lt;/code&gt;.&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;ts-loader&lt;/strong&gt;: allow integrate TypeScript to webpack&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1387,7 +1387,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file&lt;/p&gt;
 
     &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -1406,10 +1406,10 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;Notice: you can see, we don’t import any &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; file. The reason is &lt;code class=&quot;highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt;, will be explained below.&lt;/p&gt;
+    &lt;p&gt;Notice: you can see, we don’t import any &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; file. The reason is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt;, will be explained below.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/add.ts&lt;/code&gt;
-    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/add.ts&lt;/code&gt;
+    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;treeShaking&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;This phrase will not appear on build file&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
@@ -1417,25 +1417,25 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/app.d.ts&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/app.d.ts&lt;/code&gt;&lt;/p&gt;
 
     &lt;p&gt;Why this file? TypeScript is a strong type, it will not consider files as images, videos as modules, and we can’t import them. So we need declare the type for each file type.&lt;/p&gt;
 
-    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.jpg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.jpg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.jpeg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;module&lt;/span&gt;  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;*.jpeg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/index.scss&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/index.scss&lt;/code&gt;
     &lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#ddd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;nn&quot;&gt;#root&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1444,7 +1444,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/loadImage.ts&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/loadImage.ts&lt;/code&gt;
     &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;logo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./logo.png&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;():&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HTMLElement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;element&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HTMLDivElement&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -1457,11 +1457,11 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)?.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;component&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/subtract.ts&lt;/code&gt;
-    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/subtract.ts&lt;/code&gt;
+    &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;src/index.ts&lt;/code&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/index.ts&lt;/code&gt;
     &lt;div class=&quot;language-ts highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;subtract&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./subtract&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./add&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;./loadImage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1471,13 +1471,13 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;h2 id=&quot;configuration&quot;&gt;Configuration&lt;/h2&gt;
-    &lt;h3 id=&quot;tsconfigjson&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/h3&gt;
+    &lt;h3 id=&quot;tsconfigjson&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt;&lt;/h3&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;This file contains de configuration to compile the TypeScript code to Js code.&lt;/p&gt;
 
-&lt;p&gt;Create compileOption for TypeScript: &lt;code class=&quot;highlighter-rouge&quot;&gt;tsc --init&lt;/code&gt; or create directly &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; in the root folder and paste the following code.&lt;/p&gt;
+&lt;p&gt;Create compileOption for TypeScript: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsc --init&lt;/code&gt; or create directly &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; in the root folder and paste the following code.&lt;/p&gt;
 &lt;h4 id=&quot;code&quot;&gt;Code&lt;/h4&gt;
 &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1505,21 +1505,21 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 
 &lt;h4 id=&quot;explanation&quot;&gt;Explanation&lt;/h4&gt;
 
-&lt;p&gt;How &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; file works?&lt;/p&gt;
+&lt;p&gt;How &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; file works?&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;target&lt;/strong&gt;: Version javascript that we want to build from TypeScript. Here is &lt;code class=&quot;highlighter-rouge&quot;&gt;ES6&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;allowJs&lt;/strong&gt;: Allow use using &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; file in TypeScript project&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;strict&lt;/strong&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;Strict mode&lt;/code&gt; for Typescript&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;module&lt;/strong&gt;: After compiling the js, the codes will be written as ESNext module. There are many option here, but we do not recommend use the option &lt;code class=&quot;highlighter-rouge&quot;&gt;commonJS&lt;/code&gt; because il will lose the &lt;a href=&quot;https://webpack.js.org/guides/tree-shaking/&quot;&gt;Tree-shaking&lt;/a&gt; feature of webpack. See this feature in &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack#tree-shaking-in-webpack&quot;&gt;my previous post&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;target&lt;/strong&gt;: Version javascript that we want to build from TypeScript. Here is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ES6&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;allowJs&lt;/strong&gt;: Allow use using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; file in TypeScript project&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;strict&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Strict mode&lt;/code&gt; for Typescript&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;module&lt;/strong&gt;: After compiling the js, the codes will be written as ESNext module. There are many option here, but we do not recommend use the option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commonJS&lt;/code&gt; because il will lose the &lt;a href=&quot;https://webpack.js.org/guides/tree-shaking/&quot;&gt;Tree-shaking&lt;/a&gt; feature of webpack. See this feature in &lt;a href=&quot;https://blog.adev42.com/basic-setup-webpack#tree-shaking-in-webpack&quot;&gt;my previous post&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;noImplicitAny&lt;/strong&gt;: Do not allow any implicit understanding&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;sourceMap&lt;/strong&gt;: easier to debug in dev enviroment. We need use it in both &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;baseUrl&lt;/strong&gt;: The base path, usually “./”. If you use the &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; option below, you must specify baseUrl&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;paths&lt;/strong&gt;: Create alias to facilitate import. For example, instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;../../../&lt;/code&gt; now you can shorten it to &lt;code class=&quot;highlighter-rouge&quot;&gt;@/&lt;/code&gt;. Configuring the alias in &lt;code class=&quot;highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; just helps the editor to understand it, it doesn’t work with webpack. So you have to configure with alias with the webpack below as well.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;sourceMap&lt;/strong&gt;: easier to debug in dev enviroment. We need use it in both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;baseUrl&lt;/strong&gt;: The base path, usually “./”. If you use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path&lt;/code&gt; option below, you must specify baseUrl&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;paths&lt;/strong&gt;: Create alias to facilitate import. For example, instead of using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;../../../&lt;/code&gt; now you can shorten it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@/&lt;/code&gt;. Configuring the alias in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tsconfig.json&lt;/code&gt; just helps the editor to understand it, it doesn’t work with webpack. So you have to configure with alias with the webpack below as well.&lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;include&lt;/strong&gt;: Specifies the files to be used in the project.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;webpackconfigjs&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;webpackconfigjs&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt;&lt;/h3&gt;
 &lt;h4 id=&quot;code-1&quot;&gt;Code&lt;/h4&gt;
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;HtmlWebpackPlugin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;html-webpack-plugin&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -1601,70 +1601,70 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;h4 id=&quot;explanation-1&quot;&gt;Explanation&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Entry&lt;/code&gt;: Entry points of your project where you put the main code to run your server. Check &lt;a href=&quot;https://webpack.js.org/concepts/entry-points/&quot;&gt;Webpack entry point&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;module.rules&lt;/code&gt;: Array contains the &lt;code class=&quot;highlighter-rouge&quot;&gt;loaders&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Entry&lt;/code&gt;: Entry points of your project where you put the main code to run your server. Check &lt;a href=&quot;https://webpack.js.org/concepts/entry-points/&quot;&gt;Webpack entry point&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module.rules&lt;/code&gt;: Array contains the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loaders&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;: Using &lt;strong&gt;regex&lt;/strong&gt; to determine the file type. If it is &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; then it will run the loader.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt;: Using &lt;strong&gt;regex&lt;/strong&gt; to determine the file type. If it is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; then it will run the loader.&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;file-loader&lt;/code&gt; will run png, svg, jpg, gif… (image and video) file.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-loader&lt;/code&gt; will run png, svg, jpg, gif… (image and video) file.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exclude&lt;/code&gt;: Enter a &lt;strong&gt;regex&lt;/strong&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;loader&lt;/code&gt; will ignore these file and folder.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;use&lt;/code&gt;: Retrieve an object or an array containing loader information.
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exclude&lt;/code&gt;: Enter a &lt;strong&gt;regex&lt;/strong&gt;, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loader&lt;/code&gt; will ignore these file and folder.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;use&lt;/code&gt;: Retrieve an object or an array containing loader information.
     &lt;ul&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: using presets &lt;code class=&quot;highlighter-rouge&quot;&gt;@babel/preset&lt;/code&gt; by default. It will compile to ES5 syntax.&lt;/li&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;: using &lt;strong&gt;sourMap&lt;/strong&gt; to easier debug when dev.&lt;/li&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: using &lt;code class=&quot;highlighter-rouge&quot;&gt;[path][name].[ext]&lt;/code&gt; means after build, the files will be created with the similar names in similar folder. For example: if you have &lt;code class=&quot;highlighter-rouge&quot;&gt;src/logo.png&lt;/code&gt; file, when you build it, you will have &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/src/logo.png&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: using presets &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@babel/preset&lt;/code&gt; by default. It will compile to ES5 syntax.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;: using &lt;strong&gt;sourMap&lt;/strong&gt; to easier debug when dev.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[path][name].[ext]&lt;/code&gt; means after build, the files will be created with the similar names in similar folder. For example: if you have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/logo.png&lt;/code&gt; file, when you build it, you will have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist/src/logo.png&lt;/code&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;resolve: { extensions: [‘.js’, ‘.jsx’] }&lt;/code&gt;: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;alias&lt;/code&gt;: Create alias to facilitate import in webpack&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt;: configuration of build file webpack
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resolve: { extensions: [‘.js’, ‘.jsx’] }&lt;/code&gt;: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias&lt;/code&gt;: Create alias to facilitate import in webpack&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt;: configuration of build file webpack
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.path&lt;/code&gt;: the absolute path to the directory after build. For the absolute path, we usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;path.resolve()&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;path.join()&lt;/code&gt; in combination with the global variable &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname&lt;/code&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.publicPath&lt;/code&gt;: the relative path from the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file pointing to the files in the &lt;strong&gt;dist&lt;/strong&gt; directory after build.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.path&lt;/code&gt;: the absolute path to the directory after build. For the absolute path, we usually use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path.resolve()&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path.join()&lt;/code&gt; in combination with the global variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__dirname&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.publicPath&lt;/code&gt;: the relative path from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file pointing to the files in the &lt;strong&gt;dist&lt;/strong&gt; directory after build.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;For example: in the file &lt;code class=&quot;highlighter-rouge&quot;&gt;loadImage.js&lt;/code&gt;, we import logo, the logo variable will be become: &lt;code class=&quot;highlighter-rouge&quot;&gt;output.publicPath + 'src/logo.png&lt;/code&gt;. If after the build, we run the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file in a different location not in &lt;strong&gt;the public directory&lt;/strong&gt;, we will accidentally make the logo variable wrong.&lt;/p&gt;
+    &lt;p&gt;For example: in the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loadImage.js&lt;/code&gt;, we import logo, the logo variable will be become: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.publicPath + 'src/logo.png&lt;/code&gt;. If after the build, we run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file in a different location not in &lt;strong&gt;the public directory&lt;/strong&gt;, we will accidentally make the logo variable wrong.&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.filename&lt;/code&gt;: filename of js bundle after build.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.filename&lt;/code&gt;: filename of js bundle after build.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;Here we use &lt;code class=&quot;highlighter-rouge&quot;&gt;[hash:6]&lt;/code&gt; means the bundle will add 6 random characters to the bundle file in each build (ex: &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.bbc536.js&lt;/code&gt;).&lt;/p&gt;
+    &lt;p&gt;Here we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[hash:6]&lt;/code&gt; means the bundle will add 6 random characters to the bundle file in each build (ex: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle.bbc536.js&lt;/code&gt;).&lt;/p&gt;
 
     &lt;p&gt;This is aimed at restricting your browser to cache Javascript when you update a new Javascript version for your website.&lt;/p&gt;
 
-    &lt;p&gt;But we have a problem. Each time of build, we will have a new bundle file. So do we need edit the src of script import in the &lt;code class=&quot;highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file?&lt;/p&gt;
+    &lt;p&gt;But we have a problem. Each time of build, we will have a new bundle file. So do we need edit the src of script import in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; file?&lt;/p&gt;
 
-    &lt;p&gt;We don’t. Because we use the plugin &lt;code class=&quot;highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt;. It will help use create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file from the original html file.&lt;/p&gt;
+    &lt;p&gt;We don’t. Because we use the plugin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HtmlWebpackPlugin&lt;/code&gt;. It will help use create a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file from the original html file.&lt;/p&gt;
 
-    &lt;p&gt;This new &lt;code class=&quot;highlighter-rouge&quot;&gt;html&lt;/code&gt; file will use the template as the &lt;code class=&quot;highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; and automatically build to &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/src/index.html&lt;/code&gt; and import new &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle.....js&lt;/code&gt; file.&lt;/p&gt;
+    &lt;p&gt;This new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;html&lt;/code&gt; file will use the template as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public/index.html&lt;/code&gt; and automatically build to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist/src/index.html&lt;/code&gt; and import new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle.....js&lt;/code&gt; file.&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the &lt;code class=&quot;highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;strong&gt;arrowFunction&lt;/strong&gt;: support arrow function.&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;bigIntLiteral&lt;/strong&gt;: support BigInt&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;const&lt;/strong&gt;: support declaration &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; và &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;const&lt;/strong&gt;: support declaration &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; và &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;destructuring&lt;/strong&gt;: support destructuring&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;dynamicImport&lt;/strong&gt;: support async import&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;forOf&lt;/strong&gt;: support &lt;code class=&quot;highlighter-rouge&quot;&gt;forOf&lt;/code&gt; for array&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;forOf&lt;/strong&gt;: support &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forOf&lt;/code&gt; for array&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;module&lt;/strong&gt;: support moudle ES6 (import … from ‘…’)&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;devtool&lt;/code&gt;: contains the configuration file after dev or after build. When you in the dev step, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;source-map&lt;/code&gt; to debug more simply. But we don’t use it in the production to reduce the volume of file when build.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;devtool&lt;/code&gt;: contains the configuration file after dev or after build. When you in the dev step, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source-map&lt;/code&gt; to debug more simply. But we don’t use it in the production to reduce the volume of file when build.&lt;/p&gt;
 
     &lt;p&gt;Check &lt;a href=&quot;https://webpack.js.org/configuration/devtool/&quot;&gt;Devtool Webpack&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;devServer&lt;/code&gt;: You can imagine, it will create a server &lt;strong&gt;localhost&lt;/strong&gt; at the root folder
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;devServer&lt;/code&gt;: You can imagine, it will create a server &lt;strong&gt;localhost&lt;/strong&gt; at the root folder
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.contentBase&lt;/strong&gt;: the path directory where contains &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file. Here is &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.contentBase&lt;/strong&gt;: the path directory where contains &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file. Here is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;devServer.port&lt;/strong&gt;: port of localhost&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.hot&lt;/strong&gt;: The mode &lt;code class=&quot;highlighter-rouge&quot;&gt;hot reload&lt;/code&gt;. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The &lt;code class=&quot;highlighter-rouge&quot;&gt;hot reload&lt;/code&gt; helps use to see the change but don’t need reload page.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.publicPath&lt;/strong&gt;: the relative path from root directory pointing to the build directory. Here is &lt;code class=&quot;highlighter-rouge&quot;&gt;/dist/&lt;/code&gt; –&amp;gt; / is root folder&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.watchContentBase&lt;/strong&gt;: If you have the change in the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, browser will reload automatically.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.hot&lt;/strong&gt;: The mode &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hot reload&lt;/code&gt;. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hot reload&lt;/code&gt; helps use to see the change but don’t need reload page.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.publicPath&lt;/strong&gt;: the relative path from root directory pointing to the build directory. Here is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dist/&lt;/code&gt; –&amp;gt; / is root folder&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.watchContentBase&lt;/strong&gt;: If you have the change in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, browser will reload automatically.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1756,7 +1756,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
           &lt;li&gt;&lt;a href=&quot;#demo-code&quot;&gt;Demo code&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#explanation&quot;&gt;Explanation&lt;/a&gt;
             &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#configuration-in-webpackconfigjs-file&quot;&gt;Configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#configuration-in-webpackconfigjs-file&quot;&gt;Configuration in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file&lt;/a&gt;&lt;/li&gt;
               &lt;li&gt;&lt;a href=&quot;#tree-shaking-in-webpack&quot;&gt;Tree Shaking in Webpack&lt;/a&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
@@ -1769,19 +1769,19 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 
 &lt;h2 id=&quot;webpack-basics&quot;&gt;Webpack basics&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Webpack&lt;/code&gt; is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging …&lt;/p&gt;
 
 &lt;p&gt;Check more information on &lt;a href=&quot;https://webpack.js.org/&quot;&gt;Webpack website&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;setup-a-webpack-project&quot;&gt;Setup a webpack project&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Create project and init &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file
+  &lt;li&gt;Create project and init &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;webpack-basic
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;webpack-basic
 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm init &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;In the root project create &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt; folder and &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html file&lt;/code&gt;
+  &lt;li&gt;In the root project create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt; folder and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html file&lt;/code&gt;
     &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lang=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 
@@ -1816,9 +1816,9 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@babel/core&lt;/code&gt;: Core of babel contains algorithms of its&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;@babel/preset-env&lt;/code&gt;: is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!. Check official website of &lt;a href=&quot;https://babeljs.io/docs/en/babel-preset-env#:~:text=%40babel%2Fpreset%2Denv%20is,Install&quot;&gt;@babel/preset-env&lt;/a&gt; for more details.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: This package allows transpiling JavaScript files using Babel and webpack. Check &lt;a href=&quot;https://github.com/babel/babel-loader&quot;&gt;babel-loader github&lt;/a&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@babel/core&lt;/code&gt;: Core of babel contains algorithms of its&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@babel/preset-env&lt;/code&gt;: is a smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (and optionally, browser polyfills) are needed by your target environment(s). This both makes your life easier and JavaScript bundles smaller!. Check official website of &lt;a href=&quot;https://babeljs.io/docs/en/babel-preset-env#:~:text=%40babel%2Fpreset%2Denv%20is,Install&quot;&gt;@babel/preset-env&lt;/a&gt; for more details.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: This package allows transpiling JavaScript files using Babel and webpack. Check &lt;a href=&quot;https://github.com/babel/babel-loader&quot;&gt;babel-loader github&lt;/a&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -1827,9 +1827,9 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn add css-loader file-loader sass sass-loader style-loader &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;css-loader&lt;/code&gt;: help you to import &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; into &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; file&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sass&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sass-loader&lt;/code&gt; help you compile &lt;code class=&quot;highlighter-rouge&quot;&gt;scss&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: help you import file as &lt;code class=&quot;highlighter-rouge&quot;&gt;image&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;video&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css-loader&lt;/code&gt;: help you to import &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sass&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sass-loader&lt;/code&gt; help you compile &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: help you import file as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;image&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;video&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; file&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;setup-webpack&quot;&gt;Setup Webpack&lt;/h2&gt;
@@ -1838,15 +1838,15 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;npm &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;webpack webpack-cli webpack-dev-server &lt;span class=&quot;nt&quot;&gt;-D&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;: core of webpack&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack-cli&lt;/code&gt;: allow us to use command of webpack on the terminal&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;webpack-dev-server&lt;/code&gt;: can be use to create a &lt;code class=&quot;highlighter-rouge&quot;&gt;local server&lt;/code&gt; for dev environment&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;: core of webpack&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack-cli&lt;/code&gt;: allow us to use command of webpack on the terminal&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack-dev-server&lt;/code&gt;: can be use to create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;local server&lt;/code&gt; for dev environment&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Configuration&lt;/p&gt;
 
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file in the root project and paste the following code.&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file in the root project and paste the following code.&lt;/p&gt;
 
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;agrv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1921,7 +1921,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Script to run server
-Edit script in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file to run and build server.&lt;/p&gt;
+Edit script in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file to run and build server.&lt;/p&gt;
 
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack serve --mode development&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -1931,7 +1931,7 @@ Edit script in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/
     &lt;h3 id=&quot;demo-code&quot;&gt;Demo code&lt;/h3&gt;
     &lt;p&gt;To understand better how webpack works, we will create some simple demo code&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;src&lt;/code&gt; folder in the root of project and a &lt;code class=&quot;highlighter-rouge&quot;&gt;src/add.js&lt;/code&gt; file
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt; folder in the root of project and a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/add.js&lt;/code&gt; file
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//src/add.js&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;treeShaking&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -1999,96 +1999,96 @@ Edit script in &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;yarn build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;h3 id=&quot;explanation&quot;&gt;Explanation&lt;/h3&gt;
-    &lt;h4 id=&quot;configuration-in-webpackconfigjs-file&quot;&gt;Configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file&lt;/h4&gt;
+    &lt;h4 id=&quot;configuration-in-webpackconfigjs-file&quot;&gt;Configuration in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; file&lt;/h4&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Definition&lt;/code&gt;: This is the main configuration webpack file. Webpack configs allow you to configure and extend Webpack’s basic functionality. A Webpack config is a JavaScript object that configures one of Webpack’s options.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Definition&lt;/code&gt;: This is the main configuration webpack file. Webpack configs allow you to configure and extend Webpack’s basic functionality. A Webpack config is a JavaScript object that configures one of Webpack’s options.&lt;/p&gt;
 
-    &lt;p&gt;When we run &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt; command in the &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file, webpack will be take automatically the configuration in this file.&lt;/p&gt;
+    &lt;p&gt;When we run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt; command in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file, webpack will be take automatically the configuration in this file.&lt;/p&gt;
 
     &lt;p&gt;For more information of configuration of webpack &lt;a href=&quot;https://webpack.js.org/configuration/&quot;&gt;webpack configuration&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Exporting&lt;/code&gt;: In the &lt;code class=&quot;highlighter-rouge&quot;&gt;config&lt;/code&gt; file, we can export an &lt;strong&gt;object&lt;/strong&gt;, a &lt;strong&gt;function&lt;/strong&gt;, an &lt;strong&gt;array&lt;/strong&gt; or a &lt;strong&gt;promise&lt;/strong&gt;. In this article, we will see how to export a function, because it allows us to use the arguments passed from outside. Check &lt;a href=&quot;https://webpack.js.org/configuration/configuration-types/&quot;&gt;Webpack configuration type&lt;/a&gt;.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Exporting&lt;/code&gt;: In the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config&lt;/code&gt; file, we can export an &lt;strong&gt;object&lt;/strong&gt;, a &lt;strong&gt;function&lt;/strong&gt;, an &lt;strong&gt;array&lt;/strong&gt; or a &lt;strong&gt;promise&lt;/strong&gt;. In this article, we will see how to export a function, because it allows us to use the arguments passed from outside. Check &lt;a href=&quot;https://webpack.js.org/configuration/configuration-types/&quot;&gt;Webpack configuration type&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Mode&lt;/code&gt;: We need to provide a &lt;strong&gt;mode&lt;/strong&gt; configuration option when configure webpack. Each mode has its own a config settings. Check &lt;a href=&quot;https://webpack.js.org/configuration/mode/&quot;&gt;Webpack mode&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mode&lt;/code&gt;: We need to provide a &lt;strong&gt;mode&lt;/strong&gt; configuration option when configure webpack. Each mode has its own a config settings. Check &lt;a href=&quot;https://webpack.js.org/configuration/mode/&quot;&gt;Webpack mode&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;If you remember, we have used this mode to run 2 different cases for server in the &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file, for the &lt;strong&gt;development&lt;/strong&gt; and &lt;strong&gt;production&lt;/strong&gt; mode.&lt;/p&gt;
+    &lt;p&gt;If you remember, we have used this mode to run 2 different cases for server in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file, for the &lt;strong&gt;development&lt;/strong&gt; and &lt;strong&gt;production&lt;/strong&gt; mode.&lt;/p&gt;
 
     &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;start&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack serve --mode development&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;build&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;webpack --mode production&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
 
-    &lt;p&gt;And in the &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; we can define the mode by using &lt;code class=&quot;highlighter-rouge&quot;&gt;argv.mode&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;And in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack.config.js&lt;/code&gt; we can define the mode by using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;argv.mode&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Entry&lt;/code&gt;: Entry points of your project where you put the main code to run your server. Check &lt;a href=&quot;https://webpack.js.org/concepts/entry-points/&quot;&gt;Webpack entry point&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;module.rules&lt;/code&gt;: Array contains the &lt;code class=&quot;highlighter-rouge&quot;&gt;loaders&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Entry&lt;/code&gt;: Entry points of your project where you put the main code to run your server. Check &lt;a href=&quot;https://webpack.js.org/concepts/entry-points/&quot;&gt;Webpack entry point&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;module.rules&lt;/code&gt;: Array contains the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loaders&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;test&lt;/code&gt;: Using &lt;strong&gt;regex&lt;/strong&gt; to determine the file type. If it is &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; then it will run the loader.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;test&lt;/code&gt;: Using &lt;strong&gt;regex&lt;/strong&gt; to determine the file type. If it is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true&lt;/code&gt; then it will run the loader.&lt;/p&gt;
 
-    &lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt; will run the &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;jsx&lt;/code&gt; file. &lt;code class=&quot;highlighter-rouge&quot;&gt;style-loader&lt;/code&gt; will run &lt;code class=&quot;highlighter-rouge&quot;&gt;sass&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;scss&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt; file.&lt;/p&gt;
+    &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt; will run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;js&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jsx&lt;/code&gt; file. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style-loader&lt;/code&gt; will run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sass&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;scss&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;css&lt;/code&gt; file.&lt;/p&gt;
 
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;file-loader&lt;/code&gt; will run png, svg, jpg, gif… (image and video) file.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-loader&lt;/code&gt; will run png, svg, jpg, gif… (image and video) file.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exclude&lt;/code&gt;: Enter a &lt;strong&gt;regex&lt;/strong&gt;, the &lt;code class=&quot;highlighter-rouge&quot;&gt;loader&lt;/code&gt; will ignore these file and folder.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;use&lt;/code&gt;: Retrieve an object or an array containing loader information.
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exclude&lt;/code&gt;: Enter a &lt;strong&gt;regex&lt;/strong&gt;, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loader&lt;/code&gt; will ignore these file and folder.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;use&lt;/code&gt;: Retrieve an object or an array containing loader information.
     &lt;ul&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: using presets &lt;code class=&quot;highlighter-rouge&quot;&gt;@babel/preset&lt;/code&gt; by default. It will compile to ES5 syntax.&lt;/li&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;: using &lt;strong&gt;sourMap&lt;/strong&gt; to easier debug when dev.&lt;/li&gt;
-      &lt;li&gt;Notice for &lt;code class=&quot;highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: using &lt;code class=&quot;highlighter-rouge&quot;&gt;[path][name].[ext]&lt;/code&gt; means after build, the files will be created with the similar names in similar folder. For example: if you have &lt;code class=&quot;highlighter-rouge&quot;&gt;src/logo.png&lt;/code&gt; file, when you build it, you will have &lt;code class=&quot;highlighter-rouge&quot;&gt;dist/src/logo.png&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;babel-loader&lt;/code&gt;: using presets &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@babel/preset&lt;/code&gt; by default. It will compile to ES5 syntax.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;style-loader&lt;/code&gt;: using &lt;strong&gt;sourMap&lt;/strong&gt; to easier debug when dev.&lt;/li&gt;
+      &lt;li&gt;Notice for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;file-loader&lt;/code&gt;: using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[path][name].[ext]&lt;/code&gt; means after build, the files will be created with the similar names in similar folder. For example: if you have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/logo.png&lt;/code&gt; file, when you build it, you will have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dist/src/logo.png&lt;/code&gt;.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;resolve: { extensions: [‘.js’, ‘.jsx’] }&lt;/code&gt;: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output&lt;/code&gt;: configuration of build file webpack
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;resolve: { extensions: [‘.js’, ‘.jsx’] }&lt;/code&gt;: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output&lt;/code&gt;: configuration of build file webpack
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.path&lt;/code&gt;: the absolute path to the directory after build. For the absolute path, we usually use &lt;code class=&quot;highlighter-rouge&quot;&gt;path.resolve()&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;path.join()&lt;/code&gt; in combination with the global variable &lt;code class=&quot;highlighter-rouge&quot;&gt;__dirname&lt;/code&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.publicPath&lt;/code&gt;: the relative path from the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file pointing to the files in the &lt;strong&gt;dist&lt;/strong&gt; directory after build.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.path&lt;/code&gt;: the absolute path to the directory after build. For the absolute path, we usually use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path.resolve()&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path.join()&lt;/code&gt; in combination with the global variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;__dirname&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.publicPath&lt;/code&gt;: the relative path from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file pointing to the files in the &lt;strong&gt;dist&lt;/strong&gt; directory after build.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;For example: in the file &lt;code class=&quot;highlighter-rouge&quot;&gt;loadImage.js&lt;/code&gt;, we import logo, the logo variable will be become: &lt;code class=&quot;highlighter-rouge&quot;&gt;output.publicPath + 'src/logo.png&lt;/code&gt;. If after the build, we run the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file in a different location not in &lt;strong&gt;the public directory&lt;/strong&gt;, we will accidentally make the logo variable wrong.&lt;/p&gt;
+    &lt;p&gt;For example: in the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;loadImage.js&lt;/code&gt;, we import logo, the logo variable will be become: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.publicPath + 'src/logo.png&lt;/code&gt;. If after the build, we run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file in a different location not in &lt;strong&gt;the public directory&lt;/strong&gt;, we will accidentally make the logo variable wrong.&lt;/p&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.filename&lt;/code&gt;: filename of js bundle after build&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the &lt;code class=&quot;highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.filename&lt;/code&gt;: filename of js bundle after build&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;output.environment&lt;/code&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;strong&gt;arrowFunction&lt;/strong&gt;: support arrow function.&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;bigIntLiteral&lt;/strong&gt;: support BigInt&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;const&lt;/strong&gt;: support declaration &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; và &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;const&lt;/strong&gt;: support declaration &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; và &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt;&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;destructuring&lt;/strong&gt;: support destructuring&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;dynamicImport&lt;/strong&gt;: support async import&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;forOf&lt;/strong&gt;: support &lt;code class=&quot;highlighter-rouge&quot;&gt;forOf&lt;/code&gt; for array&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;forOf&lt;/strong&gt;: support &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;forOf&lt;/code&gt; for array&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;module&lt;/strong&gt;: support moudle ES6 (import … from ‘…’)&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;devtool&lt;/code&gt;: contains the configuration file after dev or after build. When you in the dev step, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;source-map&lt;/code&gt; to debug more simply. But we don’t use it in the production to reduce the volume of file when build.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;devtool&lt;/code&gt;: contains the configuration file after dev or after build. When you in the dev step, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source-map&lt;/code&gt; to debug more simply. But we don’t use it in the production to reduce the volume of file when build.&lt;/p&gt;
 
     &lt;p&gt;Check &lt;a href=&quot;https://webpack.js.org/configuration/devtool/&quot;&gt;Devtool Webpack&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;devServer&lt;/code&gt;: You can imagine, it will create a server &lt;strong&gt;localhost&lt;/strong&gt; at the root folder
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;devServer&lt;/code&gt;: You can imagine, it will create a server &lt;strong&gt;localhost&lt;/strong&gt; at the root folder
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.contentBase&lt;/strong&gt;: the path directory where contains &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file. Here is &lt;code class=&quot;highlighter-rouge&quot;&gt;public&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.contentBase&lt;/strong&gt;: the path directory where contains &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; file. Here is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public&lt;/code&gt;&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;devServer.port&lt;/strong&gt;: port of localhost&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.hot&lt;/strong&gt;: The mode &lt;code class=&quot;highlighter-rouge&quot;&gt;hot reload&lt;/code&gt;. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The &lt;code class=&quot;highlighter-rouge&quot;&gt;hot reload&lt;/code&gt; helps use to see the change but don’t need reload page.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.publicPath&lt;/strong&gt;: the relative path from root directory pointing to the build directory. Here is &lt;code class=&quot;highlighter-rouge&quot;&gt;/dist/&lt;/code&gt; –&amp;gt; / is root folder&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;devServer.watchContentBase&lt;/strong&gt;: If you have the change in the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, browser will reload automatically.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.hot&lt;/strong&gt;: The mode &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hot reload&lt;/code&gt;. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hot reload&lt;/code&gt; helps use to see the change but don’t need reload page.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.publicPath&lt;/strong&gt;: the relative path from root directory pointing to the build directory. Here is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dist/&lt;/code&gt; –&amp;gt; / is root folder&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;devServer.watchContentBase&lt;/strong&gt;: If you have the change in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt;, browser will reload automatically.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;tree-shaking-in-webpack&quot;&gt;Tree Shaking in Webpack&lt;/h4&gt;
 
-&lt;p&gt;If you pay attention, in the &lt;code class=&quot;highlighter-rouge&quot;&gt;src/add.js&lt;/code&gt; file, we added a function &lt;code class=&quot;highlighter-rouge&quot;&gt;treeShaking&lt;/code&gt;. This function is exported but we did not use it anywhere in project. So webpack will not use this function and you cant find it in the build file.&lt;/p&gt;
+&lt;p&gt;If you pay attention, in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src/add.js&lt;/code&gt; file, we added a function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;treeShaking&lt;/code&gt;. This function is exported but we did not use it anywhere in project. So webpack will not use this function and you cant find it in the build file.&lt;/p&gt;
 
 &lt;p&gt;This is a called the &lt;a href=&quot;https://webpack.js.org/guides/tree-shaking/&quot;&gt;tree shaking&lt;/a&gt; feature to help us to reduce unused module export.&lt;/p&gt;
 
 &lt;p&gt;But this feature only works with code using &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&quot;&gt;ES Module syntax &lt;/a&gt; (&lt;strong&gt;import export …&lt;/strong&gt;)&lt;/p&gt;
 
-&lt;p&gt;A typical example is the &lt;a href=&quot;https://lodash.com/&quot;&gt;lodash&lt;/a&gt; library. If you &lt;code class=&quot;highlighter-rouge&quot;&gt;import {get} from 'lodash'&lt;/code&gt;, webpack won’t tree shake. It will still import a huge lodash library to your bundle file. There are no different from : &lt;code class=&quot;highlighter-rouge&quot;&gt;import _ from 'lodash'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;A typical example is the &lt;a href=&quot;https://lodash.com/&quot;&gt;lodash&lt;/a&gt; library. If you &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import {get} from 'lodash'&lt;/code&gt;, webpack won’t tree shake. It will still import a huge lodash library to your bundle file. There are no different from : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import _ from 'lodash'&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;To fix this problem, we can use the syntax &lt;code class=&quot;highlighter-rouge&quot;&gt;import get from 'lodash/get&lt;/code&gt;. Or simply use the &lt;a href=&quot;https://www.npmjs.com/package/lodash-es&quot;&gt;lodash es&lt;/a&gt; library.&lt;/p&gt;
+&lt;p&gt;To fix this problem, we can use the syntax &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import get from 'lodash/get&lt;/code&gt;. Or simply use the &lt;a href=&quot;https://www.npmjs.com/package/lodash-es&quot;&gt;lodash es&lt;/a&gt; library.&lt;/p&gt;
 
 &lt;p&gt;For more detail &lt;a href=&quot;https://webpack.js.org/guides/tree-shaking/&quot;&gt;Tree Shaking Webpack&lt;/a&gt;&lt;/p&gt;
 
@@ -2465,13 +2465,13 @@ Template literals in JavaScript let you replace ${} placeholders with values ins
 &lt;h2 id=&quot;loops-and-iteration&quot;&gt;Loops and Iteration&lt;/h2&gt;
 &lt;p&gt;Lastly, Python has a while loop, which looks and works almost the same as its JavaScript counterpart:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Python
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Python
 password = input(&quot;Enter the secret password: &quot;)
 while password != 'sesame':
     password = input(&quot;Invalid password. Try again: &quot;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// JavaScript
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// JavaScript
 let password = prompt(&quot;Enter the secret password:&quot;);
 while (password !== 'sesame') {
   password = prompt(&quot;Invalid password. Try again: &quot;);
@@ -2567,7 +2567,7 @@ while (password !== 'sesame') {
 &lt;h2 id=&quot;lambda-literal--&quot;&gt;Lambda Literal -&amp;gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;word-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Lambda Literal is a anonymous function like lambda in python, &lt;code class=&quot;highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; in JS or C#, allows you to create lambda easily.&lt;/p&gt;
+&lt;p&gt;Lambda Literal is a anonymous function like lambda in python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; in JS or C#, allows you to create lambda easily.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
@@ -2587,7 +2587,7 @@ while (password !== 'sesame') {
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is a regular parameter. &lt;code class=&quot;highlighter-rouge&quot;&gt;*b&lt;/code&gt; will take all the parameters passed after the first one and put them in an array. &lt;code class=&quot;highlighter-rouge&quot;&gt;**c&lt;/code&gt; will take any parameter given in the format key: value at the end of the method call.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; is a regular parameter. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*b&lt;/code&gt; will take all the parameters passed after the first one and put them in an array. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**c&lt;/code&gt; will take any parameter given in the format key: value at the end of the method call.&lt;/p&gt;
 
 &lt;p&gt;See the following examples:&lt;/p&gt;
 
@@ -2607,14 +2607,14 @@ while (password !== 'sesame') {
 &lt;h2 id=&quot;handle-single-object-and-array-in-the-same-way&quot;&gt;Handle single object and array in the same way&lt;/h2&gt;
 &lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;format-decimal&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Sometimes you might want to give the option to either accept a single object or an array of objects. Instead of checking for the type of object you’ve received, you could use &lt;code class=&quot;highlighter-rouge&quot;&gt;[*something] or Array(something)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Sometimes you might want to give the option to either accept a single object or an array of objects. Instead of checking for the type of object you’ve received, you could use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[*something] or Array(something)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s assign two variables. The first one is a single digit and the second one is an array of digits.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;stuff_arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;In the following example, I use &lt;code class=&quot;highlighter-rouge&quot;&gt;[*...]&lt;/code&gt; to loop through whatever is give&lt;/p&gt;
+&lt;p&gt;In the following example, I use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[*...]&lt;/code&gt; to loop through whatever is give&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -2968,7 +2968,7 @@ c.foo
 
 &lt;p&gt;Why we don’t install directly the version rails 6.0?&lt;/p&gt;
 
-&lt;p&gt;And he said: “One word: &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
+&lt;p&gt;And he said: “One word: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
 
 &lt;p&gt;I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you’re still OK on Rails 5 (especially 5.2 or higher)&lt;/p&gt;
@@ -2981,7 +2981,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;As you probably already know, the way of implementing tests is very important. We try to implement as many suitable tests as we can. It’s great news for us as more tests will no longer have that much of an impact on the execution time. (Stay tuned for our guide on how to write great tests in Rails!)&lt;/p&gt;
 
-&lt;p&gt;“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in &lt;code class=&quot;highlighter-rouge&quot;&gt;rails_helper.rb&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails_helper.rb&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;native-webpacker-support&quot;&gt;Native Webpacker Support&lt;/h2&gt;
 
@@ -3001,7 +3001,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h2 id=&quot;zeitwerk&quot;&gt;Zeitwerk&lt;/h2&gt;
 
-&lt;p&gt;With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.&lt;/p&gt;
+&lt;p&gt;With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require&lt;/code&gt; calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.&lt;/p&gt;
 
 &lt;p&gt;Still curious for more? You can find more new stuff over at &lt;a href=&quot;https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/&quot;&gt;rubyonrails.org&lt;/a&gt;.&lt;/p&gt;
 

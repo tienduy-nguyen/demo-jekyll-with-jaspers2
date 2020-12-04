@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
-  <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-11-24T19:29:35+01:00</updated>
+  <updated>2020-12-04T13:32:29+01:00</updated>
   <id>/tag/ruby/feed.xml</id>
 
   
@@ -54,7 +54,7 @@
 &lt;h2 id=&quot;lambda-literal--&quot;&gt;Lambda Literal -&amp;gt;&lt;/h2&gt;
 &lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;word-array&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Lambda Literal is a anonymous function like lambda in python, &lt;code class=&quot;highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; in JS or C#, allows you to create lambda easily.&lt;/p&gt;
+&lt;p&gt;Lambda Literal is a anonymous function like lambda in python, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;=&amp;gt;&lt;/code&gt; in JS or C#, allows you to create lambda easily.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;call&lt;/span&gt;
@@ -74,7 +74,7 @@
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt; is a regular parameter. &lt;code class=&quot;highlighter-rouge&quot;&gt;*b&lt;/code&gt; will take all the parameters passed after the first one and put them in an array. &lt;code class=&quot;highlighter-rouge&quot;&gt;**c&lt;/code&gt; will take any parameter given in the format key: value at the end of the method call.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; is a regular parameter. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*b&lt;/code&gt; will take all the parameters passed after the first one and put them in an array. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;**c&lt;/code&gt; will take any parameter given in the format key: value at the end of the method call.&lt;/p&gt;
 
 &lt;p&gt;See the following examples:&lt;/p&gt;
 
@@ -94,14 +94,14 @@
 &lt;h2 id=&quot;handle-single-object-and-array-in-the-same-way&quot;&gt;Handle single object and array in the same way&lt;/h2&gt;
 &lt;p&gt;&lt;a style=&quot;padding:0px, margin:0px&quot; name=&quot;format-decimal&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Sometimes you might want to give the option to either accept a single object or an array of objects. Instead of checking for the type of object you’ve received, you could use &lt;code class=&quot;highlighter-rouge&quot;&gt;[*something] or Array(something)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Sometimes you might want to give the option to either accept a single object or an array of objects. Instead of checking for the type of object you’ve received, you could use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[*something] or Array(something)&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Let’s assign two variables. The first one is a single digit and the second one is an array of digits.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;stuff_arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;In the following example, I use &lt;code class=&quot;highlighter-rouge&quot;&gt;[*...]&lt;/code&gt; to loop through whatever is give&lt;/p&gt;
+&lt;p&gt;In the following example, I use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[*...]&lt;/code&gt; to loop through whatever is give&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stuff_arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
@@ -455,7 +455,7 @@ c.foo
 
 &lt;p&gt;Why we don’t install directly the version rails 6.0?&lt;/p&gt;
 
-&lt;p&gt;And he said: “One word: &lt;code class=&quot;highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
+&lt;p&gt;And he said: “One word: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;webpack&lt;/code&gt;. I always don’t understand so much for the “webpack”, and I need to search more on the internet. And with this article (this is not mine), we will know some advantages and new features of rails 6 .&lt;/p&gt;
 
 &lt;p&gt;I hear that: Rails 5 is still just fine
 Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiving regular security updates; so you’re still OK on Rails 5 (especially 5.2 or higher)&lt;/p&gt;
@@ -468,7 +468,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;As you probably already know, the way of implementing tests is very important. We try to implement as many suitable tests as we can. It’s great news for us as more tests will no longer have that much of an impact on the execution time. (Stay tuned for our guide on how to write great tests in Rails!)&lt;/p&gt;
 
-&lt;p&gt;“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in &lt;code class=&quot;highlighter-rouge&quot;&gt;rails_helper.rb&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;“The default number [of workers running in parallel] is the actual core count on the machine you are on, but can be changed by the number passed to the parallelize method.” To enable executing tests parallel just set the number of workers in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails_helper.rb&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;native-webpacker-support&quot;&gt;Native Webpacker Support&lt;/h2&gt;
 
@@ -488,7 +488,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h2 id=&quot;zeitwerk&quot;&gt;Zeitwerk&lt;/h2&gt;
 
-&lt;p&gt;With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.&lt;/p&gt;
+&lt;p&gt;With this version of Rails a new code loader was introduced - Zeitwerk. It promises to load your project’s classes and modules on demand, no need to write &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require&lt;/code&gt; calls. Zeitwerk uses absolute file names making the loader more efficient. Your classes and modules are available everywhere. The team behind the loader claims that it is thread-safe and matches Ruby’s semantics for constants.&lt;/p&gt;
 
 &lt;p&gt;Still curious for more? You can find more new stuff over at &lt;a href=&quot;https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/&quot;&gt;rubyonrails.org&lt;/a&gt;.&lt;/p&gt;
 
@@ -546,9 +546,9 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h2 id=&quot;installation-rails&quot;&gt;Installation rails&lt;/h2&gt;
 
-&lt;p&gt;Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and I will use it for this tuto.&lt;/p&gt;
+&lt;p&gt;Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and I will use it for this tuto.&lt;/p&gt;
 
-&lt;p&gt;If you are using another ruby package manager like &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt;, you should look at &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and its advantage. &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is more lighter and faster than the &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is very recommended by a a lot of developers.&lt;/p&gt;
+&lt;p&gt;If you are using another ruby package manager like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rvm&lt;/code&gt;, you should look at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; and its advantage. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is more lighter and faster than the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rvm&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv&lt;/code&gt; is very recommended by a a lot of developers.&lt;/p&gt;
 
 &lt;p&gt;There is an article on &lt;a href=&quot;https://dev.to/&quot;&gt;dev.to&lt;/a&gt; help you understand more clearly: &lt;a href=&quot;https://dev.to/krtb/why-and-how-i-replaced-rvm-with-rbenv-23ad&quot;&gt;Why and How I Replaced RVM with RBENV&lt;/a&gt;.&lt;/p&gt;
 
@@ -556,23 +556,23 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;To install whatever version(s) of rails you want:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem install rails -v 6.0.3.2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install rails -v 6.0.3.2&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;To know all rails versions released, you check out on &lt;a href=&quot;https://rubygems.org/gems/rails/versions&quot;&gt;all rails versions&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You can also do it with your terminal with the command line &lt;code class=&quot;highlighter-rouge&quot;&gt;gem list rails --remote --all | grep &quot;^rails &quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can also do it with your terminal with the command line &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem list rails --remote --all | grep &quot;^rails &quot;&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;I you want to install rails on another version of ruby, you need to switch version of ruby and re-install version of rails.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv install 2.5.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv install 2.5.1&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv global 2.5.1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv global 2.5.1&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;You can check list gems to see if you installed succesfullly:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem list --local&lt;/code&gt; # result: rails(5.2.4.2,5.2.3)&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem list --local&lt;/code&gt; # result: rails(5.2.4.2,5.2.3)&lt;/p&gt;
 
-&lt;p&gt;now you tap &lt;code class=&quot;highlighter-rouge&quot;&gt;rails version&lt;/code&gt; to see the current version of rails using, but it shows only&lt;/p&gt;
+&lt;p&gt;now you tap &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails version&lt;/code&gt; to see the current version of rails using, but it shows only&lt;/p&gt;
 
 &lt;p&gt;When you install multi version of rails on your machine, it will always take the lastest version of rails. So the question is how can create a new project rails with the version wanted?&lt;/p&gt;
 
@@ -581,7 +581,7 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 &lt;p&gt;I founded two ways to solve it:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Using ruby package manager(rbenv)&lt;/li&gt;
-  &lt;li&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;gem bundler&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem bundler&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;using-ruby-package-manager-rbenv&quot;&gt;Using ruby package manager (rbenv)&lt;/h3&gt;
@@ -593,9 +593,9 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;p&gt;if i want to create a project with rails 5.2.4.2&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rbenv exec rails _5.2.4.2_ new my_project&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rbenv exec rails _5.2.4.2_ new my_project&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;You can check the version of rails in the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; when the new app has been created:&lt;/p&gt;
+&lt;p&gt;You can check the version of rails in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt; when the new app has been created:&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.7.1'&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'&lt;/span&gt;
@@ -604,9 +604,9 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 
 &lt;h3 id=&quot;using-bundler&quot;&gt;Using bundler&lt;/h3&gt;
 
-&lt;p&gt;The second way is using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundler&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The second way is using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundler&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;You just do like another gem dependencies. That means you will specify version of rails in your &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You just do like another gem dependencies. That means you will specify version of rails in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;for example:&lt;/p&gt;
 
@@ -615,11 +615,11 @@ Rails 5.0.Z is still on the severe patches list, and Rails 5.2.Z is still receiv
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Very simple, isn’t it?&lt;/p&gt;
 
-&lt;p&gt;Make sure you don’t forget &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install all the dependencies from your Gemfile.&lt;/p&gt;
+&lt;p&gt;Make sure you don’t forget &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; to install all the dependencies from your Gemfile.&lt;/p&gt;
 
 &lt;p&gt;And then, what we need to do, just finish with:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rails new new_app&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rails new new_app&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;So that is two ways I used. I hope it will be helpful for you.&lt;/p&gt;</content>
 

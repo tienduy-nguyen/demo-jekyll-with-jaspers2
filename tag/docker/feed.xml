@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
-  <generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="/tag/docker/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" />
-  <updated>2020-11-24T19:29:35+01:00</updated>
+  <updated>2020-12-04T13:32:29+01:00</updated>
   <id>/tag/docker/feed.xml</id>
 
   
@@ -49,9 +49,9 @@
 
 &lt;p&gt;With the docker-cli, we can run and execute the Docker container via &lt;a href=&quot;https://docs.docker.com/engine/reference/builder/#:~:text=A%20Dockerfile%20is%20a%20text,can%20use%20in%20a%20Dockerfile%20.&quot;&gt;Dockerfile&lt;/a&gt;. But with Dockerfile, we can work only with a container, but in the project, we normally work with multiple containers. In that case, we need to use &lt;strong&gt;Docker compose&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt; define the services that make up your app in &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; so they can be run together in an isolated environment. It get an app running in one command by just running &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker Compose&lt;/strong&gt; define the services that make up your app in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; so they can be run together in an isolated environment. It get an app running in one command by just running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose up&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; if one add the build command to your project’s &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;. Your Docker workflow should be to build a suitable &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; for each image you wish to create, then use compose to assemble the images using the build command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; uses the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; if one add the build command to your project’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt;. Your Docker workflow should be to build a suitable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; for each image you wish to create, then use compose to assemble the images using the build command.&lt;/p&gt;
 
 &lt;p&gt;We will create a demo: simple app nodejs using Redis. You will see the problem with only &lt;strong&gt;Dockerfile&lt;/strong&gt; and why use &lt;strong&gt;Docker compose&lt;/strong&gt;.&lt;/p&gt;
 
@@ -73,7 +73,7 @@
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file&lt;/p&gt;
 
     &lt;p&gt;In this file, we will declare the dependencies we use for our application. This step is similar as you create the Nodejs application (without &lt;strong&gt;npm install&lt;/strong&gt; or &lt;strong&gt;yarn add&lt;/strong&gt; dependencies).&lt;/p&gt;
 
@@ -99,7 +99,7 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file to config &lt;code class=&quot;highlighter-rouge&quot;&gt;express&lt;/code&gt; and run server
+  &lt;li&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file to config &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt; and run server
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//index.js&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;redis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -146,7 +146,7 @@
     &lt;p&gt;You can also check an article on my blog for more information of Dockerfile: &lt;a href=&quot;https://blog.adev42.com/create-simple-project-nodejs-with-docker&quot;&gt;Create simple project Nodejs with Docker&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt;&lt;/p&gt;
 
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;node_modules&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;npm-debug.log&lt;/span&gt;
@@ -208,7 +208,7 @@ The answer is &lt;strong&gt;Docker compose&lt;/strong&gt;. In this case, we need
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;To make sure the project above running, we need simply create a &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file.
+    &lt;p&gt;To make sure the project above running, we need simply create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file.
 It is a config file for docker-compose. It allows us to define the services (container) using in our app.&lt;/p&gt;
 
     &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compose.yml&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
@@ -231,7 +231,7 @@ It is a config file for docker-compose. It allows us to define the services (con
     &lt;p&gt;Check &lt;a href=&quot;https://docs.docker.com/compose/gettingstarted/&quot;&gt;docker compose&lt;/a&gt; for more details about configuration.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Update redis services to &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file&lt;/p&gt;
+    &lt;p&gt;Update redis services to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file&lt;/p&gt;
 
     &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// index.js&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -293,8 +293,8 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;ul&gt;
   &lt;li&gt;Separate CLI that gets installed along with Docker&lt;/li&gt;
   &lt;li&gt;Used to startup multiple Docker containers at the same time&lt;/li&gt;
-  &lt;li&gt;Automate some of the long-winded arguments we were passing to &lt;code class=&quot;highlighter-rouge&quot;&gt;docker run&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; will start and connect all the containers Docker that you declare in the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file. We will use it usually when we work with Docker.&lt;/li&gt;
+  &lt;li&gt;Automate some of the long-winded arguments we were passing to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Docker compose&lt;/strong&gt; will start and connect all the containers Docker that you declare in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker-compose.yml&lt;/code&gt; file. We will use it usually when we work with Docker.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
@@ -358,7 +358,7 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mkdir&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;simple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodejs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;simple&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodejs&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;init-packagejson&quot;&gt;Init &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;init-packagejson&quot;&gt;Init &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yarn&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -381,8 +381,8 @@ It is a config file for docker-compose. It allows us to define the services (con
     &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;create-indexjs-file-in-root-project&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file (in root project)&lt;/h3&gt;
-&lt;p&gt;Add the following code to run server nodejs with &lt;code class=&quot;highlighter-rouge&quot;&gt;express&lt;/code&gt; framework.&lt;/p&gt;
+&lt;h3 id=&quot;create-indexjs-file-in-root-project&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.js&lt;/code&gt; file (in root project)&lt;/h3&gt;
+&lt;p&gt;Add the following code to run server nodejs with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;express&lt;/code&gt; framework.&lt;/p&gt;
 
 &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -399,7 +399,7 @@ It is a config file for docker-compose. It allows us to define the services (con
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;create-dockerfile&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;create-dockerfile&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt;&lt;/h3&gt;
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;touch&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dockerfile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -433,15 +433,15 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;span class=&quot;s&quot;&gt;COPY . .&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Your app binds to port &lt;code class=&quot;highlighter-rouge&quot;&gt;8080&lt;/code&gt; so you’ll use the &lt;code class=&quot;highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; instruction to have it mapped by the docker daemon:
+  &lt;li&gt;Your app binds to port &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8080&lt;/code&gt; so you’ll use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EXPOSE&lt;/code&gt; instruction to have it mapped by the docker daemon:
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;EXPOSE &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Last but not least, define the command to run your app using CMD which defines your runtime. Here we will use &lt;code class=&quot;highlighter-rouge&quot;&gt;node index.js&lt;/code&gt; to start your server as write in scripts of &lt;code class=&quot;highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.
+  &lt;li&gt;Last but not least, define the command to run your app using CMD which defines your runtime. Here we will use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;node index.js&lt;/code&gt; to start your server as write in scripts of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;package.json&lt;/code&gt; file.
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;CMD [&quot;yarn&quot;, &quot;dev&quot;]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Your &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; should now look like this:
+  &lt;li&gt;Your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; should now look like this:
     &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;c1&quot;&gt;# Specify a base image&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;FROM node:12.18.1&lt;/span&gt;
 
@@ -469,12 +469,12 @@ It is a config file for docker-compose. It allows us to define the services (con
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;create-dockerignore-file-with-the-following-content&quot;&gt;Create &lt;code class=&quot;highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt; file with the following content:&lt;/h3&gt;
+&lt;h3 id=&quot;create-dockerignore-file-with-the-following-content&quot;&gt;Create &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.dockerignore&lt;/code&gt; file with the following content:&lt;/h3&gt;
 &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;s&quot;&gt;node_modules&lt;/span&gt;
   &lt;span class=&quot;s&quot;&gt;npm-debug.log&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;h3 id=&quot;build-your-image&quot;&gt;Build your image&lt;/h3&gt;
-&lt;p&gt;Go to the directory that has your &lt;code class=&quot;highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; and run the following command to build the Docker image. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-t&lt;/code&gt; flag lets you tag your image so it’s easier to find later using the &lt;code class=&quot;highlighter-rouge&quot;&gt;docker images&lt;/code&gt; command:&lt;/p&gt;
+&lt;p&gt;Go to the directory that has your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Dockerfile&lt;/code&gt; and run the following command to build the Docker image. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t&lt;/code&gt; flag lets you tag your image so it’s easier to find later using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker images&lt;/code&gt; command:&lt;/p&gt;
 
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -488,7 +488,7 @@ It is a config file for docker-compose. It allows us to define the services (con
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;run-the-image&quot;&gt;Run the image&lt;/h3&gt;
-&lt;p&gt;Running your image with &lt;code class=&quot;highlighter-rouge&quot;&gt;-d&lt;/code&gt; runs the container in detached mode, leaving the container running in the background. The &lt;code class=&quot;highlighter-rouge&quot;&gt;-p&lt;/code&gt; flag redirects a public port to a private port inside the container. Run the image you previously built:&lt;/p&gt;
+&lt;p&gt;Running your image with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-d&lt;/code&gt; runs the container in detached mode, leaving the container running in the background. The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-p&lt;/code&gt; flag redirects a public port to a private port inside the container. Run the image you previously built:&lt;/p&gt;
 
 &lt;div class=&quot;language-s highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;m&quot;&gt;49160&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;docker&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

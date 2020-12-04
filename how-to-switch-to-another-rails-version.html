@@ -237,9 +237,9 @@ into the {body} of the default.hbs template -->
 
 <h2 id="installation-rails">Installation rails</h2>
 
-<p>Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is <code class="highlighter-rouge">rbenv</code> and I will use it for this tuto.</p>
+<p>Before I talk about how to switch a version of rails, I will go quickly how to install the different versions of rails. The ruby package manager that I’am using is <code class="language-plaintext highlighter-rouge">rbenv</code> and I will use it for this tuto.</p>
 
-<p>If you are using another ruby package manager like <code class="highlighter-rouge">rvm</code>, you should look at <code class="highlighter-rouge">rbenv</code> and its advantage. <code class="highlighter-rouge">rbenv</code> is more lighter and faster than the <code class="highlighter-rouge">rvm</code> and <code class="highlighter-rouge">rbenv</code> is very recommended by a a lot of developers.</p>
+<p>If you are using another ruby package manager like <code class="language-plaintext highlighter-rouge">rvm</code>, you should look at <code class="language-plaintext highlighter-rouge">rbenv</code> and its advantage. <code class="language-plaintext highlighter-rouge">rbenv</code> is more lighter and faster than the <code class="language-plaintext highlighter-rouge">rvm</code> and <code class="language-plaintext highlighter-rouge">rbenv</code> is very recommended by a a lot of developers.</p>
 
 <p>There is an article on <a href="https://dev.to/">dev.to</a> help you understand more clearly: <a href="https://dev.to/krtb/why-and-how-i-replaced-rvm-with-rbenv-23ad">Why and How I Replaced RVM with RBENV</a>.</p>
 
@@ -247,23 +247,23 @@ into the {body} of the default.hbs template -->
 
 <p>To install whatever version(s) of rails you want:</p>
 
-<p><code class="highlighter-rouge">gem install rails -v 6.0.3.2</code></p>
+<p><code class="language-plaintext highlighter-rouge">gem install rails -v 6.0.3.2</code></p>
 
 <p>To know all rails versions released, you check out on <a href="https://rubygems.org/gems/rails/versions">all rails versions</a>.</p>
 
-<p>You can also do it with your terminal with the command line <code class="highlighter-rouge">gem list rails --remote --all | grep "^rails "</code>.</p>
+<p>You can also do it with your terminal with the command line <code class="language-plaintext highlighter-rouge">gem list rails --remote --all | grep "^rails "</code>.</p>
 
 <p>I you want to install rails on another version of ruby, you need to switch version of ruby and re-install version of rails.</p>
 
-<p><code class="highlighter-rouge">rbenv install 2.5.1</code></p>
+<p><code class="language-plaintext highlighter-rouge">rbenv install 2.5.1</code></p>
 
-<p><code class="highlighter-rouge">rbenv global 2.5.1</code></p>
+<p><code class="language-plaintext highlighter-rouge">rbenv global 2.5.1</code></p>
 
 <p>You can check list gems to see if you installed succesfullly:</p>
 
-<p><code class="highlighter-rouge">gem list --local</code> # result: rails(5.2.4.2,5.2.3)</p>
+<p><code class="language-plaintext highlighter-rouge">gem list --local</code> # result: rails(5.2.4.2,5.2.3)</p>
 
-<p>now you tap <code class="highlighter-rouge">rails version</code> to see the current version of rails using, but it shows only</p>
+<p>now you tap <code class="language-plaintext highlighter-rouge">rails version</code> to see the current version of rails using, but it shows only</p>
 
 <p>When you install multi version of rails on your machine, it will always take the lastest version of rails. So the question is how can create a new project rails with the version wanted?</p>
 
@@ -272,7 +272,7 @@ into the {body} of the default.hbs template -->
 <p>I founded two ways to solve it:</p>
 <ul>
   <li>Using ruby package manager(rbenv)</li>
-  <li>Using <code class="highlighter-rouge">gem bundler</code></li>
+  <li>Using <code class="language-plaintext highlighter-rouge">gem bundler</code></li>
 </ul>
 
 <h3 id="using-ruby-package-manager-rbenv">Using ruby package manager (rbenv)</h3>
@@ -284,9 +284,9 @@ into the {body} of the default.hbs template -->
 
 <p>if i want to create a project with rails 5.2.4.2</p>
 
-<p><code class="highlighter-rouge">rbenv exec rails _5.2.4.2_ new my_project</code></p>
+<p><code class="language-plaintext highlighter-rouge">rbenv exec rails _5.2.4.2_ new my_project</code></p>
 
-<p>You can check the version of rails in the <code class="highlighter-rouge">Gemfile</code> when the new app has been created:</p>
+<p>You can check the version of rails in the <code class="language-plaintext highlighter-rouge">Gemfile</code> when the new app has been created:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ruby</span> <span class="s1">'2.7.1'</span>
 <span class="c1"># Bundle edge Rails instead: gem 'rails', github: 'rails/rails'</span>
@@ -295,9 +295,9 @@ into the {body} of the default.hbs template -->
 
 <h3 id="using-bundler">Using bundler</h3>
 
-<p>The second way is using <code class="highlighter-rouge">bundler</code>.</p>
+<p>The second way is using <code class="language-plaintext highlighter-rouge">bundler</code>.</p>
 
-<p>You just do like another gem dependencies. That means you will specify version of rails in your <code class="highlighter-rouge">Gemfile</code>.</p>
+<p>You just do like another gem dependencies. That means you will specify version of rails in your <code class="language-plaintext highlighter-rouge">Gemfile</code>.</p>
 
 <p>for example:</p>
 
@@ -306,11 +306,11 @@ into the {body} of the default.hbs template -->
 </code></pre></div></div>
 <p>Very simple, isn’t it?</p>
 
-<p>Make sure you don’t forget <code class="highlighter-rouge">bundle install</code> to install all the dependencies from your Gemfile.</p>
+<p>Make sure you don’t forget <code class="language-plaintext highlighter-rouge">bundle install</code> to install all the dependencies from your Gemfile.</p>
 
 <p>And then, what we need to do, just finish with:</p>
 
-<p><code class="highlighter-rouge">rails new new_app</code></p>
+<p><code class="language-plaintext highlighter-rouge">rails new new_app</code></p>
 
 <p>So that is two ways I used. I hope it will be helpful for you.</p>
 
@@ -377,6 +377,33 @@ into the {body} of the default.hbs template -->
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/how-to-switch-to-another-rails-version", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -694,17 +721,22 @@ into the {body} of the default.hbs template -->
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

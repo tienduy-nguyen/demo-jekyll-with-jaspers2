@@ -255,13 +255,13 @@ into the {body} of the default.hbs template -->
   <li><a href="#create-project-files">Create project files</a></li>
   <li><a href="#configuration">Configuration</a>
     <ul>
-      <li><a href="#tsconfigjson"><code class="highlighter-rouge">tsconfig.json</code></a>
+      <li><a href="#tsconfigjson"><code class="language-plaintext highlighter-rouge">tsconfig.json</code></a>
         <ul>
           <li><a href="#code">Code</a></li>
           <li><a href="#explanation">Explanation</a></li>
         </ul>
       </li>
-      <li><a href="#webpackconfigjs"><code class="highlighter-rouge">webpack.config.js</code></a>
+      <li><a href="#webpackconfigjs"><code class="language-plaintext highlighter-rouge">webpack.config.js</code></a>
         <ul>
           <li><a href="#code-1">Code</a></li>
           <li><a href="#explanation-1">Explanation</a></li>
@@ -291,18 +291,18 @@ into the {body} of the default.hbs template -->
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add html-webpack-plugin <span class="nt">-D</span>
 </code></pre></div>    </div>
 
-    <p>This plugin will help use import automatically the new <code class="highlighter-rouge">bundle.js</code> file after build into <code class="highlighter-rouge">index.html</code> build file. You will see more explanation below.</p>
+    <p>This plugin will help use import automatically the new <code class="language-plaintext highlighter-rouge">bundle.js</code> file after build into <code class="language-plaintext highlighter-rouge">index.html</code> build file. You will see more explanation below.</p>
   </li>
   <li>
     <p>Install TypeScript
 <a href="https://www.typescriptlang.org/">TypeScript</a> extends JavaScript by adding types. By understanding JavaScript, TypeScript saves you time catching errors, debug adn providing fixes before you run code. Any browser, any OS, anywhere JavaScript runs.</p>
 
-    <p>We can use TypeScript to compile to the compatible JavaScript version, so we don’t need use <code class="highlighter-rouge">babel</code> in this case.</p>
+    <p>We can use TypeScript to compile to the compatible JavaScript version, so we don’t need use <code class="language-plaintext highlighter-rouge">babel</code> in this case.</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add typescript ts-loader <span class="nt">-D</span>
 </code></pre></div>    </div>
     <ul>
-      <li><strong>typescript</strong>: install TypeScript language for your project. You can also install TypeScript on your machine as <code class="highlighter-rouge">Nodejs</code>, <code class="highlighter-rouge">Python</code> and the other programming languages with command: <code class="highlighter-rouge">yarn add global typescript</code>.</li>
+      <li><strong>typescript</strong>: install TypeScript language for your project. You can also install TypeScript on your machine as <code class="language-plaintext highlighter-rouge">Nodejs</code>, <code class="language-plaintext highlighter-rouge">Python</code> and the other programming languages with command: <code class="language-plaintext highlighter-rouge">yarn add global typescript</code>.</li>
       <li><strong>ts-loader</strong>: allow integrate TypeScript to webpack</li>
     </ul>
   </li>
@@ -314,7 +314,7 @@ into the {body} of the default.hbs template -->
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">public/index.html</code> file</p>
+    <p><code class="language-plaintext highlighter-rouge">public/index.html</code> file</p>
 
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
   <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
@@ -333,10 +333,10 @@ into the {body} of the default.hbs template -->
   <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>    </div>
-    <p>Notice: you can see, we don’t import any <code class="highlighter-rouge">js</code> file. The reason is <code class="highlighter-rouge">HtmlWebpackPlugin</code>, will be explained below.</p>
+    <p>Notice: you can see, we don’t import any <code class="language-plaintext highlighter-rouge">js</code> file. The reason is <code class="language-plaintext highlighter-rouge">HtmlWebpackPlugin</code>, will be explained below.</p>
   </li>
-  <li><code class="highlighter-rouge">src/add.ts</code>
-    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span> <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+  <li><code class="language-plaintext highlighter-rouge">src/add.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">):</span> <span class="kr">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
 <span class="k">export</span> <span class="kd">const</span> <span class="nx">treeShaking</span> <span class="o">=</span> <span class="p">():</span> <span class="k">void</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This phrase will not appear on build file</span><span class="dl">'</span><span class="p">);</span>
 <span class="p">};</span>
@@ -344,25 +344,25 @@ into the {body} of the default.hbs template -->
 </code></pre></div>    </div>
   </li>
   <li>
-    <p><code class="highlighter-rouge">src/app.d.ts</code></p>
+    <p><code class="language-plaintext highlighter-rouge">src/app.d.ts</code></p>
 
     <p>Why this file? TypeScript is a strong type, it will not consider files as images, videos as modules, and we can’t import them. So we need declare the type for each file type.</p>
 
-    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.png</span><span class="dl">'</span><span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">declare</span> <span class="kr">module</span>  <span class="dl">'</span><span class="s1">*.png</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
 <span class="p">}</span>
-<span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.jpg</span><span class="dl">'</span><span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="kr">declare</span> <span class="kr">module</span>  <span class="dl">'</span><span class="s1">*.jpg</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
 <span class="p">}</span>
-<span class="nx">declare</span> <span class="nx">module</span>  <span class="dl">'</span><span class="s1">*.jpeg</span><span class="dl">'</span><span class="p">{</span>
-  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="nx">string</span><span class="p">;</span>
+<span class="kr">declare</span> <span class="kr">module</span>  <span class="dl">'</span><span class="s1">*.jpeg</span><span class="dl">'</span><span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">src</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="k">export</span> <span class="k">default</span> <span class="nx">src</span>
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">src/index.scss</code>
+  <li><code class="language-plaintext highlighter-rouge">src/index.scss</code>
     <div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$color</span><span class="p">:</span> <span class="mh">#ddd</span><span class="p">;</span>
 <span class="nn">#root</span> <span class="p">{</span>
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
@@ -371,7 +371,7 @@ into the {body} of the default.hbs template -->
 <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">src/loadImage.ts</code>
+  <li><code class="language-plaintext highlighter-rouge">src/loadImage.ts</code>
     <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">logo</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./logo.png</span><span class="dl">'</span><span class="p">;</span>
 <span class="kd">const</span> <span class="nx">component</span> <span class="o">=</span> <span class="p">():</span> <span class="nx">HTMLElement</span> <span class="o">=&gt;</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="na">element</span><span class="p">:</span> <span class="nx">HTMLDivElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">'</span><span class="s1">div</span><span class="dl">'</span><span class="p">);</span>
@@ -384,11 +384,11 @@ into the {body} of the default.hbs template -->
 <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">root</span><span class="dl">'</span><span class="p">)?.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">component</span><span class="p">());</span>
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">src/subtract.ts</code>
-    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">subtract</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">number</span><span class="p">,</span> <span class="nx">b</span><span class="p">:</span> <span class="nx">number</span><span class="p">):</span> <span class="nx">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+  <li><code class="language-plaintext highlighter-rouge">src/subtract.ts</code>
+    <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">const</span> <span class="nx">subtract</span> <span class="o">=</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">b</span><span class="p">:</span> <span class="kr">number</span><span class="p">):</span> <span class="kr">number</span> <span class="o">=&gt;</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">src/index.ts</code>
+  <li><code class="language-plaintext highlighter-rouge">src/index.ts</code>
     <div class="language-ts highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">subtract</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./subtract</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="p">{</span> <span class="nx">add</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./add</span><span class="dl">'</span><span class="p">;</span>
 <span class="k">import</span> <span class="dl">'</span><span class="s1">./loadImage</span><span class="dl">'</span><span class="p">;</span>
@@ -398,13 +398,13 @@ into the {body} of the default.hbs template -->
 
 </code></pre></div>    </div>
     <h2 id="configuration">Configuration</h2>
-    <h3 id="tsconfigjson"><code class="highlighter-rouge">tsconfig.json</code></h3>
+    <h3 id="tsconfigjson"><code class="language-plaintext highlighter-rouge">tsconfig.json</code></h3>
   </li>
 </ul>
 
 <p>This file contains de configuration to compile the TypeScript code to Js code.</p>
 
-<p>Create compileOption for TypeScript: <code class="highlighter-rouge">tsc --init</code> or create directly <code class="highlighter-rouge">tsconfig.json</code> in the root folder and paste the following code.</p>
+<p>Create compileOption for TypeScript: <code class="language-plaintext highlighter-rouge">tsc --init</code> or create directly <code class="language-plaintext highlighter-rouge">tsconfig.json</code> in the root folder and paste the following code.</p>
 <h4 id="code">Code</h4>
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="p">{</span><span class="w">
     </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -432,21 +432,21 @@ into the {body} of the default.hbs template -->
 
 <h4 id="explanation">Explanation</h4>
 
-<p>How <code class="highlighter-rouge">tsconfig.json</code> file works?</p>
+<p>How <code class="language-plaintext highlighter-rouge">tsconfig.json</code> file works?</p>
 
 <ul>
-  <li><strong>target</strong>: Version javascript that we want to build from TypeScript. Here is <code class="highlighter-rouge">ES6</code></li>
-  <li><strong>allowJs</strong>: Allow use using <code class="highlighter-rouge">js</code> file in TypeScript project</li>
-  <li><strong>strict</strong>: <code class="highlighter-rouge">Strict mode</code> for Typescript</li>
-  <li><strong>module</strong>: After compiling the js, the codes will be written as ESNext module. There are many option here, but we do not recommend use the option <code class="highlighter-rouge">commonJS</code> because il will lose the <a href="https://webpack.js.org/guides/tree-shaking/">Tree-shaking</a> feature of webpack. See this feature in <a href="https://blog.adev42.com/basic-setup-webpack#tree-shaking-in-webpack">my previous post</a></li>
+  <li><strong>target</strong>: Version javascript that we want to build from TypeScript. Here is <code class="language-plaintext highlighter-rouge">ES6</code></li>
+  <li><strong>allowJs</strong>: Allow use using <code class="language-plaintext highlighter-rouge">js</code> file in TypeScript project</li>
+  <li><strong>strict</strong>: <code class="language-plaintext highlighter-rouge">Strict mode</code> for Typescript</li>
+  <li><strong>module</strong>: After compiling the js, the codes will be written as ESNext module. There are many option here, but we do not recommend use the option <code class="language-plaintext highlighter-rouge">commonJS</code> because il will lose the <a href="https://webpack.js.org/guides/tree-shaking/">Tree-shaking</a> feature of webpack. See this feature in <a href="https://blog.adev42.com/basic-setup-webpack#tree-shaking-in-webpack">my previous post</a></li>
   <li><strong>noImplicitAny</strong>: Do not allow any implicit understanding</li>
-  <li><strong>sourceMap</strong>: easier to debug in dev enviroment. We need use it in both <code class="highlighter-rouge">tsconfig</code> and <code class="highlighter-rouge">webpack.config</code></li>
-  <li><strong>baseUrl</strong>: The base path, usually “./”. If you use the <code class="highlighter-rouge">path</code> option below, you must specify baseUrl</li>
-  <li><strong>paths</strong>: Create alias to facilitate import. For example, instead of using <code class="highlighter-rouge">../../../</code> now you can shorten it to <code class="highlighter-rouge">@/</code>. Configuring the alias in <code class="highlighter-rouge">tsconfig.json</code> just helps the editor to understand it, it doesn’t work with webpack. So you have to configure with alias with the webpack below as well.</li>
+  <li><strong>sourceMap</strong>: easier to debug in dev enviroment. We need use it in both <code class="language-plaintext highlighter-rouge">tsconfig</code> and <code class="language-plaintext highlighter-rouge">webpack.config</code></li>
+  <li><strong>baseUrl</strong>: The base path, usually “./”. If you use the <code class="language-plaintext highlighter-rouge">path</code> option below, you must specify baseUrl</li>
+  <li><strong>paths</strong>: Create alias to facilitate import. For example, instead of using <code class="language-plaintext highlighter-rouge">../../../</code> now you can shorten it to <code class="language-plaintext highlighter-rouge">@/</code>. Configuring the alias in <code class="language-plaintext highlighter-rouge">tsconfig.json</code> just helps the editor to understand it, it doesn’t work with webpack. So you have to configure with alias with the webpack below as well.</li>
   <li><strong>include</strong>: Specifies the files to be used in the project.</li>
 </ul>
 
-<h3 id="webpackconfigjs"><code class="highlighter-rouge">webpack.config.js</code></h3>
+<h3 id="webpackconfigjs"><code class="language-plaintext highlighter-rouge">webpack.config.js</code></h3>
 <h4 id="code-1">Code</h4>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path</span><span class="dl">'</span><span class="p">)</span>
 <span class="kd">const</span> <span class="nx">HtmlWebpackPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">html-webpack-plugin</span><span class="dl">'</span><span class="p">)</span>
@@ -528,70 +528,70 @@ into the {body} of the default.hbs template -->
 <h4 id="explanation-1">Explanation</h4>
 
 <ul>
-  <li><code class="highlighter-rouge">Entry</code>: Entry points of your project where you put the main code to run your server. Check <a href="https://webpack.js.org/concepts/entry-points/">Webpack entry point</a></li>
-  <li><code class="highlighter-rouge">module.rules</code>: Array contains the <code class="highlighter-rouge">loaders</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Entry</code>: Entry points of your project where you put the main code to run your server. Check <a href="https://webpack.js.org/concepts/entry-points/">Webpack entry point</a></li>
+  <li><code class="language-plaintext highlighter-rouge">module.rules</code>: Array contains the <code class="language-plaintext highlighter-rouge">loaders</code></li>
   <li>
-    <p><code class="highlighter-rouge">test</code>: Using <strong>regex</strong> to determine the file type. If it is <code class="highlighter-rouge">true</code> then it will run the loader.</p>
+    <p><code class="language-plaintext highlighter-rouge">test</code>: Using <strong>regex</strong> to determine the file type. If it is <code class="language-plaintext highlighter-rouge">true</code> then it will run the loader.</p>
 
-    <p><code class="highlighter-rouge">file-loader</code> will run png, svg, jpg, gif… (image and video) file.</p>
+    <p><code class="language-plaintext highlighter-rouge">file-loader</code> will run png, svg, jpg, gif… (image and video) file.</p>
   </li>
-  <li><code class="highlighter-rouge">exclude</code>: Enter a <strong>regex</strong>, the <code class="highlighter-rouge">loader</code> will ignore these file and folder.</li>
-  <li><code class="highlighter-rouge">use</code>: Retrieve an object or an array containing loader information.
+  <li><code class="language-plaintext highlighter-rouge">exclude</code>: Enter a <strong>regex</strong>, the <code class="language-plaintext highlighter-rouge">loader</code> will ignore these file and folder.</li>
+  <li><code class="language-plaintext highlighter-rouge">use</code>: Retrieve an object or an array containing loader information.
     <ul>
-      <li>Notice for <code class="highlighter-rouge">babel-loader</code>: using presets <code class="highlighter-rouge">@babel/preset</code> by default. It will compile to ES5 syntax.</li>
-      <li>Notice for <code class="highlighter-rouge">style-loader</code>: using <strong>sourMap</strong> to easier debug when dev.</li>
-      <li>Notice for <code class="highlighter-rouge">file-loader</code>: using <code class="highlighter-rouge">[path][name].[ext]</code> means after build, the files will be created with the similar names in similar folder. For example: if you have <code class="highlighter-rouge">src/logo.png</code> file, when you build it, you will have <code class="highlighter-rouge">dist/src/logo.png</code>.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">babel-loader</code>: using presets <code class="language-plaintext highlighter-rouge">@babel/preset</code> by default. It will compile to ES5 syntax.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">style-loader</code>: using <strong>sourMap</strong> to easier debug when dev.</li>
+      <li>Notice for <code class="language-plaintext highlighter-rouge">file-loader</code>: using <code class="language-plaintext highlighter-rouge">[path][name].[ext]</code> means after build, the files will be created with the similar names in similar folder. For example: if you have <code class="language-plaintext highlighter-rouge">src/logo.png</code> file, when you build it, you will have <code class="language-plaintext highlighter-rouge">dist/src/logo.png</code>.</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">resolve: { extensions: [‘.js’, ‘.jsx’] }</code>: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file</li>
-  <li><code class="highlighter-rouge">alias</code>: Create alias to facilitate import in webpack</li>
-  <li><code class="highlighter-rouge">output</code>: configuration of build file webpack
+  <li><code class="language-plaintext highlighter-rouge">resolve: { extensions: [‘.js’, ‘.jsx’] }</code>: The priority order when import files. For example, there are 2 files name.js and name.jsx in the same folder. In another file you import * from ‘name’, it will prioritize .js file</li>
+  <li><code class="language-plaintext highlighter-rouge">alias</code>: Create alias to facilitate import in webpack</li>
+  <li><code class="language-plaintext highlighter-rouge">output</code>: configuration of build file webpack
     <ul>
-      <li><code class="highlighter-rouge">output.path</code>: the absolute path to the directory after build. For the absolute path, we usually use <code class="highlighter-rouge">path.resolve()</code> or <code class="highlighter-rouge">path.join()</code> in combination with the global variable <code class="highlighter-rouge">__dirname</code>.</li>
-      <li><code class="highlighter-rouge">output.publicPath</code>: the relative path from the <code class="highlighter-rouge">index.html</code> file pointing to the files in the <strong>dist</strong> directory after build.</li>
+      <li><code class="language-plaintext highlighter-rouge">output.path</code>: the absolute path to the directory after build. For the absolute path, we usually use <code class="language-plaintext highlighter-rouge">path.resolve()</code> or <code class="language-plaintext highlighter-rouge">path.join()</code> in combination with the global variable <code class="language-plaintext highlighter-rouge">__dirname</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">output.publicPath</code>: the relative path from the <code class="language-plaintext highlighter-rouge">index.html</code> file pointing to the files in the <strong>dist</strong> directory after build.</li>
     </ul>
 
-    <p>For example: in the file <code class="highlighter-rouge">loadImage.js</code>, we import logo, the logo variable will be become: <code class="highlighter-rouge">output.publicPath + 'src/logo.png</code>. If after the build, we run the <code class="highlighter-rouge">index.html</code> file in a different location not in <strong>the public directory</strong>, we will accidentally make the logo variable wrong.</p>
+    <p>For example: in the file <code class="language-plaintext highlighter-rouge">loadImage.js</code>, we import logo, the logo variable will be become: <code class="language-plaintext highlighter-rouge">output.publicPath + 'src/logo.png</code>. If after the build, we run the <code class="language-plaintext highlighter-rouge">index.html</code> file in a different location not in <strong>the public directory</strong>, we will accidentally make the logo variable wrong.</p>
     <ul>
-      <li><code class="highlighter-rouge">output.filename</code>: filename of js bundle after build.</li>
+      <li><code class="language-plaintext highlighter-rouge">output.filename</code>: filename of js bundle after build.</li>
     </ul>
 
-    <p>Here we use <code class="highlighter-rouge">[hash:6]</code> means the bundle will add 6 random characters to the bundle file in each build (ex: <code class="highlighter-rouge">bundle.bbc536.js</code>).</p>
+    <p>Here we use <code class="language-plaintext highlighter-rouge">[hash:6]</code> means the bundle will add 6 random characters to the bundle file in each build (ex: <code class="language-plaintext highlighter-rouge">bundle.bbc536.js</code>).</p>
 
     <p>This is aimed at restricting your browser to cache Javascript when you update a new Javascript version for your website.</p>
 
-    <p>But we have a problem. Each time of build, we will have a new bundle file. So do we need edit the src of script import in the <code class="highlighter-rouge">public/index.html</code> file?</p>
+    <p>But we have a problem. Each time of build, we will have a new bundle file. So do we need edit the src of script import in the <code class="language-plaintext highlighter-rouge">public/index.html</code> file?</p>
 
-    <p>We don’t. Because we use the plugin <code class="highlighter-rouge">HtmlWebpackPlugin</code>. It will help use create a new <code class="highlighter-rouge">index.html</code> file from the original html file.</p>
+    <p>We don’t. Because we use the plugin <code class="language-plaintext highlighter-rouge">HtmlWebpackPlugin</code>. It will help use create a new <code class="language-plaintext highlighter-rouge">index.html</code> file from the original html file.</p>
 
-    <p>This new <code class="highlighter-rouge">html</code> file will use the template as the <code class="highlighter-rouge">public/index.html</code> and automatically build to <code class="highlighter-rouge">dist/src/index.html</code> and import new <code class="highlighter-rouge">bundle.....js</code> file.</p>
+    <p>This new <code class="language-plaintext highlighter-rouge">html</code> file will use the template as the <code class="language-plaintext highlighter-rouge">public/index.html</code> and automatically build to <code class="language-plaintext highlighter-rouge">dist/src/index.html</code> and import new <code class="language-plaintext highlighter-rouge">bundle.....js</code> file.</p>
 
     <ul>
-      <li><code class="highlighter-rouge">output.environment</code>: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the <code class="highlighter-rouge">output.environment</code>
+      <li><code class="language-plaintext highlighter-rouge">output.environment</code>: By default, webpack will generate code using the ES6 syntax. If you don’t want this, you can modify the target build by yourself in the <code class="language-plaintext highlighter-rouge">output.environment</code>
         <ul>
           <li><strong>arrowFunction</strong>: support arrow function.</li>
           <li><strong>bigIntLiteral</strong>: support BigInt</li>
-          <li><strong>const</strong>: support declaration <code class="highlighter-rouge">const</code> và <code class="highlighter-rouge">let</code></li>
+          <li><strong>const</strong>: support declaration <code class="language-plaintext highlighter-rouge">const</code> và <code class="language-plaintext highlighter-rouge">let</code></li>
           <li><strong>destructuring</strong>: support destructuring</li>
           <li><strong>dynamicImport</strong>: support async import</li>
-          <li><strong>forOf</strong>: support <code class="highlighter-rouge">forOf</code> for array</li>
+          <li><strong>forOf</strong>: support <code class="language-plaintext highlighter-rouge">forOf</code> for array</li>
           <li><strong>module</strong>: support moudle ES6 (import … from ‘…’)</li>
         </ul>
       </li>
     </ul>
   </li>
   <li>
-    <p><code class="highlighter-rouge">devtool</code>: contains the configuration file after dev or after build. When you in the dev step, you can use <code class="highlighter-rouge">source-map</code> to debug more simply. But we don’t use it in the production to reduce the volume of file when build.</p>
+    <p><code class="language-plaintext highlighter-rouge">devtool</code>: contains the configuration file after dev or after build. When you in the dev step, you can use <code class="language-plaintext highlighter-rouge">source-map</code> to debug more simply. But we don’t use it in the production to reduce the volume of file when build.</p>
 
     <p>Check <a href="https://webpack.js.org/configuration/devtool/">Devtool Webpack</a></p>
   </li>
-  <li><code class="highlighter-rouge">devServer</code>: You can imagine, it will create a server <strong>localhost</strong> at the root folder
+  <li><code class="language-plaintext highlighter-rouge">devServer</code>: You can imagine, it will create a server <strong>localhost</strong> at the root folder
     <ul>
-      <li><strong>devServer.contentBase</strong>: the path directory where contains <code class="highlighter-rouge">index.html</code> file. Here is <code class="highlighter-rouge">public</code></li>
+      <li><strong>devServer.contentBase</strong>: the path directory where contains <code class="language-plaintext highlighter-rouge">index.html</code> file. Here is <code class="language-plaintext highlighter-rouge">public</code></li>
       <li><strong>devServer.port</strong>: port of localhost</li>
-      <li><strong>devServer.hot</strong>: The mode <code class="highlighter-rouge">hot reload</code>. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The <code class="highlighter-rouge">hot reload</code> helps use to see the change but don’t need reload page.</li>
-      <li><strong>devServer.publicPath</strong>: the relative path from root directory pointing to the build directory. Here is <code class="highlighter-rouge">/dist/</code> –&gt; / is root folder</li>
-      <li><strong>devServer.watchContentBase</strong>: If you have the change in the <code class="highlighter-rouge">index.html</code>, browser will reload automatically.</li>
+      <li><strong>devServer.hot</strong>: The mode <code class="language-plaintext highlighter-rouge">hot reload</code>. By default, on the dev server, webpack will refresh the page every time when there is a slight change in the code. The <code class="language-plaintext highlighter-rouge">hot reload</code> helps use to see the change but don’t need reload page.</li>
+      <li><strong>devServer.publicPath</strong>: the relative path from root directory pointing to the build directory. Here is <code class="language-plaintext highlighter-rouge">/dist/</code> –&gt; / is root folder</li>
+      <li><strong>devServer.watchContentBase</strong>: If you have the change in the <code class="language-plaintext highlighter-rouge">index.html</code>, browser will reload automatically.</li>
     </ul>
   </li>
 </ul>
@@ -697,6 +697,33 @@ into the {body} of the default.hbs template -->
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/setup-webpack-with-typescript", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -1019,17 +1046,22 @@ into the {body} of the default.hbs template -->
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   

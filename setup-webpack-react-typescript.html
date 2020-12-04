@@ -240,7 +240,7 @@ into the {body} of the default.hbs template -->
 
 <hr />
 
-<p>With <a href="https://github.com/facebook/create-react-app">create-react-app</a>, it only takes a few clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that <code class="highlighter-rouge">create-react-app</code> brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It’s the time to configure manually <code class="highlighter-rouge">webpack</code>.</p>
+<p>With <a href="https://github.com/facebook/create-react-app">create-react-app</a>, it only takes a few clicks to create a complete React project, requires not in-depth knowledge of webpack or babel. But if you are still not satisfied with the features that <code class="language-plaintext highlighter-rouge">create-react-app</code> brings. For example, CSS does not show source-map when dev, or may be you simply configure more deeply. If in this case, It’s the time to configure manually <code class="language-plaintext highlighter-rouge">webpack</code>.</p>
 
 <p>If you do not have any knowledge about webpack, you can refer my two previous articles:</p>
 <ul>
@@ -264,21 +264,21 @@ into the {body} of the default.hbs template -->
       <li><strong>clean-webpack-plugin</strong>: A webpack plugin to remove/clean your build folder(s). Check <a href="https://github.com/johnagan/clean-webpack-plugin">clean-webpack-plugin</a></li>
       <li><strong>compression-webpack-plugin</strong>: Compress asset file (css, js, html …) to <strong>gzip</strong> Check more <a href="https://webpack.js.org/plugins/compression-webpack-plugin/">compression-webpack-plugin</a></li>
       <li><strong>copy-webpack-plugin</strong>: Copies individual files or entire directories, which already exist, to the build directory. For example: you have files such as favicon.ico, robots.txt at the same level as index.html, when the build is complete, these files will also be present in the build. If you do not have this plugin, you have to copy them manually. Check <a href="https://webpack.js.org/plugins/copy-webpack-plugin/">copy-webpack-plugin</a>.</li>
-      <li><strong>dotenv-webpack</strong>: Using <code class="highlighter-rouge">.env</code> file in your app. Check <a href="https://github.com/mrsteele/dotenv-webpack">dotenv-webpack</a></li>
-      <li><strong>html-webpack-plugin</strong>: Clone <code class="highlighter-rouge">public/index.html</code> file to build folder. Check how it works in my previous post <a href="https://blog.adev42.com/setup-webpack-with-typescript">Webpack &amp; Typescript</a></li>
-      <li><strong>mini-css-extract-plugin</strong>: Normally, the <code class="highlighter-rouge">css</code> will be in the js file after build. When running the app, <code class="highlighter-rouge">js</code> will add that <code class="highlighter-rouge">css</code> to <style></style> tag. Now, if we want the <code class="highlighter-rouge">css</code> to be in a separate file with <code class="highlighter-rouge">js</code> and when app running, <code class="highlighter-rouge">js</code> will automatically import it with the <link />&lt;/link&gt; tag. That is the function of this plugin.<br />
+      <li><strong>dotenv-webpack</strong>: Using <code class="language-plaintext highlighter-rouge">.env</code> file in your app. Check <a href="https://github.com/mrsteele/dotenv-webpack">dotenv-webpack</a></li>
+      <li><strong>html-webpack-plugin</strong>: Clone <code class="language-plaintext highlighter-rouge">public/index.html</code> file to build folder. Check how it works in my previous post <a href="https://blog.adev42.com/setup-webpack-with-typescript">Webpack &amp; Typescript</a></li>
+      <li><strong>mini-css-extract-plugin</strong>: Normally, the <code class="language-plaintext highlighter-rouge">css</code> will be in the js file after build. When running the app, <code class="language-plaintext highlighter-rouge">js</code> will add that <code class="language-plaintext highlighter-rouge">css</code> to <style></style> tag. Now, if we want the <code class="language-plaintext highlighter-rouge">css</code> to be in a separate file with <code class="language-plaintext highlighter-rouge">js</code> and when app running, <code class="language-plaintext highlighter-rouge">js</code> will automatically import it with the <link />&lt;/link&gt; tag. That is the function of this plugin.<br />
 Check more information for <a href="https://webpack.js.org/plugins/mini-css-extract-plugin/">mini-css-extract-plugin</a></li>
       <li><strong>webpack-bundle-analyzer</strong>: It will create an interactive treemap visualization of the contents of all your bundles. Check <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">webpack-bundle-analyzer</a></li>
     </ul>
   </li>
-  <li>Install <code class="highlighter-rouge">ESLint</code> &amp; <code class="highlighter-rouge">Prettier</code>
+  <li>Install <code class="language-plaintext highlighter-rouge">ESLint</code> &amp; <code class="language-plaintext highlighter-rouge">Prettier</code>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn add <span class="nt">-D</span> eslint eslint-config-react-app eslint-loader eslint-plugin-flowtype eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-plugin-prettier eslint-config-prettier
 </code></pre></div>    </div>
-    <p>Except <code class="highlighter-rouge">prettier</code>, <code class="highlighter-rouge">eslint-config-prettier</code> and <code class="highlighter-rouge">eslint-plugin-prettier</code> the rest are plugins used by <code class="highlighter-rouge">create-react-app</code>.</p>
+    <p>Except <code class="language-plaintext highlighter-rouge">prettier</code>, <code class="language-plaintext highlighter-rouge">eslint-config-prettier</code> and <code class="language-plaintext highlighter-rouge">eslint-plugin-prettier</code> the rest are plugins used by <code class="language-plaintext highlighter-rouge">create-react-app</code>.</p>
 
     <p><strong>Create file configuration:</strong>:</p>
     <ul>
-      <li><code class="highlighter-rouge">.eslintrc</code>
+      <li><code class="language-plaintext highlighter-rouge">.eslintrc</code>
         <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
 </span><span class="nl">"extends"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"react-app"</span><span class="p">,</span><span class="w"> </span><span class="s2">"prettier"</span><span class="p">],</span><span class="w">
 </span><span class="nl">"plugins"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"react"</span><span class="p">,</span><span class="w"> </span><span class="s2">"prettier"</span><span class="p">],</span><span class="w">
@@ -300,12 +300,12 @@ Check more information for <a href="https://webpack.js.org/plugins/mini-css-extr
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>        </div>
       </li>
-      <li><code class="highlighter-rouge">.eslintignore</code>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/src/serviceWorker.ts
+      <li><code class="language-plaintext highlighter-rouge">.eslintignore</code>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/src/serviceWorker.ts
 /src/setupTests.ts
 </code></pre></div>        </div>
       </li>
-      <li><code class="highlighter-rouge">.prettierrc</code>
+      <li><code class="language-plaintext highlighter-rouge">.prettierrc</code>
         <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
 </span><span class="nl">"arrowParens"</span><span class="p">:</span><span class="w"> </span><span class="s2">"avoid"</span><span class="p">,</span><span class="w">
 </span><span class="nl">"semi"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -317,14 +317,14 @@ Check more information for <a href="https://webpack.js.org/plugins/mini-css-extr
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>        </div>
       </li>
-      <li><code class="highlighter-rouge">prettierignore</code>
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cache
+      <li><code class="language-plaintext highlighter-rouge">prettierignore</code>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cache
 package-lock.json
 </code></pre></div>        </div>
       </li>
     </ul>
   </li>
-  <li>Add scripts to <code class="highlighter-rouge">package.json</code>
+  <li>Add scripts to <code class="language-plaintext highlighter-rouge">package.json</code>
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
   </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack serve --mode development"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack --mode production"</span><span class="p">,</span><span class="w">
@@ -339,11 +339,11 @@ package-lock.json
 </ul>
 
 <h2 id="configuration">Configuration</h2>
-<h3 id="config-tsconfigjson">Config <code class="highlighter-rouge">tsconfig.json</code></h3>
+<h3 id="config-tsconfigjson">Config <code class="language-plaintext highlighter-rouge">tsconfig.json</code></h3>
 <ul>
   <li>
     <p>Code
-I will use TypeScript for this template, so I need a config file for TypeScript to compile JavaScript. If you want to use JavaScript, that will be very similar, you just need install <code class="highlighter-rouge">babel</code> and these loader. Check my <a href="https://blog.adev42.com/basic-setup-webpack">previous article</a> for the details.</p>
+I will use TypeScript for this template, so I need a config file for TypeScript to compile JavaScript. If you want to use JavaScript, that will be very similar, you just need install <code class="language-plaintext highlighter-rouge">babel</code> and these loader. Check my <a href="https://blog.adev42.com/basic-setup-webpack">previous article</a> for the details.</p>
 
     <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"compilerOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -368,7 +368,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   </li>
 </ul>
 
-<h3 id="config-webpackconfigjs">Config <code class="highlighter-rouge">webpack.config.js</code></h3>
+<h3 id="config-webpackconfigjs">Config <code class="language-plaintext highlighter-rouge">webpack.config.js</code></h3>
 <ul>
   <li>Code
     <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">"</span><span class="s2">path</span><span class="dl">"</span><span class="p">)</span>
@@ -505,18 +505,18 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
   <li>
     <p>Explanation</p>
 
-    <p>I have explain the details of many definition in the <code class="highlighter-rouge">webpack.config.js</code> file in my two previous article <a href="https://blog.adev42.com/basic-setup-webpack">setup webpack basic</a> &amp; <a href="https://blog.adev42.com/setup-webpack-with-typescript">setup webpack typescript</a>. In this article, I just explain the new definitions..</p>
+    <p>I have explain the details of many definition in the <code class="language-plaintext highlighter-rouge">webpack.config.js</code> file in my two previous article <a href="https://blog.adev42.com/basic-setup-webpack">setup webpack basic</a> &amp; <a href="https://blog.adev42.com/setup-webpack-with-typescript">setup webpack typescript</a>. In this article, I just explain the new definitions..</p>
 
     <ul>
-      <li><code class="highlighter-rouge">isDev</code>: We have 2 modes: <strong>development</strong> and <strong>production</strong> equivalent to dev and build. These two modes are passed through the <code class="highlighter-rouge">--mode</code> in the script in <code class="highlighter-rouge">package.json</code>.</li>
-      <li><code class="highlighter-rouge">isAnalyze</code>: To define use <code class="highlighter-rouge">BundleAnalyzerPlugin</code> or not</li>
-      <li><code class="highlighter-rouge">basePlugins</code>: plugins use in dev mode</li>
-      <li><code class="highlighter-rouge">CopyPlugin</code>: copy all files in <strong>public</strong> folder to <strong>build</strong> folder, except <code class="highlighter-rouge">index.html</code>. Because we have already plugin <code class="highlighter-rouge">HtmlWebpackPlugin</code> do it.</li>
-      <li><code class="highlighter-rouge">webpack.ProgressPlugin()</code> show by percentage of progress when run webpack</li>
-      <li><code class="highlighter-rouge">CompressionPlugin()</code>: compress build files to <strong>gzip</strong></li>
-      <li><code class="highlighter-rouge">prodPlugins</code>: plugins used in mode production.</li>
-      <li><code class="highlighter-rouge">plugins</code>: Contains plugins of webpack</li>
-      <li><code class="highlighter-rouge">performance.maxEntrypointSize</code>: When a build file exceeds this limit (in bytes), it will be warned on the terminal.</li>
+      <li><code class="language-plaintext highlighter-rouge">isDev</code>: We have 2 modes: <strong>development</strong> and <strong>production</strong> equivalent to dev and build. These two modes are passed through the <code class="language-plaintext highlighter-rouge">--mode</code> in the script in <code class="language-plaintext highlighter-rouge">package.json</code>.</li>
+      <li><code class="language-plaintext highlighter-rouge">isAnalyze</code>: To define use <code class="language-plaintext highlighter-rouge">BundleAnalyzerPlugin</code> or not</li>
+      <li><code class="language-plaintext highlighter-rouge">basePlugins</code>: plugins use in dev mode</li>
+      <li><code class="language-plaintext highlighter-rouge">CopyPlugin</code>: copy all files in <strong>public</strong> folder to <strong>build</strong> folder, except <code class="language-plaintext highlighter-rouge">index.html</code>. Because we have already plugin <code class="language-plaintext highlighter-rouge">HtmlWebpackPlugin</code> do it.</li>
+      <li><code class="language-plaintext highlighter-rouge">webpack.ProgressPlugin()</code> show by percentage of progress when run webpack</li>
+      <li><code class="language-plaintext highlighter-rouge">CompressionPlugin()</code>: compress build files to <strong>gzip</strong></li>
+      <li><code class="language-plaintext highlighter-rouge">prodPlugins</code>: plugins used in mode production.</li>
+      <li><code class="language-plaintext highlighter-rouge">plugins</code>: Contains plugins of webpack</li>
+      <li><code class="language-plaintext highlighter-rouge">performance.maxEntrypointSize</code>: When a build file exceeds this limit (in bytes), it will be warned on the terminal.</li>
     </ul>
   </li>
 </ul>
@@ -524,7 +524,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 <h2 id="demo-code">Demo code</h2>
 
 <ul>
-  <li>Create <code class="highlighter-rouge">public/index.html</code>
+  <li>Create <code class="language-plaintext highlighter-rouge">public/index.html</code>
     <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 
@@ -550,7 +550,7 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 <span class="nv">$ </span>yarn build:analyze <span class="c"># Build and analyze project</span>
   
 </code></pre></div>    </div>
-    <p>We can use <code class="highlighter-rouge">yarn lint</code>, <code class="highlighter-rouge">yarn lint:fix</code>, <code class="highlighter-rouge">yarn prettier</code> and <code class="highlighter-rouge">yarn prettier:fix</code> to run the command check and fix syntax code with eslint or prettier.</p>
+    <p>We can use <code class="language-plaintext highlighter-rouge">yarn lint</code>, <code class="language-plaintext highlighter-rouge">yarn lint:fix</code>, <code class="language-plaintext highlighter-rouge">yarn prettier</code> and <code class="language-plaintext highlighter-rouge">yarn prettier:fix</code> to run the command check and fix syntax code with eslint or prettier.</p>
   </li>
 </ul>
 
@@ -734,6 +734,33 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
       <!-- If you use Disqus comments, just uncomment this block.
             The only thing you need to change is "test-apkdzgmqhj" - which
             should be replaced with your own Disqus site-id. -->
+      
+
+      <!-- If you use Gitalk comments, just uncomment this block. -->
+      
+      <section class="post-full-comments">
+        <!-- _includes/gitalk-comment.html -->
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: '47d9028ad954579e29a1',
+    clientSecret: "0fc3a929bc1c7d9db3678dd52952f1342c01cf2c",
+    repo: "tienduy-nguyen",
+    owner: "tienduy-nguyen",
+    admin: ["tienduy-nguyen"],
+    id: "/setup-webpack-react-typescript", // Ensure uniqueness and length less than 50 
+    distractionFreeMode: false, // Facebook-like distraction free mode
+    perPage: 100
+  });
+
+  gitalk.render('gitalk-container')
+</script>
+
+
+      </section>
       
 
     </article>
@@ -1056,17 +1083,22 @@ I will use TypeScript for this template, so I need a config file for TypeScript 
 
   <!-- Add Google Analytics  -->
   <!-- Google Analytics Tracking code -->
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-165413288-1', 'auto');
+  ga('create', 'G-MTSKWTNVW3', 'auto');
   ga('send', 'pageview');
-
- </script>
-
+</script>
 
   <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
   
