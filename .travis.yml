@@ -2,16 +2,32 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
-  - 2.7.1
-before_install:
+  - 2.5.1
+# before_install:
+#   - gem update --system
+#   - gem install bundler
+#   - gem install rake
+#   - gem install jekyll bundler
+
+# install:
+#   # Install Jekyll and dependencies
+#   - bundle install
+#   - bundler update --bundler
+#   - bundle exec jekyll build
+
+notifications:
+  email:
+    on_success: never
+    on_failure: never
+
+script:
+  - gem update --system
   - gem install bundler
   - gem install rake
-
-install:
-  # Install Jekyll and dependencies
-  - bundle install
-
-script: bundle exec rake site:deploy --quiet #--trace
+  - bundler update --bundler
+  - gem install jekyll bundler
+  - bundle exec jekyll build
+  - bundle exec rake site:deploy --quiet #--trace
 
 # Generate your secure token with the travis gem:
 # get Github token from your Travis CI profile page
