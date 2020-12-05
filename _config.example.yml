@@ -61,7 +61,7 @@ gitalk:
   admin: tienduy-nguyen # GitHub repo owner and collaborators, only these guys can initialize github issues eg. 'colynn,daattali'
 
 # Google Analytics
-google_analytics: G-DFDQFLJDFMJ # replace with your GA tracking identifier
+google_analytics: UA-25516099-7 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title

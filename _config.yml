@@ -61,7 +61,7 @@ gitalk:
   admin: tienduy-nguyen # GitHub repo owner and collaborators, only these guys can initialize github issues eg. 'colynn,daattali'
 
 # Google Analytics
-google_analytics: G-MTSKWTNVW3 # replace with your GA tracking identifier
+google_analytics: G-ZPR33Z69S9 # replace with your GA tracking identifier
 
 # Permalinks
 permalink: /:title
@@ -174,6 +174,9 @@ exclude:
   - .git*
   - vendor
 
+timezone: Europe/Paris
+
+sitemap: true
 # Defaults
 defaults:
   # _posts
@@ -193,5 +196,6 @@ defaults:
       class: post-template
       subclass: 'post'
       author: tienduy
-      navigation: True
+      navigation: true
       current: post
+      sitemap: true
